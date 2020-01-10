@@ -3,9 +3,9 @@ title: "Contact"
 logo: "/img/logo.svg"
 contact_entries:
   - heading: Location
-    text: "3153 Lynn Avenue, South San Francisco, California 94080"
+    text: "1740 Shaff Rd Box 315\nStayton, OR 97383\nUSA"
   - heading: Working hours
-    text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
+    text: "Mon – Fri: 8am – 5pm\nSat – Sun: Closed"
 ---
 
 We’d love to get in touch with you and hear your ideas and

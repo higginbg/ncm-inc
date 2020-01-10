@@ -3,15 +3,15 @@
 <div class="ph3 bg-off-white">
 	<div class="center mw6 pv3">
 
-		<img src="{{ .Params.logo }}" alt="" class="db w4 center pv4">
+		<div class="tc mb3">{{ partial "logo" (dict "size" "f2") }}</div>
 
 		{{ .Content }}
 
 		<div class="flex-ns mb3">
 	        	{{ range .Params.contact_entries }}
-				<div>
+				<div class="w-50-ns">
 					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
-					<p>{{ .text }}</p>
+					<p>{{ (replace .text "\n" "<br/>") | safeHTML }}</p>
 				</div>
 			{{ end }}
 		</div>

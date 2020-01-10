@@ -1,50 +1,33 @@
-<footer class="bg-black ph3 pv4 white">
+<footer class="bg-black white">
 
-	<div class="mw7 center pt3">
+	<div class="mw7 center pt3 pv4 ph3">
 
-		<div class="measure-narrow center mb4">
+		<div class="flex flex-column measure-narrow center mb4">
 
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
+			<div class="f2 pre primary b db w4 center tc mb4 br0">NCM Inc.</div>
 
-			{{ partial "newsletter-form" . }}
-
-		</div>
-
-		<div class="flex-ns justify-between">
+			{{ partial "contact-form" . }}
 
 			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
+				<h3 class="f4 b lh-title primary">Contact</h3>
+				<ul class="flex flex-column items-start mhn2">
+					<li class="mb2">1740 Shaff Rd Box 315<br>Stayton, OR 97383</li>
+					{{ partial "contact-icon" (dict "link" "tel:+1971-336-2341" "text" "+1 (971) 336-2341") }}
 				</ul>
 			</div>
 
 		</div>
+
 	</div>
+
+	<ul class="bg-primary white h-100 flex flex-row justify-start content">
+		<li class="ma1"><a href="/" class="link">Home</a></li>
+		<li class="ma1"><a href="/about" class="link">About</a></li>
+		<li class="ma1"><a href="/projects" class="link">Projects</a></li>
+		<li class="ma1"><a href="/post" class="link">Testimonials</a></li>
+		<li class="ma1"><a href="/join" class="link">Join</a></li>
+		<li class="ma1"><a href="/contact" class="link">Contact</a></li>
+	</ul>
 
 </footer>
 

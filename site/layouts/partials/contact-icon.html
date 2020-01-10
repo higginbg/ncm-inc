@@ -1,0 +1,4 @@
+<li class="flex flex-row lh-title mb3 white relative">
+  {{ if .icon }}<i class="{{.icon}} mr1"></i>{{ end }}
+  <a href="{{.link}}" class="link" target="_blank">{{ (replace .text "\n" "<br/>") | safeHTML }}</a>
+</li>

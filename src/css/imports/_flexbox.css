@@ -13,6 +13,7 @@
 
 .flex-column  { flex-direction: column; }
 .flex-row     { flex-direction: row; }
+.flex-reverse  { flex-direction: reverse; }
 .flex-wrap    { flex-wrap: wrap; }
 
 .items-start    { align-items: flex-start; }
@@ -63,6 +64,7 @@
   .flex-column-ns { flex-direction: column; }
   .flex-row-ns     { flex-direction: row; }
   .flex-wrap-ns { flex-wrap: wrap; }
+  .flex-reverse-ns  { flex-direction: reverse; }
   .items-start-ns { align-items: flex-start; }
   .items-end-ns { align-items: flex-end; }
   .items-center-ns { align-items: center; }

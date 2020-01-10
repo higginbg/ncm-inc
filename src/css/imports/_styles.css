@@ -4,7 +4,7 @@
 
 /* Used in the navbar */
 .divider-grey {
-  box-shadow: inset 0 -4px 0 var(--grey-1);
+  box-shadow: inset 0 -4px 0 var(--black), 0 2px 4px -1px rgba(0, 0, 0, 0.25);
   /* Link hover states */
   & a {
     transition: var(--hover-transition);
@@ -13,3 +13,12 @@
     box-shadow: inset 0 -4px 0 var(--primary);
   }
 }
+
+.size-trans {
+  transition: var(--size-transition);
+}
+
+.visible {  visibility: visible; }
+.hidden {   visibility: hidden; }
+.bs-none {  box-shadow: inset none; }
+.no-select { user-select: none; }

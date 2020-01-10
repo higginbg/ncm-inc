@@ -1,19 +1,30 @@
-<nav class="overflow-x-scroll overflow-x-visible-ns flex justify-between items-center center bg-white divider-grey relative">
+<nav id="nav" class="f5-ns f5 w-100 db divider-grey bg-black o-90 fixed z-9999 no-select animated">
+	<div class="w-100 flex justify-between items-center-ns items-start center relative">
 
-	<!-- Logo -->
-	<a href="/" class="pa3 db mr4 h-100 w3 flex-none">
-		<img src="/img/logo.svg" alt="Kaldi logo" class="br0 db mb0 w-100"/>
-	</a>
+		<!-- Logo -->
+		<a href="/" class="b lh-solid pv3 ph3 pa3-ns db mr4 h-100 flex-none no-underline">{{ partial "logo" (dict "size" "f3") }}</a>
 
-	<!-- Primary Nav -->
-	<ul class="flex b grey-3">
-		<li><a href="/products" class="pa3 no-underline db">Products</a></li>
+		<button class="dn-ns white f4 link bg-none b0 pv3 ph3 pa3-ns animated slideInDown"><i class="fas fa-bars"></i></button>
 
-		<li><a href="/values" class="pa3 no-underline db">Values</a></li>
+		<!-- Primary Nav -->
+		<ul class="w-100 bottom-0 flex-ns flex-row-ns justify-end-ns relative-ns bg-black bt bt-ns-0 bw0-ns bw1 b--off-white o-90-ns dn absolute flex-column white animated z-999">
 
-		<li><a href="/post" class="pa3 no-underline db">Blog</a></li>
+			<li><a href="/about" class="pv3 ph3 pa3-ns no-underline db">About</a></li>
 
-		<li><a href="/contact" class="pa3 no-underline db">Contact</a></li>
-	</ul>
+			<li><a href="/projects" class="pv3 ph3 pa3-ns no-underline db">Projects</a></li>
+
+			<li><a href="/post" class="pv3 ph3 pa3-ns no-underline db">Testimonials</a></li>
+
+			<li><a href="/join" class="pv3 ph3 pa3-ns no-underline db pre">Join</a></li>
+
+			<li><a href="/contact" class="pv3 ph3 pa3-ns no-underline db">Contact</a></li>
+		</ul>
+		
+	</div>
 
 </nav>
+
+
+<div id="nav-dummy" class="w-100 bg-black relative no-select animated">
+	<a href="/" class="pa3 db mr4 h-100 flex-none no-underline hidden">{{ partial "logo" (dict "size" "f3") }}</a>
+</div>

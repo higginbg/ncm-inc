@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  font-size: var(--spacing-medium);
+  font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: var(--body-font-weight);
   -webkit-font-smoothing: antialiased;

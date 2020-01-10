@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-center") }}
+
+<div class="mw7 center ph3 pt4">
+
+  {{ partial "portraits" (dict "imageUrl" .Params.image "name" .Params.name "title" .Params.title) }}
+
+</div>
+
+{{ end }}

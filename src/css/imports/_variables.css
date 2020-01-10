@@ -1,22 +1,22 @@
 :root {
 	/* Colors */
-	--primary: rgba(255, 68, 0, 1);
-	--highlight: rgba(254, 213, 198, 1);
+	--primary: rgba(88, 179, 0, 1);
+	--highlight: rgba(145, 145, 145, 1);
 	--white: rgba(255, 255, 255, 1);
 	--off-white: rgba(255, 253, 252, 1);
 	--grey-1: rgba(245, 243, 242, 1);
-	--grey-2: rgba(235, 231, 230, 1);
+	--grey-2: rgb(80, 42, 32);
 	--grey-3: rgba(89, 87, 86, 1);
-	--grey-4: rgba(66, 64, 64, 1);
-	--black: rgba(43, 37, 35, 1);
+	--grey-4: rgba(45, 45, 45, 1);
+	--black: rgba(25, 25, 25, 1);
 
 	/* Typography */
-	--font-family: Nunito Sans, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+	--font-family: Lato, Nunito Sans, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
 	--line-height: 1.5;
 
-	--font-size: 18px;
-	--font-size-m: 20px;
-	--font-size-l: 22px;
+	--font-size: 20px;
+	--font-size-m: 22px;
+	--font-size-l: 24px;
 
 	--body-font-weight: 400;
 	--bold-font-weight: 700;
@@ -34,4 +34,5 @@
 	/* Miscelaneous */
 	--border-radius: .25rem;
 	--hover-transition: all 150ms ease;
+	--size-transition: width 500ms ease, height 500ms ease;
 }

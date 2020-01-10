@@ -15,14 +15,16 @@ fieldset
 }
 
 input, textarea {
-  background-color: var(--grey-2);
+  background-color: var(--off-white);
   border-radius: var(--border-radius);
+  border: 2px solid var(--black);
   padding: 12px 16px 10px;
   font-size: var(--spacing-medium);
   line-height: 1.25;
   position: relative;
   transition: var(--hover-transition);
   z-index: 2;
+  user-select: none;
   &:focus {
     background-color: var(--white);
   }
