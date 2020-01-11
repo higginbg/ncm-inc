@@ -1,33 +1,30 @@
-<footer class="bg-black white">
+<footer class="bg-grey-1 black">
 
-	<div class="mw7 center pt3 pv4 ph3">
+	<div class="w-100 center pa3">
 
-		<div class="flex flex-column measure-narrow center mb4">
+		<div class="w-100 flex flex-column center mb1">
 
-			<div class="f2 pre primary b db w4 center tc mb4 br0">NCM Inc.</div>
-
-			{{ partial "contact-form" . }}
-
-			<div>
-				<h3 class="f4 b lh-title primary">Contact</h3>
-				<ul class="flex flex-column items-start mhn2">
-					<li class="mb2">1740 Shaff Rd Box 315<br>Stayton, OR 97383</li>
-					{{ partial "contact-icon" (dict "link" "tel:+1971-336-2341" "text" "+1 (971) 336-2341") }}
-				</ul>
+			<div class="measure-narrow center">
+				{{ partial "contact-form" . }}
 			</div>
-
+			
 		</div>
-
+		
+	</div>
+	
+	<div class="f6 h-100 w-100 flex flex-row flex-column flex-wrap justify-between bg-grey-4 white">
+		<ul class="flex flex-row flex-wrap">
+			<li class="ma1"><a href="/" class="link">Home</a></li>
+			<li class="ma1"><a href="/about" class="link">About</a></li>
+			<li class="ma1"><a href="/projects" class="link">Projects</a></li>
+			<li class="ma1"><a href="/post" class="link">Testimonials</a></li>
+			<li class="ma1"><a href="/join" class="link">Join</a></li>
+			<li class="ma1"><a href="/contact" class="link">Contact</a></li>
+		</ul>
+		<div class="db-ns dn ma1 pre"><i class="fas fa-phone"></i> <a href="tel:+1971-336-2341" class="link" title="+1 (971) 336-2341">+1 (971) 336-2341</a></div>
+		<div class="dn-ns db ma1 pre"><i class="fas fa-phone"></i> <a href="tel:+1971-336-2341" class="link">Call</a></div>
 	</div>
 
-	<ul class="bg-primary white h-100 flex flex-row justify-start content">
-		<li class="ma1"><a href="/" class="link">Home</a></li>
-		<li class="ma1"><a href="/about" class="link">About</a></li>
-		<li class="ma1"><a href="/projects" class="link">Projects</a></li>
-		<li class="ma1"><a href="/post" class="link">Testimonials</a></li>
-		<li class="ma1"><a href="/join" class="link">Join</a></li>
-		<li class="ma1"><a href="/contact" class="link">Contact</a></li>
-	</ul>
 
 </footer>
 

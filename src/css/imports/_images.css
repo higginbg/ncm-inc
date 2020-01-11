@@ -6,3 +6,5 @@ img {
 img:not(.w-100) {
   border-radius: var(--border-radius);
 }
+
+.object-cover {object-fit: cover;}

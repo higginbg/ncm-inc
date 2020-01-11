@@ -2,7 +2,7 @@
 title: "Contact"
 logo: "/img/logo.svg"
 contact_entries:
-  - heading: Location
+  - heading: Mailing Address
     text: "1740 Shaff Rd Box 315\nStayton, OR 97383\nUSA"
   - heading: Working hours
     text: "Mon – Fri: 8am – 5pm\nSat – Sun: Closed"

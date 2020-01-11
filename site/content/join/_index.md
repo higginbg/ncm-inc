@@ -1,6 +1,6 @@
 ---
 title: "NPM Inc."
-subtitle: Join
+subtitle: Join Our Team!
 image: /img/home-cover.png
 body:
     heading: We're hiring!
