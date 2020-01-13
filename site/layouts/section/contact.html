@@ -3,21 +3,18 @@
 <div class="ph3 bg-off-white">
 	<div class="center mw6 pv3">
 
-		<div class="tc mb3">{{ partial "logo" (dict "size" "f2") }}</div>
+		<div class="f2 primary tc mb3">Contact Us!</div>
 
 		{{ .Content }}
 
-		<div class="flex-ns mb3">
+		<div class="flex-ns flex-wrap mb3">
 	        	{{ range .Params.contact_entries }}
 				<div class="w-50-ns">
-					<h4 class="f4 b lh-title mb2 primary">{{ .heading }}</h4>
+					<h4 class="f4 lh-title mb2 primary">{{ .heading }}</h4>
 					<p>{{ (replace .text "\n" "<br/>") | safeHTML }}</p>
 				</div>
 			{{ end }}
 		</div>
-
-		{{ partial "contact-form" . }}
-
 	</div>
 </div>
 

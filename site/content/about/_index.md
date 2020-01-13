@@ -1,6 +1,5 @@
 ---
-title: "NPM Inc."
-subtitle: About
+title: About Our Team
 image: /img/about-cover.jpg
 about:
   - name: "Shade-grown coffee"

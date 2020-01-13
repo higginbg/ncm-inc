@@ -1,5 +1,10 @@
 ::selection {
+  color: var(--black);
   background-color: var(--highlight);
+}
+
+#sitemap ::selection {
+  background-color: var(--white);
 }
 
 /* Used in the navbar */

@@ -2,6 +2,6 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-bottom") }}
 
-{{ partial "short-text" .Params.body }}
+<div class="bg-white">{{ partial "short-text" .Params.body }}</div>
 
 {{ end }}

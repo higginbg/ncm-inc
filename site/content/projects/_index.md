@@ -1,6 +1,5 @@
 ---
-title: "NPM Inc."
-subtitle: Projects
+title: Our Projects
 type: projects
 image: /img/projects-cover.jpg
 heading: What we offer

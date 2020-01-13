@@ -71,3 +71,14 @@ drpdwnBtn.addEventListener('click', () => {
     drpdwn.classList.remove('slideOutRight', 'faster');
   }
 });
+
+// Highlight nav link when current page
+const url = window.location.href.split('/');
+const page = url[url.length - 2];
+for (const link of links) {
+  const navLoc = link.href.split('/');
+  const checkNav = navLoc[navLoc.length - 1];
+  if (page === checkNav) {
+    link.classList.add('bg-grey-3');
+  }
+}
