@@ -3,18 +3,19 @@
 <div class="ph3 bg-off-white">
 	<div class="center mw6 pv3">
 
-		<div class="f2 primary tc mb3">Contact Us!</div>
+		<div class="f2 tc mb3">Let's get in touch.</div>
 
 		{{ .Content }}
 
 		<div class="flex-ns flex-wrap mb3">
 	        	{{ range .Params.contact_entries }}
 				<div class="w-50-ns">
-					<h4 class="f4 lh-title mb2 primary">{{ .heading }}</h4>
+					<h4 class="f4 lh-title mb2">{{ .heading }}</h4>
 					<p>{{ (replace .text "\n" "<br/>") | safeHTML }}</p>
 				</div>
 			{{ end }}
 		</div>
+		<p>You can also use the form below to contact us directly.</p>
 	</div>
 </div>
 

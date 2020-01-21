@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
+
+<div class="flex flex-row flex-wrap justify-center w-100 bg-white pa3">
+  {{ range .Params.testimonials }}
+    {{ partial "testimonial" . }}
+  {{ end }}
+</div>
+
+{{ end }}

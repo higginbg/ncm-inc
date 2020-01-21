@@ -1,0 +1,11 @@
+<div class="bg-white pa3">
+  <div class="flex flex-row flex-wrap justify-center mb3">
+    {{ range .Params.testimonials }}
+      {{ partial "testimonial" . }}
+    {{ end }}
+  </div>
+
+  <div class="tc">
+    <a href="/testimonials" class="btn">More testimonials <i class="fas fa-angle-right"></i></a>
+  </div>
+</div>

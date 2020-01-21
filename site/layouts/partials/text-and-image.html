@@ -1,19 +1,30 @@
 <div class="pv4">
 	<div class="ph3 mw7 center">
 
-		<div class="flex-l mhn2-l">
-			<div class="w-40-l ph2-l">
-				<h2 class="f2 lh-title mb2">{{.heading}}</h2>
+		<h2 class="f2 lh-title mb3">{{.heading}}</h2>
+
+		<div class="mhn2-l">
+			
+			<div>
 				<p>{{.text}}</p>
 			</div>
 
-			<div class="w-60-l ph2-l">
-				<img src="img/about-cover.jpg" alt="" class="mb3">
+			<div class="flex-ns mhn2-ns mb3">
+				<div class="pa2-ns w-50-ns">
+				  <img src="img/about-cover.jpg" alt="" class="w-100 br1 h5 center object-cover db">
+				</div>
+
+				<div class="pa2-ns w-50-ns">
+					<img src="img/about-team.jpg" alt="" class="w-100 br1 h5 center object-cover db">
+				  </div>
+			  </div>
+
 			</div>
+
 		</div>
 
 		<div class="tc">
-			<a href="{{.buttonLink}}" class="btn">{{.buttonText}}</a>
+			<a href="{{.buttonLink}}" class="btn">{{.buttonText}}<i class="fas fa-angle-right"></i></a>
 		</div>
 
 	</div>

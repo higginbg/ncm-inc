@@ -9,15 +9,7 @@ contact_entries:
   - heading: Mailing Address
     text: "1740 Shaff Rd Box 315\nStayton, OR 97383\nUSA"
   - heading: Working hours
-    text: <table><tr><td class="pr3">Mon – Fri:</td><td class="pr3">8am – 5pm</td></tr><tr><td>Sat – Sun:</td><td>Closed</td></tr></table>
+    text: <table><tr><td class="b pr1 tr">Monday</td><td class="b pr1">–</td><td class="b pr3">Friday</td><td>8am – 5pm PST</td></tr><tr><td class="b pr1 tr">Saturday</td><td class="b pr1">–</td><td class="b pr3">Sunday</td><td>Closed</td></tr></table>
 ---
 
-We’d love to get in touch with you and hear your ideas and
-questions. We strive to grow and improve constantly and your feedback
-is valuable for us.
-
-<h3 class="f4 b lh-title mb2">How can I get…?</h3>
-
-You can also use the form below for any inquiries about coffee
-availability, monthly subscriptions and scheduling a 1-on-1 session
-with our baristas. Don’t be shy, drop us a line!
+Like our work? We’d love to get in touch with you to schedule a consultation!

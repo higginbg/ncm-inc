@@ -1,7 +1,11 @@
 .link {
   text-decoration: none;
   transition: var(--hover-transition);
-  color: inherit;
+  color: var(--primary);
+}
+
+footer .link {
+  color: var(--white);
 }
 
 .link:link,

@@ -5,11 +5,13 @@
 <div class="bg-grey-1">{{ partial "short-text" .Params.blurb}}</div>
 
 <div class="bg-white">
-    {{ partial "text-and-image" (dict "heading" .Params.about.heading "text" .Params.about.text "buttonText" "Read more" "buttonLink" "/about") }}
+    {{ partial "text-and-image" (dict "heading" .Params.about.heading "text" .Params.about.text "buttonText" "About our team" "buttonLink" "/about") }}
 </div>
 
 <div class="bg-off-white">{{ partial "2-up" .Params }}</div>
 
-<div class="bg-white">{{ partial "blog" . }}</div>
+<div class="bg-white pa3">
+  {{ partial "testimonials" . }}
+</div>
 
 {{ end }}
