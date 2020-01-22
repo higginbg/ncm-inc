@@ -19,6 +19,10 @@
   }
 }
 
+.box-shadow {
+  box-shadow: var(--box-shadow);
+}
+
 .size-trans {
   transition: var(--size-transition);
 }

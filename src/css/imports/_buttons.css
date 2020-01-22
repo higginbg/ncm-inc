@@ -9,8 +9,8 @@
   text-decoration: none;
   color: var(--off-white);
   text-align: center;
-  box-shadow: none;
   transition: var(--hover-transition);
+  box-shadow: var(--box-shadow);
   user-select: none;
   
   i {

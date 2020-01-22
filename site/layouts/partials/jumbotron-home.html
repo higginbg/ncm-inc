@@ -1,9 +1,9 @@
 <div
-  class="pv5 pv6-l vh-75-ns vh-50 ph3 {{.position}} cover no-select animated fadeInRight"
+  class="pv5 pv6-l vh-75-ns vh-50 ph3 {{.position}} cover no-select"
   style="background-image: url('{{.imageUrl}}')"
-  data-aos="fade-in"
+  data-aos="fade-left"
 >
-  <div class="top-1 top-0-ns absolute animated fadeIn delay-1s">
+  <div class="top-1 top-0-ns absolute" data-aos="fade-in" data-aos-delay=1000>
     <div class="br1 pa3 ma3-ns db o-90 bg-black">
       <div class="mw7 relative bg-fix-primary">
         <h1 class="f2 f1-l di lh-title primary mw6">
@@ -13,7 +13,7 @@
 
       {{ if .subtitle }}
       <div class="mw7 relative bg-fix-primary">
-        <p class="f3 di lh-title mb3 white mw6 animated fadeIn delay-2s">
+        <p class="f3 di lh-title mb3 white mw6" data-aos="fade-in" data-aos-delay=2000>
           {{.subtitle}}
         </p>
       </div>
