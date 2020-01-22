@@ -20,5 +20,3 @@ list:
     location: Salem, OR
     link: "#"
 ---
-
-
