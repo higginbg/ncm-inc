@@ -2,7 +2,8 @@
 title: Testimonials
 type: testimonials
 image: /img/testimonials-cover.jpg
-testimonials:
+text: "Here's what some of our clients have to say:"
+list:
   - author: Elisabeth Kaurismäki
     company: Great Hotel Co.
     quote: >-

@@ -27,3 +27,9 @@
 .hidden {   visibility: hidden; }
 .bs-none {  box-shadow: inset none; }
 .no-select { user-select: none; }
+
+.bq {
+  background-color: var(--off-white);
+  border: 1px solid var(--grey-1);
+  transition: var(--hover-transition);
+}

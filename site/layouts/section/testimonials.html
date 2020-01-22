@@ -2,10 +2,18 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
 
-<div class="flex flex-row flex-wrap justify-center w-100 bg-white pa3">
-  {{ range .Params.testimonials }}
-    {{ partial "testimonial" . }}
-  {{ end }}
+<div class="w-100 bg-white">
+
+  <div class="w-100 center mw8 pa3">
+
+    <h2 class="f3 ma3 mb4">{{ .Params.text }}</h2>
+
+    <div class="flex flex-row flex-wrap justify-center">
+      {{ range .Params.list }}
+        {{ partial "blockquote" . }}
+      {{ end }}
+    </div>
+  </div>
 </div>
 
 {{ end }}

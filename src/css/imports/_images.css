@@ -8,4 +8,4 @@ img:not(.w-100) {
 }
 
 .object-cover {object-fit: cover;}
-.object-fill {object-fit: fill;}
+.object-fill {object-fit: scale-down;}

@@ -1,19 +1,22 @@
 <div class="pv4">
   <div class="ph3 mw7 center">
-    <h2 class="f2 lh-title mb2">{{.intro.heading}}</h2>
-    <p class="mb4 mw6">{{.intro.text}}</p>
-
-    <div class="flex-ns mhn2-ns mb3">
-      {{ range .projects }}
-      <div class="ph2-ns w-50-ns">
-        <img src="{{.image}}" alt="" class="w-100 br1 h5 center object-cover db mb3">
-        <p>{{.text}}</p>
-      </div>
+    <h2 class="f2 lh-title mb2">{{.projects.heading}}</h2>
+    <p class="mb3 mw6">{{.projects.text}}</p>
+    
+    <div class="flex-ns mhn2-l mb3 db">
+      {{ range .projects.list }}
+      <a href="{{.link}}" class="w-50-ns h5 ma1-ns mb2 link db no-select">
+        <div class="overflow-hidden w-100 h-100 br1 relative" style="background-image: url('{{.image}}'); background-size: cover; background-position: center bottom;">
+          <div class="w-100 bg-grey-3 white o-90 pv1 ph2 absolute bottom-0">
+            <div class="f5">{{.text}}</div>
+            <div class="f6">{{.location}}</div>
+          </div>
+        </div>
+      </a>
       {{ end }}
     </div>
-
-    <div class="tc">
-      <a href="/projects" class="btn">See our projects <i class="fas fa-angle-right"></i></a>
-    </div>
   </div>
+
+  {{ partial "button-redirect" (dict "link" "/projects" "text" "See our projects" "icon" "fas fa-angle-right")}}
+
 </div>

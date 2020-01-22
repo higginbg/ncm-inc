@@ -2,6 +2,7 @@
   text-decoration: none;
   transition: var(--hover-transition);
   color: var(--primary);
+  cursor: pointer;
 }
 
 footer .link {

@@ -55,7 +55,7 @@ export default class TestimonialsPreview extends React.Component {
       </div>
 
       <div className="pb4">
-        {(entry.getIn(['data', 'testimonials']) || []).map((testimonial, index) => <div className="center mb3 ph3" key={index}>
+        {(entry.getIn(['data', 'testimonials', "list"]) || []).map((testimonial, index) => <div className="center mb3 ph3" key={index}>
         	<blockquote className="bg-grey-1 primary pa3 mb3 br1 b mw6 center">
         		<p className="f4 mb0">“{testimonial.get('quote')}”</p>
         		<cite className="tr db grey-3">{testimonial.get('author')}</cite>

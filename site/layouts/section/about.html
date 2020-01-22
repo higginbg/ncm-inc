@@ -2,10 +2,14 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-center") }}
 
-<div class="mw7 center ph3 pt4">
-
-  {{ partial "portraits" (dict "imageUrl" .Params.image "name" .Params.name "title" .Params.title) }}
-
+<div class="bg-off-white center pv4 ph3">
+  
+  <div class="flex-m flex-row flex-wrap mw7 center mhn2-m mw7">
+    
+    {{ range .Params.list }}
+      <div class="w-33-m ph2">{{ partial "portrait" . }}</div>
+    {{ end }}
+  </div>
 </div>
 
 {{ end }}

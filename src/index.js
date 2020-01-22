@@ -74,6 +74,7 @@ drpdwnBtn.addEventListener('click', () => {
   }
 });
 
+/*
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
   const height = contactCont.clientHeight;
@@ -84,8 +85,8 @@ contactForm.addEventListener('submit', e => {
   contactCont.style.height = `${height}px`;
   contactCont.parentElement.classList.remove('measure-narrow');
   contactCont.classList.add('flex', 'items-center');
-  
 });
+*/
 
 // Highlight nav link when current page
 const url = window.location.href.split('/');
