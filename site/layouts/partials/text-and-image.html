@@ -1,29 +1,21 @@
-<div class="pv4">
-	<div class="ph3 mw7 center">
+<div class="ph3 mw7 center">
 
-		<h2 class="f2 lh-title mb3">{{.heading}}</h2>
+  <h2 class="f2 lh-title mb3">{{.heading}}</h2>
 
-		<div class="mhn2-l">
-			
-			<div>
-				<p>{{.text}}</p>
-			</div>
+  <div class="mhn2-l">
+    
+    <div>
+      <p>{{.text}}</p>
+    </div>
 
-			<div class="flex-ns mhn2-ns">
-				<div class="pa2-ns w-50-ns mb-0-ns mb3">
-				  <img src="img/about-cover.jpg" alt="" class="w-100 br1 h5 center object-cover db">
-				</div>
+    <div class="flex-ns mhn2-ns">
+      <div class="pa2-ns w-50-ns mb-0-ns mb3" data-aos="fade-in">
+        <img src="img/about-cover.jpg" alt="" class="w-100 br1 h5 center object-cover db">
+      </div>
 
-				<div class="pa2-ns w-50-ns mb3">
-					<img src="img/about-team.jpg" alt="" class="w-100 br1 h5 center object-cover db">
-				  </div>
-			  </div>
-
-			</div>
-
-		</div>
-
-    {{ partial "button-redirect" (dict "link" .buttonLink "text" .buttonText "icon" "fas fa-angle-right")}}
-
-	</div>
+      <div class="pa2-ns w-50-ns mb3" data-aos="fade-in">
+        <img src="img/about-team.jpg" alt="" class="w-100 br1 h5 center object-cover db">
+      </div>
+    </div>
+  </div>
 </div>

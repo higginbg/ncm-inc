@@ -1,14 +1,12 @@
-<div class="bg-white pa3">
-  <div class="mw7 center">
-    <h2 class="f2 lh-title mb2 mw7">{{ .Params.testimonials.heading }}</h2>
-  </div>
+<div class="ph3 mw7 center">
+
+  <h2 class="f2 lh-title mb2 mw7">{{ .Params.testimonials.heading }}</h2>
 
   <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+    
     {{ range .Params.testimonials.list }}
       {{ partial "blockquote" . }}
     {{ end }}
+
   </div>
-
-  {{ partial "button-redirect" (dict "link" "/testimonials" "text" "More testimonials" "icon" "fas fa-angle-right")}}
-
 </div>
