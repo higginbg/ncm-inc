@@ -27,9 +27,10 @@
   transition: var(--size-transition);
 }
 
-.visible {  visibility: visible; }
-.hidden {   visibility: hidden; }
+.visible {   visibility: visible; }
+.hidden {    visibility: hidden; }
 .no-select { user-select: none; }
+.no-resize { resize: none; }
 
 .banner {
   transition: var(--hover-transition);

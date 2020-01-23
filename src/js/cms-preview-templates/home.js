@@ -1,3 +1,4 @@
+  
 import React from "react";
 import format from "date-fns/format";
 
@@ -36,7 +37,7 @@ export default class TestimonialsPreview extends React.Component {
             </div>
 
             <div className="tc">
-              <a href="#" className="btn raise">See our projects</a>
+              <a href="#" className="btn">See our projects</a>
             </div>
           </div>
         </div>
@@ -48,18 +49,20 @@ export default class TestimonialsPreview extends React.Component {
               <div className="w-40-l ph2-l">
                 <h2 className="f2 b lh-title mb2">{entry.getIn(["data", "testimonials", "heading"])}</h2>
 
-                <p>{entry.getIn(["data", "testimonials", "text"])}</p>
+                <p>{entry.getIn(["data", "values", "text"])}</p>
+              </div>
+
+              <div className="w-60-l ph2-l">
+                <img src="/img/home-1.jpg" alt="" className="mb3"/>
               </div>
             </div>
 
             <div className="tc">
-              <a href="{{.buttonLink}}" className="btn raise">Read more</a>
+              <a href="{{.buttonLink}}" className="btn">Read more</a>
             </div>
 
           </div>
         </div>
-
-
     </div>
   }
 }

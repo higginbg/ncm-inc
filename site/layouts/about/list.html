@@ -3,13 +3,17 @@
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-center") }}
 
 <div class="bg-off-white center pv4 ph3">
-  
+
   <div class="flex-m flex-row flex-wrap mw7 center mhn2-m mw7">
-    
-    {{ range .Params.list }}
-      <div class="w-33-m ph2">{{ partial "portrait" . }}</div>
-    {{ end }}
+
+  {{ range .Data.Pages }}
+    <div class="w-33-m ph2">
+      <a href="{{.RelPermalink}}" class="tile link db" data-aos="fade-in">
+        {{ partial "portrait" .Params }}
+      </a>
+    </div>
+  {{ end }}
+
   </div>
 </div>
-
 {{ end }}

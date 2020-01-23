@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph3 pv4">
+    <div class="flex flex-row flex-wrap">
+
+      <div class="w-50-ns">
+        <h1 class="f2 lh-title mb3">{{.Params.name}}</h1>
+        <div class="cms">    
+          {{ .Content }}
+        </div>
+      </div>
+      
+      <div class="w-50-ns w-100 pl3-ns">
+        <img src="{{ .Params.image }}" alt="{{ .Params.name }}" class="w-100 h5 br1 object-cover"/>
+      </div>      
+
+    </div>
+  </div>
+
+{{ end }}
