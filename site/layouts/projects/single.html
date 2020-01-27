@@ -11,6 +11,9 @@
     <div class="cms">    
       {{ .Content }}
     </div>
+
+    {{ partial "button-back" (dict "link" "/projects" "text" "Return to projects")}}
+  
   </div>
 
 {{ end }}

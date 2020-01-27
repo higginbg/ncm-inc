@@ -11,7 +11,7 @@
 <!-- About -->
 <div class="bg-white pv4">
   {{ partial "text-and-image" .Params.about }}
-  {{ partial "button-redirect" (dict "link" "/about" "text" "Meet our team")}}
+  {{ partial "button-forward" (dict "link" "/about" "text" "Meet our team")}}
 </div>
 
 <!-- Projects -->
@@ -23,7 +23,7 @@
   
     <p class="mb3">{{.Params.projects.text}}</p>
   
-    <div class="flex-m flex-row flex-wrap mv3 center mhn2-m mw7">
+    <div class="flex-m flex-row flex-wrap center mhn2-m mw7">
   
       {{ range where ( where .Site.Pages "Section" "=" "projects") ".Params.featured" "=" true }}
         <div class="w-50-m ph2-ns">  
@@ -36,14 +36,14 @@
     </div>
   </div>
 
-  {{ partial "button-redirect" (dict "link" "/projects" "text" "See our projects")}}
+  {{ partial "button-forward" (dict "link" "/projects" "text" "See our projects") }}
 
 </div>
 
 <!-- Testimonials -->
 <div class="bg-white pv4">
   {{ partial "testimonials" .Params.testimonials }}
-  {{ partial "button-redirect" (dict "link" "/testimonials" "text" "More testimonials")}}
+  {{ partial "button-forward" (dict "link" "/testimonials" "text" "More testimonials")}}
 </div>
 
 {{ end }}

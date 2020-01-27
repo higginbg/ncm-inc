@@ -22,8 +22,15 @@
     opacity: 0.9;
 
     i {
-      margin-left: var(--spacing-small);    
       opacity: 1;
     }
   }
+}
+
+.btn-back:hover i {
+  margin-right: var(--spacing-small);    
+}
+
+.btn-forward:hover i {
+  margin-left: var(--spacing-small);    
 }
