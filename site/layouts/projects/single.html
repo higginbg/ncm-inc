@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+  <div class="mw8 center">
+    <img src="{{ .Params.image }}" alt="{{ .Params.name }}" class="w-100 object-cover"/>
+  </div>
+
+  <div class="mw6 center ph3 pv4">
+
+    <h1 class="f2 lh-title mb3">{{ .Title }}</h1>
+
+    <div class="cms">    
+      {{ .Content }}
+    </div>
+  </div>
+
+{{ end }}

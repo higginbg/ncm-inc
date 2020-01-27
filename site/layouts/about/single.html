@@ -4,14 +4,15 @@
     <div class="flex flex-row flex-wrap">
 
       <div class="w-50-ns">
-        <h1 class="f2 lh-title mb3">{{.Params.name}}</h1>
+        <h1 class="f2 lh-title mb2">{{ .Title }}</h1>
+        <h2 class="f4 lh-title mb3">{{ .Params.subtitle }}</h2>
         <div class="cms">    
           {{ .Content }}
         </div>
       </div>
       
       <div class="w-50-ns w-100 pl3-ns">
-        <img src="{{ .Params.image }}" alt="{{ .Params.name }}" class="w-100 h5 br1 object-cover"/>
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 h5 br1 object-cover"/>
       </div>      
 
     </div>

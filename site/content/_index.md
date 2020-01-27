@@ -13,13 +13,11 @@ projects:
   text: "Since 1996, NCM Inc. has completed over 100 hotel renovations across the country. We have state licensing in Florida, California, Washington, South Carolina, Oregon, Arizona, and Colorado. Though we are always expanding, our fair treatment of clients keeps them coming back year after year."
   list:
     - image: img/home-1.jpg
-      text: La Quinta by Wyndham
-      location: Salem, OR
-      link: "#"
+      title: La Quinta by Wyndham
+      subtitle: Salem, OR
     - image: /img/home-2.png
-      text: Courtyard North Harbor
-      location: Portland, OR
-      link: "#"
+      title: Courtyard North Harbor
+      subtitle: Portland, OR
 testimonials:
   heading: Testimonials
   list:

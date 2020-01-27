@@ -5,24 +5,44 @@
 
 <!-- Blurb -->
 <div class="bg-grey-1">
-  {{ partial "short-text" .Params.blurb}}
+  {{ partial "short-text" .Params.blurb }}
 </div>
 
 <!-- About -->
 <div class="bg-white pv4">
-  {{ partial "text-and-image" (dict "heading" .Params.about.heading "text" .Params.about.text) }}
+  {{ partial "text-and-image" .Params.about }}
   {{ partial "button-redirect" (dict "link" "/about" "text" "Meet our team")}}
 </div>
 
 <!-- Projects -->
-<div class="bg-grey-1 pv4">
-  {{ partial "2-up" .Params.projects }}
+<div class="bg-off-white center pv4 mw7">
+
+  <div class="ph3">
+
+    <h2 class="f2 lh-title mv3">{{.Params.projects.heading}}</h2>
+  
+    <p class="mb3">{{.Params.projects.text}}</p>
+  
+    <div class="flex-m flex-row flex-wrap mv3 center mhn2-m mw7">
+  
+      {{ range where ( where .Site.Pages "Section" "=" "projects") ".Params.featured" "=" true }}
+        <div class="w-50-m ph2-ns">  
+          <a href="{{.RelPermalink}}" class="tile link db" data-aos="fade-in">
+            {{ partial "media-tile" .Params }}
+          </a>
+        </div>
+      {{ end }}
+  
+    </div>
+  </div>
+
   {{ partial "button-redirect" (dict "link" "/projects" "text" "See our projects")}}
+
 </div>
 
 <!-- Testimonials -->
 <div class="bg-white pv4">
-  {{ partial "testimonials" . }}
+  {{ partial "testimonials" .Params.testimonials }}
   {{ partial "button-redirect" (dict "link" "/testimonials" "text" "More testimonials")}}
 </div>
 

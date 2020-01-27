@@ -1,7 +1,8 @@
 ---
-name: Fran Guerra
-position: Chief Financial Officer
-image: "/img/blank-profile-picture.png"
+title: Fran Guerra
+subtitle: Chief Financial Officer
+image: "/img/portraits/blank-profile-picture.png"
+order: 7
 ---
 
-Fran has been working in the hospitality industry for over 32 years. She brings a wealth of knowledge and experience to the table when working with us.
+Fran has been working in the hospitality industry for over 32 years. She brings a wealth of knowledge and experience.

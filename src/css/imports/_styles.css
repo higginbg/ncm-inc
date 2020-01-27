@@ -32,10 +32,10 @@
 .no-select { user-select: none; }
 .no-resize { resize: none; }
 
-.banner {
+.tile .banner {
   transition: var(--hover-transition);
 }
 
 .tile:hover .banner {
-  padding-bottom: var(--spacing-large);
+  padding-bottom: var(--spacing-medium);
 }

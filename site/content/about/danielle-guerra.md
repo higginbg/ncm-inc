@@ -1,7 +1,8 @@
 ---
-name: Danielle Guerra
-position: Controller
-image: "/img/blank-profile-picture.png"
+title: Danielle Guerra
+subtitle: Controller
+image: "/img/portraits/blank-profile-picture.png"
+order: 3
 ---
 
-Danielle is the Controller at NCM Inc. She has pervious experience with account management and finances. Danielle first started with the company in 2015 as the Head of Marketing and has learned and grown with the company to get to the position she is in today. When Danielle is not working she enjoys spending time with friends and reading.
+Danielle first started with the company in 2015 as the Head of Marketing and has learned and grown with the company to get to the position she is in today. She has previous experience with account management and finances. When Danielle is not working, she enjoys spending time with friends and reading.
