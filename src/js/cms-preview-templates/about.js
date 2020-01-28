@@ -6,15 +6,10 @@ import MediaTile from "./components/media-tile";
 export default class AboutPreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
-    
-    let image = getAsset(entry.getIn(["data", "image"]));
 
-    if (image && !image.fileObj) {
-      image = window.parent.location.protocol + "//" + window.parent.location.host + image;
-    }
-
-    const name = getAsset(entry.getIn(["data", "title"]));
-    const position = getAsset(entry.getIn(["data", "subtitle"]));
+    const name = entry.getIn(["data", "title"]);
+    const position = entry.getIn(["data", "subtitle"]);
+    const image = entry.getIn(["data", "image"]);
     
     return <div>
       <div className="bg-off-white pv4">
