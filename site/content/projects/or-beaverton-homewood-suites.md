@@ -1,7 +1,7 @@
 ---
 title: Homewood Suites by Hilton
 subtitle: Hilsboro/Beaverton, OR
-image: "/img/or-beaverton-homewood-suites-lobby.jfif"
+image: "/img/or-beaverton-homewood-suites-lobby.jpg"
 featured: false
 ---
 
