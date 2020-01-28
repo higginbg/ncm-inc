@@ -6,7 +6,7 @@ public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "about" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Team Member" # Used in the UI, ie.: "New Post"
+    label: "About" # Used in the UI, ie.: "New Post"
     folder: "site/content/about" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{title}}"
@@ -89,8 +89,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Blurb", name: blurb, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
-          - {label: Testimonials, name: testimonials, widget: object, fields: [
-              {label: list, name: list, widget: list, fields: [
-                {label: Quote, name: quote, widget: string},
-                {label: Name, name: author, widget: string},
-                {label: "Position and Company", name: company, widget: string}]}]}
+          - {label: list, name: list, widget: list, fields: [
+              {label: Quote, name: quote, widget: string},
+              {label: Name, name: author, widget: string},
+              {label: "Position and Company", name: company, widget: string}]}
