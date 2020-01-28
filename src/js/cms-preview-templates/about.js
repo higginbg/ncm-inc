@@ -9,7 +9,13 @@ export default class AboutPreview extends React.Component {
 
     const name = entry.getIn(["data", "title"]);
     const position = entry.getIn(["data", "subtitle"]);
-    const image = entry.getIn(["data", "image"]);
+    
+    let image = getAsset(entry.getIn(["data", "image"]));
+
+    // Bit of a nasty hack to make relative paths work as expected as a background image here
+    if (image && !image.fileObj) {
+      image = window.parent.location.protocol + "//" + window.parent.location.host + image;
+    }
     
     return <div>
       <div className="bg-off-white pv4">
