@@ -2,10 +2,8 @@ import React from 'react';
 
 const { useState } = React;
 
-export default AboutPreview => {
+export default AboutPreview = ({ entry, getAsset }) => {
   const [image, setImage] = useState('');
-
-  const { entry, getAsset } = this.props;
 
   const name = entry.getIn(['data', 'title']);
   const position = entry.getIn(['data', 'subtitle']);
