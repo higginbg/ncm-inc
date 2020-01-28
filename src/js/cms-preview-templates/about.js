@@ -1,17 +1,21 @@
 import React from "react";
 
+const { useState, useEffect } = React;
+
 export default class AboutPreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
 
+    const [image, setImage] = useState('')
+
     const name = entry.getIn(["data", "title"]);
     const position = entry.getIn(["data", "subtitle"]);
     const body = entry.getIn(["data", "body"]);
-    
-    const getImage = async () => {
-      const path = await getAsset(entry.getIn(["data", "image"]));
-      return path.toString();
-    };
+
+    useEffect(() => {
+      getAsset(entry.getIn(["data", "image"]))
+        .then(path => setImage(path.toString()));
+    }, []);
     
     return <div class="mw6 center ph3 pv4">
     <div class="flex flex-row flex-wrap">
@@ -23,7 +27,7 @@ export default class AboutPreview extends React.Component {
       </div>
 
       <div class="w-50-ns w-100 pl3-ns">
-        <img src={getImage()} class="w-100 h5 br1 object-cover"/>
+        <img src={image} class="w-100 h5 br1 object-cover"/>
       </div>
     </div>
   </div>;
