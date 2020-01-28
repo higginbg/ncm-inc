@@ -1,12 +1,12 @@
 import React from "react";
 
-const { useState, useEffect } = React;
-
-const [image, setImage] = useState('');
+const { useState } = React;
 
 export default class AboutPreview extends React.Component {
   render() {
     const {entry, getAsset} = this.props;
+
+    const [image, setImage] = useState('');
 
     const name = entry.getIn(["data", "title"]);
     const position = entry.getIn(["data", "subtitle"]);
