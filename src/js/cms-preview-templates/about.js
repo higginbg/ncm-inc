@@ -7,13 +7,11 @@ export default class AboutPreview extends React.Component {
     const name = entry.getIn(["data", "title"]);
     const position = entry.getIn(["data", "subtitle"]);
     const body = entry.getIn(["data", "body"]);
-    let image = '';
     
-    getAsset(entry.getIn(["data", "image"]))
-      .then(path => {
-        image = path.toString();
-        console.log(image);
-      });
+    const getImage = async () => {
+      const path = await getAsset(entry.getIn(["data", "image"]));
+      return path.toString();
+    };
     
     return <div class="mw6 center ph3 pv4">
     <div class="flex flex-row flex-wrap">
@@ -25,7 +23,7 @@ export default class AboutPreview extends React.Component {
       </div>
 
       <div class="w-50-ns w-100 pl3-ns">
-        <img src={image} class="w-100 h5 br1 object-cover"/>
+        <img src={getImage()} class="w-100 h5 br1 object-cover"/>
       </div>
     </div>
   </div>;
