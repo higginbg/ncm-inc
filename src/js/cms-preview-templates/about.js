@@ -10,9 +10,10 @@ export default class AboutPreview extends React.Component {
     let image = '';
     
     getAsset(entry.getIn(["data", "image"]))
-      .then(path => image = path.toString());
-
-    console.log(image);
+      .then(path => {
+        image = path.toString();
+        console.log(image);
+      });
     
     return <div class="mw6 center ph3 pv4">
     <div class="flex flex-row flex-wrap">
