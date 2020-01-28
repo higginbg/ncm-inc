@@ -1,7 +1,7 @@
 ---
 title: Danielle Guerra
 subtitle: Controller
-image: "/img/portraits/blank-profile-picture.png"
+image: "/img/blank-profile-picture.png"
 order: 3
 ---
 

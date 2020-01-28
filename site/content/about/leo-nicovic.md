@@ -1,7 +1,7 @@
 ---
 title: Leo Nicovic
 subtitle: Superintendent
-image: "/img/portraits/blank-profile-picture.png"
+image: "/img/blank-profile-picture.png"
 order: 6
 ---
 

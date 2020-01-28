@@ -1,7 +1,7 @@
 ---
 title: James Guerra
 subtitle: President
-image: "/img/portraits/james-guerra.jfif"
+image: "/img/james-guerra.jfif"
 order: 1
 ---
 

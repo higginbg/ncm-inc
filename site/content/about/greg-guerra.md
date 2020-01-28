@@ -1,7 +1,7 @@
 ---
 title: Greg Guerra
 subtitle: Vice President
-image: "/img/portraits/greg-guerra.jfif"
+image: "/img/greg-guerra.jfif"
 order: 2
 ---
 

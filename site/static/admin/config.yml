@@ -6,25 +6,31 @@ public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "about" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "About" # Used in the UI, ie.: "New Post"
+    label: "Team Member" # Used in the UI, ie.: "New Post"
     folder: "site/content/about" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{title}}"
     fields: # The fields each document in this collection have
       - {label: "Name", name: "title", widget: "string"}
-      - {label: "Position", name: "subtitle", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", required: true, default: "/img/portraits/blank-profile-picture.png"}
+      - {label: "Company Position", name: "subtitle", widget: "string"}
+      - {label: "Portrait", name: "image", widget: "image", required: true, default: "/img/blank-profile-picture.png"}
       - {label: "Order in List", name: "order", widget: number}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Project" # Used in the UI, ie.: "New Post"
-    folder: "site/content/projects" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+  - name: "projects"
+    label: "Project"
+    folder: "site/content/projects"
+    create: true
     slug: "{{subtitle}}-{{title}}"
-    fields: # The fields each document in this collection have
+    fields:
       - {label: "Project Name", name: "title", widget: "string"}
       - {label: "Location", name: "subtitle", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", required: false}
+      - label: "Images"
+        name: "image"
+        widget: "image"
+        required: true
+        media_library:
+          config:
+            multiple: true
       - {label: "Feature on Home Page?", name: "featured", widget: boolean}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
@@ -46,7 +52,11 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Projects", name: projects, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}, {label: Company and Position, name: company, widget: string}]}
+          - {label: Testimonials, name: testimonials, widget: object, fields: [
+              {label: list, name: list, widget: list, fields: [
+                {label: Quote, name: quote, widget: string},
+                {label: Name, name: author, widget: string},
+                {label: "Position and Company", name: company, widget: string}]}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
@@ -75,5 +85,12 @@ collections: # A list of collections the CMS should be able to edit
         name: "testimonials"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}, {label: Company and Position, name: company, widget: string}]}
+          - {label: "Cover Image", name: image, widget: image}
+          - {label: "Blurb", name: blurb, widget: object, fields: [
+              {label: "Heading", name: "heading", widget: string},
+              {label: "Text", name: "text", widget: "text"}]}
+          - {label: Testimonials, name: testimonials, widget: object, fields: [
+              {label: list, name: list, widget: list, fields: [
+                {label: Quote, name: quote, widget: string},
+                {label: Name, name: author, widget: string},
+                {label: "Position and Company", name: company, widget: string}]}]}
