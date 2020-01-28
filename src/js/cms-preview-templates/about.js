@@ -9,8 +9,8 @@ export default class AboutPreview extends React.Component {
     const body = entry.getIn(["data", "body"]);
     
     const getImage = async () => {
-      getAsset(entry.getIn(["data", "image"]))
-        .then(path => { return path.toString(); });
+      const path = await getAsset(entry.getIn(["data", "image"]));
+      return path.toString();
     };
     
     return <div class="mw6 center ph3 pv4">
