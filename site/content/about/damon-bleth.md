@@ -1,7 +1,7 @@
 ---
 title: Damon Bleth
-subtitle: Partner/ Project Manager
-image: "/img/portraits/blank-profile-picture.png"
+subtitle: Partner/Project Manager
+image: /img/portraits/blank-profile-picture.png
 order: 4
 ---
 
