@@ -2,7 +2,7 @@ import React from 'react';
 
 const { useState } = React;
 
-export default AboutPreview = ({ entry, getAsset }) => {
+const AboutPreview = ({ entry, getAsset }) => {
   const [image, setImage] = useState('');
 
   const name = entry.getIn(['data', 'title']);
@@ -29,3 +29,5 @@ export default AboutPreview = ({ entry, getAsset }) => {
     </div>
   );
 };
+
+export default AboutPreview;
