@@ -7,9 +7,10 @@ export default class AboutPreview extends React.Component {
     const name = entry.getIn(["data", "title"]);
     const position = entry.getIn(["data", "subtitle"]);
     const body = entry.getIn(["data", "body"]);
+    let image = '';
     
-    const image = getAsset(entry.getIn(["data", "image"]))
-      .then(path => path.toString());
+    getAsset(entry.getIn(["data", "image"]))
+      .then(path => image = path.toString());
 
     console.log(image);
     
