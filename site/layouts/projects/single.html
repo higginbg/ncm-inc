@@ -1,28 +1,37 @@
 {{ define "main" }}
 
-  <div class="bg-off-white pv4">
-
-    <div class="mw8 center">
-      <img src="{{ .Params.image }}" alt="{{ .Params.name }}" class="w-100 object-cover"/>
-    </div>
-
-  </div>
-
-
-  <div class="bg-white">
+  <div class="bg-off-white ph3 pv4">
   
-    <div class="mw6 center ph3 pv4">
+    <div class="mw7 center">
   
       <h1 class="f2 lh-title mb3">{{ .Title }}</h1>
   
       <div class="cms">    
         {{ .Content }}
       </div>
-  
-      {{ partial "button-back" (dict "link" "/projects" "text" "Return to projects")}}
     
     </div>
   </div>
 
+  <div class="bg-white ph3 pv4">
+
+    <div class="mw7 center">
+
+      <h2 class="f2 lh-title mb3">Gallery</h2>
+  
+      <div class="flex flex-row flex-wrap">
+  
+        {{ range .Params.gallery }}
+          <div class="w-50-ns h5 pa2 mb3">
+            {{ partial "media-tile" (dict "title" .text "image" .image) }}
+          </div>
+        {{ end }}
+  
+      </div>
+    </div>
+
+    {{ partial "button-back" (dict "link" "/projects" "text" "Return to projects")}}
+
+  </div>
 
 {{ end }}

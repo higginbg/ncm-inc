@@ -75,10 +75,10 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - label: Heading
                 name: heading
-                widget: string
+                widget: markdown
               - label: Text
                 name: text
-                widget: text
+                widget: markdown
       - file: "site/content/join/_index.md"
         label: "Join Page"
         name: "join"
