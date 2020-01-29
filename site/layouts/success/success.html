@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+<div class="ph3 pv5 tc">
+  <h2>{{ .Params.heading }}</h2>
+  <h3>{{ .Params.text }}</h3>
+
+  {{ partial "button-forward" (dict "link" "/" "text" "Go to homepage")}}
+</div>
+
+{{ end }}

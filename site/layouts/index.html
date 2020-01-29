@@ -4,9 +4,7 @@
 {{ partial "jumbotron-home" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-bottom") }}
 
 <!-- Blurb -->
-<div class="bg-grey-1">
-  {{ partial "short-text" .Params.blurb }}
-</div>
+{{ partial "short-text" .Params.blurb }}
 
 <!-- About -->
 <div class="bg-white pv4">
@@ -25,9 +23,9 @@
   
     <div class="flex-m flex-row flex-wrap center mhn2-m mw7">
   
-      {{ range where ( where .Site.Pages "Section" "=" "projects") ".Params.featured" "=" true }}
+      {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
         <div class="w-50-m ph2-ns">  
-          <a href="{{.RelPermalink}}" class="tile link db" data-aos="fade-in">
+          <a href="{{.RelPermalink}}" class="link db" data-aos="fade-in">
             {{ partial "media-tile" .Params }}
           </a>
         </div>
@@ -36,7 +34,7 @@
     </div>
   </div>
 
-  {{ partial "button-forward" (dict "link" "/projects" "text" "See our projects") }}
+  {{ partial "button-forward" (dict "link" "/projects" "text" "More projects") }}
 
 </div>
 

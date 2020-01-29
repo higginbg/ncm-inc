@@ -13,7 +13,11 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Company Position", name: "subtitle", widget: "string"}
-      - {label: "Portrait", name: "image", widget: "image", required: true, default: "/img/blank-profile-picture.png"}
+      - label: "Portrait"
+        name: "image"
+        widget: "image"
+        required: true
+        default: "/img/blank-profile-picture.png"
       - {label: "Order in List", name: "order", widget: number}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects"
@@ -24,14 +28,15 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Project Name", name: "title", widget: "string"}
       - {label: "Location", name: "subtitle", widget: "string"}
-      - label: "Images"
+      - {label: "Month Completed", name: date, widget: datetime, dateFormat: "MM-YYYY", timeFormat: false}
+      - label: "Cover Image"
         name: "image"
         widget: "image"
         required: true
-        media_library:
-          config:
-            multiple: true
-      - {label: "Feature on Home Page?", name: "featured", widget: boolean}
+      - {label: Gallery, name: gallery, widget: list, fields: [
+          {label: Image, name: image, widget: image},
+          {label: Text, name: text, widget: string}]}
+      - {label: "Featured", name: "featured", widget: boolean}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
@@ -56,7 +61,8 @@ collections: # A list of collections the CMS should be able to edit
               {label: list, name: list, widget: list, fields: [
                 {label: Quote, name: quote, widget: string},
                 {label: Name, name: author, widget: string},
-                {label: "Position and Company", name: company, widget: string}]}]}
+                {label: "Position in Company", name: position, widget: string},
+                {label: Company, name: company, widget: string}]}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
@@ -92,4 +98,5 @@ collections: # A list of collections the CMS should be able to edit
           - {label: list, name: list, widget: list, fields: [
               {label: Quote, name: quote, widget: string},
               {label: Name, name: author, widget: string},
-              {label: "Position and Company", name: company, widget: string}]}
+              {label: "Position in Company", name: position, widget: string},
+              {label: Company, name: company, widget: string}]}

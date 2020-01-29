@@ -4,7 +4,7 @@
   padding: 14px 16px 14px;
   font-size: var(--font-size-m);
   line-height: 1.25;
-  border: 1px solid var(--grey-3);
+  border: 2px solid var(--white);
   background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
   text-decoration: none;
   color: var(--off-white);
@@ -23,6 +23,7 @@
 
     i {
       opacity: 1;
+      margin-left: var(--spacing-small); 
     }
   }
 }

@@ -1,27 +1,25 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/about-cover.jpg" "title" "About Our Team" "position" "bg-center") }}
+  {{ partial "jumbotron" (dict "imageUrl" "/img/about-cover.jpg" "title" "About Our Team" "position" "bg-center") }}
 
-<div class="bg-grey-1">
   {{ partial "short-text" (dict "heading" "Our Mission Statement" "text" "We strive to be the contractor of choice to provide top quality and professional work in a timely manner to the hospitality industry while still being fair to both the client and the subcontractor.") }}
-</div>
 
-<div class="bg-white">
+  <div class="bg-white">
 
-  <div class="mw7 center pv4 ph3">
+    <div class="mw7 center pv4 ph3">
 
-    <h1 class="f2 mb3">Our Team</h1>
-  
-    <div class="flex-m flex-row flex-wrap center mhn1-m">
-  
-    {{ range (.Data.Pages.ByParam "order") }}
-      <div class="w-33-m ph2">
-        {{ .Render "li" }}
+      <h1 class="f2 mb3">Our Team</h1>
+    
+      <div class="flex-m flex-row flex-wrap center mhn1-m">
+    
+        {{ range (.Data.Pages.ByParam "order") }}
+          <div class="w-33-m ph2">
+            {{ .Render "li" }}
+          </div>
+        {{ end }}
+    
       </div>
-    {{ end }}
-  
     </div>
   </div>
 
-</div>
 {{ end }}

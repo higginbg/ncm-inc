@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+heading: "Let's get in touch."
 logo: "/img/logo.svg"
 contact_entries:
   - heading: Phone

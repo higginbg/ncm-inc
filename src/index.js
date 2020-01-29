@@ -17,8 +17,6 @@ AOS.init({
 
 const nav         = document.getElementById('nav');
 const navDum      = document.getElementById('nav-dummy');
-const contactCont = document.getElementById('contact-container');
-const contactForm = document.getElementById('contact-form');
 const logo        = nav.querySelector('a');
 const drpdwnBtn   = nav.querySelector('button');
 const drpdwn      = nav.querySelector('ul')
@@ -74,20 +72,6 @@ drpdwnBtn.addEventListener('click', () => {
     drpdwn.classList.remove('slideOutRight', 'faster');
   }
 });
-
-/*
-contactForm.addEventListener('submit', e => {
-  e.preventDefault();
-  const height = contactCont.clientHeight;
-  contactCont.innerHTML = `
-    <h4 class="f3 tc animated fadeIn">Thank you for your message!</br>
-    We'll be in touch soon.</h4>
-  `;
-  contactCont.style.height = `${height}px`;
-  contactCont.parentElement.classList.remove('measure-narrow');
-  contactCont.classList.add('flex', 'items-center');
-});
-*/
 
 // Highlight nav link when current page
 const url = window.location.href.split('/');

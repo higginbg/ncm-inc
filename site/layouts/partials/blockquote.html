@@ -4,9 +4,16 @@
       <p class="f5 mb3" data-aos-duration="1000">“{{ .quote }}”</p>
       <cite class="tr db grey-4">
         <span class="db">{{ .author }}</span>
-        {{ if .company }}
-          <span class="db i">{{ .company }}</span>
-        {{ end }}
+
+          {{ if .position }}
+            <span class="f6 db">{{.position}}</span>
+          {{ end }}
+
+          {{ if .company }}
+            <span class="f6 db">{{ .company }}</span>
+          {{ end }}
+
+        </span>
       </cite>
     </blockquote>
   </div>
