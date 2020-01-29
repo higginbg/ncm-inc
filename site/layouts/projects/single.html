@@ -22,8 +22,8 @@
       <div class="flex flex-row flex-wrap">
   
         {{ range .Params.gallery }}
-          <div class="w-50-ns h5 pa2 mb3">
-            {{ partial "media-tile" (dict "title" .text "image" .image) }}
+          <div class="w-33-ns w-100 pa2">
+            <img src="{{.image}}" alt="{{.title}}" class="h4 object-cover" />
           </div>
         {{ end }}
   

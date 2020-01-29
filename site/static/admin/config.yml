@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Gallery, name: gallery, widget: list, fields: [
           {label: Image, name: image, widget: image},
           {label: Text, name: text, widget: string}]}
-      - {label: "Featured", name: "featured", widget: boolean}
+      - {label: ""Feature on Home Page"", name: "featured", widget: boolean}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
@@ -58,11 +58,7 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
           - {label: Testimonials, name: testimonials, widget: object, fields: [
-              {label: list, name: list, widget: list, fields: [
-                {label: Quote, name: quote, widget: string},
-                {label: Name, name: author, widget: string},
-                {label: "Position in Company", name: position, widget: string},
-                {label: Company, name: company, widget: string}]}]}
+              {label: Heading, name: heading, widget: text}}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
@@ -99,4 +95,5 @@ collections: # A list of collections the CMS should be able to edit
               {label: Quote, name: quote, widget: string},
               {label: Name, name: author, widget: string},
               {label: "Position in Company", name: position, widget: string},
-              {label: Company, name: company, widget: string}]}
+              {label: Company, name: company, widget: string},
+              {label: "Feature on Home Page", name: featured, widget: boolean}]}

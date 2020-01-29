@@ -40,7 +40,22 @@
 
 <!-- Testimonials -->
 <div class="bg-white pv4">
-  {{ partial "testimonials" .Params.testimonials }}
+
+  <div class="ph3 mw7 center">
+
+    <h2 class="f2 lh-title mb3 mw7">{{ .Params.testimonials.heading }}</h2>
+  
+    <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+
+      {{ range where .Pages "Section" "testimonials" }}
+        {{ range .Params.list }}
+          {{ if eq .featured true }}{{ partial "blockquote" . }}{{ end }}
+        {{ end }}
+      {{ end }}
+  
+    </div>
+  </div>
+  
   {{ partial "button-forward" (dict "link" "/testimonials" "text" "More testimonials")}}
 </div>
 
