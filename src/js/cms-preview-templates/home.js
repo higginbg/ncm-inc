@@ -53,7 +53,7 @@ export default class TestimonialsPreview extends React.Component {
               </div>
 
               <div className="w-60-l ph2-l">
-                <img src="/img/home-1.jpg" alt="" className="mb3"/>
+                <img src="/img/salem-or-la-quinta-inn-pool.jpg" alt="" className="mb3"/>
               </div>
             </div>
 

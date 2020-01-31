@@ -1,7 +1,7 @@
 ---
 title: Fran Guerra
 subtitle: Chief Financial Officer
-image: "/img/blank-profile-picture.png"
+image: "/img/portrait-blank.png"
 order: 7
 ---
 

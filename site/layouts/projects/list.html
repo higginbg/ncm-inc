@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  {{ partial "jumbotron" (dict "imageUrl" "/img/projects-cover.jpg" "title" "Our Projects" "position" "bg-center") }}
+  {{ partial "jumbotron" (dict "imageUrl" "/img/cover-projects.jpg" "title" "Our Projects" "position" "bg-center") }}
 
   {{ partial "short-text" (dict "heading" "Over 100 Renovations" "text" "Since 1996 our team has completed over 100 renovations in the hospitality industry. Take a look below at some of our most significant work, or browse the archive to see all our projects.") }}
 
@@ -10,7 +10,7 @@
 
       <h1 class="f2 mb3">Project List</h1>
     
-      <div class="flex-m flex-row flex-wrap">
+      <div class="flex-m flex-row flex-wrap justify-center">
     
         {{ range .Data.Pages }}
           <div class="w-50-m ph2">

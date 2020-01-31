@@ -56,6 +56,7 @@ const shrinkNav = () => {
 // Only slide nav bar if on home page
 const isRoot = location.pathname === '/';
 if (isRoot) {
+  drpdwn['data-aos-disable'] = true;
   drpdwn.classList.add('slideInDown');
 }
 

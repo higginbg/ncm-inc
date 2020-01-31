@@ -1,7 +1,7 @@
 ---
 title: Jim Curry
 subtitle: Purchasing and Logistics Manager
-image: "/img/blank-profile-picture.png"
+image: "/img/portrait-blank.png"
 order: 5
 ---
 

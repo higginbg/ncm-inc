@@ -4,7 +4,8 @@
   
     <div class="mw7 center">
   
-      <h1 class="f2 lh-title mb3">{{ .Title }}</h1>
+      <h1 class="f2 lh-title mb2">{{ .Title }}</h1>
+      <h1 class="f4 lh-title mb3">{{ .Params.subtitle }}</h1>
   
       <div class="cms">    
         {{ .Content }}
@@ -23,7 +24,7 @@
   
         {{ range .Params.gallery }}
           <div class="w-33-ns w-100 pa2">
-            <img src="{{.image}}" alt="{{.title}}" class="h4-ns h5 w-100 br1 object-cover" />
+            <img src="{{.image}}" alt="{{.text}}" class="h4-ns h5 w-100 br1 object-cover" />
           </div>
         {{ end }}
   

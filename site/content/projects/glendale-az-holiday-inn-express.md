@@ -1,14 +1,14 @@
 ---
 title: Holiday Inn Express
 subtitle: Glendale, AZ
-image: "/img/az-glendale-holiday-inn-express-room.png"
+image: "/img/glendale-az-holiday-inn-guest-room.jpg"
 date: "2014-02-01T00:00:00.000Z"
 featured: true
 gallery:
-  - image: "/img/az-glendale-holiday-inn-express-room.png"
-    text: Lobby
-  - image: "/img/az-glendale-holiday-inn-express-room.png"
-    text: Lobby 2
-  - image: "/img/az-glendale-holiday-inn-express-room.png"
-    text: Lobby 3
+  - image: "/img/glendale-az-holiday-inn-front-desk.jpg"
+    text: Front Desk
+  - image: "/img/glendale-az-holiday-inn-breakfast-room.jpg"
+    text: Breakfast Room
+  - image: "/img/glendale-az-holiday-inn-guest-room.jpg"
+    text: Guest Room
 ---

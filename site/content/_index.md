@@ -1,7 +1,7 @@
 ---
 title: "NCM Inc."
 subtitle: Commercial Renovators
-image: /img/home-cover.png
+image: /img/cover-home.png
 blurb:
     heading: 30 Years in Hospitality
     text: "NCM Inc. is a top choice for renovations in the hospitality industry. Why? 30 years of experience speaks for itself. From pools to patios and barrooms to bathrooms, we've done it all."

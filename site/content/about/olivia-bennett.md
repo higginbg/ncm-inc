@@ -1,7 +1,7 @@
 ---
 title: Olivia Bennett
 subtitle: Administrative Assistant
-image: /img/blank-profile-picture.png
+image: /img/portrait-blank.png
 order: 9
 ---
 

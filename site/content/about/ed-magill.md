@@ -1,7 +1,7 @@
 ---
 title: Ed Magill
 subtitle: Project Coordinator
-image: img/blank-profile-picture.png
+image: img/portrait-blank.png
 order: 8
 ---
 
