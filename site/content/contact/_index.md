@@ -10,7 +10,7 @@ contact_entries:
   - heading: Mailing Address
     text: "1740 Shaff Rd Box 315\nStayton, OR 97383\nUSA"
   - heading: Working hours
-    text: <table><tr><td class="b pr1 tr">Monday</td><td class="b pr1">–</td><td class="b pr3">Friday</td><td>8am – 5pm PST</td></tr><tr><td class="b pr1 tr">Saturday</td><td class="b pr1">–</td><td class="b pr3">Sunday</td><td>Closed</td></tr></table>
+    text: <table><tr><td class="b pr1">Monday</td><td class="b pr1">–</td><td class="b pr3">Friday</td><td>8am – 5pm PST</td></tr><tr><td class="b pr1">Saturday</td><td class="b pr1">–</td><td class="b pr3">Sunday</td><td>Closed</td></tr></table>
 ---
 
 Like our work? We’d love to get in touch with you to schedule a consultation!

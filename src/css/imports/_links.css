@@ -2,6 +2,7 @@
   text-decoration: none;
   transition: var(--hover-transition);
   color: var(--primary);
+  padding: var(--spacing-extra-small);
   cursor: pointer;
 }
 
@@ -18,6 +19,7 @@ footer .link {
   text-decoration: underline;
 }
 .link:active  {
+  border-radius: var(--border-radius);
   transition: color .15s ease-in;
 }
 .link:focus   {

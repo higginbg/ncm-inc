@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Gallery, name: gallery, widget: list, fields: [
           {label: Image, name: image, widget: image},
           {label: Text, name: text, widget: string}]}
-      - {label: ""Feature on Home Page"", name: "featured", widget: boolean}
+      - {label: "Feature on Home Page", name: "featured", widget: boolean}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"

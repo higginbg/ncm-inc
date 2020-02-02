@@ -1,3 +1,4 @@
+.w0 {    width: 0; }
 .w1 {    width: var(--spacing-medium); }
 .w2 {    width: 2rem; }
 .w3 {    width: 4rem; }

@@ -19,6 +19,10 @@
   }
 }
 
+.nav-small {
+  width: 300px;
+}
+
 .box-shadow {
   box-shadow: var(--box-shadow);
 }

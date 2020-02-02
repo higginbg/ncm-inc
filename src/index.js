@@ -19,8 +19,11 @@ const nav         = document.getElementById('nav');
 const navDum      = document.getElementById('nav-dummy');
 const logo        = nav.querySelector('a');
 const drpdwnBtn   = nav.querySelector('button');
-const drpdwn      = nav.querySelector('ul')
+const drpdwn      = nav.querySelector('ul');
+const callBtn     = nav.querySelector('#call');
 const links       = drpdwn.querySelectorAll('li a');
+
+const isRoot = location.pathname === '/';
 
 
 // Grow or shrink Nav if page is scrolled up/down
@@ -35,8 +38,8 @@ const shrinkNav = () => {
 
   const shrinkEl = el => {
     shrink
-      ? el.classList.replace('pa3-ns', 'pa2-ns')
-      : el.classList.replace('pa2-ns', 'pa3-ns');
+      ? el.classList.replace('pa3-m', 'pa2-m')
+      : el.classList.replace('pa2-m', 'pa3-m');
   };
 
   shrinkEl(logo);
@@ -48,30 +51,46 @@ const shrinkNav = () => {
   }
 
   // Decreases link fonts
-  shrink ? nav.classList.replace('f5-ns', 'f6-ns') : nav.classList.replace('f6-ns', 'f5-ns');
+  shrink ? nav.classList.replace('f5-m', 'f6-m') : nav.classList.replace('f6-ns', 'f5-ns');
   navDum.style.fontheight = nav.clientHeight;
   lastScroll = scrollPos();
 };
 
 // Only slide nav bar if on home page
-const isRoot = location.pathname === '/';
 if (isRoot) {
-  drpdwn['data-aos-disable'] = true;
-  drpdwn.classList.add('slideInDown');
+  const anmtn = 'slideInDown';
+  drpdwn.classList.add(anmtn);
+  drpdwnBtn.classList.add(anmtn);
+  callBtn.classList.add(anmtn);
 }
 
-window.onscroll = shrinkNav;
+
+const menuOpenIcon = '<i class="fas fa-bars"></i>';
+const menuCloseIcon = '<i class="fas fa-times"></i>';
+const navSmall = 'nav-small';
+
+const closeMenu = () => {
+  drpdwn.classList.remove(navSmall);
+  drpdwnBtn.innerHTML = menuOpenIcon;
+};
+
 window.onload = AOS.refresh;
+window.onscroll = shrinkNav;
+window.onresize = closeMenu;
+
+window.addEventListener('click', e => {
+  if (drpdwn.classList.contains(navSmall) && !e.target.closest('nav')) {
+    closeMenu();
+  }
+});
+
+nav.addEventListener('click', e => {
+  e.stopPropagation();
+});
 
 drpdwnBtn.addEventListener('click', () => {
-  drpdwn.classList.remove('dn');
-  if (drpdwn.classList.contains('slideInRight')) {
-    drpdwn.classList.remove('slideInRight');
-    drpdwn.classList.add('slideOutRight', 'faster');
-  } else {
-    drpdwn.classList.add('slideInRight');
-    drpdwn.classList.remove('slideOutRight', 'faster');
-  }
+  drpdwn.classList.toggle(navSmall);
+  drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall) ? menuCloseIcon : menuOpenIcon;
 });
 
 // Highlight nav link when current page
@@ -80,7 +99,7 @@ const page = url[url.length - 2];
 for (const link of links) {
   const navLoc = link.href.split('/');
   const checkNav = navLoc[navLoc.length - 1];
-  if (page === checkNav) {
+  if (!checkNav && isRoot || page === checkNav) {
     link.classList.add('bg-grey-3');
   }
 }

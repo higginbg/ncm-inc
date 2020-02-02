@@ -1,25 +1,28 @@
 <nav id="nav" class="f5-m f5 w-100 db divider-grey bg-black o-90 fixed z-9999 no-select animated">
-	<div class="w-100 flex justify-between items-center-m items-start center relative">
-
-		<!-- Logo -->
-		<a href="/" class="lh-solid pv3 ph3 pa3-m db mr4 h-100 flex-none no-underline">{{ partial "logo" (dict "size" "f3") }}</a>
+	<div class="w-100 flex justify-between items-center relative">
 
 		<!-- Menu Button (for small screens) -->
-		<button class="dn-m white f4 link bg-none b0 pv3 ph3 pa3-m" data-aos="slide-down" data-aos-once="false"><i class="fas fa-bars"></i></button>
+		<button class="dn-m w3 mr2 f4 no-underline bg-none white pv3 ph3 pa3-m animated enlarge"><i class="fas fa-bars"></i></button>
+
+		<!-- Logo -->
+		<a href="/" class="f3 lh-solid pv3 ph3 pa3-m db mr4-m h-100 flex-none no-underline">{{ partial "logo" . }}</a>
 
 		<!-- Primary Nav -->
-		<ul class="w-100 bottom-0 flex-m flex-row-m justify-end-m relative-m bg-black bt bt-m-0 bw0-m bw1 b--off-white o-90-m dn absolute flex-column white z-999 animated">
+		<div class="overflow-y-auto bg-black relative-m absolute top-100 h-auto-m vh-100 pb0-m pb3 b0-m bt b--grey-3 z-999">
 
-			<li><a href="/about" class="pv3 ph3 pa3-m no-underline db">About</a></li>
+			<ul class="overflow-x-hidden overflow-y-visible bg-black w-100-m w0 h-90-ns h-auto flex flex-row-m flex-column justify-end-m white size-trans animated">
+				
+				<div class="dn-m db">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
+				{{ partial "nav-link" (dict "link" "/about" "text" "About") }}
+				{{ partial "nav-link" (dict "link" "/projects" "text" "Projects") }}
+				{{ partial "nav-link" (dict "link" "/testimonials" "text" "Testimonials") }}
+				{{ partial "nav-link" (dict "link" "/join" "text" "Join") }}
+				{{ partial "nav-link" (dict "link" "/contact" "text" "Contact") }}
+	
+			</ul>
+		</div>
 
-			<li><a href="/projects" class="pv3 ph3 pa3-m no-underline db">Projects</a></li>
-
-			<li><a href="/testimonials" class="pv3 ph3 pa3-m no-underline db">Testimonials</a></li>
-
-			<li><a href="/join" class="pv3 ph3 pa3-m no-underline db pre">Join</a></li>
-
-			<li><a href="/contact" class="pv3 ph3 pa3-m no-underline db">Contact</a></li>
-		</ul>
+		<a id="call" href="tel:+1971-336-2341" class="no-underline w3 tc ml2 white dn-m db pv3 ph3 pa3-m animated enlarge"><i class="fas fa-phone"></i></a>
 		
 	</div>
 
@@ -27,5 +30,5 @@
 
 
 <div id="nav-dummy" class="w-100 bg-black relative no-select animated">
-	<a href="/" class="pa3 db mr4 h-100 flex-none no-underline hidden">{{ partial "logo" (dict "size" "f3") }}</a>
+	<a href="/" class="f3 pa3 db mr4 h-100 flex-none no-underline hidden">{{ partial "logo" . }}</a>
 </div>

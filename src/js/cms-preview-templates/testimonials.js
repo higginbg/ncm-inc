@@ -1,21 +1,32 @@
-import React from "react";
-import format from "date-fns/format";
+import React from 'react';
 
-export default class TestimonialsPreview extends React.Component {
-  render() {
-    const {entry, widgetFor, getAsset} = this.props;
-    let image = getAsset(entry.getIn(["data", "image"]));
+const { useState } = React;
 
-    return <div className="mw6 center ph3 pv4">
-      <h1 className="f2 lh-title b mb3">{ entry.getIn(["data", "title"])}</h1>
-      <div className="flex justify-between grey-3">
-        
-      </div>
-      <div className="cms mw6">
-        <p>{ entry.getIn(["data", "description"]) }</p>
-        { image && <img src={ image } alt={ entry.getIn(["data", "title"])} /> }
-        { widgetFor("body") }
-      </div>
-    </div>;
-  }
-}
+const TestimonialsPreview = ({ entry, getAsset }) => {
+  const [image, setImage] = useState('');
+
+  const heading = entry.getIn(['data', 'blurb', 'heading']);
+  const text = entry.getIn(['data', 'blurb', 'text']);
+
+  getAsset(entry.getIn(['data', 'image'])).then(path =>
+    setImage(path.toString())
+  );
+
+  return (
+    <div class='mw6 center ph3 pv4'>
+      <img src={image} class='h5 object-cover' />
+      <h1 class='f2 lh-title mb2'>{heading}</h1>
+      <p class='mb3'>{text}</p>
+      {(entry.getIn(['data', 'testimonials', "list"]) || []).map((testimonial, i) => <div className="center mb3 ph3" key={i}>
+        	<blockquote className="bg-grey-1 grey-3 pa3 mb3 br1 mw6 center">
+        		<p className="f4 mb2">“{testimonial.get('quote')}”</p>
+        		<cite className="f5 tr db">{testimonial.get('author')}</cite>
+            <cite className="f6 tr db">{testimonial.get('position')}</cite>
+            <cite className="f6 tr db">{testimonial.get('company')}</cite>
+        	</blockquote>
+        </div>)}
+    </div>
+  );
+};
+
+export default TestimonialsPreview;
