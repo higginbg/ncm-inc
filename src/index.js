@@ -36,22 +36,24 @@ const shrinkNav = () => {
   const notTop = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
   const shrink = notTop && currScroll > lastScroll;
 
-  const shrinkEl = el => {
+  const shrinkEl = (el, l, s) => {
     shrink
-      ? el.classList.replace('pa3-m', 'pa2-m')
-      : el.classList.replace('pa2-m', 'pa3-m');
+      ? el.classList.replace(l, s)
+      : el.classList.replace(s, l);
   };
 
-  shrinkEl(logo);
-  shrinkEl(drpdwnBtn);
+  const pa2 = 'pa2-m', pa3 = 'pa3-m';
+
+  shrinkEl(logo, pa3, pa2);
+  shrinkEl(drpdwnBtn, pa3, pa2);
+  shrinkEl(nav, 'f5-m', 'f6-m');
 
   // Shrink links
   for (const link of links) {
-    shrinkEl(link);
+    shrinkEl(link, pa3, pa2);
   }
 
   // Decreases link fonts
-  shrink ? nav.classList.replace('f5-m', 'f6-m') : nav.classList.replace('f6-ns', 'f5-ns');
   navDum.style.fontheight = nav.clientHeight;
   lastScroll = scrollPos();
 };
@@ -59,6 +61,7 @@ const shrinkNav = () => {
 // Only slide nav bar if on home page
 if (isRoot) {
   const anmtn = 'slideInDown';
+  
   drpdwn.classList.add(anmtn);
   drpdwnBtn.classList.add(anmtn);
   callBtn.classList.add(anmtn);

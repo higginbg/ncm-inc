@@ -17,7 +17,7 @@ const AboutPreview = ({ entry, getAsset }) => {
     <div class='mw6 center ph3 pv4'>
       <h1 class='f2 lh-title mb2'>{name}</h1>
       <h2 class='f4 lh-title mb3'>{position}</h2>
-      <img src={image} class='h5 object-cover' />
+      <img class='h5 object-cover mb3' src={image} />
       <div class='cms'>{body}</div>
     </div>
   );

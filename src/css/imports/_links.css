@@ -1,8 +1,8 @@
-.link {
+.link, .md a {
   text-decoration: none;
   transition: var(--hover-transition);
   color: var(--primary);
-  padding: var(--spacing-extra-small);
+  padding: var(--spacing-extra-small) 1px;
   cursor: pointer;
 }
 
@@ -10,19 +10,19 @@ footer .link {
   color: var(--white);
 }
 
-.link:link,
-.link:visited {
+.link:link, .md a:link
+.link:visited, .md a:visited {
   transition: color .15s ease-in;
 }
-.link:hover   {
+.link:hover, .md a:hover   {
   transition: color .15s ease-in;
   text-decoration: underline;
 }
-.link:active  {
+.link:active, .md a:active  {
   border-radius: var(--border-radius);
   transition: color .15s ease-in;
 }
-.link:focus   {
+.link:focus, .md a:focus   {
   transition: color .15s ease-in;
   outline: 1px dotted currentColor;
 }

@@ -1,28 +1,30 @@
 import React from "react";
 
-const ContactEntry = ({heading, text}) =>
-  <div>
-    <h4 className="f4 b lh-title mb2 primary">{ heading }</h4>
+const ContactEntry = ({ heading, text }) =>
+  <div class="w-50-ns w-100">
+    <h4 className="f4 lh-title mb2">{ heading }</h4>
     <p>{ text }</p>
   </div>;
 
-const ContactEntries = ({data}) => data && data.length > 0
-    ? <div className="flex-ns mb3">
-      {data.map(({heading, text}) => <ContactEntry heading={heading} text={text} />)}
-    </div>
+const ContactEntries = ({ data }) => data && data.length > 0
+    ? <div class="bg-white pv4">
+        <div className="flex flex-row flex-wrap mw6 center">
+          {data.map(({heading, text}) => <ContactEntry heading={heading} text={text} />)}
+        </div>
+      </div>
     : "";
 
-export default class ContactPreview extends React.Component {
-  render() {
-    const {entry, getAsset, widgetFor} = this.props;
-    const entryContactEntries = entry.getIn(["data", "contact_entries"]);
-    const contactEntries = entryContactEntries ? entryContactEntries.toJS() : [];
-    return <div className="ph3 bg-off-white">
-      <img src={getAsset(entry.getIn(["data", "logo"]))} alt="" className="db w4 center pv4" />
-      <div className="center mw6 pv3">
-        { widgetFor("body") }
-        <ContactEntries data={contactEntries} />
-      </div>
-    </div>;
-  }
-}
+const ContactPreview = ({ entry, getAsset, widgetFor }) => {
+  const entryContactEntries = entry.getIn(["data", "contact_entries"]);
+  const contactEntries = entryContactEntries ? entryContactEntries.toJS() : [];
+
+  return <div className="pv4">
+    <div class="pv4 ph3 mw6 center">
+      <h1 class='f2 tc lh-title mb3'>{entry.getIn(["data", "heading"])}</h1>
+      { widgetFor("body") }
+    </div>
+    <ContactEntries data={contactEntries} />
+  </div>;
+};
+
+export default ContactPreview;

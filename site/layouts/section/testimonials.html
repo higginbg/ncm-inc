@@ -8,8 +8,10 @@
 
   <div class="center mw7 pa3">
 
+    <h2 class="f2 lh-title mb3">{{ .Params.main.heading }}</h2>
+
     <div class="flex flex-row flex-wrap justify-center">
-      {{ range .Params.list }}
+      {{ range .Params.main.list }}
         {{ partial "blockquote" . }}
       {{ end }}
     </div>

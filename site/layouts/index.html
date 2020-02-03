@@ -9,7 +9,7 @@
 <!-- About -->
 <div class="bg-white pv4">
   {{ partial "text-and-image" .Params.about }}
-  {{ partial "button-forward" (dict "link" "/about" "text" "Meet our team")}}
+  {{ partial "button-forward" (dict "link" "/about" "text" .Params.about.button)}}
 </div>
 
 <!-- Projects -->
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  {{ partial "button-forward" (dict "link" "/projects" "text" "More projects") }}
+  {{ partial "button-forward" (dict "link" "/projects" "text" .Params.projects.button) }}
 
 </div>
 
@@ -48,15 +48,15 @@
     <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 
       {{ range where .Pages "Section" "testimonials" }}
-        {{ range .Params.list }}
-          {{ if eq .featured true }}{{ partial "blockquote" . }}{{ end }}
+        {{ range first 3 .Params.main.list }}
+          {{ partial "blockquote" . }}
         {{ end }}
       {{ end }}
   
     </div>
   </div>
   
-  {{ partial "button-forward" (dict "link" "/testimonials" "text" "More testimonials")}}
+  {{ partial "button-forward" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
 </div>
 
 {{ end }}

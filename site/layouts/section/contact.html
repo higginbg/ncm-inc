@@ -20,7 +20,7 @@
       {{ range .Params.contact_entries }}
         <div class="w-50-ns">
           <h4 class="f4 lh-title mb2">{{ .heading }}</h4>
-          <p>{{ (replace .text "\n" "<br/>") | safeHTML }}</p>
+          <p class="md">{{ .text | markdownify }}</p>
         </div>
       {{ end }}
       

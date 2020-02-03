@@ -5,14 +5,14 @@
 		<button class="dn-m w3 mr2 f4 no-underline bg-none white pv3 ph3 pa3-m animated enlarge"><i class="fas fa-bars"></i></button>
 
 		<!-- Logo -->
-		<a href="/" class="f3 lh-solid pv3 ph3 pa3-m db mr4-m h-100 flex-none no-underline">{{ partial "logo" . }}</a>
+		<a href="/" class="f3 lh-solid ph3 pa3-m db mr4-m h-100 flex-none no-underline">{{ partial "logo" . }}</a>
 
 		<!-- Primary Nav -->
-		<div class="overflow-y-auto bg-black relative-m absolute top-100 h-auto-m vh-100 pb0-m pb3 b0-m bt b--grey-3 z-999">
+		<div class="overflow-y-auto bg-black relative-m absolute top-100 h-auto-m vh-100 pb0-m pb3 bt-0-m bt b--grey-3 z-999">
 
 			<ul class="overflow-x-hidden overflow-y-visible bg-black w-100-m w0 h-90-ns h-auto flex flex-row-m flex-column justify-end-m white size-trans animated">
 				
-				<div class="dn-m db">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
+				<div class="dn-m">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
 				{{ partial "nav-link" (dict "link" "/about" "text" "About") }}
 				{{ partial "nav-link" (dict "link" "/projects" "text" "Projects") }}
 				{{ partial "nav-link" (dict "link" "/testimonials" "text" "Testimonials") }}

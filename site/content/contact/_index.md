@@ -1,16 +1,21 @@
 ---
 title: "Contact"
 heading: "Let's get in touch."
-logo: "/img/logo.svg"
 contact_entries:
   - heading: Phone
-    text: <a href="tel:+1971-336-2341" class="link ml1" title="+1 (971) 336-2341">+1 (971) 336-2341</a>
+    text: "[+1 (971) 336-2341](tel:+1971-336-2341)"
   - heading: Email
-    text: <a href="mailto:danielle.guerra@ncmreno.com" class="link" target="_blank">danielle.guerra@ncmreno.com</a>
+    text: "[danielle.guerra@ncmreno.com](mailto:danielle.guerra@ncmreno.com)"
   - heading: Mailing Address
-    text: "1740 Shaff Rd Box 315\nStayton, OR 97383\nUSA"
+    text: "1740 Shaff Rd Box 315\\
+
+Stayton, OR 97383\\
+
+USA"
   - heading: Working hours
-    text: <table><tr><td class="b pr1">Monday</td><td class="b pr1">–</td><td class="b pr3">Friday</td><td>8am – 5pm PST</td></tr><tr><td class="b pr1">Saturday</td><td class="b pr1">–</td><td class="b pr3">Sunday</td><td>Closed</td></tr></table>
+    text: "**Monday -- Friday**: 8am – 5pm PST\\
+
+**Saturday -- Sunday**: Closed"
 ---
 
 Like our work? We’d love to get in touch with you to schedule a consultation!
