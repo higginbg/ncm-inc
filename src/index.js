@@ -61,7 +61,7 @@ const shrinkNav = () => {
 // Only slide nav bar if on home page
 if (isRoot) {
   const anmtn = 'slideInDown';
-  
+
   drpdwn.classList.add(anmtn);
   drpdwnBtn.classList.add(anmtn);
   callBtn.classList.add(anmtn);

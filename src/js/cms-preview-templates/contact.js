@@ -7,14 +7,14 @@ const ContactEntry = ({ heading, text }) =>
   </div>;
 
 const ContactEntries = ({ data }) => data && data.length > 0
-    ? <div class="bg-white pv4">
-        <div className="flex flex-row flex-wrap mw6 center">
-          {data.map(({heading, text}) => <ContactEntry heading={heading} text={text} />)}
-        </div>
+  ? <div class="bg-white pv4">
+      <div className="flex flex-row flex-wrap mw6 center">
+        {data.map(({heading, text}) => <ContactEntry heading={heading} text={text} />)}
       </div>
-    : "";
+    </div>
+  : "";
 
-const ContactPreview = ({ entry, getAsset, widgetFor }) => {
+const ContactPreview = ({ entry, widgetFor }) => {
   const entryContactEntries = entry.getIn(["data", "contact_entries"]);
   const contactEntries = entryContactEntries ? entryContactEntries.toJS() : [];
 

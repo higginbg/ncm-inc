@@ -3,8 +3,8 @@
 <!-- Jumbotron -->
 {{ partial "jumbotron-home" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-bottom") }}
 
-<!-- Blurb -->
-{{ partial "short-text" .Params.blurb }}
+<!-- Intro -->
+{{ partial "short-text" .Params.intro }}
 
 <!-- About -->
 <div class="bg-white pv4">
@@ -48,7 +48,7 @@
     <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 
       {{ range where .Pages "Section" "testimonials" }}
-        {{ range first 3 .Params.main.list }}
+        {{ range first 3 .Params.list.entries }}
           {{ partial "blockquote" . }}
         {{ end }}
       {{ end }}

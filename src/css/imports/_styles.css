@@ -3,7 +3,7 @@
   background-color: var(--highlight);
 }
 
-#sitemap ::selection {
+footer ::selection {
   background-color: var(--white);
 }
 

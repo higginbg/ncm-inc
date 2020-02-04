@@ -2,7 +2,7 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
 
-{{ partial "short-text" .Params.blurb }}
+{{ partial "short-text" .Params.intro }}
 
 <div class="bg-white pv4">
 
@@ -11,7 +11,7 @@
     <h2 class="f2 lh-title mb3">{{ .Params.main.heading }}</h2>
 
     <div class="flex flex-row flex-wrap justify-center">
-      {{ range .Params.main.list }}
+      {{ range .Params.list.entries }}
         {{ partial "blockquote" . }}
       {{ end }}
     </div>
