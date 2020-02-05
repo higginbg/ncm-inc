@@ -1,6 +1,11 @@
-<div class="tile h5 br1 overflow-hidden cover relative box-shadow bg-center" style="background-image: url('{{.image}}')">
+<div class="tile h5 br1 overflow-hidden cover relative box-shadow bg-center" style="background-image: url('{{ .Params.image }}')">
   <div class="banner bg-black white w-100 o-90 ph2 pv1 absolute bottom-0">
-    <h2 class="f5">{{.title}}</h2>
-    {{ if .subtitle }}<h3 class="f6">{{.subtitle}}</h3>{{ end }}
+
+    <h3 class="f5">{{ .Params.title }}</h3>
+    
+    {{ if .Params.subtitle }}
+      <h4 class="f6">{{ .Params.subtitle }}</h4>
+    {{ end }}
+
   </div>
 </div>

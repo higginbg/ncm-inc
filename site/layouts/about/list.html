@@ -1,0 +1,5 @@
+<div class="flex-m flex-row flex-wrap justify-center">
+  {{ range (.Data.Pages.ByParam "order") }}
+    {{ .Render "li" }}
+  {{ end }}
+</div>

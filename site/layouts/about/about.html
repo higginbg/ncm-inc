@@ -5,22 +5,13 @@
   {{ partial "short-text" (dict "heading" .Params.intro.heading "text" .Params.intro.text) }}
 
   <div class="bg-white pv4 ph3">
-
     <div class="mw7 center">
 
       <h1 class="f2 mb3">{{ .Params.main.heading }}</h1>
-
-      <p class="mb3 db">{{ .Params.main.text }}</p>
+      <p class="mb4 db">{{ .Params.main.text }}</p>
     
-      <div class="flex-m flex-row flex-wrap center mhn1-m">
-    
-        {{ range (.Data.Pages.ByParam "order") }}
-          <div class="w-33-m ph2">
-            {{ .Render "li" }}
-          </div>
-        {{ end }}
-    
-      </div>
+      {{ .Render "list" }}
+      
     </div>
   </div>
 

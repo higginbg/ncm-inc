@@ -6,6 +6,20 @@
   cursor: pointer;
 }
 
+a.testimonial {
+  text-decoration: none;
+  transition: var(--hover-transition);
+
+  & blockquote {
+    transition: var(--hover-transition);
+  }
+
+  &:hover blockquote, &:hover cite {
+    background-color: var(--grey-1);
+    color: var(--grey-4);
+  }
+}
+
 footer .link {
   color: var(--white);
 }

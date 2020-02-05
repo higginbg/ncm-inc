@@ -25,11 +25,7 @@
     <div class="flex-m flex-row flex-wrap center mhn2-m mw7">
   
       {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
-        <div class="w-50-m ph2-ns pv2">  
-          <a href="{{.RelPermalink}}" class="link db" data-aos="fade-in">
-            {{ partial "media-tile" .Params }}
-          </a>
-        </div>
+        {{ .Render "li" }}
       {{ end }}
   
     </div>
@@ -47,16 +43,15 @@
   
     <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 
-      {{ range where .Pages "Section" "testimonials" }}
-        {{ range first 3 .Params.main.list }}
-          {{ partial "blockquote" . }}
-        {{ end }}
+      {{ range first 3 ( where .Site.Pages "Section" "=" "testimonials") }}
+        {{ .Render "li" }}
       {{ end }}
   
-    </div>
-  </div>
+    </div> 
   
   {{ partial "button-forward" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
+
+  </div>
 </div>
 
 {{ end }}

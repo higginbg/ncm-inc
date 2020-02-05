@@ -1,20 +1,18 @@
-<div class="w-33-m pa2-m pb3">
-  <div class="h-100 bg-off-white ba b--grey-1 mw5-l pa3 br1 box-shadow" data-aos="fade-in">
-    <blockquote class="h-100 flex flex-column justify-between black">
-      <p class="f5 mb3" data-aos-duration="1000">“{{ .quote }}”</p>
-      <cite class="tr db grey-4">
-        <span class="db">{{ .author }}</span>
+<blockquote class="h-100  ba b--grey-1 bg-off-white black br1 pa3 box-shadow" data-aos="fade-in">
+  <div class="h-100 flex flex-column justify-between">
+    <p class="f5 mb3" data-aos-duration="1000">“{{ .Params.quote }}”</p>
+    <cite class="tr db grey-4">
+      <span class="db">{{ .Params.title }}</span>
 
-          {{ if .position }}
-            <span class="f6 db">{{.position}}</span>
-          {{ end }}
+        {{ if .Params.position }}
+          <span class="f6 lh-title db">{{ .Params.position }}</span>
+        {{ end }}
 
-          {{ if .company }}
-            <span class="f6 db">{{ .company }}</span>
-          {{ end }}
+        {{ if .Params.company }}
+          <span class="f6 lh-title db">{{ .Params.company }}</span>
+        {{ end }}
 
-        </span>
-      </cite>
-    </blockquote>
+      </span>
+    </cite>  
   </div>
-</div>
+</blockquote>

@@ -23,14 +23,16 @@ const TestimonialsPreview = ({ entry }) => {
 
           <h1 class='f2 lh-title mb3'>{ main.getIn(['heading']) }</h1>
 
-          {main.getIn(['list']).map((testimonial, i) => <div className="center mb3 ph3" key={i}>
+          <p class='mb3'>{ main.getIn(['text']) }</p>
+
+          {/*main.getIn(['list']).map((testimonial, i) => <div className="center mb3 ph3" key={i}>
             <blockquote className="bg-off-white ba b--grey-1 grey-4 pa3 mb3 br1 mw6 center box-shadow">
               <p className="f4 mb2">“{ testimonial.get('quote') }”</p>
               <cite className="f5 tr db">{ testimonial.get('author') }</cite>
               <cite className="f6 tr db">{ testimonial.get('position') }</cite>
               <cite className="f6 tr db">{ testimonial.get('company') }</cite>
             </blockquote>
-          </div>)}
+          </div>)*/}
         </div>
       </div>
     </div>
