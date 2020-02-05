@@ -5,26 +5,11 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: bio # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Team Bio" # Used in the UI, ie.: "New Post"
-    folder: "site/content/about/bios" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{title}}"
-    fields: # The fields each document in this collection have
-      - {label: Name, name: title, widget: string}
-      - {label: Company Position, name: subtitle, widget: string}
-      - label: Portrait
-        name: image
-        widget: image
-        required: true
-        default: "/img/portrait-blank.png"
-      - {label: Order in List, name: order, widget: number}
-      - {label: Body, name: body, widget: markdown}
-  - name: projects
+  - name: project
     label: Project
     folder: "site/content/projects/list"
     create: true
-    slug: "{{subtitle}}-{{title}}"
+    slug: "{{year}}-{{month}}-{{subtitle}}-{{title}}"
     fields:
       - {label: Project Name, name: title, widget: string}
       - {label: Location, name: subtitle, widget: string}
@@ -37,6 +22,21 @@ collections: # A list of collections the CMS should be able to edit
           {label: Image, name: image, widget: image},
           {label: Description, name: text, widget: string}]}
       - {label: Feature on Home Page, name: featured, widget: boolean}
+      - {label: Body, name: body, widget: markdown}
+  - name: bio # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Bio" # Used in the UI, ie.: "New Post"
+    folder: "site/content/about/bio" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}"
+    fields: # The fields each document in this collection have
+      - {label: Name, name: title, widget: string}
+      - {label: Company Position, name: subtitle, widget: string}
+      - label: Portrait
+        name: image
+        widget: image
+        required: true
+        default: "/img/portrait-blank.png"
+      - {label: Order in List, name: order, widget: number}
       - {label: Body, name: body, widget: markdown}
   - name: pages
     label: Pages
