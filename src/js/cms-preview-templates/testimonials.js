@@ -3,31 +3,35 @@ import Jumbotron from './components/jumbotron';
 
 const TestimonialsPreview = ({ entry }) => {
 
-  const intro = {
-    heading: entry.getIn(['data', 'intro', 'heading']),
-    text: entry.getIn(['data', 'intro', 'text'])
-  };
-
-  const main = {
-    heading: entry.getIn(['data', 'list', 'heading']),
-    list: entry.getIn(['data', 'list', 'entries']) || []
-  };
+  const data = entry.getIn(['data']);
+  const intro = data.getIn(['intro']);
+  const main = data.getIn(['main']);
 
   return (
-    <div>
-      <Jumbotron image={entry.getIn(['data', 'image'])} title={entry.getIn(['data', 'title'])} />
-      <div class='mw6 center ph3 pv4 mt3'>
-        <h1 class='f2 lh-title mb3'>{ intro.heading }</h1>
-        <p class='mb3'>{ intro.text }</p>
-        <h1 class='f2 lh-title mb3'>{ main.heading }</h1>
-        {main.list.map((testimonial, i) => <div className="center mb3 ph3" key={i}>
-          <blockquote className="bg-white ba b--grey-1 grey-4 pa3 mb3 br1 mw6 center">
-            <p className="f4 mb2">“{ testimonial.get('quote') }”</p>
-            <cite className="f5 tr db">{ testimonial.get('author') }</cite>
-            <cite className="f6 tr db">{ testimonial.get('position') }</cite>
-            <cite className="f6 tr db">{ testimonial.get('company') }</cite>
-          </blockquote>
-        </div>)}
+    <div className="bg-off-white pb4">
+      <Jumbotron image={ data.getIn(['image']) } title={ data.getIn(['title']) } />
+
+      <div className="bg-off-white ph3 pv4">
+        <div className="mw6 center">
+          <h1 className='f2 lh-title mb3'>{ intro.getIn(['heading']) }</h1>
+          <p>{ intro.getIn(['text']) }</p>
+        </div>
+      </div>
+
+      <div className="bg-white ph3 pv4">
+        <div className='mw6 center'>
+
+          <h1 class='f2 lh-title mb3'>{ main.getIn(['heading']) }</h1>
+
+          {main.getIn(['list']).map((testimonial, i) => <div className="center mb3 ph3" key={i}>
+            <blockquote className="bg-off-white ba b--grey-1 grey-4 pa3 mb3 br1 mw6 center box-shadow">
+              <p className="f4 mb2">“{ testimonial.get('quote') }”</p>
+              <cite className="f5 tr db">{ testimonial.get('author') }</cite>
+              <cite className="f6 tr db">{ testimonial.get('position') }</cite>
+              <cite className="f6 tr db">{ testimonial.get('company') }</cite>
+            </blockquote>
+          </div>)}
+        </div>
       </div>
     </div>
   );

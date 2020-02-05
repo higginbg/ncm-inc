@@ -7,7 +7,7 @@ public_folder: "img"
 collections: # A list of collections the CMS should be able to edit
   - name: bio # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Team Bio" # Used in the UI, ie.: "New Post"
-    folder: "site/content/about" # The path to the folder where the documents are stored
+    folder: "site/content/about/bios" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{title}}"
     fields: # The fields each document in this collection have
@@ -22,7 +22,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Body, name: body, widget: markdown}
   - name: projects
     label: Project
-    folder: "site/content/projects"
+    folder: "site/content/projects/list"
     create: true
     slug: "{{subtitle}}-{{title}}"
     fields:
@@ -35,7 +35,7 @@ collections: # A list of collections the CMS should be able to edit
         required: true
       - {label: Gallery, name: gallery, widget: list, fields: [
           {label: Image, name: image, widget: image},
-          {label: Text, name: text, widget: string}]}
+          {label: Description, name: text, widget: string}]}
       - {label: Feature on Home Page, name: featured, widget: boolean}
       - {label: Body, name: body, widget: markdown}
   - name: pages
@@ -67,7 +67,19 @@ collections: # A list of collections the CMS should be able to edit
         name: about
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
+          - {label: Cover Image, name: image, widget: image}
+          - {label: Intro, name: intro, widget: object, fields: [
+              {label: Heading, name: "heading", widget: string},
+              {label: Text, name: text, widget: text}]}
+          - {label: Main, name: main, widget: object, fields: [
+              {label: Heading, name: heading, widget: string},
+              {label: Text, name: text, widget: text}]}
+      - file: "site/content/projects/_index.md"
+        label: Projects Page
+        name: projects
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Cover Image, name: image, widget: image}
           - {label: Intro, name: intro, widget: object, fields: [
               {label: Heading, name: "heading", widget: string},
               {label: Text, name: text, widget: text}]}
@@ -79,7 +91,7 @@ collections: # A list of collections the CMS should be able to edit
         name: contact
         fields:
           - {label: Heading, name: heading, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - {label: Intro Text, name: intro_text, widget: markdown}
           - label: Contact Entries
             name: contact_entries
             widget: list
@@ -90,6 +102,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: markdown
+          - {label: Outro Text, name: outro_text, widget: markdown}
       - file: "site/content/join/_index.md"
         label: Join Page
         name: join

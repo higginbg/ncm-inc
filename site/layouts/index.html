@@ -7,15 +7,16 @@
 {{ partial "short-text" .Params.intro }}
 
 <!-- About -->
-<div class="bg-white pv4">
-  {{ partial "text-and-image" .Params.about }}
-  {{ partial "button-forward" (dict "link" "/about" "text" .Params.about.button)}}
+<div class="bg-white pv4 ph3">
+  <div class="mw7 center">
+    {{ partial "text-and-image" .Params.about }}
+    {{ partial "button-forward" (dict "link" "/about" "text" .Params.about.button)}}
+  </div>
 </div>
 
 <!-- Projects -->
-<div class="bg-off-white center pv4 mw7">
-
-  <div class="ph3">
+<div class="bg-off-white pv4 ph3">
+  <div class="mw7 center">
 
     <h2 class="f2 lh-title mv3">{{.Params.projects.heading}}</h2>
   
@@ -39,16 +40,15 @@
 </div>
 
 <!-- Testimonials -->
-<div class="bg-white pv4">
+<div class="bg-white pv4 ph3">
+  <div class="mw7 center">
 
-  <div class="ph3 mw7 center">
-
-    <h2 class="f2 lh-title mb3 mw7">{{ .Params.testimonials.heading }}</h2>
+    <h2 class="f2 lh-title mb3">{{ .Params.testimonials.heading }}</h2>
   
     <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 
       {{ range where .Pages "Section" "testimonials" }}
-        {{ range first 3 .Params.list.entries }}
+        {{ range first 3 .Params.main.list }}
           {{ partial "blockquote" . }}
         {{ end }}
       {{ end }}

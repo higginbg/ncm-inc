@@ -4,14 +4,14 @@
 
 {{ partial "short-text" .Params.intro }}
 
-<div class="bg-white pv4">
+<div class="bg-white pv4 ph3">
 
-  <div class="center mw7 pa3">
+  <div class="mw7 center">
 
     <h2 class="f2 lh-title mb3">{{ .Params.main.heading }}</h2>
 
     <div class="flex flex-row flex-wrap justify-center">
-      {{ range .Params.list.entries }}
+      {{ range .Params.main.list }}
         {{ partial "blockquote" . }}
       {{ end }}
     </div>

@@ -1,20 +1,29 @@
 import React from 'react';
 
-const BioPreview = ({ entry }) => {
+const BioPreview = ({ entry, widgetFor }) => {
 
   const name = entry.getIn(['data', 'title']);
   const position = entry.getIn(['data', 'subtitle']);
   const portrait = entry.getIn(['data', 'image'])
-  const body = entry.getIn(['data', 'body']);
+  const body = widgetFor('body');
 
-  return (
-    <div class='mw6 center ph3 pv4'>
-      <h1 class='f2 lh-title mb2'>{ name }</h1>
-      <h2 class='f4 lh-title mb3'>{ position }</h2>
-      <img class='h5 object-cover mb3' src={ portrait } />
-      <div class='cms'>{ body }</div>
+  return <div className="bg-off-white pb4">
+
+    <div className="bg-off-white pv4 ph3">
+      <div className='mw6 center'>
+        <h1 className='f2 lh-title mb2'>{ name }</h1>
+        <h2 className='f4 lh-title'>{ position }</h2>
+      </div>
     </div>
-  );
+
+    <div className="bg-white pv4 ph3">
+      <div className='mw6 center'>
+        <img className='db center h5 object-cover mb3 box-shadow' src={ portrait } />
+        <div className='cms'>{ body }</div>
+      </div>
+    </div>
+
+  </div>;
 };
 
 export default BioPreview;

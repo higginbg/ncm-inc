@@ -1,6 +1,7 @@
 ---
-title: "Contact"
+title: Contact
 heading: "Let's get in touch."
+intro_text: "Like our work? We’d love to get in touch with you to schedule a consultation!"
 contact_entries:
   - heading: Phone
     text: "[+1 (971) 336-2341](tel:+1971-336-2341)"
@@ -12,10 +13,9 @@ contact_entries:
 Stayton, OR 97383\\
 
 USA"
-  - heading: Working hours
-    text: "**Monday -- Friday**: 8am – 5pm PST\\
+  - heading: Working Hours
+    text: "**Monday – Friday**: 8am – 5pm PST\\
 
-**Saturday -- Sunday**: Closed"
+**Saturday – Sunday**: Closed"
+outro_text: "You can also use the form below to contact us directly."
 ---
-
-Like our work? We’d love to get in touch with you to schedule a consultation!

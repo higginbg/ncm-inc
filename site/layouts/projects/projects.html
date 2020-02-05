@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-  {{ partial "jumbotron" (dict "imageUrl" "/img/cover-projects.jpg" "title" "Our Projects" "position" "bg-center") }}
+  {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
 
-  {{ partial "short-text" (dict "heading" "Over 100 Renovations" "text" "Since 1996 our team has completed over 100 renovations in the hospitality industry. Take a look below at some of our most significant work, or browse the archive to see all our projects.") }}
+  {{ partial "short-text" (dict "heading" .Params.intro.heading "text" .Params.intro.text) }}
 
-  <div class="bg-white">
+  <div class="bg-white pv4 ph3">
+    <div class="mw7 center mhn2-m">
 
-    <div class="mw7 center mhn2-m pv4 ph3">
-
-      <h1 class="f2 mb3">Project List</h1>
+      <h1 class="f2 mb2">{{ .Params.main.heading }}</h1>
+      <h1 class="mb3">{{ .Params.main.text }}</h1>
     
       <div class="flex-m flex-row flex-wrap justify-center">
     

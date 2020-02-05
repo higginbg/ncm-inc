@@ -16,7 +16,6 @@ button:focus {
   outline: 0!important;
 }
 
-
 .btn:focus {
   border: 2px solid var(--primary);
   box-shadow: inset 0 0 0 2px var(--white);

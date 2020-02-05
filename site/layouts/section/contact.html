@@ -13,7 +13,7 @@
 
   <div class="mw6 center">
 
-    <div class="db mb4">{{ .Content }}</div>
+    <div class="db mb4">{{ .Params.intro_text }}</div>
 
     <div class="flex-ns flex-wrap mb4">
     
@@ -26,7 +26,7 @@
       
     </div>
   
-    <p>You can also use the form below to contact us directly.</p>
+    <p>{{ .Params.outro_text }}</p>
 
   </div>
 </div>

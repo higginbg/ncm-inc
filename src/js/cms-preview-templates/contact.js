@@ -1,29 +1,43 @@
 import React from "react";
 
 const ContactEntry = ({ heading, text }) =>
-  <div class="w-50-ns w-100">
+  <div className="md w-50-ns w-100">
     <h4 className="f4 lh-title mb2">{ heading }</h4>
-    <p>{ text }</p>
+    { text }
   </div>;
 
-const ContactEntries = ({ data }) => data && data.length > 0
-  ? <div class="bg-white pv4">
-      <div className="flex flex-row flex-wrap mw6 center">
-        {data.map(({heading, text}) => <ContactEntry heading={heading} text={text} />)}
+const ContactEntries = ({ data }) => {return data
+  ? <div className="bg-white">
+    <div className="flex flex-row flex-wrap mw6 center">
+      {data.map((entry, i) => <ContactEntry heading={entry.getIn(['widgets', 'heading'])} text={entry.getIn(['widgets', 'text'])} key={i} />)}
+    </div>
+  </div>
+  : "";
+};
+
+const ContactPreview = ({ entry, widgetFor, widgetsFor }) => {
+  const contactEntries = widgetsFor('contact_entries') || {};
+
+  return <div>
+    <div className="bg-off-white pv4 ph3">
+      <div className="mw6 center">
+
+        <h1 className='f2 tc lh-title'>{ entry.getIn(["data", "heading"]) }</h1>
+
       </div>
     </div>
-  : "";
 
-const ContactPreview = ({ entry, widgetFor }) => {
-  const entryContactEntries = entry.getIn(["data", "contact_entries"]);
-  const contactEntries = entryContactEntries ? entryContactEntries.toJS() : [];
+    <div className="bg-white pv4 ph3">
+      <div className="mw6 center">
 
-  return <div className="pv4">
-    <div class="pv4 ph3 mw6 center">
-      <h1 class='f2 tc lh-title mb3'>{entry.getIn(["data", "heading"])}</h1>
-      { widgetFor("body") }
+        <div className="mb4">{ widgetFor('intro_text') }</div>
+
+        <ContactEntries data={contactEntries} />
+
+        <div>{ widgetFor('outro_text') }</div>
+
+      </div>
     </div>
-    <ContactEntries data={contactEntries} />
   </div>;
 };
 
