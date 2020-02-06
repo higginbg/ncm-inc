@@ -76,6 +76,28 @@
   background-color: var(--black);
 }
 
+.bg-black-90 {
+  background-color: var(--black-90);
+}
+
+@media (--breakpoint-not-small) {
+  .bg-black-90-ns {
+    background-color: var(--black-90);
+  }
+}
+
+@media (--breakpoint-medium) {
+  .bg-black-90-m {
+    background-color: var(--black-90);
+  }
+}
+
+@media (--breakpoint-large) {
+  .bg-black-90-l {
+    background-color: var(--black-90);
+  }
+}
+
 .bg-fix-primary {
   padding: 0 var(--spacing-small);
   & :first-child {

@@ -50,12 +50,15 @@ const shrinkNav = () => {
 };
 
 // Only slide nav bar if on home page
-if (isRoot) {
+const addAnmtn = el => {
   const anmtn = 'slideInDown';
+  el.classList.add(anmtn);
+};
 
-  drpdwn.classList.add(anmtn);
-  drpdwnBtn.classList.add(anmtn);
-  callBtn.classList.add(anmtn);
+if (isRoot) {
+  addAnmtn(drpdwn);
+  addAnmtn(drpdwnBtn);
+  addAnmtn(callBtn);
 }
 
 const menuOpenIcon = '<i class="fas fa-bars"></i>';
@@ -87,12 +90,24 @@ drpdwnBtn.addEventListener('click', () => {
 });
 
 // Highlight nav link when current page
-const url = window.location.href.split('/');
-const page = url[url.length - 2];
+const url = window.location.href;
+const urlArr = url.split('/');
+const page = urlArr[urlArr.length - 2];
+
 for (const link of links) {
   const navLoc = link.href.split('/');
   const checkNav = navLoc[navLoc.length - 1];
-  if (!checkNav && isRoot || page === checkNav) {
-    link.classList.add('bg-grey-4');
+
+  const isHome = !checkNav && isRoot;
+  const isCurrentPath = url.toLowerCase().indexOf(link.text.toLowerCase()) > 0;
+  const isCurrentPage = page === checkNav;
+
+  if (isCurrentPath || isHome) {
+    link.classList.add('selected');
+
+    if (isCurrentPage || isHome) {
+      link.removeAttribute("href");
+      link.classList.remove('nav-link');
+    }
   }
 }

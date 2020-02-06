@@ -1,14 +1,8 @@
 {{ define "main" }}
 
-<div class="bg-off-white ph3 pv4">
-	<div class="mw6 center">
+{{ partial "heading-center" . }}
 
-		<div class="f2 tc db" data-aos="zoom-in">{{ .Params.heading }}</div>
-    
-  </div>
-</div>
-
-<div class="bg-white ph3 pv4">
+<div class="bg-white ph3 pv4 bb b--grey-1">
   <div class="mw6 center">
 
     <p class="db mb4">{{ .Params.intro_text }}</p>

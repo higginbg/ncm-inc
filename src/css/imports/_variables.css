@@ -10,6 +10,7 @@
 	--grey-3: rgba(105, 105, 105, 1);
 	--grey-4: rgba(45, 45, 45, 1);
 	--black: rgba(25, 25, 25, 1);
+	--black-90: rgba(25, 25, 25, 0.9);
 
 	/* Typography */
 	--font-family: Muli, Lato, Nunito Sans, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
@@ -40,6 +41,7 @@
 
 	/* Miscelaneous */
 	--border-radius: 7px;
+	--border-radius-pill: 75px;
 	--hover-transition: all 150ms ease;
 	--size-transition:
 	  width 150ms ease,
@@ -57,4 +59,8 @@
   --tile-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
   --image-shadow: 0 0 20px rgba(0,0,0,0.35), 0 0 6px rgba(0,0,0,0.47);
+
+  --nav-shadow: 0 3px 20px rgba(0,0,0,0.19), 0 3px 20px rgba(0,0,0,0.23);
+
+  --menu-shadow: 3px 0 20px rgba(0,0,0,0.19), 3px 0 20px rgba(0,0,0,0.23);
 }

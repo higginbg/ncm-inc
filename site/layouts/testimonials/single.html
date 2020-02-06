@@ -1,14 +1,8 @@
 {{ define "main" }}
 
-<div class="bg-off-white ph3 pv4">
-  <div class="mw6 center">
-    <h1 class="f2 lh-title mb2">{{ .Title }}</h1>
-    <h2 class="f4 lh-title mb1">{{ .Params.position }}</h2>
-    <h2 class="f4 lh-title">{{ .Params.company }}</h2>
-  </div>
-</div>
+{{ partial "heading-left" (dict "title" .Title "subtitle" .Params.position "subsubtitle" .Params.company "mw" "mw6") }}
 
-<div class="bg-white ph3 pv4">
+<div class="bg-white ph3 pv4 bb b--grey-1">
   <div class="mw6 center">
     <h2 class="f3 lh-title mb3">Testimonial</h2>
     <p class="db">“{{ .Params.quote }}”</p>
@@ -18,25 +12,23 @@
 <div class="bg-off-white ph3 pv4">
   <div class="mw6 center">
 
-    {{ if or (.Params.phone) (.Params.email) }}
+    {{ if .Params.contact }}
     
       <h2 class="f3 lh-title mb3">Contact {{ with .Title }}{{ index (split . " ") 0 }}{{ end }}</h2>
-      <p class="db lh-title">We encourage you to call our references to hear their experience with our team.</p>
+      <p class="db lh-title">We encourage you to contact our references to hear their experience with our team.</p>
 
       <div class="flex-ns flex-row pt2">
 
-        {{ if .Params.phone }}
-          <div class="w-50-ns ph-ns pv2">
-            <h3 class="f4 lh-title mb2">Phone</h3 class="f3 lh-title mb3">
-            <p class="db"><a class="link" href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a></p>
-          </div>
-        {{ end }}
+        {{ range $key, $value := .Params.contact }}
+          {{ if $value }}
 
-        {{ if .Params.email }}
-          <div class="w-50-ns ph3-ns pv2">
-            <h3 class="f4 lh-title mb2">Email</h3 class="f3 lh-title mb3">
-            <p class="db"><a class="link" href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
-          </div>
+            <div class="w-50-ns ph-ns pv2">
+              <h3 class="f4 lh-title mb2">{{ title $key }}</h3>
+                
+              <p class="db"><a class="link" {{ if eq $key "phone" }}href="tel:+1{{ $value | urlize }}"{{ else if eq $key "email" }}href="mailto:{{ $value }}"{{ end }}>{{ $value }}</a></p>
+            </div>
+
+          {{ end }}
         {{ end }}
 
       </div>

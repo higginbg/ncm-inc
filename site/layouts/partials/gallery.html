@@ -1,0 +1,9 @@
+<div class="flex flex-row flex-wrap">
+  
+  {{ range .Params.gallery }}
+    <div class="w-33-ns w-100 pa2-ns pv2">
+      <img src="{{.image}}" alt="{{.text}}" class="h4-ns h5 w-100 br1 object-cover image-shadow" />
+    </div>
+  {{ end }}
+
+</div>

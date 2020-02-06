@@ -1,0 +1,10 @@
+<div class="bg-white pv4 ph3 bb b--grey-1">
+  <div class="mw7 center">
+
+    <h1 class="f2 mb3">{{ .Params.main.heading }}</h1>
+    {{ if .Params.main.text }}<p class="mb4 db">{{ .Params.main.text }}</p>{{ end }}
+  
+    {{ .Render "list" }}
+    
+  </div>
+</div>

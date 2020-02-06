@@ -1,6 +1,6 @@
 .btn {
   display: inline-block;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-pill);
   padding: 14px 16px 14px;
   font-size: var(--font-size-m);
   line-height: 1.25;
@@ -9,8 +9,8 @@
   text-decoration: none;
   color: var(--off-white);
   text-align: center;
-  transition: var(--hover-transition);
-  box-shadow: var(--box-shadow);
+  transition: var(--box-shadow-transition);
+  box-shadow: var(--tile-shadow);
   background-origin: border-box;
   user-select: none;
   
@@ -20,12 +20,18 @@
   }
 
   &:hover {
-    opacity: 0.9;
+    box-shadow: var(--image-shadow);
 
     i {
       opacity: 1;
       margin-left: var(--spacing-small); 
     }
+  }
+
+  &:focus, &:active {
+    background-image: linear-gradient(var(--grey-3), var(--grey-3));
+    box-shadow: var(--image-shadow);
+    outline: 0!important;
   }
 }
 

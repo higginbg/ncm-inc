@@ -14,10 +14,22 @@ fieldset
   padding: 0;
 }
 
+fieldset {
+  margin: var(--spacing-extra-small) 0;
+}
+
+input {
+  border-radius: var(--border-radius-pill);
+}
+
+textarea {
+  border-radius: var(--border-radius);
+}
+
 input, textarea {
   background-color: var(--off-white);
-  border: 1px solid transparent;
-  border-bottom: 1px solid var(--grey-2);
+  color: var(--black);
+  border: 1px solid var(--grey-1);
   padding: var(--spacing-small);
   font-size: var(--font-size);
   line-height: 1.25;
@@ -26,7 +38,6 @@ input, textarea {
   z-index: 2;
   user-select: none;
   &:hover, &:focus {
-    border-radius: var(--border-radius);
     border: 1px solid var(--grey-2);
   }
   &:focus + label {
@@ -35,46 +46,52 @@ input, textarea {
 }
 
 input[type="file"] {
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: var(--spacing-small) 1px;
+  font-size: var(--font-size);
+  background-color: var(--off-white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small);
+  border: 1px solid var(--grey-1);
+
+  & + label {
+    display: block;
+  } 
   &:hover {
-    border: 1px solid transparent;
+    border: 1px solid var(--grey-2);
   }
   &:focus {
-    padding: var(--spacing-small);
+    background-color: transparent;
     border: 1px solid var(--grey-2);
   }
 }
 
 ::-webkit-input-placeholder {
-   color: transparent;
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--grey-3);
+  font-size: var(--font-size);
+  line-height: normal;
 }
 
 :-moz-placeholder {
-   color: transparent;
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--grey-3);
+  font-size: var(--font-size);
+  line-height: normal;
 }
 
 ::-moz-placeholder {
-   color: transparent;
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--grey-3);
+  font-size: var(--font-size);
+  line-height: normal;
 }
 
 :-ms-input-placeholder {
-   color: transparent;
-   font-size: var(--spacing-medium);
-   line-height: normal;
+  color: var(--grey-3);
+  font-size: var(--font-size);
+  line-height: normal;
 }
 
 label
 {
-  display: block;
-  font-size: .875rem;
+  display: none;
+  font-size: var(--font-size);
   font-weight: 400;
   color: var(--grey-4);
   padding: var(--spacing-extra-small) 0;
@@ -82,4 +99,8 @@ label
   line-height: 1;
   transition: var(--hover-transition);
   z-index: 2;
+}
+
+label[for="resume"] {
+  display: block;
 }

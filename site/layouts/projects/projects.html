@@ -2,18 +2,9 @@
 
   {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
 
-  {{ partial "short-text" (dict "heading" .Params.intro.heading "text" .Params.intro.text) }}
+  {{ partial "short-text" .Params.intro }}
 
-  <div class="bg-white pv4 ph3">
-    <div class="mw7 center">
-
-      <h1 class="f2 mb2">{{ .Params.main.heading }}</h1>
-      <p class="mb3">{{ .Params.main.text }}</p>
-    
-      {{ .Render "list" }}
-
-    </div>
-  </div>
+  {{ partial "section-main" . }}
 
   {{ partial "form-contact" . }}
 

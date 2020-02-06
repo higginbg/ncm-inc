@@ -21,7 +21,7 @@ const TestimonialSinglePreview = ({ entry }) => {
           <p class="db mb4">“{ data.getIn(['quote']) }”</p>
 
           <h2 class="f3 lh-title mb3">Contact</h2>
-          <p class="db lh-title">We encourage you to call our references to hear their experience with our team.</p>
+          <p class="db lh-title">We encourage you to contact our references to hear their experience with our team.</p>
 
           <p class="db"><a class="link" href={`tel:${ data.getIn(['phone']) }`}>{ data.getIn(['phone']) }</a></p>
           <p class="db"><a class="link" href={`mailto:${ data.getIn(['email']) }`}>{ data.getIn(['email']) }</a></p>

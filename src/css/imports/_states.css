@@ -1,26 +1,30 @@
 /* Focus states */
 input:focus, textarea:focus {
   border-radius: var(--border-radius);
-  background-color: var(--grey-1);
-  border: 1px solid transparent;
+  background-color: var(--white);
+  border: 1px solid var(--grey-2);
   outline: 0!important;
 }
 
 .link, .md a {
-  transition: all .15s ease-in;
   border-bottom: 1px dotted transparent;
   padding-bottom: 1px;
+  text-decoration: none;
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--box-shadow-transition) !important;
 
   &:hover {
     text-decoration: none;
     border-bottom: 1px solid var(--grey-2);
   }
 
-  &:focus {
-    background-color: var(--grey-1);
+  &:focus, &:active {
+    transition: var(--box-shadow-transition);
     padding: var(--spacing-extra-small);
     border-radius: var(--border-radius);
-    border: none;
+    border: 1px solid var(--grey-2);
+    background: var(--white);
     outline: 0!important;
   }
 }
@@ -39,8 +43,8 @@ input:focus, textarea:focus {
   text-decoration: none;
   transition: all .15s ease-in;
   color: var(--white);
-  padding: var(--spacing-extra-small);
-  border-radius: var(--border-radius);
+  padding: var(--spacing-extra-small) var(--spacing-small);
+  border-radius: var(--border-radius-pill);
 
   &:hover, &:focus, &:active {
     background-color: var(--grey-3);
@@ -78,6 +82,10 @@ input:focus, textarea:focus {
 
 .tile-shadow {
   box-shadow: var(--tile-shadow);
+}
+
+.nav-shadow {
+  box-shadow: var(--nav-shadow);
 }
 
 .tile {
