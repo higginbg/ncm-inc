@@ -1,7 +1,7 @@
 import React from 'react';
 import Jumbotron from './components/jumbotron';
 
-const TestimonialsPreview = ({ entry }) => {
+const TestimonialListPreview = ({ entry }) => {
 
   const data = entry.getIn(['data']);
   const intro = data.getIn(['intro']);
@@ -39,4 +39,4 @@ const TestimonialsPreview = ({ entry }) => {
   );
 };
 
-export default TestimonialsPreview;
+export default TestimonialListPreview;

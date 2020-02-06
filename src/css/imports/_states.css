@@ -1,23 +1,123 @@
 /* Focus states */
 input:focus, textarea:focus {
   border-radius: var(--border-radius);
+  background-color: var(--grey-1);
   border: 1px solid transparent;
-  box-shadow: inset 0 0 0 2px var(--grey-2);
   outline: 0!important;
 }
 
-a:focus {
-  box-shadow: inset 0 0 0 2px var(--primary);
-  outline: 0!important;
+.link, .md a {
+  transition: all .15s ease-in;
+  border-bottom: 1px dotted transparent;
+  padding-bottom: 1px;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid var(--grey-2);
+  }
+
+  &:focus {
+    background-color: var(--grey-1);
+    padding: var(--spacing-extra-small);
+    border-radius: var(--border-radius);
+    border: none;
+    outline: 0!important;
+  }
 }
+
+.nav-link {
+  text-decoration: none;
+
+  &:focus {
+    background-color: var(--grey-4);
+    color: var(--white);
+    outline: 0!important;
+  }
+}
+
+.footer-link {
+  text-decoration: none;
+  transition: all .15s ease-in;
+  color: var(--white);
+  padding: var(--spacing-extra-small);
+  border-radius: var(--border-radius);
+
+  &:hover, &:focus, &:active {
+    background-color: var(--grey-3);
+    box-shadow: none;
+    outline: 0!important;
+  }
+}
+
+.testimonial {
+  text-decoration: none;
+  color: var(--primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: var(--box-shadow-transition);
+
+  & blockquote {
+    transition: var(--box-shadow-transition);
+  }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: var(--box-shadow-hover);
+  }
+
+  &:focus, &:active {
+    outline: 0!important;
+
+    & blockquote {
+      transition: var(--box-shadow-transition);
+      background-color: var(--grey-1);
+    }
+  }
+}
+
+.tile-shadow {
+  box-shadow: var(--tile-shadow);
+}
+
+.tile {
+  text-decoration: none;
+  color: var(--white);
+  box-shadow: var(--tile-shadow);
+  transition: var(--box-shadow-transition);
+  border-radius: var(--border-radius);
+
+  & .banner {
+    transition: var(--box-shadow-transition);
+  }
+
+  &:hover {
+    box-shadow: 3px 5px 20px var(--spacing-extra-small) var(--grey-3);
+
+    &:hover .banner {
+      padding-bottom: var(--spacing-small);
+    }
+  }
+
+  &:focus, &:active {
+    box-shadow: 0 0 5px var(--spacing-extra-small) var(--grey-3);
+    outline: 0!important;
+
+    &:focus .banner, &:active .banner {
+      padding-bottom: var(--spacing-medium);
+    }
+  }
+}
+
 
 button:focus {
-  box-shadow: inset 0 0 0 2px var(--primary);
+  background-color: var(--grey-4);
+  color: var(--white);
   outline: 0!important;
 }
 
 .btn:focus {
-  border: 2px solid var(--primary);
+  border: 2px solid var(--grey-3);
   box-shadow: inset 0 0 0 2px var(--white);
   outline: 0!important;
 }

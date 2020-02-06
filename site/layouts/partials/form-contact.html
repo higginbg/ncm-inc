@@ -1,38 +1,43 @@
 
-<div class="measure-narrow center flex flex-column mb1">
+<div class="bg-off-white pv3-m pv4 ph3">
+
+  <h4 class="f3 lh-title tc mb3" data-aos="zoom-in">Send us a message!</h4>
   
-  <!-- Contact -->
-  <div class="ba b--grey-2 bg-white ma1-ns pa3 br1 h-100">
+  <div class="measure-narrow center flex flex-column">
     
-  
-    <form id="form-contact" name="contact" action="/success" netlify>
-      <div class="flex flex-column">
-        <!-- Name -->
+    <!-- Contact -->
+    <div class="ba b--grey-2 bg-white ma1-ns pa3 br1 h-100 tile-shadow">
+      
+    
+      <form id="form-contact" name="contact" action="/success" netlify>
+        <div class="flex flex-column">
+          <!-- Name -->
+          <fieldset>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2">
+          </fieldset>
+          <!-- Email -->
+          <fieldset>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2">
+          </fieldset>
+          <!-- Company -->
+          <fieldset>
+            <label for="company">Company</label>
+            <input type="company" id="company" name="company" placeholder="Company" class="w-100 mb2">
+          </fieldset>
+        </div>
+    
+        <!-- Message -->
         <fieldset>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Your message" rows="8" cols="80" class="w-100 no-resize"></textarea>
         </fieldset>
-        <!-- Email -->
-        <fieldset>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2">
-        </fieldset>
-        <!-- Company -->
-        <fieldset>
-          <label for="company">Company</label>
-          <input type="company" id="company" name="company" placeholder="Company" class="w-100 mb2">
-        </fieldset>
-      </div>
-  
-      <!-- Message -->
-      <fieldset>
-        <label for="message">Your message</label>
-        <textarea id="message" name="message" placeholder="Your message" rows="8" cols="80" class="w-100 no-resize"></textarea>
-      </fieldset>
-      <!-- Button -->
-      <div class="w-100 tc mt2">
-        <button type="submit" class="btn w-100">Send<i class="fas fa-paper-plane"></i></button>
-      </div>
-    </form>
+        <!-- Button -->
+        <div class="w-100 tc mt2">
+          <button type="submit" class="btn w-100">Send<i class="fas fa-paper-plane"></i></button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

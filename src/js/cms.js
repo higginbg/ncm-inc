@@ -7,9 +7,10 @@ import styles from "!to-string-loader!css-loader!postcss-loader!sass-loader!../c
 import HomePreview from "./cms-preview-templates/home";
 import AboutPreview from "./cms-preview-templates/about";
 import BioPreview from "./cms-preview-templates/bio";
-import TestimonialsPreview from "./cms-preview-templates/testimonials";
-import ProjectsLandingPreview from "./cms-preview-templates/projects-landing";
-import ProjectsSinglePreview from "./cms-preview-templates/projects-single";
+import TestimonialListPreview from "./cms-preview-templates/testimonial-list";
+import TestimonialSinglePreview from "./cms-preview-templates/testimonial-single";
+import ProjectListPreview from "./cms-preview-templates/project-list";
+import ProjectSinglePreview from "./cms-preview-templates/project-single";
 import JoinPreview from "./cms-preview-templates/join";
 import ContactPreview from "./cms-preview-templates/contact";
 
@@ -17,9 +18,10 @@ CMS.registerPreviewStyle(styles, { raw: true });
 CMS.registerPreviewTemplate("home", HomePreview);
 CMS.registerPreviewTemplate("about", AboutPreview);
 CMS.registerPreviewTemplate("bio", BioPreview);
-CMS.registerPreviewTemplate("testimonials", TestimonialsPreview);
-CMS.registerPreviewTemplate("projects", ProjectsLandingPreview);
-CMS.registerPreviewTemplate("project", ProjectsSinglePreview);
+CMS.registerPreviewTemplate("testimonial-list", TestimonialListPreview);
+CMS.registerPreviewTemplate("testimonial-single", TestimonialSinglePreview);
+CMS.registerPreviewTemplate("project-list", ProjectListPreview);
+CMS.registerPreviewTemplate("project-single", ProjectSinglePreview);
 CMS.registerPreviewTemplate("join", JoinPreview);
 CMS.registerPreviewTemplate("contact", ContactPreview);
 CMS.init();

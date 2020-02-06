@@ -22,7 +22,7 @@ input, textarea {
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
-  transition: var(--hover-transition);
+  transition: var(--box-shadow-transition);
   z-index: 2;
   user-select: none;
   &:hover, &:focus {
@@ -37,7 +37,7 @@ input, textarea {
 input[type="file"] {
   background-color: transparent;
   border: 1px solid transparent;
-  padding: var(--spacing-extra-small) 1px;
+  padding: var(--spacing-small) 1px;
   &:hover {
     border: 1px solid transparent;
   }

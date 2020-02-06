@@ -23,6 +23,12 @@
 	--bold-font-weight: 700;
 
 	/* Sizing */
+	--nav-height: 80px;
+	--nav-height-small: 60px;
+	--footer-height: 250px;
+
+	--footer-height-medium: 50px;
+
 	--spacing-none: 0;
 	--spacing-extra-small: .25rem;
 	--spacing-small: .5rem;
@@ -39,8 +45,16 @@
 	  width 150ms ease,
 	  height 150ms ease,
 	  max-height 150ms ease,
-	  max-width 150ms ease;
-	--box-shadow:
-		0  5px 10px rgba(154, 160, 185, 0.05),
-		0 15px 40px rgba(166, 173, 201, 0.2);
+    max-width 150ms ease;
+    
+  /* Box Shadow */
+  --box-shadow:
+    0  5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+  --box-shadow-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  --box-shadow-hover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+  --tile-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  --image-shadow: 0 0 20px rgba(0,0,0,0.35), 0 0 6px rgba(0,0,0,0.47);
 }

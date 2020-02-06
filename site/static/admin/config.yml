@@ -5,7 +5,7 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: project # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: project-single # Used in routes, ie.: /admin/collections/:slug/edit
     label: Project # Used in the UI, ie.: "New Post"
     folder: "site/content/projects/list" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -23,7 +23,7 @@ collections: # A list of collections the CMS should be able to edit
           {label: Description, name: text, widget: string}]}
       - {label: Feature on Home Page, name: featured, widget: boolean}
       - {label: Body, name: body, widget: markdown}
-  - name: testimonial
+  - name: testimonial-single
     label: Testimonial
     folder: "site/content/testimonials/list"
     create: true
@@ -33,7 +33,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Position in Company, name: position, widget: string}
       - {label: Company Name, name: company, widget: string}
       - {label: Quote, name: quote, widget: text}
-      - {label: Month Completed, name: date, widget: datetime, dateFormat: "MM-YYYY", timeFormat: false}
+      - {label: Phone Number, name: phone, widget: string}
+      - {label: Eamil, name: email, widget: string}
   - name: bio
     label: "Bio"
     folder: "site/content/about/bio"
@@ -92,7 +93,7 @@ collections: # A list of collections the CMS should be able to edit
               {label: Text, name: text, widget: text}]}
       - file: "site/content/projects/_index.md"
         label: Projects
-        name: projects
+        name: project-list
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Cover Image, name: image, widget: image}
@@ -127,7 +128,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Body, name: body, widget: markdown}
       - file: "site/content/testimonials/_index.md"
         label: Testimonials
-        name: testimonials
+        name: testimonial-list
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Cover Image, name: image, widget: image}

@@ -4,14 +4,10 @@
   <body class="sans-serif overflow-x-hidden">
 
     {{ block "header" . }}
-      <div class="f2 bg-black pv3 tc">{{ partial "logo" . }}</div>
+      <div class="f2 bg-black pa3 flex justify-center">{{ partial "logo" . }}</div>
     {{end}}
 
-    <div data-aos="fade-in">
-
-      {{ block "main" . }}{{ end }}
-
-    </div>
+    {{ block "main" . }}{{ end }}
 
     {{ $script := .Site.Data.webpack.main }}
     

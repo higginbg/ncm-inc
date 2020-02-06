@@ -23,8 +23,8 @@ footer ::selection {
   width: 300px;
 }
 
-.box-shadow {
-  box-shadow: var(--box-shadow);
+.image-shadow {
+  box-shadow: var(--image-shadow);
 }
 
 .size-trans {
@@ -36,10 +36,36 @@ footer ::selection {
 .no-select { user-select: none; }
 .no-resize { resize: none; }
 
-.tile .banner {
-  transition: var(--hover-transition);
+#page-container {
+  position: relative;
+  min-height: 100vh;
 }
 
-.tile:hover .banner {
-  padding-bottom: var(--spacing-medium);
+#content-wrapper {
+  padding-top: var(--nav-height);
+  padding-bottom: var(--footer-height);
+}
+
+nav {
+  height: var(--nav-height);
+
+  &.small {
+    height: var(--nav-height-small);
+  }
+}
+
+footer {
+  height: var(--footer-height);
+  margin-top: calc(-1 * var(--footer-height));
+}
+
+@media (--breakpoint-medium) {
+  #content-wrapper {
+    padding-bottom: var(--footer-height-medium);
+  }
+
+  footer {
+    height: var(--footer-height-medium);
+    margin-top: calc(-1 * var(--footer-height-medium));
+  }
 }

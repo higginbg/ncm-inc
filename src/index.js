@@ -16,11 +16,9 @@ AOS.init({
 });
 
 const nav         = document.getElementById('nav');
-const navDum      = document.getElementById('nav-dummy');
-const logo        = nav.querySelector('a');
 const drpdwnBtn   = nav.querySelector('button');
 const drpdwn      = nav.querySelector('ul');
-const callBtn     = nav.querySelector('#call');
+const callBtn     = document.getElementById('call');
 const links       = drpdwn.querySelectorAll('li a');
 
 const isRoot = location.pathname === '/';
@@ -42,19 +40,12 @@ const shrinkNav = () => {
       : el.classList.replace(s, l);
   };
 
-  const pa2 = 'pa2-m', pa3 = 'pa3-m';
+  shrink ? nav.classList.add('small') : nav.classList.remove('small');
 
-  shrinkEl(logo, pa3, pa2);
-  shrinkEl(drpdwnBtn, pa3, pa2);
+  shrinkEl(nav, 'o-100', 'o-90');
   shrinkEl(nav, 'f5-m', 'f6-m');
 
-  // Shrink links
-  for (const link of links) {
-    shrinkEl(link, pa3, pa2);
-  }
-
   // Decreases link fonts
-  navDum.style.fontheight = nav.clientHeight;
   lastScroll = scrollPos();
 };
 
@@ -67,7 +58,6 @@ if (isRoot) {
   callBtn.classList.add(anmtn);
 }
 
-
 const menuOpenIcon = '<i class="fas fa-bars"></i>';
 const menuCloseIcon = '<i class="fas fa-times"></i>';
 const navSmall = 'nav-small';
@@ -77,9 +67,11 @@ const closeMenu = () => {
   drpdwnBtn.innerHTML = menuOpenIcon;
 };
 
-window.onload = AOS.refresh;
-window.onscroll = shrinkNav;
 window.onresize = closeMenu;
+
+window.addEventListener('load', AOS.refresh);
+
+window.addEventListener('scroll', shrinkNav);
 
 window.addEventListener('click', e => {
   if (drpdwn.classList.contains(navSmall) && !e.target.closest('nav')) {
@@ -87,9 +79,7 @@ window.addEventListener('click', e => {
   }
 });
 
-nav.addEventListener('click', e => {
-  e.stopPropagation();
-});
+nav.addEventListener('click', e => e.stopPropagation());
 
 drpdwnBtn.addEventListener('click', () => {
   drpdwn.classList.toggle(navSmall);
@@ -103,6 +93,6 @@ for (const link of links) {
   const navLoc = link.href.split('/');
   const checkNav = navLoc[navLoc.length - 1];
   if (!checkNav && isRoot || page === checkNav) {
-    link.classList.add('bg-grey-3');
+    link.classList.add('bg-grey-4');
   }
 }

@@ -1,24 +1,18 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
-  <body class="sans-serif overflow-x-hidden">
+  <body class="sans-serif">
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
 
-    <div data-aos="fade-in">
+    <div id="page-container" class="overflow-x-hidden" data-aos="fade-in">
+      <div id="content-wrapper">
 
-      {{ block "main" . }}{{ end }}
+        {{ block "main" . }}{{ end }}
+
+      </div>
 
       {{ block "footer" . }}
-
-        <div class="bg-off-white w-100 center ph3 pb2 pt3">
-
-          <h4 class="f3 lh-title tc mb3" data-aos="zoom-in">Send us a message!</h4>
-
-          {{ partial "form-contact" . }}
-          
-        </div>
-
         {{ partial "footer" . }}
       {{end}}
 

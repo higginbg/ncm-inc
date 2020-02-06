@@ -1,15 +1,17 @@
 html {
+  overflow: auto;
+  height: 100%;
+  scroll-behavior: smooth;
   font-size: var(--font-size);
+  background-color: var(--off-white);
+  
   @media (--breakpoint-medium) {
     font-size: var(--font-size-m);
   }
   @media (--breakpoint-large) {
     font-size: var(--font-size-l);
   }
-  background-color: var(--off-white);
-  overflow: auto;
 }
-
 
 body {
   font-family: var(--font-family);
@@ -20,7 +22,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--off-white);
   min-width: 400px;
- }
+  height: 100%;
+}
 
 p {
   margin-bottom: var(--spacing-medium);

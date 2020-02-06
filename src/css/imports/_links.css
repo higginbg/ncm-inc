@@ -2,26 +2,7 @@
   text-decoration: none;
   transition: var(--hover-transition);
   color: var(--primary);
-  padding: var(--spacing-extra-small) 1px;
   cursor: pointer;
-}
-
-a.testimonial {
-  text-decoration: none;
-  transition: var(--hover-transition);
-
-  & blockquote {
-    transition: var(--hover-transition);
-  }
-
-  &:hover blockquote, &:hover cite {
-    background-color: var(--grey-1);
-    color: var(--grey-4);
-  }
-}
-
-footer .link {
-  color: var(--white);
 }
 
 .link:link, .md a:link
@@ -33,10 +14,8 @@ footer .link {
   text-decoration: underline;
 }
 .link:active, .md a:active  {
-  border-radius: var(--border-radius);
   transition: color .15s ease-in;
 }
 .link:focus, .md a:focus   {
   transition: color .15s ease-in;
-  outline: 1px dotted currentColor;
 }

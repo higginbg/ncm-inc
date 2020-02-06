@@ -1,16 +1,20 @@
-<footer class="bg-black white">
+<footer class="w-100 bg-black white absolute bottom-0">
 	
-	<div class="f6 flex flex-row flex-wrap-m justify-between items-center pa0-m pa3">
+	<div class="f6 h-100 flex flex-row flex-wrap-m justify-between items-center ph2-m pv0-m pa3">
+
 		<ul class="flex flex-row-m flex-column flex-wrap">
-			<li class="ma1"><a href="/" class="link">Home</a></li>
-			<li class="ma1"><a href="/about" class="link">About</a></li>
-			<li class="ma1"><a href="/projects" class="link">Projects</a></li>
-			<li class="ma1"><a href="/testimonials" class="link">Testimonials</a></li>
-			<li class="ma1"><a href="/join" class="link">Join</a></li>
-			<li class="ma1"><a href="/contact" class="link">Contact</a></li>
+			<li class="ma1"><a href="/" class="footer-link">Home</a></li>
+			<li class="ma1"><a href="/about" class="footer-link">About</a></li>
+			<li class="ma1"><a href="/projects" class="footer-link">Projects</a></li>
+			<li class="ma1"><a href="/testimonials" class="footer-link">Testimonials</a></li>
+			<li class="ma1"><a href="/join" class="footer-link">Join</a></li>
+			<li class="ma1"><a href="/contact" class="footer-link">Contact</a></li>
 		</ul>
-		<div class="db-m dn ma1 pre"><i class="fas fa-phone"></i><a href="tel:+1971-336-2341" class="link ml1" title="+1 (971) 336-2341">+1 (971) 336-2341</a></div>
+
+		<div class="db-m dn ma1 pre"><a href="tel:+1971-336-2341" class="footer-link" title="+1 (971) 336-2341"><span class="dib mr1"><i class="fas fa-phone" aria-hidden="true"></i></span>+1 (971) 336-2341</a></div>
+		
 		<div class="dn-m f2 pr3">{{ partial "logo" . }}</div>
+
 	</div>
 
 </footer>

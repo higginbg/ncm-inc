@@ -1,18 +1,18 @@
-<nav id="nav" class="f5-m f5 w-100 db divider-grey bg-black o-90 fixed z-9999 no-select animated">
-	<div class="w-100 flex justify-between items-center relative">
+<nav id="nav" class="f5-m f5 w-100 bg-black o-100 fixed z-9999 no-select animated divider-grey size-trans">
+	<div class="w-100 h-100 flex flex-row justify-between relative">
 
 		<!-- Menu Button (for small screens) -->
-		<button class="dn-m w3 mr2 f4 no-underline bg-none white pv3 ph3 pa3-m animated enlarge"><i class="fas fa-bars"></i></button>
+		<button class="nav-link dn-m w3 mr2 f4 bg-none white pa1 animated enlarge"><i class="fas fa-bars"></i></button>
 
 		<!-- Logo -->
-		<a href="/" class="f3 lh-solid pa3-m pa3 db mr4-m h-100 flex-none no-underline">{{ partial "logo" . }}</a>
+		<a id="logo" href="/" class="nav-link f3 lh-solid pa2 mr4-m h-100">{{ partial "logo" . }}</a>
 
 		<!-- Primary Nav -->
-		<div class="overflow-y-auto bg-black relative-m absolute top-100 h-auto-m vh-100 pb0-m pb3 bt-0-m bt b--grey-3 z-999">
+		<div class="overflow-y-auto bg-black static-m absolute top-100 h-100-m vh-100 pb0-m pb3 bt-0-m bt b--grey-3 z-999">
 
-			<ul class="overflow-x-hidden overflow-y-visible bg-black w-100-m w0 h-90-ns h-auto flex flex-row-m flex-column justify-end-m white size-trans animated">
+			<ul class="overflow-x-hidden overflow-y-visible bg-black w-auto-m w0 h-100-m h-90 flex flex-row-m flex-column white size-trans animated">
 				
-				<div class="dn-m">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
+				<div class="dn-m h-100-m h3">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
 				{{ partial "nav-link" (dict "link" "/about" "text" "About") }}
 				{{ partial "nav-link" (dict "link" "/projects" "text" "Projects") }}
 				{{ partial "nav-link" (dict "link" "/testimonials" "text" "Testimonials") }}
@@ -22,13 +22,8 @@
 			</ul>
 		</div>
 
-		<a id="call" href="tel:+1971-336-2341" class="no-underline w3 tc ml2 white dn-m db pv3 ph3 pa3-m animated enlarge"><i class="fas fa-phone"></i></a>
+    <!-- Call Button (small screens only) -->
+    <a id="call" href="tel:+1971-336-2341" class="nav-link dn-m w3 h-100 ml2 white pa1 animated enlarge"><div class="h-100 flex justify-center items-center"><i class="fas fa-phone"></i></div></a>
 		
 	</div>
-
 </nav>
-
-
-<div id="nav-dummy" class="w-100 bg-black relative no-select animated">
-	<a href="/" class="f3 pa3 db mr4 h-100 flex-none no-underline hidden">{{ partial "logo" . }}</a>
-</div>

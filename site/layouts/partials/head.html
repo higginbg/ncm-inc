@@ -1,10 +1,6 @@
 <head>
 
-  {{ if .IsHome }}
-	 <title>Leaders in Hospitality Renovation - NCM Inc.</title>
-  {{ else }}
-	  <title>{{ .Title }} - {{ $.Site.Title }}</title>
-  {{ end }}
+	<title>{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}</title>
 
 
   {{ $stylesheet := .Site.Data.webpack.main }}
