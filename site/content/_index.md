@@ -12,8 +12,8 @@ about:
 projects:
   heading: Our Projects
   text: "Since 1996, NCM Inc. has completed over 100 hotel renovations across the country. We have state licensing in Florida, California, Washington, South Carolina, Oregon, Arizona, and Colorado. Though we are always expanding, our fair treatment of clients keeps them coming back year after year."
-  button: More projects
+  button: See our projects
 testimonials:
   heading: Testimonials
-  button: More testimonials
+  button: Meet our clients
 ---

@@ -97,7 +97,7 @@ input:focus, textarea:focus {
 .tile {
   text-decoration: none;
   color: var(--white);
-  box-shadow: var(--image-shadow);
+  box-shadow: var(--tile-shadow);
   transition: var(--box-shadow-transition);
   border-radius: var(--border-radius);
 
