@@ -14,23 +14,12 @@ fieldset
   padding: 0;
 }
 
-fieldset {
-  margin: var(--spacing-extra-small) 0;
-}
-
-input {
-  border-radius: var(--border-radius-pill);
-}
-
-textarea {
-  border-radius: var(--border-radius);
-}
-
 input, textarea {
   background-color: var(--off-white);
   color: var(--black);
   border: 1px solid var(--grey-1);
   padding: var(--spacing-small);
+  border-radius: var(--border-radius);
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
@@ -51,6 +40,7 @@ input[type="file"] {
   border-radius: var(--border-radius);
   padding: var(--spacing-small);
   border: 1px solid var(--grey-1);
+  cursor: pointer;
 
   & + label {
     display: block;
@@ -65,32 +55,32 @@ input[type="file"] {
 }
 
 ::-webkit-input-placeholder {
-  color: var(--grey-3);
+  color: transparent;
   font-size: var(--font-size);
   line-height: normal;
 }
 
 :-moz-placeholder {
-  color: var(--grey-3);
+  color: transparent;
   font-size: var(--font-size);
   line-height: normal;
 }
 
 ::-moz-placeholder {
-  color: var(--grey-3);
+  color: transparent;
   font-size: var(--font-size);
   line-height: normal;
 }
 
 :-ms-input-placeholder {
-  color: var(--grey-3);
+  color: transparent;
   font-size: var(--font-size);
   line-height: normal;
 }
 
 label
 {
-  display: none;
+  display: block;
   font-size: var(--font-size);
   font-weight: 400;
   color: var(--grey-4);
@@ -99,8 +89,4 @@ label
   line-height: 1;
   transition: var(--hover-transition);
   z-index: 2;
-}
-
-label[for="resume"] {
-  display: block;
 }

@@ -1,7 +1,4 @@
-<div class="bg-off-white pv4 ph3">
-
-  
-
+<div class="section-off-white">
   <div class="measure-narrow center flex flex-column">
 
     <!-- Contact -->
@@ -10,29 +7,31 @@
       <h2 class="f3 lh-title tc mb3" data-aos="zoom-in">Join our team!</h2>
     
       <form id="apply-form" name="application" action="/success" netlify>
-        <div class="flex flex-column">
-          <!-- Name -->
-          <fieldset>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2">
-          </fieldset>
-          <!-- Email -->
-          <fieldset>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2">
-          </fieldset>
-        </div>
-    
+
+        <!-- Name -->
+        <fieldset>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name" class="w-100 mb2">
+        </fieldset>
+
+        <!-- Email -->
+        <fieldset>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" class="w-100 mb2">
+        </fieldset>
+
         <!-- Message -->
         <fieldset>
           <label for="message">Your message</label>
           <textarea id="message" name="message" placeholder="Your message" rows="8" cols="80" class="w-100 no-resize"></textarea>
         </fieldset>
+
         <!-- Resume -->
         <fieldset>
           <label for="resume">Resume (pdf, doc, docx)</label>
           <input type="file" accept=".pdf,.doc,.docx" id="resume" name="resume" placeholder="Resume" class="w-100 mb2">
         </fieldset>
+        
         <!-- Button -->
         <div class="w-100 tc mt2">
           <button type="submit" class="btn w-100">Send<i class="fas fa-paper-plane"></i></button>

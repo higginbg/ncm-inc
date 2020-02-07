@@ -11,14 +11,14 @@ const TestimonialListPreview = ({ entry }) => {
     <div className="bg-off-white pb4">
       <Jumbotron image={ data.getIn(['image']) } title={ data.getIn(['title']) } />
 
-      <div className="bg-off-white ph3 pv4">
+      <div className="section-off-white">
         <div className="mw6 center">
           <h1 className='f2 lh-title mb3'>{ intro.getIn(['heading']) }</h1>
           <p>{ intro.getIn(['text']) }</p>
         </div>
       </div>
 
-      <div className="bg-white ph3 pv4">
+      <div className="section-white">
         <div className='mw6 center'>
 
           <h1 class='f2 lh-title mb3'>{ main.getIn(['heading']) }</h1>

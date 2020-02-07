@@ -1,10 +1,9 @@
 {{ define "main" }}
 
-<div class="bg-white ph3 pv5 tc bb b--grey-1">
+<div class="section-white h5 tc flex flex-column justify-center">
   <h2>{{ .Params.heading }}</h2>
   <h3>{{ .Params.text }}</h3>
-
-  {{ partial "button-forward" (dict "link" "/" "text" "Go to homepage")}}
+  <div>{{ partial "button-forward" (dict "link" "/" "text" "Go to homepage")}}</div>
 </div>
 
 {{ end }}

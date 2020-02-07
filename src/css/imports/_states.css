@@ -7,25 +7,31 @@ input:focus, textarea:focus {
 }
 
 .link, .md a {
-  border-bottom: 1px dotted transparent;
-  padding-bottom: 1px;
   text-decoration: none;
+  position: relative;
   color: var(--primary);
-  cursor: pointer;
   transition: var(--box-shadow-transition) !important;
+  cursor: pointer;
 
-  &:hover {
-    text-decoration: none;
-    border-bottom: 1px solid var(--grey-2);
+  &:before {
+    background-color: var(--primary);
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 0;
   }
 
-  &:focus, &:active {
-    transition: var(--box-shadow-transition);
-    padding: var(--spacing-extra-small);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--grey-2);
-    background: var(--white);
+  &:hover, &:focus, &:active {
+    text-decoration: none;
     outline: 0!important;
+
+    &:before {
+       width: 100%;
+    }
   }
 }
 
@@ -91,7 +97,7 @@ input:focus, textarea:focus {
 .tile {
   text-decoration: none;
   color: var(--white);
-  box-shadow: var(--tile-shadow);
+  box-shadow: var(--image-shadow);
   transition: var(--box-shadow-transition);
   border-radius: var(--border-radius);
 

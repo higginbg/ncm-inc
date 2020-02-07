@@ -9,14 +9,14 @@ const BioPreview = ({ entry, widgetFor }) => {
 
   return <div className="bg-off-white pb4">
 
-    <div className="bg-off-white pv4 ph3">
+    <div className="section-off-white">
       <div className='mw6 center'>
         <h1 className='f2 lh-title mb2'>{ name }</h1>
         <h2 className='f4 lh-title'>{ position }</h2>
       </div>
     </div>
 
-    <div className="bg-white pv4 ph3">
+    <div className="section-white">
       <div className='mw6 center'>
         <img className='db center h5 object-cover mb3 box-shadow' src={ portrait } />
         <div className='cms'>{ body }</div>

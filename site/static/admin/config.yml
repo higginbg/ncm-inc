@@ -34,8 +34,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Company Name, name: company, widget: string}
       - {label: Quote, name: quote, widget: text}
       - {label: Contact, name: contact, widget: list, fields: [
-        - {label: Phone Number, name: phone, widget: string}
-        - {label: Eamil, name: email, widget: string}]}
+          {label: Phone Number, name: phone, widget: string},
+          {label: Eamil, name: email, widget: string}]}
   - name: bio
     label: "Bio"
     folder: "site/content/about/bio"

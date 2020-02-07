@@ -7,7 +7,7 @@
 {{ partial "short-text" .Params.intro }}
 
 <!-- About -->
-<div class="bg-white pv4 ph3 bb b--grey-1">
+<div class="section-white">
   <div class="mw7 center">
     {{ partial "text-and-image" .Params.about }}
     {{ partial "button-forward" (dict "link" "/about" "text" .Params.about.button)}}
@@ -15,7 +15,7 @@
 </div>
 
 <!-- Projects -->
-<div class="bg-off-white pv4 ph3 bb b--grey-1">
+<div class="section-off-white">
   <div class="mw7 center">
 
     <h2 class="f2 lh-title mv3">{{.Params.projects.heading}}</h2>
@@ -29,14 +29,14 @@
       {{ end }}
   
     </div>
+
+    {{ partial "button-forward" (dict "link" "/projects" "text" .Params.projects.button) }}
+
   </div>
-
-  {{ partial "button-forward" (dict "link" "/projects" "text" .Params.projects.button) }}
-
 </div>
 
 <!-- Testimonials -->
-<div class="bg-white pv4 ph3 bb b--grey-1">
+<div class="section-white">
   <div class="mw7 center">
 
     <h2 class="f2 lh-title mb3">{{ .Params.testimonials.heading }}</h2>

@@ -104,3 +104,16 @@ footer {
     margin-top: calc(-1 * var(--footer-height-medium));
   }
 }
+
+.section-white, .section-off-white {
+  padding: var(--spacing-large) var(--spacing-medium);
+  border-bottom: 1px solid var(--grey-1);
+}
+
+.section-off-white {
+  background-color: var(--off-white);
+}
+
+.section-white {
+  background-color: var(--white);
+}

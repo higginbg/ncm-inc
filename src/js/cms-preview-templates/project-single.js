@@ -9,14 +9,14 @@ const ProjectsPreview = ({ entry, widgetFor }) => {
   };
 
   return <div>
-    <div className="bg-off-white pv4 ph3">
+    <div className="section-off-white">
       <div className="mw7 center">
         <h2 className="f2 lh-title mb2">{ intro.title }</h2>
         <h3 className="f4 lh-title">{ intro.subtitle }</h3>
       </div>
     </div>
 
-    <div className="bg-white pv4 ph3">
+    <div className="section-white">
       <div className="mw7 center">
         <p className="mb3">{ intro.text }</p>
         <div className="flex-ns flex-wrap mhn2-ns mb3">
