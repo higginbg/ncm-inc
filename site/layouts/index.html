@@ -22,7 +22,7 @@
   
     <p class="mb3">{{.Params.projects.text}}</p>
   
-    <div class="flex-m flex-row flex-wrap center mhn2-m mw7">
+    <div class="flex-m flex-row flex-wrap center mhn2-m mw7 pb3">
   
       {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
         {{ .Render "li" }}
