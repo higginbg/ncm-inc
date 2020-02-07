@@ -64,7 +64,7 @@ input:focus, textarea:focus {
   color: var(--primary);
   border-radius: var(--border-radius);
   cursor: pointer;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--tile-shadow);
   transition: var(--box-shadow-transition);
 
   & blockquote {
@@ -106,7 +106,7 @@ input:focus, textarea:focus {
   }
 
   &:hover {
-    box-shadow: 3px 5px 20px var(--spacing-extra-small) var(--grey-3);
+    box-shadow: var(--box-shadow-hover);
 
     &:hover .banner {
       padding-bottom: var(--spacing-small);
@@ -114,7 +114,7 @@ input:focus, textarea:focus {
   }
 
   &:focus, &:active {
-    box-shadow: 0 0 5px var(--spacing-extra-small) var(--grey-3);
+    box-shadow: var(--box-shadow-hover);
     outline: 0!important;
 
     &:focus .banner, &:active .banner {

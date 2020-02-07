@@ -48,10 +48,6 @@ footer ::selection {
   width: 300px;
 }
 
-.image-shadow {
-  box-shadow: var(--image-shadow);
-}
-
 .size-trans {
   transition: var(--size-transition);
 }

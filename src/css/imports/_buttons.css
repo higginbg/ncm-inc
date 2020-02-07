@@ -20,7 +20,7 @@
   }
 
   &:hover {
-    box-shadow: var(--image-shadow);
+    box-shadow: var(--button-press-shadow);
 
     i {
       opacity: 1;
@@ -30,7 +30,7 @@
 
   &:focus, &:active {
     background-image: linear-gradient(var(--grey-3), var(--grey-3));
-    box-shadow: var(--image-shadow);
+    box-shadow: var(--button-press-shadow);
     outline: 0!important;
   }
 }
