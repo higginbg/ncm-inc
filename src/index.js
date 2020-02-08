@@ -10,7 +10,7 @@ console.log('🦊 Hello! Edit me in src/index.js');
 
 AOS.init({
   startEvent: 'load',
-  duration: 500,
+  duration: 1000,
   once: true,
   easing: 'ease'
 });

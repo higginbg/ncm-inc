@@ -3,14 +3,14 @@
 {{ partial "heading-left" (dict "title" .Title "subtitle" .Params.position "subsubtitle" .Params.company "mw" "mw6") }}
 
 <div class="section bg-white">
-  <div class="mw6 center">
+  <div class="mw6 center" data-aos="fade-in">
     <h2 class="f3 lh-title mb3">Testimonial</h2>
     <p class="db">“{{ .Params.quote }}”</p>
   </div>
 </div>
 
 <div class="section bg-off-white">
-  <div class="mw6 center">
+  <div class="mw6 center" data-aos="fade-in">
 
     {{ if .Params.contact }}
     
