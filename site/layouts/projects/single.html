@@ -2,19 +2,34 @@
 
   {{ partial "heading-left" (dict "title" .Title "subtitle" .Params.subtitle "mw" "mw7") }}
 
-  <div class="section-white">
-    <div class="mw7 center pb3">
+  <div class="section bg-white">
+    <div class="mw7 center">
 
-      <div class="cms mb3">    
-        {{ .Content }}
-      </div>
+      {{ if .Content }}
+
+        <h2 class="f3 lh-title mb3">Summary</h2>
+
+        <div class="cms mb3">    
+          {{ .Content }}
+        </div>
+        
+      {{ end }}
+
+      <h2 class="f3 lh-title mb3">Gallery</h2>
   
       {{ partial "gallery" . }}
 
     </div>
+  </div>
 
-    {{ partial "button-back" (dict "link" "/projects" "text" "Return to projects") }}
+  <div class="section bg-off-white">
+    <div class="mw7 center">
 
+    {{ partial "page-maker" . }}
+
+    {{ partial "page-number" . }}
+
+    </div>
   </div>
 
 {{ end }}

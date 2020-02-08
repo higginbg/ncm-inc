@@ -10,14 +10,14 @@ const ProjectsLandingPreview = ({ entry }) => {
   return <div className="bg-off-white pb4">
     <Jumbotron image={ data.getIn(['image']) } title={ data.getIn(['title']) } />
 
-    <div className="section-off-white">
+    <div className="section bg-off-white">
       <div className='mw6 center'>
         <h1 className='f2 lh-title mb3'>{ intro.getIn(['heading']) }</h1>
         <p>{ intro.getIn(['text']) }</p>
       </div>
     </div>
 
-    <div className="section-white">
+    <div className="section bg-white">
       <div className='mw6 center'>
         <h1 className='f2 lh-title mb3'>{ main.getIn(['heading']) }</h1>
         <p>{ main.getIn(['text']) }</p>

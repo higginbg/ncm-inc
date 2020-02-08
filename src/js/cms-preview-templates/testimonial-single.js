@@ -8,7 +8,7 @@ const TestimonialSinglePreview = ({ entry }) => {
   return (
     <div className="bg-off-white pb4">
 
-      <div className="section-off-white">
+      <div className="section bg-off-white">
         <div className="mw6 center">
           <h1 className='f2 lh-title mb3'>{ data.getIn(['title']) }</h1>
           <h2>{ data.getIn(['position']) }</h2>
@@ -16,7 +16,7 @@ const TestimonialSinglePreview = ({ entry }) => {
         </div>
       </div>
 
-      <div className="section-white">
+      <div className="section bg-white">
         <div className='mw6 center'>
 
           <p class="db mb4">“{ data.getIn(['quote']) }”</p>

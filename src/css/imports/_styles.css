@@ -90,6 +90,9 @@ nav {
 footer {
   height: var(--footer-height);
   margin-top: calc(-1 * var(--footer-height));
+  -webkit-box-shadow: var(--footer-shadow);
+  -moz-box-shadow: var(--footer-shadow);
+  box-shadow: var(--footer-shadow);
 }
 
 @media (--breakpoint-medium) {
@@ -103,15 +106,10 @@ footer {
   }
 }
 
-.section-white, .section-off-white {
+.section {
   padding: var(--spacing-large) var(--spacing-medium);
-  border-bottom: 1px solid var(--grey-1);
-}
 
-.section-off-white {
-  background-color: var(--off-white);
-}
-
-.section-white {
-  background-color: var(--white);
+  & + .section {
+    border-top: 1px solid var(--grey-1);
+  }
 }

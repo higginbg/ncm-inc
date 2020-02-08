@@ -25,6 +25,16 @@ input:focus, textarea:focus {
     width: 0;
   }
 
+  &.link-prev:before {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  &.link-next:before {
+    left: 0;
+    transform: translateX(0);
+  }
+
   &:hover, &:focus, &:active {
     text-decoration: none;
     outline: 0!important;
@@ -37,6 +47,9 @@ input:focus, textarea:focus {
 
 .nav-link {
   text-decoration: none;
+  color: var(--white);
+  transition: var(--box-shadow-transition) !important;
+  cursor: pointer;
 
   &:focus {
     background-color: var(--grey-4);
@@ -92,6 +105,10 @@ input:focus, textarea:focus {
 
 .nav-shadow {
   box-shadow: var(--nav-shadow);
+}
+
+.footer-shadow {
+  box-shadow: var(--footer-shadow);
 }
 
 .tile {

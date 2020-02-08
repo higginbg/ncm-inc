@@ -62,5 +62,7 @@
 
   --menu-shadow: 3px 0 20px rgba(0,0,0,0.19), 3px 0 20px rgba(0,0,0,0.23);
 
+  --footer-shadow: 0 -3px 20px rgba(0,0,0,0.19), 0 3px 20px rgba(0,0,0,0.23);
+
   --button-press-shadow: 0 0 20px rgba(0,0,0,0.35), 0 0 6px rgba(0,0,0,0.47);
 }

@@ -76,9 +76,18 @@ window.addEventListener('load', AOS.refresh);
 
 window.addEventListener('scroll', shrinkNav);
 
-window.addEventListener('click', e => {
-  if (drpdwn.classList.contains(navSmall) && !e.target.closest('nav')) {
+window.addEventListener('click', ({ target }) => {
+
+  const tag = target.tagName.toLowerCase();
+
+  if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
     closeMenu();
+  }
+
+  if (tag === 'input' || tag === 'textarea') {
+    document.body.paddingTop = `${document.body.paddingTop + nav.clientHeight}px`;
+  } else {
+    document.body.paddingTop = `${document.body.paddingTop - nav.clientHeight}px`;
   }
 });
 

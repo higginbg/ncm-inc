@@ -1,11 +1,13 @@
-<div class="h5 br1 overflow-hidden cover relative bg-center" style="background-image: url('{{ .Params.image }}')">
-  <div class="banner db bg-black white w-100 o-90 ph2 pv1 absolute bottom-0">
-
-    <h3 class="f5">{{ .Params.title }}</h3>
-    
-    {{ if .Params.subtitle }}
-      <h4 class="f6">{{ .Params.subtitle }}</h4>
-    {{ end }}
-
+<a class="db no-underline tile" href="{{ .RelPermalink }}">
+  <div class="h5 br1 overflow-hidden cover relative bg-center" style="background-image: url('{{ .Params.image }}')">
+    <div class="banner db bg-black white w-100 o-90 ph2 pv1 absolute bottom-0">
+  
+      <h3 class="f5">{{ .Params.title }}</h3>
+      
+      {{ if .Params.subtitle }}
+        <h4 class="f6">{{ .Params.subtitle }}</h4>
+      {{ end }}
+  
+    </div>
   </div>
-</div>
+</a>

@@ -1,5 +1,7 @@
 <div class="flex-m flex-row flex-wrap justify-center">
-  {{ range .Data.Pages }}
-    {{ .Render "li" }}
+  {{ range (.Paginator 10).Pages.ByDate.Reverse }}
+    {{ .Render "li"}}
   {{ end }}
 </div>
+
+{{ partial "pagination" . }}

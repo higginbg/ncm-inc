@@ -1,0 +1,23 @@
+<div class="flex flex-row justify-around">
+
+  {{ $pages := .CurrentSection.Pages }}
+  
+  <div class="w-50 self-start tl pr2">
+    {{ with ($pages.ByParam "order").Reverse.Prev . }}
+      <div class="center">
+        <a class="db no-underline" href="{{ .RelPermalink }}"><h2 class="f4 lh-title mb2">&larr; Previous</h2></a>
+        {{ partial "media-tile" . }}
+      </div>
+    {{ end }}
+  </div>
+
+  <div class="w-50 self-end tr pl2">
+    {{ with ($pages.ByParam "order").Reverse.Next . }}
+      <div class="center">
+        <a class="db no-underline" href="{{ .RelPermalink }}"><h2 class="f4 lh-title mb2">Next &rarr;</h2></a>
+        {{ partial "media-tile" . }}
+      </div>
+    {{ end }}
+  </div>
+
+</div>

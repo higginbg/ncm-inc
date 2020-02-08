@@ -2,15 +2,25 @@
 
 {{ partial "heading-left" (dict "title" .Title "subtitle" .Params.subtitle "mw" "mw6") }}
 
-  <div class="section-white">
+  <div class="section bg-white">
     <div class="mw6 center">
         
-        <img src="{{ .Params.image }}" alt="{{ .Title }}, {{ .Params.subtitle }}" class="db center h5 mb3 object-cover tile-shadow"/>
+        <img src="{{ .Params.image }}" alt="{{ .Title }}, {{ .Params.subtitle }}" class="db center h5-m h-auto w-auto-m w-100 br1 mb4 object-cover tile-shadow"/>
         
         <div class="cms">    
           {{ .Content }}
         </div>
   
+    </div>
+  </div>
+
+  <div class="section bg-off-white">
+    <div class="mw6 center">
+
+    {{ partial "page-maker" . }}
+
+    {{ partial "page-number" . }}
+
     </div>
   </div>
 

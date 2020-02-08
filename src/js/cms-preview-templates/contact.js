@@ -17,7 +17,7 @@ const ContactPreview = ({ entry, widgetFor, widgetsFor }) => {
   const contactEntries = widgetsFor('contact_entries') || {};
 
   return <div>
-    <div className="section-off-white">
+    <div className="section bg-off-white">
       <div className="mw6 center">
 
         <h1 className='f2 tc lh-title'>{ entry.getIn(["data", "heading"]) }</h1>
@@ -25,7 +25,7 @@ const ContactPreview = ({ entry, widgetFor, widgetsFor }) => {
       </div>
     </div>
 
-    <div className="section-white">
+    <div className="section bg-white">
       <div className="mw6 center">
 
         <div className="mb4">{ widgetFor('intro_text') }</div>
