@@ -135,11 +135,16 @@ footer {
   cursor: default;
 
   & .link {
-    cursor: pointer;
+    pointer-events: none;
   }
 
   &:hover, &:active, &:focus, &:focus-within {
     outline: 0!important;
+
+    & .link {
+      pointer-events: auto;
+      cursor: pointer;
+    }
 
     & .flip-card-inner {
       transform: rotateY(180deg);
@@ -152,13 +157,14 @@ footer {
     }
 
     & .flip-card-back {
+      display: block;
       box-shadow: var(--tile-shadow);
     }
   }
 }
 
 .contact {
-  flex-basis: 33%;
+  flex-basis: 40%;
 }
 
 .flip-card-inner {

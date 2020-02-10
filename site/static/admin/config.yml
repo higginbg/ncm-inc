@@ -64,10 +64,10 @@ collections: # A list of collections the CMS should be able to edit
               {label: Image 1, name: Image1, widget: image},
               {label: Image 2, name: Image2, widget: image},
               {label: Team Members, name: list, widget: list, fields: [
-                {label: Name, name: title, widget: string, required: true}
-                - {label: Position in Company, name: subtitle, widget: string, required: true}
-                - {label: Portrait, name: image, widget: image, required: true, default: "/img/portrait-blank.png"}
-                - {label: Text, name: text, widget: markdown, required: true}
+                {label: Name, name: name, widget: string, required: true},
+                {label: Position in Company, name: position, widget: string, required: true},
+                {label: Portrait, name: image, widget: image, required: true, default: "/img/portrait-blank.png"},
+                {label: Text, name: text, widget: markdown, required: true}
               ]}]}
       - file: "site/content/projects/_index.md"
         label: Projects
@@ -117,10 +117,10 @@ collections: # A list of collections the CMS should be able to edit
               {label: Heading, name: heading, widget: string},
               {label: Text, name: text, widget: text},
               {label: Testimonials, name: list, widget: list, fields: [
-                - {label: Name, name: name, widget: string}
-                - {label: Position in Company, name: position, widget: string}
-                - {label: Company Name, name: company, widget: string}
-                - {label: Quote, name: quote, widget: text}
-                - {label: Contact, name: contact, widget: list, fields: [
-                    {label: Phone Number, name: phone, widget: string},
-                    {label: Eamil, name: email, widget: string}]}]}]}
+                {label: Name, name: name, widget: string},
+                {label: Position in Company, name: position, widget: string},
+                {label: Company Name, name: company, widget: string},
+                {label: Quote, name: quote, widget: text},
+                {label: Contact, name: contact, widget: list, fields: [
+                  {label: Phone Number, name: phone, widget: string},
+                  {label: Eamil, name: email, widget: string}]}]}]}
