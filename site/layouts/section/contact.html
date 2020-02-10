@@ -11,8 +11,8 @@
     
       {{ range .Params.contact_entries }}
         <div class="w-50-ns mb2-ns mb4">
-          <h4 class="f4 lh-title mb2">{{ .heading }}</h4>
-          <p class="md">{{ .text | markdownify }}</p>
+          <h4 class="f3 lh-title mb2">{{ .heading }}</h4>
+          <p class="f5 md">{{ .text | markdownify }}</p>
         </div>
       {{ end }}
       

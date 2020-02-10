@@ -6,21 +6,13 @@
 <!-- Intro -->
 {{ partial "short-text" .Params.intro }}
 
-<!-- About -->
+<!-- Projects -->
 <div class="section bg-white">
   <div class="mw7 center" data-aos="fade-in">
-    {{ partial "text-and-image" .Params.about }}
-    {{ partial "button-forward" (dict "link" "/about" "text" .Params.about.button)}}
-  </div>
-</div>
 
-<!-- Projects -->
-<div class="section bg-off-white">
-  <div class="mw7 center" data-aos="fade-in">
-
-    <h2 class="f2 lh-title mb3">{{.Params.projects.heading}}</h2>
+    <h2 class="f2 lh-title mb3">{{ .Params.projects.heading }}</h2>
   
-    <p class="mb3">{{.Params.projects.text}}</p>
+    <p class="mb3">{{ .Params.projects.text }}</p>
   
     <div class="flex-m flex-row flex-wrap center mhn2-m mw7">
   
@@ -35,6 +27,16 @@
   </div>
 </div>
 
+<!-- About -->
+{{ with .Params.about }}
+  <div class="section bg-debut">
+    <div class="mw7 center" data-aos="fade-in">
+      {{ partial "text-and-image" . }}
+      {{ partial "button-forward" (dict "link" "/about" "text" .button)}}
+    </div>
+  </div>
+{{ end }}
+
 <!-- Testimonials -->
 <div class="section bg-white">
   <div class="mw7 center" data-aos="fade-in">
@@ -43,8 +45,14 @@
   
     <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 
-      {{ range first 3 ( where .Site.Pages "Section" "=" "testimonials") }}
-        {{ .Render "li" }}
+      {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
+        {{ with .Params.main }}
+          <div class="flex flex-row flex-wrap justify-center">
+            {{ range first 3 .list }}
+              {{ partial "testimonials" . }}
+            {{ end }}
+          </div>
+        {{ end }}
       {{ end }}
   
     </div> 

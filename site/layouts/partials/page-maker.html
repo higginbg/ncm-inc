@@ -3,19 +3,23 @@
   {{ $pages := .CurrentSection.Pages }}
   
   <div class="w-50 self-start tl pr2">
-    {{ with ($pages.ByParam "order").Reverse.Prev . }}
+    {{ with $pages.Reverse.Prev . }}
       <div class="center">
-        <a class="db no-underline pb2" href="{{ .RelPermalink }}"><h2 class="f4 lh-title">&larr; Previous</h2></a>
-        {{ partial "media-tile" . }}
+        <a class="db no-underline tile-link" href="{{ .RelPermalink }}">
+          <h2 class="f4 lh-title mb2">&larr; Previous</h2>
+          {{ partial "media-tile" . }}
+        </a>
       </div>
     {{ end }}
   </div>
 
   <div class="w-50 self-end tr pl2">
-    {{ with ($pages.ByParam "order").Reverse.Next . }}
+    {{ with $pages.Reverse.Next . }}
       <div class="center">
-        <a class="db no-underline pb2" href="{{ .RelPermalink }}"><h2 class="f4 lh-title">Next &rarr;</h2></a>
-        {{ partial "media-tile" . }}
+        <a class="db no-underline tile-link" href="{{ .RelPermalink }}">
+          <h2 class="f4 lh-title mb2">Next &rarr;</h2>
+          {{ partial "media-tile" . }}
+        </a>
       </div>
     {{ end }}
   </div>

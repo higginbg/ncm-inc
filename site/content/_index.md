@@ -8,6 +8,8 @@ intro:
 about:
     heading: About Our Team
     text: NCM Inc. is a family business. But don't let our roots fool you, we have over 100 commercial projects under our belt, licensing in 6 states, and team members with 30+ years of hopitality experience. Don't be surprised if you feel like part of the family!
+    image1: "img/cover-about.jpg"
+    image2: "img/about-team.jpg"
     button: Meet our team
 projects:
   heading: Our Projects

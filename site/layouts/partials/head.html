@@ -1,12 +1,11 @@
 <head>
 
-	<title>{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}</title>
-
-
-  {{ $stylesheet := .Site.Data.webpack.main }}
-  {{ with $stylesheet.css }}
+	{{ $stylesheet := .Site.Data.webpack.main }}
+	{{ with $stylesheet.css }}
     <link href="{{ relURL . }}" rel="stylesheet">
-  {{ end }}
+	{{ end }}
+	
+	<title>{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}</title>
 
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">

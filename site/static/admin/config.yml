@@ -23,39 +23,6 @@ collections: # A list of collections the CMS should be able to edit
           {label: Description, name: text, widget: string}]}
       - {label: Feature on Home Page, name: featured, widget: boolean}
       - {label: Body, name: body, widget: markdown}
-  - name: testimonial-single
-    label: Testimonial
-    folder: "site/content/testimonials/list"
-    create: true
-    slug: "{{title}}"
-    fields:
-      - {label: Name, name: title, widget: string}
-      - {label: Position in Company, name: position, widget: string}
-      - {label: Company Name, name: company, widget: string}
-      - {label: Quote, name: quote, widget: text}
-      - {label: Contact, name: contact, widget: list, fields: [
-          {label: Phone Number, name: phone, widget: string},
-          {label: Eamil, name: email, widget: string}]}
-  - name: bio
-    label: "Bio"
-    folder: "site/content/about/bio"
-    create: true
-    slug: "{{title}}"
-    fields:
-      - {label: Name, name: title, widget: string}
-      - {label: Position in Company, name: subtitle, widget: string}
-      - label: Portrait
-        name: image
-        widget: image
-        required: true
-        default: "/img/portrait-blank.png"
-      - label: Order in List
-        name: order
-        widget: number
-        valueType: "int"
-        min: 1
-        max: 15
-      - {label: Body, name: body, widget: markdown}
   - name: pages
     label: Pages
     files:
@@ -72,6 +39,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: About, name: about, widget: object, fields: [
               {label: Heading, name: heading, widget: string},
               {label: Text, name: text, widget: text},
+              {label: Image 1, name: Image1, widget: image},
+              {label: Image 2, name: Image2, widget: image},
               {label: Button Text, name: "button", widget: string}]}
           - {label: Projects, name: projects, widget: object, fields: [
               {label: Heading, name: heading, widget: string},
@@ -91,7 +60,15 @@ collections: # A list of collections the CMS should be able to edit
               {label: Text, name: text, widget: text}]}
           - {label: Main, name: main, widget: object, fields: [
               {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text}]}
+              {label: Text, name: text, widget: text},
+              {label: Image 1, name: Image1, widget: image},
+              {label: Image 2, name: Image2, widget: image},
+              {label: Team Members, name: list, widget: list, fields: [
+                {label: Name, name: title, widget: string, required: true}
+                - {label: Position in Company, name: subtitle, widget: string, required: true}
+                - {label: Portrait, name: image, widget: image, required: true, default: "/img/portrait-blank.png"}
+                - {label: Text, name: text, widget: markdown, required: true}
+              ]}]}
       - file: "site/content/projects/_index.md"
         label: Projects
         name: project-list
@@ -138,4 +115,12 @@ collections: # A list of collections the CMS should be able to edit
               {label: Text, name: text, widget: text}]}
           - {label: Main, name: main, widget: object, fields: [
               {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text}]}
+              {label: Text, name: text, widget: text},
+              {label: Testimonials, name: list, widget: list, fields: [
+                - {label: Name, name: name, widget: string}
+                - {label: Position in Company, name: position, widget: string}
+                - {label: Company Name, name: company, widget: string}
+                - {label: Quote, name: quote, widget: text}
+                - {label: Contact, name: contact, widget: list, fields: [
+                    {label: Phone Number, name: phone, widget: string},
+                    {label: Eamil, name: email, widget: string}]}]}]}

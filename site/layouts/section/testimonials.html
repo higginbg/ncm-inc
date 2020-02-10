@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
+
+{{ partial "short-text" .Params.intro }}
+
+<div class="section bg-white">
+
+    <div class="mw7 center">
+
+      {{ with .Params.main }}
+    
+        <h1 class="f2 mb3" data-aos="fade-in">{{ .heading }}</h1>
+        {{ if .text }}<p class="mb4 db" data-aos="fade-in">{{ .text }}</p>{{ end }}
+
+        <div class="flex flex-row flex-wrap justify-center">
+          {{ range .list }}
+            {{ partial "testimonials" . }}
+          {{ end }}
+        </div>
+
+      {{ end }}
+          
+    </div>
+  </div>
+  
+
+{{ partial "form-contact" }}
+  
+{{ end }}

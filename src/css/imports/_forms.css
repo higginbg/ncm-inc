@@ -15,19 +15,20 @@ fieldset
 }
 
 input, textarea {
-  background-color: var(--off-white);
+  background-color: white;
   color: var(--black);
-  border: 1px solid var(--grey-1);
+  border: 1px solid var(--off-white);
+  border-bottom: 2px solid var(--primary);
   padding: var(--spacing-small);
-  border-radius: var(--border-radius);
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
   transition: var(--box-shadow-transition);
   z-index: 2;
   user-select: none;
-  &:hover, &:focus {
-    border: 1px solid var(--grey-2);
+  &:hover, &:focus, &:active {
+    border: 1px solid var(--grey-1);
+  border-bottom: 2px solid var(--primary);
   }
   &:focus + label {
     pointer-events: auto;
@@ -36,20 +37,17 @@ input, textarea {
 
 input[type="file"] {
   font-size: var(--font-size);
-  background-color: var(--off-white);
-  border-radius: var(--border-radius);
   padding: var(--spacing-small);
-  border: 1px solid var(--grey-1);
+  border: 1px solid var(--off-white);
   cursor: pointer;
 
   & + label {
     display: block;
   } 
   &:hover {
-    border: 1px solid var(--grey-2);
+    border: 1px solid var(--grey-1);
   }
   &:focus {
-    background-color: transparent;
     border: 1px solid var(--grey-2);
   }
 }

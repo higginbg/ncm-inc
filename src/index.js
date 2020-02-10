@@ -72,7 +72,10 @@ const closeMenu = () => {
 
 window.onresize = closeMenu;
 
-window.addEventListener('load', AOS.refresh);
+window.addEventListener('load', () => {
+  document.body.classList.remove('preload');
+  AOS.refresh();
+});
 
 window.addEventListener('scroll', shrinkNav);
 

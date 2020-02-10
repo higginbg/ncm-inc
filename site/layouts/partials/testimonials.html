@@ -1,0 +1,69 @@
+<div class="w-33-l w-100 pa2-l pv2">
+  <blockquote class="flip-card h-100" tabindex=0 data-aos="fade-in">
+
+    <div class="flip-card-inner">
+
+      <div class="flip-card-front bg-spikes ba b--off-white black br1 pa3 tile-shadow">
+
+        <div class="bg-white h-100 br1 pv1 ph2 ba b--off-white flex flex-column justify-between">
+
+          <p class="f5 mb3">“{{ .quote }}”</p>
+  
+          <cite class="tr db grey-4">
+            <span class="db">{{ .name }}</span>
+      
+              {{ if .position }}
+                <span class="f6 lh-title db">{{ .position }}</span>
+              {{ end }}
+      
+              {{ if .company }}
+                <span class="f6 lh-title db">{{ .company }}</span>
+              {{ end }}
+      
+            </span>
+          </cite> 
+        </div>
+
+
+      </div>
+  
+      <div class="flip-card-back pa3 bg-white ba b--off-white br1 overflow-auto">
+      
+        <h2 class="f3 lh-title mb3">Contact {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
+        <p class="db lh-title mb2">We encourage you to contact our references for their experiences with our team.</p>
+
+        <div class="flex flex-row flex-wrap">
+
+          {{ with .contact }}
+
+            <!-- Phone -->
+            {{ if .phone }}
+    
+              <div class="contact mt3">
+                <h3 class="f5 lh-title mb1">Phone</h3>
+                  
+                <a class="link db pre" href="tel:+1{{ .phone | urlize }}">{{ .phone }}</a>
+              </div>
+
+            {{ end }}
+
+            <!-- Email -->
+            {{ if .email }}
+    
+              <div class="contact mt3">
+                <h3 class="f5 lh-title mb1">Email</h3>
+                  
+                <a class="link db pre" href="mailto:{{ .email }}">{{ .email }}</a>
+              </div>
+    
+            {{ end }}
+
+          {{ end }}
+
+        </div>
+
+
+      </div>
+    </div>
+  </blockquote>
+</div>

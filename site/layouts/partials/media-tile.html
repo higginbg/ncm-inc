@@ -1,13 +1,15 @@
-<a class="db no-underline tile" href="{{ .RelPermalink }}">
-  <div class="h5 br1 overflow-hidden cover relative bg-center" style="background-image: url('{{ .Params.image }}')">
-    <div class="banner db bg-black white w-100 o-90 ph2 pv1 absolute bottom-0">
-  
-      <h3 class="f5">{{ .Params.title }}</h3>
-      
-      {{ if .Params.subtitle }}
-        <h4 class="f6">{{ .Params.subtitle }}</h4>
-      {{ end }}
-  
-    </div>
+<div class="tile h5 br1 overflow-hidden cover relative bg-center" style="background-image: url('{{ .Params.image }}')">
+  <div class="hover-cover absolute h-100 w-100 pa3 flex justify-center items-center">
+    <div class="h-100 w-100 bg-debut-dark o-70 absolute"></div>
+    <span class="f3 white z-999 o-90">View Project &rarr;</span>
   </div>
-</a>
+  <div class="banner db bg-debut-dark white w-100 o-80 ph2 pv1 absolute bottom-0">
+
+    <h3 class="f5">{{ .Params.title }}</h3>
+    
+    {{ if .Params.subtitle }}
+      <h4 class="f6">{{ .Params.subtitle }}</h4>
+    {{ end }}
+
+  </div>
+</div>

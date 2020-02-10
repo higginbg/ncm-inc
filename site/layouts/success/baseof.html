@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
-  <body class="sans-serif overflow-x-hidden">
+  <body class="sans-serif preload">
 
     {{ block "header" . }}
       <div class="f2 bg-black pa3 flex justify-center">{{ partial "logo" . }}</div>
@@ -14,6 +14,8 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+
+    <script> </script>
   
   </body>
 </html>

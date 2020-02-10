@@ -76,31 +76,34 @@
   background-color: var(--black);
 }
 
-.bg-black-90 {
-  background-color: var(--black-90);
-}
-
-@media (--breakpoint-not-small) {
-  .bg-black-90-ns {
-    background-color: var(--black-90);
-  }
-}
-
-@media (--breakpoint-medium) {
-  .bg-black-90-m {
-    background-color: var(--black-90);
-  }
-}
-
-@media (--breakpoint-large) {
-  .bg-black-90-l {
-    background-color: var(--black-90);
-  }
-}
-
 .bg-fix-primary {
   padding: 0 var(--spacing-small);
   & :first-child {
     box-shadow: var(--spacing-small) 0 0 var(--primary), -var(--spacing-small) 0 0 var(--primary);
   }
+}
+
+.bg-spikes {
+  background-image: url("/img/backgrounds/spikes.png");
+  background-repeat: repeat;
+}
+
+.bg-debut {
+  background-image: url("/img/backgrounds/debut.png");
+  background-repeat: repeat;
+}
+
+.bg-debut-dark {
+  background-image: url("/img/backgrounds/debut-dark.png");
+  background-repeat: repeat;
+}
+
+.bg-triangles {
+  background-image: url("/img/backgrounds/triangles.png");
+  background-repeat: repeat;
+}
+
+.bg-stripes {
+  background-image: url("/img/backgrounds/stripes.png");
+  background-repeat: repeat;
 }

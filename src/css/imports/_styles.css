@@ -1,3 +1,10 @@
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 ::selection {
   color: var(--black);
   background-color: var(--highlight);
@@ -5,6 +12,14 @@
 
 .bg-black ::selection {
   background-color: var(--white);
+}
+
+#logo {
+  box-shadow: none;
+  
+  &:hover {
+    box-shadow: inset 0 -4px 0 var(--primary);
+  }
 }
 
 /* Used in the navbar */
@@ -110,6 +125,70 @@ footer {
   padding: var(--spacing-large) var(--spacing-medium);
 
   & + .section {
-    border-top: 1px solid var(--grey-1);
+    border-top: 1px solid var(--off-white);
   }
+}
+
+.flip-card {
+  height: 100%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  cursor: default;
+
+  & .link {
+    cursor: pointer;
+  }
+
+  &:hover, &:active, &:focus, &:focus-within {
+    outline: 0!important;
+
+    & .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    & .flip-card-front {
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+      box-shadow: none;
+    }
+
+    & .flip-card-back {
+      box-shadow: var(--tile-shadow);
+    }
+  }
+}
+
+.contact {
+  flex-basis: 33%;
+}
+
+.flip-card-inner {
+  height: 100%;
+  background: transparent;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front {
+  position: relative;
+}
+
+.flip-card-front, .flip-card-back {
+  height: 100%;
+  -webkit-backface-visibility: visible; /* Safari */
+  backface-visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
