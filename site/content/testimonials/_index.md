@@ -12,7 +12,7 @@ main:
       position: President
       company: Great Hotel Co.
       quote: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et aliquam urna. Nullam sit amet felis a nunc ultricies vestibulum tincidunt mattis sem. Vestibulum sed ultricies leo.
+        Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
       contact:
         phone: "(555) 555-5555"
         email: ""
@@ -20,7 +20,7 @@ main:
       position: Vice President
       company: Hotels R' Us
       quote: >-
-        Maecenas in massa eget lorem congue gravida id et sapien. Nunc imperdiet risus id euismod cursus. Maecenas id tortor quis odio euismod gravida id et eros. Curabitur semper id magna at condimentum.
+        What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
       contact:
         phone: "(555) 555-5555"
         email: "example@example.com"
@@ -28,7 +28,7 @@ main:
       position: CEO
       company: Inns and More
       quote: >-
-        Suspendisse ultrices dolor maximus, vehicula erat id, fringilla neque. Etiam mattis volutpat fringilla. Mauris ullamcorper id turpis et vestibulum.
+        I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
       contact:
         phone: ""
         email: ""
@@ -36,7 +36,7 @@ main:
       position: President
       company: Great Hotel Co.
       quote: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et aliquam urna. Nullam sit amet felis a nunc ultricies vestibulum tincidunt mattis sem. Vestibulum sed ultricies leo.
+        Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
       contact:
         phone: "(555) 555-5555"
         email: ""
@@ -44,7 +44,7 @@ main:
       position: Vice President
       company: Hotels R' Us
       quote: >-
-        Maecenas in massa eget lorem congue gravida id et sapien. Nunc imperdiet risus id euismod cursus. Maecenas id tortor quis odio euismod gravida id et eros. Curabitur semper id magna at condimentum.
+        What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
       contact:
         phone: "(555) 555-5555"
         email: "example@example.com"
@@ -52,7 +52,7 @@ main:
       position: CEO
       company: Inns and More
       quote: >-
-        Suspendisse ultrices dolor maximus, vehicula erat id, fringilla neque. Etiam mattis volutpat fringilla. Mauris ullamcorper id turpis et vestibulum.
+        I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
       contact:
         phone: ""
         email: ""
@@ -60,7 +60,7 @@ main:
       position: President
       company: Great Hotel Co.
       quote: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et aliquam urna. Nullam sit amet felis a nunc ultricies vestibulum tincidunt mattis sem. Vestibulum sed ultricies leo.
+        Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
       contact:
         phone: "(555) 555-5555"
         email: ""
@@ -68,7 +68,7 @@ main:
       position: Vice President
       company: Hotels R' Us
       quote: >-
-        Maecenas in massa eget lorem congue gravida id et sapien. Nunc imperdiet risus id euismod cursus. Maecenas id tortor quis odio euismod gravida id et eros. Curabitur semper id magna at condimentum.
+        What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
       contact:
         phone: "(555) 555-5555"
         email: "example@example.com"
@@ -76,7 +76,7 @@ main:
       position: CEO
       company: Inns and More
       quote: >-
-        Suspendisse ultrices dolor maximus, vehicula erat id, fringilla neque. Etiam mattis volutpat fringilla. Mauris ullamcorper id turpis et vestibulum.
+        I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
       contact:
         phone: ""
         email: ""
@@ -84,7 +84,7 @@ main:
       position: President
       company: Great Hotel Co.
       quote: >-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et aliquam urna. Nullam sit amet felis a nunc ultricies vestibulum tincidunt mattis sem. Vestibulum sed ultricies leo.
+        Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
       contact:
         phone: "(555) 555-5555"
         email: ""
@@ -92,7 +92,7 @@ main:
       position: Vice President
       company: Hotels R' Us
       quote: >-
-        Maecenas in massa eget lorem congue gravida id et sapien. Nunc imperdiet risus id euismod cursus. Maecenas id tortor quis odio euismod gravida id et eros. Curabitur semper id magna at condimentum.
+        What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
       contact:
         phone: "(555) 555-5555"
         email: "example@example.com"
@@ -100,7 +100,7 @@ main:
       position: CEO
       company: Inns and More
       quote: >-
-        Suspendisse ultrices dolor maximus, vehicula erat id, fringilla neque. Etiam mattis volutpat fringilla. Mauris ullamcorper id turpis et vestibulum.
+        I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
       contact:
         phone: ""
         email: ""

@@ -4,8 +4,8 @@
   
   <div class="w-50 tl pr2-m pr1" data-aos="fade-up-left">
     {{ with $pages.Reverse.Prev . }}
-      <div class="center h-100">
-        <a class="db-m dn no-underline h-100 tile-link" href="{{ .RelPermalink }}">
+      <div class="center">
+        <a class="db-m dn no-underline tile-link" href="{{ .RelPermalink }}">
           <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
           {{ with .Params }}
             {{ partial "media-tile" (dict "title" .title "subtitle" .subtitle "image" .image "text" "← View Project") }}
@@ -35,7 +35,7 @@
           {{ end }}
         </a>
         <a class="dn-m db no-underline h-100 link tile-link link-next" href="{{ .RelPermalink }}">
-          <h2 class="f4 lh-title mb2 grey-4">Next &rarr;</h2>
+          <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
           <div class="tile br1 cover relative bg-center" style="background-image: url('{{ .Params.image }}'); height: 150px;">
             <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
               <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>

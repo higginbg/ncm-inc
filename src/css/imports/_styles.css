@@ -118,7 +118,7 @@ nav {
 /* Account for nav when using hash links */
 h1, h2, h3, h4, h5, h6 {
 
-  &::before {
+  &[id]::before {
     display: block; 
     content: " "; 
     margin-top: calc(-1 * var(--nav-height)); 
@@ -147,10 +147,8 @@ footer {
   }
 }
 
-@media (--breakpoint-not-small) {
-  .neg-margin {
-    margin-top: calc(-0.75 * var(--neg-margin));
-  }
+.neg-margin {
+  margin-top: calc(-0.75 * var(--neg-margin));
 }
 
 @media (--breakpoint-medium) {
@@ -162,15 +160,15 @@ footer {
 .section {
   padding: var(--spacing-large) var(--spacing-medium);
 
-  @media (--breakpoint-not-small) {
+  &.neg-margin-offset {
+    padding: var(--spacing-large) var(--spacing-medium);
+    padding-bottom: calc(0.75 * var(--neg-margin));
+  }
+
+  @media (--breakpoint-medium) {
     &.neg-margin-offset {
       padding: var(--spacing-large) var(--spacing-medium);
       padding-bottom: calc(var(--spacing-small) + var(--neg-margin));
-    }
-
-    &.neg-margin-offset-l {
-      padding: var(--spacing-large) var(--spacing-medium);
-      padding-bottom: calc(var(--spacing-extra-large) + var(--neg-margin));
     }
   }
 

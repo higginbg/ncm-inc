@@ -1,8 +1,8 @@
 .h0 { height: 0; }
 .h1 { height: var(--spacing-medium); }
 .h2 { height: 2rem; }
-.h3 { height: 4rem; }
-.h4 { height: 8rem; }
+.h3 { height: 10rem; }
+.h4 { height: 12rem; }
 .h5 { height: 16rem; }
 .h6 { height: 20rem; }
 .h7 { height: 24rem; }
@@ -36,8 +36,8 @@
   .h0-ns {  height: 0; }
   .h1-ns {  height: var(--spacing-medium); }
   .h2-ns {  height: 2rem; }
-  .h3-ns {  height: 4rem; }
-  .h4-ns {  height: 8rem; }
+  .h3-ns {  height: 10rem; }
+  .h4-ns {  height: 12rem; }
   .h5-ns {  height: 16rem; }
   .h6-ns { height: 20rem; }
   .h7-ns { height: 24rem; }
@@ -60,8 +60,8 @@
   .h0-m { height: 0; }
   .h1-m { height: var(--spacing-medium); }
   .h2-m { height: 2rem; }
-  .h3-m { height: 4rem; }
-  .h4-m { height: 8rem; }
+  .h3-m { height: 10rem; }
+  .h4-m { height: 12rem; }
   .h5-m { height: 16rem; }
   .h6-m { height: 20rem; }
   .h7-m { height: 24rem; }
@@ -84,8 +84,8 @@
   .h0-l { height: 0; }
   .h1-l { height: var(--spacing-medium); }
   .h2-l { height: 2rem; }
-  .h3-l { height: 4rem; }
-  .h4-l { height: 8rem; }
+  .h3-l { height: 10rem; }
+  .h4-l { height: 12rem; }
   .h5-l { height: 16rem; }
   .h6-l { height: 20rem; }
   .h7-l { height: 24rem; }
