@@ -118,7 +118,6 @@ for (const link of links) {
     link.classList.add('selected');
 
     if (isCurrentPage || isHome) {
-      link.removeAttribute("href");
       link.classList.remove('nav-link');
     }
   }
