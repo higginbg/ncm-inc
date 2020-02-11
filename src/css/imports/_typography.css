@@ -1,7 +1,6 @@
 html {
   overflow: auto;
   height: 100%;
-  scroll-behavior: smooth;
   font-size: var(--font-size);
   background-color: var(--off-white);
   background-image: url("/img/backgrounds/debut.png");

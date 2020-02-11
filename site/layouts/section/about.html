@@ -6,7 +6,7 @@
 
   {{ with .Params.main }}
 
-    <div class="section bg-white form-padding">
+    <div class="section bg-white neg-margin-offset">
       <div class="mw7 center">
 
         <h2 class="f2 lh-title mb3">{{.heading}}</h2>
@@ -16,7 +16,7 @@
 
           {{ range .list }}
 
-            <div class="w-33-l w-50-ns w-100 pa3-ns pv3">
+            <div class="w-33-l w-50-ns w-100 pa2-ns pv2">
               <div class="flip-card" tabindex=0 data-aos="fade-in">
             
                 <div class="flip-card-inner">
@@ -33,8 +33,8 @@
                     </div>
                   </div>
 
-                  <div class="flip-card-back h-100 pa3 bg-debut br1 overflow-hidden">
-                    <div class="h-100 bg-white pa2 ba b--off-white overflow-y-auto">
+                  <div class="flip-card-back h-100 pa3 bg-debut br1">
+                    <div class="inner h-100 bg-white pa2 ba b--off-white">
 
                       <h2 class="f4 lh-title mb3">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
                       <p class="db">{{ .text }}</p>

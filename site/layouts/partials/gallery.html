@@ -1,8 +1,11 @@
-<div class="flex flex-row flex-wrap">
+<div class="flex flex-row flex-wrap justify-center">
+
+  {{ $location := .Title }}
+  {{ $city := .Params.subtitle }}
   
   {{ range .Params.gallery }}
-    <div class="w-33-m w-50-ns w-100 pa2-ns pv2">
-      <img src="{{.image}}" alt="{{.text}}" class="h4-ns h5 w-100 br1 object-cover tile-shadow" />
+    <div class="w-33-l w-50-m w-100 pa2-ns pv2">
+      <img src="{{ .image }}" alt="{{ .text }} constructed by NCM Inc. at {{ $location }} in {{ $city }}." class="h5-ns h4-m h4-l h4 w-100 br1 object-cover tile-shadow" />
     </div>
   {{ end }}
 

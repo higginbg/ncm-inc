@@ -2,38 +2,45 @@
 {{ $sectionPages := (.CurrentSection.Pages.ByParam "order").Reverse }}
 {{ $pageCount := len $sectionPages }}
 
-<div class="flex flex-row justify-center items-center mw5 center mt4-m mt2">
+<nav class="mw5 center mt4-m mt2">
 
-  <!-- First Page -->
-  <div class="w-33 tr self-end pa1">
-    {{ range last 1 $sectionPages }}
-      {{ if ne $currentURL .RelPermalink }}
-        <a href="{{ .RelPermalink }}" class="link link-prev">First</a>
+  <div class="flex flex-row justify-center items-center">
+
+    <!-- First Page -->
+    <div class="w-33 tr self-end pa1">
+      {{ range last 1 $sectionPages }}
+        {{ if ne $currentURL .RelPermalink }}
+          <a href="{{ .RelPermalink }}" class="f5 link link-prev">First</a>
+        {{ else }}
+          <span class="f5">First</span>
+        {{ end }}
       {{ end }}
-    {{ end }}
+    </div>
+  
+    <!-- Page Count -->
+    <div class="w-33 tc self-center pa1">
+      {{ range $index, $val := $sectionPages }}
+        {{ if eq $currentURL .RelPermalink }}
+          {{ sub $pageCount $index }} of {{ $pageCount }}
+        {{ end }}
+      {{ end }}
+    </div>
+  
+    <!-- Last Page -->
+    <div class="w-33 tl self-start pa1">
+      {{ range first 1 $sectionPages }}
+        {{ if ne $currentURL .RelPermalink }}
+          <a href="{{ .RelPermalink }}" class="f5 link link-next">Last</a>
+        {{ else }}
+          <span class="f5">Last</span>
+        {{ end }}
+      {{ end }}
+    </div>
   </div>
 
-  <!-- Page Count -->
-  <div class="w-33 tc self-center pa1">
-    {{ range $index, $val := $sectionPages }}
-      {{ if eq $currentURL .RelPermalink }}
-        {{ sub $pageCount $index }} of {{ $pageCount }}
-      {{ end }}
-    {{ end }}
+  <div class="tc">
+    <a href="/projects#list" class="link">View All</a>
   </div>
 
-  <!-- Last Page -->
-  <div class="w-33 tl self-start pa1">
-    {{ range first 1 $sectionPages }}
-      {{ if ne $currentURL .RelPermalink }}
-        <a href="{{ .RelPermalink }}" class="link link-next">Last</a>
-      {{ end }}
-    {{ end }}
-  </div>
-
-</div>
-
-<div class="tc">
-  <a href="/projects#list" class="link">View All</a>
-</div>
+</nav>
 

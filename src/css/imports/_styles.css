@@ -3,6 +3,7 @@
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
+  scroll-behavior: auto;
 }
 
 ::selection {
@@ -113,6 +114,20 @@ nav {
   }
 }
 
+
+/* Account for nav when using hash links */
+h1, h2, h3, h4, h5, h6 {
+
+  &::before {
+    display: block; 
+    content: " "; 
+    margin-top: calc(-1 * var(--nav-height)); 
+    height: var(--nav-height); 
+    visibility: hidden; 
+    pointer-events: none;
+  }
+}
+
 footer {
   height: var(--footer-height);
   margin-top: calc(-1 * var(--footer-height));
@@ -132,12 +147,31 @@ footer {
   }
 }
 
+@media (--breakpoint-not-small) {
+  .neg-margin {
+    margin-top: calc(-0.75 * var(--neg-margin));
+  }
+}
+
+@media (--breakpoint-medium) {
+  .neg-margin {
+    margin-top: calc(-1 * var(--neg-margin));
+  }
+}
+
 .section {
   padding: var(--spacing-large) var(--spacing-medium);
 
-  &.form-padding {
-    padding: var(--spacing-large) var(--spacing-medium);
-    padding-bottom: calc(var(--spacing-small) + var(--form-margin));
+  @media (--breakpoint-not-small) {
+    &.neg-margin-offset {
+      padding: var(--spacing-large) var(--spacing-medium);
+      padding-bottom: calc(var(--spacing-small) + var(--neg-margin));
+    }
+
+    &.neg-margin-offset-l {
+      padding: var(--spacing-large) var(--spacing-medium);
+      padding-bottom: calc(var(--spacing-extra-large) + var(--neg-margin));
+    }
   }
 
   & + .section {
@@ -175,7 +209,12 @@ footer {
     }
 
     & .flip-card-back {
+      height: 100%;
       box-shadow: var(--tile-shadow);
+
+      & .inner {
+        overflow: auto;
+      }
     }
   }
 }
@@ -206,6 +245,7 @@ footer {
 }
 
 .flip-card-back {
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -213,4 +253,8 @@ footer {
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+
+  & .inner {
+    overflow: hidden;
+  }
 }

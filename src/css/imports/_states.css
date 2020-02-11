@@ -1,7 +1,7 @@
 /* Focus states */
 input:focus, textarea:focus {
   background-color: var(--white);
-  border: 1px solid var(--grey-2);
+  box-shadow: inset 0 0 5px var(--grey-2);
   border-radius: var(--border-radius);
   outline: 0!important;
 }

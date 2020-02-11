@@ -1,7 +1,3 @@
-.form-container {
-  margin-top: calc(-1 * var(--form-margin));
-}
-
 fieldset
 {
   position: relative;
@@ -33,6 +29,7 @@ input, textarea {
   &:hover, &:focus, &:active {
     border: 1px solid var(--grey-1);
     border-radius: var(--border-radius);
+    box-shadow: inset 0 0 5px var(--grey-1);
   }
   &:focus + label {
     pointer-events: auto;
@@ -56,7 +53,6 @@ input[type="file"] {
   &:focus {
     padding: var(--spacing-small);
     border-radius: var(--border-radius);
-    border: 1px solid var(--grey-2);
   }
 }
 

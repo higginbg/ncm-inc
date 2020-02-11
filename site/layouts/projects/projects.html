@@ -4,12 +4,14 @@
 
   {{ partial "short-text" .Params.intro }}
 
-  <div class="section bg-white form-padding">
+  <div class="section bg-white neg-margin-offset">
 
     <div class="mw7 center">
-    
-      <h1 id="list" class="f2 mb3" data-aos="fade-in">{{ .Params.main.heading }}</h1>
-      {{ if .Params.main.text }}<p class="mb4 db" data-aos="fade-in">{{ .Params.main.text }}</p>{{ end }}
+
+      {{ with .Params.main }}
+        <h1 id="list" class="f2 mb3" data-aos="fade-in">{{ .heading }}</h1>
+        {{ if .text }}<p class="mb4 db" data-aos="fade-in">{{ .text }}</p>{{ end }}
+      {{ end }}
 
       {{ .Render "list" }}
       

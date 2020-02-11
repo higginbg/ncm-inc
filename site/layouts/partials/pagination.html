@@ -1,18 +1,49 @@
-{{ if gt .Paginator.TotalPages 1 }}
- 
-<nav class="cf pa3">
-    {{ if .Paginator.HasNext }}
-    <a class="fl dib link dim grey-4 f6 f5-ns pa2" title="Next Page" href="{{ .Paginator.Next.URL }}">
-        &larr; Previous
-    </a>
-    {{ end }}
-    <div class="pagination">
-        {{ if .Paginator.HasPrev }}
-        <a class="fl dib link dim grey-4 f6 f5-ns pa2" title="Previous Page" href="{{ .Paginator.Prev.URL }}">
-            Next &rarr;
-        </a>
-        {{ end }}
-    </div>
-</nav>
- 
+{{ with .Paginator }}
+  {{ if gt .TotalPages 1 }}
+  
+    <nav class="center mt4 mb3">
+
+      <div class="flex flex-row justify-center items-center">
+
+        <div class="w-40-ns w-33 tr mh3">
+          {{ if .HasNext }}
+            <a class="link link-prev grey-4 f4 pre" href="{{ .Next.URL }}#list"><span class="primary">&larr;</span> Older</a>
+          {{ end }}
+        </div>
+
+        <div class="w-10-ns w-33 tc mh3">
+          <span class="pre">{{ add 1 (sub .TotalPages .PageNumber) }} of {{ .TotalPages }}</span>
+        </div>
+
+        <div class="w-40-ns w-33 tl mh3">
+          {{ if .HasPrev }}
+            <a class="link link-next grey-4 f4 pre" href="{{ .Prev.URL }}#list">Newer <span class="primary">&rarr;</span></a>
+          {{ end }}
+        </div>
+
+      </div>
+
+      <div class="flex flex-row justify-center items-center tc mt2">
+
+        <div class="w-50 tr mr3">
+          {{ if ne .URL .Last.URL }}
+            <a href="{{ .Last.URL }}#list" class="f5 link link-prev">First</a>
+          {{ else }}
+            <span class="f5">First</span>
+          {{ end }}
+        </div>
+
+        <div class="w-50 tl ml3">
+          {{ if ne .URL .First.URL }}
+            <a href="{{ .First.URL }}#list" class="f5 link link-next">Last</a>
+          {{ else }}
+            <span class="f5">Last</span>
+          {{ end }}
+        </div>
+
+      </div>
+
+    </nav>
+  
+  {{ end }}
 {{ end }}
