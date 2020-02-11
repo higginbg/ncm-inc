@@ -3,11 +3,11 @@
   {{ partial "heading-left" (dict "title" .Title "subtitle" .Params.subtitle "mw" "mw7") }}
 
   <div class="section bg-white">
-    <div class="mw7 center" data-aos="fade-in">
+    <div class="mw7 center pb6" data-aos="fade-in">
 
       {{ if .Content }}
 
-        <h2 class="f3 lh-title mb3">Summary</h2>
+        <h2 class="f3 lh-title mb3">Overview</h2>
 
         <div class="cms mb3">    
           {{ .Content }}
@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <div class="section bg-off-white">
+  <div class="section bg-debut">
     <div class="mw7 center">
 
     {{ partial "page-maker" . }}

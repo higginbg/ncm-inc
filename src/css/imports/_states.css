@@ -1,7 +1,7 @@
 /* Focus states */
 input:focus, textarea:focus {
   background-color: var(--white);
-  border: 1px solid var(--grey-1);
+  border: 1px solid var(--grey-2);
   border-radius: var(--border-radius);
   outline: 0!important;
 }
@@ -114,13 +114,12 @@ input:focus, textarea:focus {
 .tile-link {
   text-decoration: none;
   transition: var(--box-shadow-transition);
-  border-radius: var(--border-radius);
-  overflow: hidden;
 
   & .tile {
     color: var(--white);
     box-shadow: var(--tile-shadow);
     border-radius: var(--border-radius);
+    overflow: hidden;
     transition: var(--box-shadow-transition);
   }
 
@@ -140,19 +139,6 @@ input:focus, textarea:focus {
 
     & .hover-cover {
       opacity: 1;
-
-      /* Vignette */
-      &:after {
-        content: '';
-        position: absolute;
-        transform: translate(-50%,-50%);
-        top: 50%;
-        left: 50%;
-        width: 120%;
-        padding-bottom: 150%;
-        box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8);
-        border-radius: 50%;
-      }
     }
 
     & .banner {

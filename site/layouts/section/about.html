@@ -6,44 +6,42 @@
 
   {{ with .Params.main }}
 
-    <div class="section bg-white">
+    <div class="section bg-white form-padding">
       <div class="mw7 center">
 
         <h2 class="f2 lh-title mb3">{{.heading}}</h2>
         <p>{{.text}}</p>
 
-        <div class="flex-l flex-row flex-wrap justify-center">
+        <div class="flex-m flex-row flex-wrap justify-center">
 
           {{ range .list }}
 
-            <div class="w-33-l w-100 pa3-l pv3">
-              <div class="flip-card h-100" tabindex=0 data-aos="fade-in">
+            <div class="w-33-l w-50-m w-100 pa3-m pv3">
+              <div class="flip-card" tabindex=0 data-aos="fade-in">
             
                 <div class="flip-card-inner">
 
-                  <div class="flip-card-front h-100 bg-spikes grey-4 br1 overflow-hidden tile-shadow">
+                  <div class="flip-card-front bg-off-white br1 overflow-hidden tile-shadow">
 
-                    <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="w-100 br1 br--top object-cover" style="height: 400px;" />
+                    <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="w-100 h6 br1 br--top object-cover" />
 
-                    <div class="ph3 pb2 mt2 br1">
+                    <div class="w-100 bg-debut-dark off-white o-90 absolute bottom-0 ph3 pv2">
                       
-                      <h2 class="f4 lh-title mb1">{{ .name }}</h2>
-                      <h3 class="f5">{{ .position }}</h3>
+                      <h2 class="f5 lh-title mb1">{{ .name }}</h2>
+                      <h3 class="f6">{{ .position }}</h3>
   
                     </div>
                   </div>
 
-                  <div class="flip-card-back pa3 bg-spikes br1 overflow-auto">
+                  <div class="flip-card-back h-100 pa3 bg-debut br1 overflow-hidden">
+                    <div class="h-100 bg-white pa2 ba b--off-white overflow-y-auto">
 
-                      <div class="h-100 bg-white br1 pv1 ph2 ba b--off-white">
-
-                      <h2 class="f5 lh-title mb2">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
+                      <h2 class="f4 lh-title mb3">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
                       <p class="db">{{ .text }}</p>
 
                     </div>
-                  
-            
                   </div>
+
                 </div>
               </div>
             </div>

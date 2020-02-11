@@ -1,5 +1,5 @@
 <div class="flex-l flex-row flex-wrap justify-center">
-  {{ range (.Paginator 10).Pages.ByDate.Reverse }}
+  {{ range (.Paginator 4).Pages.ByDate.Reverse }}
     {{ .Render "li"}}
   {{ end }}
 </div>
