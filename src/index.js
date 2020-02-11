@@ -102,16 +102,15 @@ drpdwnBtn.addEventListener('click', () => {
 });
 
 // Highlight nav link when current page
-const url = window.location.href;
-const urlArr = url.split('/');
-const page = urlArr[urlArr.length - 2];
+const url = window.location.href.split('/');
+const page = url[3];
 
 for (const link of links) {
   const navLoc = link.href.split('/');
   const checkNav = navLoc[navLoc.length - 1];
 
   const isHome = !checkNav && isRoot;
-  const isCurrentPath = url.toLowerCase().indexOf(link.text.toLowerCase()) > 0;
+  const isCurrentPath = page.toLowerCase() === link.text.toLowerCase();
   const isCurrentPage = page === checkNav;
 
   if (isCurrentPath || isHome) {
