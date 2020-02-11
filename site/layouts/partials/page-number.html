@@ -8,7 +8,7 @@
 
     <!-- First Page -->
     <div class="w-33 tr self-end pa1">
-      {{ range last 1 $sectionPages }}
+      {{ range first 1 $sectionPages }}
         {{ if ne $currentURL .RelPermalink }}
           <a href="{{ .RelPermalink }}" class="f5 link link-prev">First</a>
         {{ else }}
@@ -28,7 +28,7 @@
   
     <!-- Last Page -->
     <div class="w-33 tl self-start pa1">
-      {{ range first 1 $sectionPages }}
+      {{ range last 1 $sectionPages }}
         {{ if ne $currentURL .RelPermalink }}
           <a href="{{ .RelPermalink }}" class="f5 link link-next">Last</a>
         {{ else }}

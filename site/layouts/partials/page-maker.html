@@ -3,7 +3,7 @@
   {{ $pages := .CurrentSection.Pages }}
   
   <div class="w-50 tl pr2-m pr1" data-aos="fade-up-left" data-aos-duration=750>
-    {{ with $pages.Reverse.Prev . }}
+    {{ with $pages.Prev . }}
       <div class="center">
         <a class="db-m dn no-underline tile-link" href="{{ .RelPermalink }}">
           <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
@@ -26,7 +26,7 @@
   </div>
 
   <div class="w-50 tr pl2-m pl1" data-aos="fade-up-right" data-aos-duration=750>
-    {{ with $pages.Reverse.Next . }}
+    {{ with $pages.Next . }}
       <div class="center h-100">
         <a class="db-m dn no-underline h-100 tile-link" href="{{ .RelPermalink }}">
           <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
