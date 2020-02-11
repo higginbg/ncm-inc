@@ -17,8 +17,17 @@
 #logo {
   box-shadow: none;
   
-  &:hover {
-    box-shadow: inset 0 -4px 0 var(--primary);
+  &:hover, &:focus, &:active {
+    background-color: var(--grey-4);
+    outline: none !important;
+  }
+}
+
+#call {
+  
+  &:focus, &:active {
+    background-color: var(--grey-4);
+    outline: none !important;
   }
 }
 
@@ -26,6 +35,8 @@
 .divider-grey {
   box-shadow: inset var(--spacing-small) 0 0 var(--black), var(--nav-shadow);
   /* Link hover states */
+  
+
   & a {
     transition: var(--hover-transition);
     border-left: var(--spacing-small) solid transparent;

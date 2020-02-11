@@ -51,7 +51,7 @@ input:focus, textarea:focus {
   transition: var(--box-shadow-transition) !important;
   cursor: pointer;
 
-  &:focus {
+  &:focus, &:active {
     background-color: var(--grey-4);
     color: var(--white);
     outline: 0!important;
@@ -133,16 +133,19 @@ input:focus, textarea:focus {
     transition: var(--box-shadow-transition);
   }
 
-  &:hover .tile, &:focus .tile, &:active .tile {
-    box-shadow: var(--box-shadow-hover);
+  &:hover, &:focus, &:active {
     outline: 0!important;
 
-    & .hover-cover {
-      opacity: 1;
-    }
+    & .tile {
+      box-shadow: var(--box-shadow-hover);
 
-    & .banner {
-      opacity: 0;
+      & .hover-cover {
+        opacity: 1;
+      }
+
+      & .banner {
+        opacity: 0;
+      }
     }
   }
 }
@@ -159,13 +162,15 @@ button:focus {
   outline: 0!important;
 }
 
-.enlarge i {
-  transition: transform .25s ease;
-}
+.enlarge {
 
-.enlarge:hover i,
-.enlarge:focus i {
-  transform: scale(1.25);
+  & i {
+    transition: transform .25s ease;
+  }
+  
+  &:hover i, &:focus i, &:active i {
+    transform: scale(1.25);
+  }
 }
 
 .raise {

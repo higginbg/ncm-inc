@@ -91,10 +91,8 @@
   }
 }
 
-.bg-spikes {
-  background-image: url("/img/backgrounds/spikes.png");
-  background-repeat: repeat;
-}
+
+/* Background patterns from Toptal Subtle Patterns */
 
 .bg-debut {
   background-image: url("/img/backgrounds/debut.png");
@@ -103,15 +101,5 @@
 
 .bg-debut-dark {
   background-image: url("/img/backgrounds/debut-dark.png");
-  background-repeat: repeat;
-}
-
-.bg-triangles {
-  background-image: url("/img/backgrounds/triangles.png");
-  background-repeat: repeat;
-}
-
-.bg-stripes {
-  background-image: url("/img/backgrounds/stripes.png");
   background-repeat: repeat;
 }

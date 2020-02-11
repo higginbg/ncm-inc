@@ -4,6 +4,8 @@ html {
   scroll-behavior: smooth;
   font-size: var(--font-size);
   background-color: var(--off-white);
+  background-image: url("/img/backgrounds/debut.png");
+  background-repeat: repeat;
   color: var(--grey-4);
   
   @media (--breakpoint-medium) {
@@ -22,6 +24,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--off-white);
+  background-image: url("/img/backgrounds/debut.png");
+  background-repeat: repeat;
   color: var(--grey-4);
   min-width: 400px;
   height: 100%;
