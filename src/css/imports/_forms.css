@@ -23,7 +23,7 @@ input, textarea {
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
-  transition: var(--box-shadow-transition);
+  transition: var(--shadow-transition);
   z-index: 2;
   user-select: none;
   &:hover, &:focus, &:active {

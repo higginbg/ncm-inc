@@ -9,7 +9,7 @@
   text-decoration: none;
   color: var(--off-white);
   text-align: center;
-  transition: var(--box-shadow-transition) !important;
+  transition: var(--shadow-transition) !important;
   box-shadow: var(--tile-shadow);
   background-origin: border-box;
   user-select: none;
