@@ -138,14 +138,14 @@ input:focus, textarea:focus {
 
     & .tile {
       box-shadow: var(--box-shadow-hover);
+    }
 
-      & .hover-cover {
-        opacity: 1;
-      }
+    & .hover-cover {
+      opacity: 1;
+    }
 
-      & .banner {
-        opacity: 0;
-      }
+    & .banner {
+      opacity: 0;
     }
   }
 }

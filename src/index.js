@@ -74,6 +74,12 @@ window.onresize = closeMenu;
 
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
+
+  baguetteBox.run('.gallery', {
+    async: true,
+    noScrollbars: true
+  });
+
   AOS.refresh();
 });
 
