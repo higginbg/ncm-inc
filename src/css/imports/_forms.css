@@ -19,7 +19,7 @@ input, textarea {
   color: var(--black);
   border: 1px solid transparent;
   border-bottom: 1px solid var(--grey-2);
-  padding: var(--spacing-small);
+  padding: var(--spacing-small) 0;
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
@@ -27,6 +27,7 @@ input, textarea {
   z-index: 2;
   user-select: none;
   &:hover, &:focus, &:active {
+    padding: var(--spacing-small);
     border: 1px solid var(--grey-1);
     border-radius: var(--border-radius);
     box-shadow: inset 0 0 5px var(--grey-1);
@@ -39,14 +40,12 @@ input, textarea {
 input[type="file"] {
   font-size: var(--font-size);
   border: 1px solid transparent;
-  padding: var(--spacing-small) 0;
   cursor: pointer;
 
   & + label {
     display: block;
   } 
   &:hover {
-    padding: var(--spacing-small);
     border-radius: var(--border-radius);
     border: 1px solid var(--grey-1);
   }

@@ -186,8 +186,12 @@ button:focus {
     transition: transform .25s ease;
   }
   
-  &:hover i, &:focus i, &:active i {
+  &:hover, &:focus, &:active {
     transform: scale(1.25);
+    
+    i {
+      transform: scale(1.25);
+    }
   }
 }
 

@@ -4,7 +4,7 @@ subtitle: Commercial Renovators
 image: /img/cover-home.png
 intro:
     heading: 30 Years in Hospitality
-    text: "NCM Inc. is a top choice for renovations in the hospitality industry. Why? 30 years of experience speaks for itself. From pools to patios and barrooms to bathrooms, we've done it all."
+    text: "NCM Inc. is a top choice for renovations in the hospitality industry. Why? 30 years of experience speaks for itself. From pools to patios and bar rooms to bathrooms, we've done it all."
 projects:
   heading: Our Projects
   text: "Since 1996, NCM Inc. has completed over 100 hotel renovations across the country. We have state licensing in Florida, California, Washington, South Carolina, Oregon, Arizona, and Colorado. Though we are always expanding, our fair treatment of clients keeps them coming back year after year."

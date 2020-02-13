@@ -2,17 +2,17 @@
 {{ $location := .Title }}
 {{ $city := .Params.subtitle }}
 
-<div id="lightgallery" class="flex flex-row flex-wrap justify-center">
+<div id="lightgallery" class="flex flex-row flex-wrap">
 
   {{ range .Params.gallery }}
     <div class="item w-50-m w-33-l w-100 pa2-ns pv2" data-src="{{ .image }}" data-sub-html=".caption">
-      <a href="{{ .image }}" class="db tile-link" data-aos="fade-in" data-aos-duration=500>
+      <a href="{{ .image }}" class="db tile-link br1 overflow-hidden tile-shadow" data-aos="fade-in" data-aos-duration=500>
       <div class="caption dn">
         <h2 class="f5">{{ .text }}</h2>
-        <h3 class="f6">{{ $location }} in {{ $city }}</h3>
+        <h3 class="f6">{{ $location }} - {{ $city }}</h3>
       </div>
-        <div class="tile cover br1 relative bg-center" style="background-image: url('{{ .image }}')">
-          <img src="{{ .image }}" alt="{{ .text }} constructed by NCM Inc. at {{ $location }} in {{ $city }}." class="hidden h5-ns h4-m h3-l h4 w-100 br1 object-cover tile-shadow" />
+        <div class="tile cover br1 relative h5-ns h4-m h3-l h4 bg-center enlarge" style="background-image: url('{{ .image }}')">
+          <img src="{{ .image }}" alt="{{ .text }} constructed by NCM Inc. at {{ $location }} in {{ $city }}." class="hidden w-100 br1 object-cover" />
           <div class="hover-cover absolute white o-90 h-100 w-100 top-0 flex justify-center items-center z-999">
             <div class="h-100 w-100 bg-black o-50 absolute"></div>
             <i class="fas fa-search fa-flip-horizontal fa-2x"></i>
@@ -21,5 +21,11 @@
       </a>
     </div>
   {{ end }}
+
+  <div class="w-50-m w-33-l w-100 pa2-ns pv2 self-center no-select">
+    <div class="h5-ns h4-m h3-l h4 bg-debut pa3 br1 tile-shadow" data-aos="fade-in" data-aos-duration=500>
+      <div class="f5 w-100 h-100 ba b--off-white bg-white flex justify-center items-center"><span>End of Gallery</span></div>
+    </div>
+  </div>
 
 </div>

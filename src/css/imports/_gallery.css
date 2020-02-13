@@ -1,18 +1,14 @@
-body.lg-on {
-    overflow: hidden;
-}
-
 img.lg-object.lg-image,
 .lg-thumb-item img {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .lg-thumb-item {
-    &:hover, &.active {
-        border: 2px solid var(--primary) !important;
-    }
+  &:hover, &.active {
+      border: 2px solid var(--primary) !important;
+  }
 }
 
 .lg-backdrop.in {
-    opacity: 0.85 !important;
+  opacity: 0.85 !important;
 }
