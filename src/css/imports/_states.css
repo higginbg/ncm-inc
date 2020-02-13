@@ -143,7 +143,7 @@ input:focus, textarea:focus {
 
   & .hover-cover {
     opacity: 0;
-    transition: var(--shadow-transition);
+    transition: var(--shadow-transition) !important;
   }
 
   & .banner {

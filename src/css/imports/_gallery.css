@@ -1,0 +1,12 @@
+body.lg-on {
+    overflow: hidden;
+}
+
+img.lg-object.lg-image,
+.lg-thumb-item img {
+    border-radius: 0;
+}
+
+.lg-backdrop.in {
+    opacity: 0.85 !important;
+}

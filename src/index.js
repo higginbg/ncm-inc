@@ -5,6 +5,11 @@ import './css/main.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import 'lightgallery.js';
+import 'lg-zoom.js';
+import 'lg-thumbnail.js';
+import 'lightgallery.js/dist/css/lightgallery.css';
+
 // Say hello
 console.log('🦊 Hello! Edit me in src/index.js');
 
@@ -75,8 +80,15 @@ window.onresize = closeMenu;
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
 
-  baguetteBox.run('.gallery', {
-    noScrollbars: true
+  lightGallery(document.getElementById('lightgallery'), {
+    thumbnail: true,
+    animateThumb: true,
+    showThumbByDefault: true,
+    scale: .5,
+    actualSize: false,
+    download: false,
+    addClass: 'o-10',
+    selector: '.item'
   });
 
   AOS.refresh();

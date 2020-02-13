@@ -49,7 +49,7 @@
         {{ with .Params.main }}
           <div class="flex flex-row flex-wrap justify-center">
             {{ range first 3 .list }}
-              {{ partial "testimonials" . }}
+              {{ partial "card-testimonial" . }}
             {{ end }}
           </div>
         {{ end }}
