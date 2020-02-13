@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         test: /lightgallery.*\.(sa|sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader]
+        use: "css-loader"
       },
       {
         test: /\.(sa|sc|c)ss$/,
