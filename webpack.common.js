@@ -28,7 +28,7 @@ module.exports = {
         query: {cacheDirectory: true}
       },
       {
-        test: /(?!(aos)\/).*/,
+        test: /(?!(lightgallery)\/).*/,
         use: ["style-loader", "css-loader"]
       },
       {
