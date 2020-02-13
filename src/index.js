@@ -8,7 +8,6 @@ import 'aos/dist/aos.css';
 import 'lightgallery.js/dist/js/lightgallery.min.js';
 import 'lg-zoom.js/dist/lg-zoom.min.js';
 import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
-import 'lightgallery.js/dist/css/lightgallery.min.css';
 
 // Say hello
 console.log('🦊 Hello! Edit me in src/index.js');
