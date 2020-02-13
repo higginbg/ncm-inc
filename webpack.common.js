@@ -28,9 +28,13 @@ module.exports = {
         query: {cacheDirectory: true}
       },
       {
+        test: /lightgallery.*\.(sa|sc|c)ss$/,
+        use: [MiniCssExtractPlugin.loader]
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules\/(?!(aos)\/).*/,
-        use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader", "postcss-loader", "sass-loader"]
+        use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
       }
     ]
   },
