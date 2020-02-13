@@ -28,6 +28,10 @@ module.exports = {
         query: {cacheDirectory: true}
       },
       {
+        test: /(?!(aos)\/).*/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules\/(?!(aos)\/).*/,
         use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
