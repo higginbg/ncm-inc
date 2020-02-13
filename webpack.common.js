@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+
 module.exports = {
   entry: {
     main: path.join(__dirname, "src", "index.js"),
@@ -29,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        exclude: [/node_modules\/(?!(aos)\/).*/, /node_modules\/(?!(lightgallery)\/).*/],
+        exclude: [/node_modules/],
         use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
       }
     ]
