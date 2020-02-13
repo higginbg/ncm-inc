@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        exclude: /node_modules\/(?!(aos|lightgallery)\/).*/,
+        exclude: /node_modules\/(?!(aos)\/).*/,
         use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
       }
     ]
