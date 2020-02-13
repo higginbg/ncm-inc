@@ -7,6 +7,12 @@ img.lg-object.lg-image,
     border-radius: 0;
 }
 
+.lg-thumb-item {
+    &:hover, &.active {
+        border: 2px solid var(--primary) !important;
+    }
+}
+
 .lg-backdrop.in {
     opacity: 0.85 !important;
 }

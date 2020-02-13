@@ -83,7 +83,8 @@ window.addEventListener('load', () => {
   lightGallery(document.getElementById('lightgallery'), {
     thumbnail: true,
     animateThumb: true,
-    showThumbByDefault: true,
+    showThumbByDefault: false,
+    subHtmlSelectorRelative: true,
     scale: .5,
     actualSize: false,
     download: false,
