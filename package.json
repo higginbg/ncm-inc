@@ -72,6 +72,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "fibers": "^4.0.2",
     "lg-thumbnail.js": "^1.1.0",
     "lg-zoom.js": "^1.0.1",
     "lightgallery.js": "^1.1.3"
