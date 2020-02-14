@@ -11,24 +11,26 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: '{{year}}-{{month}}-{{subtitle}}-{{title}}'
     fields: # The fields each document in this collection have
-      - label: Project Name
+      - label: 'Project Name'
         name: title
         widget: string
       - label: Location
         name: subtitle
         widget: string
-      - label: Month Completed
+      - label: 'Month Completed'
         name: date
         widget: datetime
         dateFormat: 'MM-YYYY'
         timeFormat: false
-      - label: Feature on Home Page
+      - label: 'Feature on Home Page'
         name: featured
         widget: boolean
       - label: 'Cover Image'
         name: image
         widget: image
         required: true
+        media_folder: '/{{media_folder}}/projects/{{slug}}'
+        public_folder: '{{public_folder}}/projects/{{slug}}'
       - label: Body
         name: body
         widget: markdown
@@ -51,64 +53,167 @@ collections: # A list of collections the CMS should be able to edit
         label: Home
         name: home
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [
-              {label: Heading, name: "heading", widget: string},
-              {label: Text, name: text, widget: text}]}
-          - {label: About, name: about, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text},
-              {label: Image 1, name: Image1, widget: image},
-              {label: Image 2, name: Image2, widget: image},
-              {label: Button Text, name: "button", widget: string}]}
-          - {label: Projects, name: projects, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text},
-              {label: Button Text, name: button, widget: string}]}
-          - {label: Testimonials, name: testimonials, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Button Text, name: button, widget: string}]}
-      - file: "site/content/about/_index.md"
+          - label: Title
+            name: title
+            widget: string
+          - label: Subtitle
+            name: subtitle
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: 'Image 1'
+                name: Image1
+                widget: image
+              - label: 'Image 2'
+                name: Image2
+                widget: image
+              - label: 'Button Text'
+                name: button
+                widget: string
+          - label: Projects
+            name: projects
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: 'Button Text'
+                name: button
+                widget: string
+          - label: Testimonials
+            name: testimonials
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: 'Button Text'
+                name: button
+                widget: string
+      - file: 'site/content/about/_index.md'
         label: About
         name: about
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Cover Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [
-              {label: Heading, name: "heading", widget: string},
-              {label: Text, name: text, widget: text}]}
-          - {label: Main, name: main, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text},
-              {label: Image 1, name: Image1, widget: image},
-              {label: Image 2, name: Image2, widget: image},
-              {label: Team Members, name: list, widget: list, fields: [
-                {label: Name, name: name, widget: string, required: true},
-                {label: Position in Company, name: position, widget: string, required: true},
-                {label: Portrait, name: image, widget: image, required: true, default: "/img/portrait-blank.png"},
-                {label: Text, name: text, widget: markdown, required: true}
-              ]}]}
-      - file: "site/content/projects/_index.md"
+          - label: Title
+            name: title
+            widget: string
+          - label: 'Cover Image'
+            name: image
+            widget: image
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Main
+            name: main
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Image 1
+                name: Image1
+                widget: image
+              - label: Image 2
+                name: Image2
+                widget: image
+              - label: 'Team Members'
+                name: list
+                widget: list
+                fields:
+                  - label: Name
+                    name: name,
+                    widget: string
+                    required: true
+                  - label: 'Position in Company'
+                    name: position
+                    widget: string
+                    required: true
+                  - label: Portrait
+                    name: image
+                    widget: image
+                    required: true
+                    default: '/img/portraits/portrait-blank.png'
+                    media_folder: '/{{media_folder}}/portraits'
+                    public_folder: '{{public_folder}}/portraits'
+                  - label: Text
+                    name: text
+                    widget: markdown
+                    required: true
+      - file: 'site/content/projects/_index.md'
         label: Projects
         name: project-list
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Cover Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [
-              {label: Heading, name: "heading", widget: string},
-              {label: Text, name: text, widget: text}]}
-          - {label: Main, name: main, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text}]}
-      - file: "site/content/contact/_index.md"
+          - label: Title
+            name: title
+            widget: string
+          - label: 'Cover Image'
+            name: image
+            widget: image
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Main
+            name: main
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+      - file: 'site/content/contact/_index.md'
         label: Contact
         name: contact
         fields:
-          - {label: Heading, name: heading, widget: string}
-          - {label: Intro Text, name: intro_text, widget: markdown}
-          - label: Contact Entries
+          - label: Heading
+            name: heading
+            widget: string
+          - label: 'Intro Text'
+            name: intro_text
+            widget: markdown
+          - label: 'Contact Entries'
             name: contact_entries
             widget: list
             fields:
@@ -118,30 +223,73 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: markdown
-          - {label: Outro Text, name: outro_text, widget: markdown}
-      - file: "site/content/join/_index.md"
+          - label: 'Outro Text'
+            name: outro_text
+            widget: markdown
+      - file: 'site/content/join/_index.md'
         label: Join
         name: join
         fields:
-          - {label: Heading, name: heading, widget: string}
-          - {label: Body, name: body, widget: markdown}
-      - file: "site/content/testimonials/_index.md"
+          - label: Heading
+            name: heading
+            widget: string
+          - label: Body
+            name: body
+            widget: markdown
+      - file: 'site/content/testimonials/_index.md'
         label: Testimonials
-        name: testimonial-list
+        name: testimonials
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Cover Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text}]}
-          - {label: Main, name: main, widget: object, fields: [
-              {label: Heading, name: heading, widget: string},
-              {label: Text, name: text, widget: text},
-              {label: Testimonials, name: list, widget: list, fields: [
-                {label: Name, name: name, widget: string},
-                {label: Position in Company, name: position, widget: string},
-                {label: Company Name, name: company, widget: string},
-                {label: Quote, name: quote, widget: text},
-                {label: Contact, name: contact, widget: list, fields: [
-                  {label: Phone Number, name: phone, widget: string},
-                  {label: Eamil, name: email, widget: string}]}]}]}
+          - label: Title
+            name: title
+            widget: string
+          - label: 'Cover Image'
+            name: image
+            widget: image
+          - label: Intro
+            name: intro
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Main
+            name: main
+            widget: object
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+              - label: Testimonials
+                name: list
+                widget: list
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: 'Position in Company'
+                    name: position
+                    widget: string
+                  - label: 'Company Name'
+                    name: company
+                    widget: string
+                  - label: Quote
+                    name: quote
+                    widget: text
+                  - label: Contact
+                    name: contact
+                    widget: list
+                    fields:
+                      - label: 'Phone Number'
+                        name: phone
+                        widget: string
+                      - label: 'Email Address'
+                        name: email
+                        widget: string
+
