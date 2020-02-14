@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title "position" "bg-center") }}
+  {{ partial "jumbotron" .Params }}
 
   {{ partial "short-text" .Params.intro }}
 

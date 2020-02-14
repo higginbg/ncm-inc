@@ -1,6 +1,6 @@
 <div
-  class="pv5 pv6-l ph2 vh-75-ns vh-50 bb b--grey-1 {{.position}} cover no-select"
-  style="background-image: url('{{.imageUrl}}')"
+  class="pv5 pv6-l ph2 vh-75-ns vh-50 bb b--grey-1 bg-bottom cover no-select"
+  style="background-image: url('{{ .image }}');"
   data-aos="fade-left"
 >
   <div class="top-1 top-0-ns absolute" data-aos="fade-in" data-aos-delay=1000 data-aos-duration=750>
@@ -8,11 +8,11 @@
       <div class="mw7 relative bg-fix-primary">
 
         <h1 class="f2 f1-l lh-title primary mw6 mb2">
-          {{.title}}
+          {{ .Title }}
         </h1>
 
         <h2 class="f3 lh-title white mw6" data-aos="fade-in" data-aos-delay=2000 data-aos-duration=750>
-          {{.subtitle}}
+          {{ .subtitle }}
         </h2>
 
       </div>

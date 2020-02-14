@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <!-- Jumbotron -->
-{{ partial "jumbotron-home" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle "position" "bg-bottom") }}
+{{ partial "jumbotron-home" .Params }}
 
 <!-- Intro -->
 {{ partial "short-text" .Params.intro }}
