@@ -1,53 +1,53 @@
 ---
 title: Homewood Suites by Hilton
 subtitle: Hillsboro/Beaverton, OR
-image: "/img/beaverton-or-homewood-suites-lobby.jpg"
+image: "/img/projects/beaverton-or-homewood-suites-lobby.jpg"
 date: "2013-02-01T00:00:00.000Z"
 featured: true
 gallery:
-  - image: "/img/beaverton-or-homewood-suites-lobby.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-lobby.jpg"
     text: Lobby
-  - image: "/img/beaverton-or-homewood-suites-breakfast-area-1.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-breakfast-area-1.jpg"
     text: Breakfast Area 1
-  - image: "/img/beaverton-or-homewood-suites-breakfast-area-2.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-breakfast-area-2.jpg"
     text: Breakfast Area 2
-  - image: "/img/beaverton-or-homewood-suites-breakfast-area-3.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-breakfast-area-3.jpg"
     text: Breakfast Area 3
-  - image: "/img/beaverton-or-homewood-suites-patio-1.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-patio-1.jpg"
     text: Patio 1
-  - image: "/img/beaverton-or-homewood-suites-patio-2.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-patio-2.jpg"
     text: Patio 2
-  - image: "/img/beaverton-or-homewood-suites-pool.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-pool.jpg"
     text: Pool
-  - image: "/img/beaverton-or-homewood-suites-fitness-center.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-fitness-center.jpg"
     text: Fitness Center
-  - image: "/img/beaverton-or-homewood-suites-business-center.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-business-center.jpg"
     text: Business Center
-  - image: "/img/beaverton-or-homewood-suites-conference-room-1.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-conference-room-1.jpg"
     text: Conference Room 1
-  - image: "/img/beaverton-or-homewood-suites-conference-room-2.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-conference-room-2.jpg"
     text: Conference Room 2
-  - image: "/img/beaverton-or-homewood-suites-guest-room-1.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-guest-room-1.jpg"
     text: Guest Room 1
-  - image: "/img/beaverton-or-homewood-suites-guest-room-2.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-guest-room-2.jpg"
     text: Guest Room 2
-  - image: "/img/beaverton-or-homewood-suites-suite-1.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-1.jpg"
     text: Suite 1
-  - image: "/img/beaverton-or-homewood-suites-suite-2.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-2.jpg"
     text: Suite 2
-  - image: "/img/beaverton-or-homewood-suites-suite-3.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-3.jpg"
     text: Suite 3
-  - image: "/img/beaverton-or-homewood-suites-suite-4.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-4.jpg"
     text: Suite 4
-  - image: "/img/beaverton-or-homewood-suites-suite-5.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-5.jpg"
     text: Suite 5
-  - image: "/img/beaverton-or-homewood-suites-suite-6.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-6.jpg"
     text: Suite 6
-  - image: "/img/beaverton-or-homewood-suites-suite-7.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-7.jpg"
     text: Suite 7
-  - image: "/img/beaverton-or-homewood-suites-suite-8.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-8.jpg"
     text: Suite 8
-  - image: "/img/beaverton-or-homewood-suites-suite-9.jpg"
+  - image: "/img/projects/beaverton-or-homewood-suites-suite-9.jpg"
     text: Suite 9
 ---
 
