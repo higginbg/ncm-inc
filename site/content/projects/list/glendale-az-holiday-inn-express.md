@@ -13,12 +13,12 @@ gallery:
     text: Breakfast Area 1
   - image: "/img/glendale-az-holiday-inn-breakfast-area-2.jpg"
     text: Breakfast Area 2
-  - image: "/img/glendale-az-holiday-inn-fitness-room-1.jpg"
-    text: Fitness Room 1
-  - image: "/img/glendale-az-holiday-inn-fitness-room-2.jpg"
-    text: Fitness Room 2
-  - image: "/img/glendale-az-holiday-inn-fitness-room-3.jpg"
-    text: Fitness Room 3
+  - image: "/img/glendale-az-holiday-inn-fitness-center-1.jpg"
+    text: Fitness Center 1
+  - image: "/img/glendale-az-holiday-inn-fitness-center-2.jpg"
+    text: Fitness Center 2
+  - image: "/img/glendale-az-holiday-inn-fitness-center-3.jpg"
+    text: Fitness Center 3
   - image: "/img/glendale-az-holiday-inn-dining-area-1.jpg"
     text: Dining Area 1
   - image: "/img/glendale-az-holiday-inn-dining-area-2.jpg"

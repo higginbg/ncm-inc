@@ -9,10 +9,10 @@ gallery:
     text: Lobby
   - image: "/img/salem-or-la-quinta-inn-pool.jpg"
     text: Pool
-  - image: "/img/salem-or-la-quinta-inn-fitness-room-1.jpg"
-    text: Fitness Room 1
-  - image: "/img/salem-or-la-quinta-inn-fitness-room-2.jpg"
-    text: Fitness Room 2
+  - image: "/img/salem-or-la-quinta-inn-fitness-center-1.jpg"
+    text: Fitness Center 1
+  - image: "/img/salem-or-la-quinta-inn-fitness-center-2.jpg"
+    text: Fitness Center 2
   - image: "/img/salem-or-la-quinta-inn-dining-area-1.jpg"
     text: Dining Area 1
   - image: "/img/salem-or-la-quinta-inn-dining-area-2.jpg"

@@ -21,7 +21,7 @@
     <div class="w-33 tc self-center pa1">
       {{ range $index, $val := $sectionPages }}
         {{ if eq $currentURL .RelPermalink }}
-          {{ sub $pageCount $index }} of {{ $pageCount }}
+          {{ add $index 1 }} of {{ $pageCount }}
         {{ end }}
       {{ end }}
     </div>

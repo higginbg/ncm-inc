@@ -13,8 +13,8 @@ gallery:
     text: Patio
   - image: "/img/portland-or-courtyard-pool.jpg"
     text: Pool
-  - image: "/img/portland-or-courtyard-fitness-room.jpg"
-    text: Fitness Room
+  - image: "/img/portland-or-courtyard-fitness-center.jpg"
+    text: Fitness Center
   - image: "/img/portland-or-courtyard-market-1.jpg"
     text: Market 1
   - image: "/img/portland-or-courtyard-market-2.jpg"
@@ -29,10 +29,10 @@ gallery:
     text: Conference Room 2
   - image: "/img/portland-or-courtyard-conference-room-3.jpg"
     text: Conference Room 3
-  - image: "/img/portland-or-courtyard-communal-area-1.jpg"
-    text: Communal Area 1
-  - image: "/img/portland-or-courtyard-communal-area-2.jpg"
-    text: Communal Area 2
+  - image: "/img/portland-or-courtyard-lounge-area-1.jpg"
+    text: Lounge Area 1
+  - image: "/img/portland-or-courtyard-lounge-area-2.jpg"
+    text: Lounge Area 2
   - image: "/img/portland-or-courtyard-guest-room-1.jpg"
     text: Guest Room 1
   - image: "/img/portland-or-courtyard-guest-room-2.jpg"
