@@ -9,7 +9,7 @@ collections: # A list of collections the CMS should be able to edit
     label: Project # Used in the UI, ie.: "New Post"
     folder: 'site/content/projects/list' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{subtitle}}-{{title}}'
+    slug: '{{year}}/{{month}}/{{subtitle}}/{{title}}'
     fields: # The fields each document in this collection have
       - label: 'Project Name'
         name: title
@@ -29,8 +29,8 @@ collections: # A list of collections the CMS should be able to edit
         name: image
         widget: image
         required: true
-        media_folder: '/{{media_folder}}/projects/{{slug}}'
-        public_folder: '{{public_folder}}/projects/{{slug}}'
+        media_folder: '/{{media_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}'
+        public_folder: '{{public_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}'
       - label: Body
         name: body
         widget: markdown
@@ -41,8 +41,8 @@ collections: # A list of collections the CMS should be able to edit
           - label: Image
             name: image
             widget: image
-            media_folder: '/{{media_folder}}/projects/{{slug}}'
-            public_folder: '{{public_folder}}/projects/{{slug}}'
+            media_folder: '/{{media_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}'
+            public_folder: '{{public_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}'
           - label: Description
             name: text
             widget: string
@@ -85,6 +85,8 @@ collections: # A list of collections the CMS should be able to edit
               - label: 'Image 1'
                 name: Image1
                 widget: image
+                media_folder: '/{{media_folder}}'
+                public_folder: '{{public_folder}}'
               - label: 'Image 2'
                 name: Image2
                 widget: image
@@ -144,10 +146,10 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
-              - label: Image 1
+              - label: 'Image 1'
                 name: Image1
                 widget: image
-              - label: Image 2
+              - label: 'Image 2'
                 name: Image2
                 widget: image
               - label: 'Team Members'
