@@ -35,12 +35,12 @@ collections: # A list of collections the CMS should be able to edit
       - label: Gallery
         name: gallery
         widget: list
-        fields: 
+        fields:
           - label: Image
             name: image
             widget: image
-            media_folder: '/{{media_folder}}/projects'
-            public_folder: '{{public_folder}}/projects'
+            media_folder: '/{{media_folder}}/projects/{{slug}}'
+            public_folder: '{{public_folder}}/projects/{{slug}}'
           - label: Description
             name: text
             widget: string
