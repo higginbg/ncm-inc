@@ -8,8 +8,10 @@ collections: # A list of collections the CMS should be able to edit
   - name: project-single # Used in routes, ie.: /admin/collections/:slug/edit
     label: Project # Used in the UI, ie.: "New Post"
     folder: 'site/content/projects/list' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
+    path: '{{year}}/{{month}}/{{subtitle}}/{{title}}'
     slug: '{{year}}/{{month}}/{{subtitle}}/{{title}}'
+    summary: '{{year}}-{{month}} | {{subtitle}} | {{title}}'
+    create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - label: 'Project Name'
         name: title
@@ -157,7 +159,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: list
                 fields:
                   - label: Name
-                    name: name,
+                    name: name
                     widget: string
                     required: true
                   - label: 'Position in Company'
