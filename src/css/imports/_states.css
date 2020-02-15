@@ -154,7 +154,7 @@ input:focus, textarea:focus {
   &:hover, &:focus, &:active {
     outline: 0!important;
 
-    & .tile {
+    & .tile, &.tile-shadow {
       box-shadow: var(--shadow-hover);
     }
 

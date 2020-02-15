@@ -87,7 +87,6 @@ window.addEventListener('load', () => {
     scale: .5,
     actualSize: false,
     download: false,
-    addClass: 'o-10',
     selector: '.item'
   });
 
