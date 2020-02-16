@@ -90,8 +90,14 @@ let loadInterval = setInterval(() => {
   count += interval;
 }, interval);
 
+let loadTimeout = setTimeout(() => {
+  loadEl.classList.replace('hidden', 'fadeIn');
+}, 100);
+
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
+
+  clearTimeout(loadTimeout);
 
   clearInterval(loadInterval);
   loadEl.classList.add('fadeOutDown', 'fast');

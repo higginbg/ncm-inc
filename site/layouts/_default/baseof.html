@@ -10,9 +10,9 @@
     <div id="page-container" class="overflow-hidden">
       <div id="content-wrapper">
 
-        <div id="loader" class="fixed top-0 vh-100 w-100 bg-debut-dark animated z-max flex flex-column justify-center items-center no-select">
-          <span class="f1 h3 primary">NCM Inc.</span>
-          <span id="loader-text" class="f3 h3 white"></span>
+        <div id="loader" class="hidden fixed top-0 vh-100 w-100 bg-debut animated z-max flex flex-column justify-center items-center no-select">
+          <span class="f1 mb2 primary">NCM Inc.</span>
+          <span id="loader-text" class="f3 grey-4">Loading</span>
         </div>
 
         {{ block "main" . }}{{ end }}
