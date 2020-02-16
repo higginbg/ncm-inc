@@ -1,12 +1,19 @@
 <!doctype html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
-  <body class="sans-serif preload">
+  <body class="sans-serif preload" data-instant-intensity="mousedown">
 
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
 
+    
+
     <div id="page-container" class="overflow-hidden">
       <div id="content-wrapper">
+
+        <div id="loader" class="fixed top-0 vh-100 w-100 bg-debut-dark animated z-max flex flex-column justify-center items-center no-select">
+          <span class="f1 h3 primary">NCM Inc.</span>
+          <span id="loader-text" class="f3 h3 white"></span>
+        </div>
 
         {{ block "main" . }}{{ end }}
 
@@ -23,6 +30,8 @@
     {{ with $script.js }}
       <script src="{{ relURL . }}"></script>
     {{ end }}
+
+    <script src="https://instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
     <script> </script>
   

@@ -24,6 +24,7 @@ const drpdwnBtn   = nav.querySelector('button');
 const drpdwn      = nav.querySelector('ul');
 const callBtn     = document.getElementById('call');
 const links       = drpdwn.querySelectorAll('li a');
+const loadEl      = document.getElementById('loader');
 
 const isRoot = location.pathname === '/';
 
@@ -76,8 +77,24 @@ const closeMenu = () => {
 
 window.onresize = closeMenu;
 
+let count = 0;
+const interval = 500;
+let loadInterval = setInterval(() => {
+  const text = loadEl.querySelector('#loader-text');
+  text.innerText = count / interval === 1 ? 'Loading.'
+    : count / interval === 2 ? 'Loading..'
+      : 'Loading...';
+
+  if (count / interval === 3) { count = 0; }
+
+  count += interval;
+}, interval);
+
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
+
+  clearInterval(loadInterval);
+  loadEl.classList.add('fadeOutDown', 'fast');
 
   lightGallery(document.getElementById('lightgallery'), {
     thumbnail: true,
