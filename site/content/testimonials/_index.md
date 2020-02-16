@@ -1,6 +1,6 @@
 ---
 title: Testimonials
-image: "/img/cover-testimonials.jpg"
+image: "/img/cover-testimonials.png"
 intro:
   heading: Client First
   text: "Because we treat our clients fairly, we have many regular customers. We take ownership of the work we do and are sensitive to the needs of the client and hotel staff. We are accomodating and understand that guests and hotel staff come first. We intend to remain unnoticed by hotel guests and, as much as possible, the hotel staff."
