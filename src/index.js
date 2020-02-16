@@ -60,12 +60,6 @@ const addAnmtn = el => {
   el.classList.add(anmtn);
 };
 
-if (isRoot) {
-  addAnmtn(drpdwn);
-  addAnmtn(drpdwnBtn);
-  addAnmtn(callBtn);
-}
-
 const menuOpenIcon = '<i class="fas fa-bars"></i>';
 const menuCloseIcon = '<i class="fas fa-times"></i>';
 const navSmall = 'nav-small';
@@ -79,28 +73,31 @@ window.onresize = closeMenu;
 
 let count = 0;
 const interval = 500;
-let loadInterval = setInterval(() => {
+const loadInterval = setInterval(() => {
   const text = loadEl.querySelector('#loader-text');
-  text.innerText = count / interval === 1 ? 'Loading.'
-    : count / interval === 2 ? 'Loading..'
-      : 'Loading...';
+  text.innerText = count / interval === 1 ? 'NCM Inc.'
+    : count / interval === 2 ? 'NCM Inc..'
+      : 'NCM Inc...';
 
   if (count / interval === 3) { count = 0; }
 
   count += interval;
 }, interval);
 
-let loadTimeout = setTimeout(() => {
-  loadEl.classList.replace('hidden', 'fadeIn');
-}, 100);
-
+let anmtnTimeout;
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
 
-  clearTimeout(loadTimeout);
+  anmtnTimeout = setTimeout(() => {
+    if (isRoot) {
+      addAnmtn(drpdwn);
+      addAnmtn(drpdwnBtn);
+      addAnmtn(callBtn);
+    }
 
-  clearInterval(loadInterval);
-  loadEl.classList.add('fadeOutDown', 'fast');
+    clearInterval(loadInterval);
+    loadEl.classList.add('fadeOutDown', 'fast');
+  }, 1000);
 
   lightGallery(document.getElementById('lightgallery'), {
     thumbnail: true,
@@ -115,6 +112,11 @@ window.addEventListener('load', () => {
 
   AOS.refresh();
 });
+
+window.addEventListener("beforeunload", () => {
+  clearTimeout(anmtnTimeout);
+  clearInterval(loadInterval);
+}, false);
 
 window.addEventListener('scroll', shrinkNav);
 
