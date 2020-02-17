@@ -10,8 +10,8 @@
 
       {{ with .Params.main }}
     
-        <h1 class="f2 mb3" data-aos="fade-in">{{ .heading }}</h1>
-        {{ if .text }}<p class="mb4 db" data-aos="fade-in">{{ .text }}</p>{{ end }}
+        <h1 class="f2 mb3">{{ .heading }}</h1>
+        {{ if .text }}<p class="mb4 db">{{ .text }}</p>{{ end }}
 
         <div class="flex flex-row flex-wrap justify-center">
           {{ range .list }}
