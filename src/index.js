@@ -2,6 +2,8 @@
 
 import './css/main.css';
 
+import lozad from 'lozad'
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -11,6 +13,14 @@ import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
 
 // Say hello
 console.log('🦊 Hello! Edit me in src/index.js');
+
+const el = document.querySelector('img');
+const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+observer.observe();
+
+lozad('.lozad', {
+  loaded: el => AOS.refresh
+});
 
 AOS.init({
   startEvent: 'load',

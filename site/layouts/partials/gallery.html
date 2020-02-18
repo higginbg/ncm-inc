@@ -4,15 +4,19 @@
 
 <div id="lightgallery" class="flex flex-row flex-wrap">
 
-  {{ range .Params.gallery }}
-    <div class="item w-50-m w-33-l w-100 pa2-ns pv2" data-src="{{ .image }}" data-sub-html=".caption">
-      <a href="{{ .image }}" class="db tile-link bg-off-white br1 overflow-hidden tile-shadow">
+  {{ with .Resources.ByType "image" }}
+  {{ range . }}
+    {{ $image := .RelPermalink }}
+    {{ $thumb := ((.Resize "400x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+
+    <div class="item w-50-m w-33-l w-100 pa2-ns pv2" data-src="{{ $image }}" data-sub-html=".caption">
+      <a href="{{ $image }}" class="db tile-link bg-off-white br1 overflow-hidden tile-shadow">
       <div class="caption dn">
-        <h2 class="f5">{{ .text }}</h2>
+        <h2 class="f5">{{ .Title }}</h2>
         <h3 class="f6">{{ $location }} - {{ $city }}</h3>
       </div>
-        <div class="tile br1 relative h5-ns h4-m h3-l h4 w-100 enlarge">
-          <img src="{{ .image }}" alt="{{ .text }} constructed by NCM Inc. at {{ $location }} in {{ $city }}" class="br1 object-cover grey-4" style="min-width: 100%; min-height: 100%;" data-aos="fade-in" data-aos-duration=500 />
+        <div class="tile br1 relative h5-ns h4-m h3-l h4 w-100 enlarge cover" style="background-image: url('{{ $thumb }}');">
+          <img src="{{ $image }}" alt="{{ .Title }} constructed by NCM Inc. at {{ $location }} in {{ $city }}" class="br1 object-cover grey-4" style="min-width: 100%; min-height: 100%;" data-aos="fade-in" data-aos-duration=500 />
           <div class="hover-cover absolute white o-90 h-100 w-100 top-0 flex justify-center items-center z-999">
             <div class="h-100 w-100 bg-black o-50 absolute"></div>
             <i class="fas fa-search fa-flip-horizontal fa-2x"></i>
@@ -20,6 +24,7 @@
         </div>
       </a>
     </div>
+  {{ end }}
   {{ end }}
 
   <div class="w-50-m w-33-l w-100 pa2-ns pv2 self-center no-select">
