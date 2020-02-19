@@ -14,15 +14,31 @@ import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
 // Say hello
 console.log('🦊 Hello! Edit me in src/index.js');
 
-const lazyImgs = document.querySelectorAll('img');
-const observer = lozad(lazyImgs); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
-observer.observe();
+const lozadEl = document.querySelectorAll('.lozad');
+if (lozadEl.length > 0) {
+  const observer = lozad(lozadEl); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+
+  const lozadTrig = document.querySelector('.lozad-trigger');
+  observer.triggerLoad(lozadTrig);
+}
 
 AOS.init({
   startEvent: 'load',
   duration: 1000,
   once: true,
   easing: 'ease'
+});
+
+lightGallery(document.getElementById('lightgallery'), {
+  thumbnail: true,
+  animateThumb: true,
+  showThumbByDefault: false,
+  subHtmlSelectorRelative: true,
+  scale: .5,
+  actualSize: false,
+  download: false,
+  selector: '.item'
 });
 
 const nav         = document.getElementById('nav');
@@ -85,17 +101,6 @@ window.onresize = closeMenu;
 let anmtnTimeout;
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
-
-  lightGallery(document.getElementById('lightgallery'), {
-    thumbnail: true,
-    animateThumb: true,
-    showThumbByDefault: false,
-    subHtmlSelectorRelative: true,
-    scale: .5,
-    actualSize: false,
-    download: false,
-    selector: '.item'
-  });
 
   AOS.refresh();
 });
