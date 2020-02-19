@@ -25,19 +25,19 @@ collections: # A list of collections the CMS should be able to edit
         name: image
         widget: image
         required: true
-        media_folder: '/{{public_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}/'
-        public_folder: '{{public_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}/'
+        media_folder: ''
+        public_folder: ''
       - {label: Body, name: body, widget: markdown}
-      - label: Gallery
-        name: gallery
+      - label: Images
+        name: resources
         widget: list
         fields:
           - label: Image
-            name: image
+            name: src
             widget: image
-            media_folder: '/{{media_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}'
-            public_folder: '{{public_folder}}/projects/{{year}}/{{month}}/{{subtitle}}/{{title}}'
-          - {label: Description, name: text, widget: string}
+            media_folder: ''
+            public_folder: ''
+          - {label: Description, name: title, widget: string}
   - name: pages
     label: Pages
     files:

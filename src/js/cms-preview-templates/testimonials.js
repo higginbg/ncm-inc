@@ -8,31 +8,31 @@ const TestimonialsPreview = ({ entry }) => {
   const main = data.getIn(['main']);
 
   return (
-    <div className="bg-off-white pb4">
+    <div className='bg-debut pb4'>
       <Jumbotron image={ data.getIn(['image']) } title={ data.getIn(['title']) } />
 
-      <div className="section bg-off-white">
-        <div className="mw6 center">
+      <div className='section bg-debut header-shadow relative'>
+        <div className='mw6 center'>
           <h1 className='f2 lh-title mb3'>{ intro.getIn(['heading']) }</h1>
           <p>{ intro.getIn(['text']) }</p>
         </div>
       </div>
 
-      <div className="section bg-white">
+      <div className='section bg-white'>
         <div className='mw6 center'>
 
-          <h1 class='f2 lh-title mb3'>{ main.getIn(['heading']) }</h1>
+          <h1 className='f2 lh-title mb3'>{ main.getIn(['heading']) }</h1>
 
-          <p class='mb3'>{ main.getIn(['text']) }</p>
+          <p className='mb3'>{ main.getIn(['text']) }</p>
 
-          {/*main.getIn(['list']).map((testimonial, i) => <div className="center mb3 ph3" key={i}>
-            <blockquote className="bg-off-white ba b--grey-1 grey-4 pa3 mb3 br1 mw6 center box-shadow">
-              <p className="f4 mb2">“{ testimonial.get('quote') }”</p>
-              <cite className="f5 tr db">{ testimonial.get('author') }</cite>
-              <cite className="f6 tr db">{ testimonial.get('position') }</cite>
-              <cite className="f6 tr db">{ testimonial.get('company') }</cite>
+          {(main.getIn(['list']) || []).map((testimonial, i) => <div className='center mb3 ph3' key={i}>
+            <blockquote className='bg-debut ba b--grey-1 pa3 mb3 br1 mw6 center box-shadow'>
+              <p className='f4 mb2'>“{ testimonial.get('quote') }”</p>
+              <cite className='f5 tr db'>{ testimonial.get('name') }</cite>
+              <cite className='f6 tr db'>{ testimonial.get('position') }</cite>
+              <cite className='f6 tr db'>{ testimonial.get('company') }</cite>
             </blockquote>
-          </div>)*/}
+          </div>)}
         </div>
       </div>
     </div>
