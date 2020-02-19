@@ -1,7 +1,7 @@
 ---
 title: Homewood Suites by Hilton
 subtitle: Hillsboro/Beaverton, OR
-image: '/projects/list/2013/02/hillsboro-beaverton-or/homewood-suites-by-hilton/lobby.jpg'
+image: 'lobby.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: true
 resources:

@@ -1,7 +1,7 @@
 ---
 title: Hampton Inn
 subtitle: Portland, OR
-image: '/projects/list/2013/02/portland-or/hampton-inn/fitness-center.jpg'
+image: 'fitness-center.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: false
 resources:

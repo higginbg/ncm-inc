@@ -7,8 +7,9 @@
       <div class="center">
         <a class="db-m dn no-underline tile-link" href="{{ .RelPermalink }}">
           <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
-          {{ with .Params }}
-            {{ partial "media-tile" (dict "title" .title "subtitle" .subtitle "image" .image "text" "← View") }}
+          {{ with .Resources.GetMatch .Params.image }}
+            {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+            {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.subtitle "loadingThumb" $loadingThumb "image" .RelPermalink "text" "← View") }}
           {{ end }}
         </a>
         <a class="dn-m db no-underline h-100 link tile-link link-prev" href="{{ .RelPermalink }}">
@@ -30,8 +31,9 @@
       <div class="center h-100">
         <a class="db-m dn no-underline h-100 tile-link" href="{{ .RelPermalink }}">
           <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
-          {{ with .Params }}
-            {{ partial "media-tile" (dict "title" .title "subtitle" .subtitle "image" .image "text" "View →") }}
+          {{ with .Resources.GetMatch .Params.image }}
+            {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+            {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.subtitle "loadingThumb" $loadingThumb "image" .RelPermalink "text" "View →") }}
           {{ end }}
         </a>
         <a class="dn-m db no-underline h-100 link tile-link link-next" href="{{ .RelPermalink }}">

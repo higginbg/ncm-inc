@@ -4,23 +4,26 @@
 
   {{ partial "short-text" .Params.intro }}
 
-  {{ with .Params.main }}
+  {{ $resources := .Resources }}
 
     <div class="section bg-white neg-margin-offset">
       <div class="mw7 center">
 
-        <h2 class="f2 lh-title mb3">{{.heading}}</h2>
-        <p>{{.text}}</p>
+        {{ with .Params.main }}
+          <h2 class="f2 lh-title mb3">{{ .heading }}</h2>
+          <p>{{ .text }}</p>
+        {{ end }}
 
         <div class="flex-ns flex-row flex-wrap">
 
-          {{ range .list }}
+          {{ range .Params.resources }}
+          {{ with $resources.GetMatch .src }}
             {{ partial "card-about" . }}
+          {{ end }}
           {{ end }}
         </div>
       </div>
     </div>
-  {{ end }}
 
   {{ partial "form-contact" . }}
 

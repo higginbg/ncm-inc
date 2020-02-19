@@ -18,8 +18,8 @@
         <h3 class="f6">{{ $location }} - {{ $city }}</h3>
       </div>
         <div class="tile br1 relative h5-ns h4-m h3-l h4 w-100 enlarge">
-          <div class="lozad lozad-trigger absolute h-100 w-100 cover z-1 animated fadeIn slow" data-background-image="{{ $loadingThumb }}"></div>
-          <img data-src="{{ $thumb }}" alt="{{ .Title }} constructed by NCM Inc. at {{ $location }} in {{ $city }}" class="lozad relative br1 object-cover grey-4 z-2" style="min-width: 100%; min-height: 100%;" data-aos="fade-in" data-aos-duration=500 />
+        <div class="absolute h-100 w-100 cover z-1 animated fadeIn slow" style="background-image: url('{{ $loadingThumb }}');"></div>
+          <img data-src="{{ $thumb }}" alt="{{ .Title }} constructed by NCM Inc. at {{ $location }} in {{ $city }}" class="lozad lozad-trigger relative br1 object-cover grey-4 z-2" style="min-width: 100%; min-height: 100%;" data-aos="fade-in" data-aos-duration=500 />
           <div class="hover-cover absolute white o-90 h-100 w-100 top-0 flex justify-center items-center z-999">
             <div class="h-100 w-100 bg-black o-50 absolute"></div>
             <i class="fas fa-search fa-flip-horizontal fa-2x"></i>

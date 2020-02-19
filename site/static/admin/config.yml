@@ -101,18 +101,18 @@ collections: # A list of collections the CMS should be able to edit
               - {label: 'Image 1', name: Image1, widget: image}
               - {label: 'Image 2', name: Image2, widget: image}
               - label: 'Team Members'
-                name: list
+                name: resources
                 widget: list
                 fields:
                   - {label: Name, name: name, widget: string, required: true}
                   - {label: 'Position in Company', name: position, widget: string, required: true}
                   - label: Portrait
-                    name: image
+                    name: src
                     widget: image
                     required: true
-                    default: '/img/portraits/portrait-blank.png'
-                    media_folder: '/{{media_folder}}/portraits'
-                    public_folder: '{{public_folder}}/portraits'
+                    default: 'portrait-blank.png'
+                    media_folder: ''
+                    public_folder: ''
                   - {label: Text, name: text, widget: markdown, required: true}
       - file: 'site/content/projects/_index.md'
         label: Projects

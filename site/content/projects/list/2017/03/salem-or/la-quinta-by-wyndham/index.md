@@ -1,7 +1,7 @@
 ---
 title: La Quinta by Wyndham
 subtitle: Salem, OR
-image: '/projects/list/2017/03/salem-or/la-quinta-by-wyndham/pool.jpg'
+image: 'pool.jpg'
 date: '2017-03-01T00:00:00.000Z'
 featured: true
 resources:

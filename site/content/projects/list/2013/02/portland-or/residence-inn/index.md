@@ -1,7 +1,7 @@
 ---
 title: Residence Inn
 subtitle: Portland, OR
-image: '/projects/list/2013/02/portland-or/residence-inn/lobby-1.jpg'
+image: 'lobby-1.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: false
 resources:
