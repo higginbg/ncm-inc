@@ -4,49 +4,61 @@
   
   <div class="w-50 tl pr2-m pr1" data-aos="fade-up-left" data-aos-duration=750>
     {{ with $pages.Prev . }}
-      <div class="center">
-        <a class="db-m dn no-underline tile-link" href="{{ .RelPermalink }}">
-          <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
-          {{ with .Resources.GetMatch .Params.image }}
-            {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
-            {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.subtitle "loadingThumb" $loadingThumb "image" .RelPermalink "text" "← View") }}
-          {{ end }}
-        </a>
-        <a class="dn-m db no-underline h-100 link tile-link link-prev" href="{{ .RelPermalink }}">
-          <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
-          <div class="tile br1 cover relative bg-center" style="background-image: url('{{ .Params.image }}'); height: 150px;">
-            <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
-              <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>
-              <span class="f4 white z-999 o-90">&larr; View</span>
+      {{ $hotel := .Title }}
+      {{ $location := .Params.subtitle }}
+
+      {{ with .Resources.GetMatch .Params.image }}
+        {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+        {{ $image := (.Resize "600x").RelPermalink }}
+
+        <div class="center">
+          <a class="db-m dn no-underline tile-link" href="{{ $.RelPermalink }}">
+            <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
+            {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.subtitle "loadingThumb" $loadingThumb "image" $image "text" "← View") }}
+          </a>
+          <a class="dn-m db no-underline h-100 link tile-link link-prev" href="{{ $.RelPermalink }}">
+            <h2 class="f4 lh-title mb2 grey-4"><span class="primary">&larr;</span> Previous</h2>
+            <div class="lozad tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $loadingThumb }}'); height: 150px;">
+            <div class="lozad lozad-trigger tile br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;"></div>
+              <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
+                <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>
+                <span class="f4 white z-999 o-90">&larr; View</span>
+              </div>
             </div>
-          </div>
-          <div class="f6 mt2">{{ .Params.title }}</div>
-        </a>
-      </div>
+            <div class="f5 lh-title mt1">{{ $hotel }}</div>
+          </a>
+        </div>
+      {{ end }}
     {{ end }}
   </div>
 
   <div class="w-50 tr pl2-m pl1" data-aos="fade-up-right" data-aos-duration=750>
     {{ with $pages.Next . }}
-      <div class="center h-100">
-        <a class="db-m dn no-underline h-100 tile-link" href="{{ .RelPermalink }}">
-          <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
-          {{ with .Resources.GetMatch .Params.image }}
-            {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+      {{ $hotel := .Title }}
+      {{ $location := .Params.subtitle }}
+
+      {{ with .Resources.GetMatch .Params.image }}
+        {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+        {{ $image := (.Resize "600x").RelPermalink }}
+
+        <div class="center h-100">
+          <a class="db-m dn no-underline h-100 tile-link" href="{{ $.RelPermalink }}">
+            <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
             {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.subtitle "loadingThumb" $loadingThumb "image" .RelPermalink "text" "View →") }}
-          {{ end }}
-        </a>
-        <a class="dn-m db no-underline h-100 link tile-link link-next" href="{{ .RelPermalink }}">
-          <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
-          <div class="tile br1 cover relative bg-center" style="background-image: url('{{ .Params.image }}'); height: 150px;">
-            <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
-              <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>
-              <span class="f4 white z-999 o-90">View &rarr;</span>
+          </a>
+          <a class="dn-m db no-underline h-100 link tile-link link-next" href="{{ $.RelPermalink }}">
+            <h2 class="f4 lh-title mb2 grey-4">Next <span class="primary">&rarr;</span></h2>
+            <div class="lozad tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;">
+            <div class="lozad lozad-trigger tile br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;"></div>
+              <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
+                <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>
+                <span class="f4 white z-999 o-90">View &rarr;</span>
+              </div>
             </div>
-          </div>
-          <div class="f6 mt2">{{ .Params.title }}</div>
-        </a>
-      </div>
+            <div class="f5 lh-title mt1">{{ $hotel }}</div>
+          </a>
+        </div>
+      {{ end }}
     {{ end }}
   </div>
 

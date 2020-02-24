@@ -14,13 +14,14 @@ const ContactEntries = ({ data }) => {return data
 };
 
 const ContactPreview = ({ entry, widgetFor, widgetsFor }) => {
+  const data = entry.get('data');
   const contactEntries = widgetsFor('contact_entries') || {};
 
   return <div>
     <div className='section bg-debut header-shadow relative'>
       <div className='mw6 center'>
 
-        <h1 className='f2 tc lh-title'>{ entry.getIn(['data', 'heading']) }</h1>
+        <h1 className='f2 tc lh-title'>{ data.get('heading') }</h1>
 
       </div>
     </div>

@@ -1,33 +1,34 @@
 
 {{ $location := .Title }}
 {{ $city := .Params.subtitle }}
-{{ $resources := .Resources }}
 
 <div id="lightgallery" class="flex flex-row flex-wrap">
 
   {{ range .Params.resources }}
-  {{ with $resources.GetMatch .src }}
-    {{ $image := .RelPermalink }}
-    {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
-    {{ $thumb := (.Resize "400x").RelPermalink }}
+    {{ with $.Resources.GetMatch .src }}
+    
+      {{ $image := .RelPermalink }}
+      {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+      {{ $thumb := (.Resize "600x").RelPermalink }}
 
-    <div class="w-50-m w-33-l w-100 pa2-ns pv2">
-      <a href="{{ $image }}" class="item db tile-link bg-off-white br1 overflow-hidden tile-shadow" data-sub-html=".caption">
-      <div class="caption dn">
-        <h2 class="f5">{{ .Title }}</h2>
-        <h3 class="f6">{{ $location }} - {{ $city }}</h3>
-      </div>
-        <div class="tile br1 relative h5-ns h4-m h3-l h4 w-100 enlarge">
-        <div class="absolute h-100 w-100 cover z-1 animated fadeIn slow" style="background-image: url('{{ $loadingThumb }}');"></div>
-          <img data-src="{{ $thumb }}" alt="{{ .Title }} constructed by NCM Inc. at {{ $location }} in {{ $city }}" class="lozad lozad-trigger relative br1 object-cover grey-4 z-2" style="min-width: 100%; min-height: 100%;" data-aos="fade-in" data-aos-duration=500 />
-          <div class="hover-cover absolute white o-90 h-100 w-100 top-0 flex justify-center items-center z-999">
-            <div class="h-100 w-100 bg-black o-50 absolute"></div>
-            <i class="fas fa-search fa-flip-horizontal fa-2x"></i>
-          </div>
+      <div class="w-50-m w-33-l w-100 pa2-ns pv2">
+        <a href="{{ $image }}" class="item db tile-link bg-off-white br1 overflow-hidden tile-shadow" data-sub-html=".caption">
+        <div class="caption dn">
+          <h2 class="f5">{{ .Title }}</h2>
+          <h3 class="f6">{{ $location }} - {{ $city }}</h3>
         </div>
-      </a>
-    </div>
-  {{ end }}
+          <div class="tile br1 relative h5-ns h4-m h3-l h4 w-100 enlarge">
+          <div class="absolute h-100 w-100 cover z-1 animated fadeIn slow" style="background-image: url('{{ $loadingThumb }}');"></div>
+            <img data-src="{{ $thumb }}" alt="{{ .Title }} constructed by NCM Inc. at {{ $location }} in {{ $city }}" class="lozad lozad-trigger relative br1 object-cover grey-4 z-2" style="min-width: 100%; min-height: 100%;" data-aos="fade-in" data-aos-duration=500 />
+            <div class="hover-cover absolute white o-90 h-100 w-100 top-0 flex justify-center items-center z-999">
+              <div class="h-100 w-100 bg-black o-50 absolute"></div>
+              <i class="fas fa-search fa-flip-horizontal fa-2x"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+    {{ end }}
   {{ end }}
 
   <div class="w-50-m w-33-l w-100 pa2-ns pv2 self-center no-select">

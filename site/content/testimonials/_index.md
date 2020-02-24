@@ -13,95 +13,83 @@ main:
       company: Great Hotel Co.
       quote: >-
         Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
-      contact:
-        phone: '(555) 555-5555'
-        email: ''
+      phone: '(555) 555-5555'
+      email: ''
     - name: Hideki Matsui
       position: Vice President
       company: Hotels R' Us
       quote: >-
         What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
-      contact:
-        phone: '(555) 555-5555'
-        email: 'example@example.com'
+      phone: '(555) 555-5555'
+      email: 'example@example.com'
     - name: Philipp Trommler
       position: CEO
       company: Inns and More
       quote: >-
         I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
-      contact:
-        phone: ''
-        email: ''
+      phone: ''
+      email: ''
     - name: Elisabeth Kaurismäki
       position: President
       company: Great Hotel Co.
       quote: >-
         Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
-      contact:
-        phone: '(555) 555-5555'
-        email: ''
+      phone: '(555) 555-5555'
+      email: ''
     - name: Hideki Matsui
       position: Vice President
       company: Hotels R' Us
       quote: >-
         What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
-      contact:
-        phone: '(555) 555-5555'
-        email: 'example@example.com'
+      phone: '(555) 555-5555'
+      email: 'example@example.com'
     - name: Philipp Trommler
       position: CEO
       company: Inns and More
       quote: >-
         I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
-      contact:
-        phone: ''
-        email: ''
+      phone: ''
+      email: ''
     - name: Elisabeth Kaurismäki
       position: President
       company: Great Hotel Co.
       quote: >-
         Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
-      contact:
-        phone: '(555) 555-5555'
-        email: ''
+      phone: '(555) 555-5555'
+      email: ''
     - name: Hideki Matsui
       position: Vice President
       company: Hotels R' Us
       quote: >-
         What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
-      contact:
-        phone: '(555) 555-5555'
-        email: 'example@example.com'
+      phone: '(555) 555-5555'
+      email: 'example@example.com'
     - name: Philipp Trommler
       position: CEO
       company: Inns and More
       quote: >-
         I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
-      contact:
-        phone: ''
-        email: ''
+      phone: ''
+      email: ''
     - name: Elisabeth Kaurismäki
       position: President
       company: Great Hotel Co.
       quote: >-
         Great work inside and out. I've never found a company more thorough, detail-oriented, and dedicated to meeting all my needs. I would hire NCM Inc. again in a heartbeat!
-      contact:
-        phone: '(555) 555-5555'
-        email: ''
+      phone: '(555) 555-5555'
+      email: ''
     - name: Hideki Matsui
       position: Vice President
       company: Hotels R' Us
       quote: >-
         What customer service! Such a smooth operation, our hotel guests never noticed an interruption. And the finished product is perfection! These guys are great, and we love that it's a family business!
-      contact:
-        phone: '(555) 555-5555'
-        email: 'example@example.com'
+      phone: '(555) 555-5555'
+      email: 'example@example.com'
     - name: Philipp Trommler
       position: CEO
       company: Inns and More
       quote: >-
         I've rarely encountered such a friendly, dedicated team. We hired NCM for one of our hotels in San Diego. They do phenomenal work, I will definitely hire them for future projects!
-      contact:
-        phone: ''
-        email: ''
+      phone: ''
+      email: ''
 ---

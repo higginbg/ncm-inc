@@ -73,6 +73,15 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
+              - label: 'Featured Projects'
+                name: featured
+                widget: relation
+                collection: project-single
+                multiple: true
+                optionsLength: 4
+                searchFields: ['title', 'subtitle']
+                valueField: 'image'
+                displayFields: ['title', 'subtitle']
               - {label: 'Button Text', name: button, widget: string}
           - label: Testimonials
             name: testimonials
@@ -101,13 +110,13 @@ collections: # A list of collections the CMS should be able to edit
               - {label: 'Image 1', name: Image1, widget: image}
               - {label: 'Image 2', name: Image2, widget: image}
               - label: 'Team Members'
-                name: resources
+                name: people
                 widget: list
                 fields:
                   - {label: Name, name: name, widget: string, required: true}
                   - {label: 'Position in Company', name: position, widget: string, required: true}
                   - label: Portrait
-                    name: src
+                    name: image
                     widget: image
                     required: true
                     default: 'portrait-blank.png'
@@ -167,8 +176,8 @@ collections: # A list of collections the CMS should be able to edit
             name: main
             widget: object
             fields:
-              - label: {Heading, name: heading, widget: string}
-              - label: {Text, name: text, widget: text}
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
               - label: Testimonials
                 name: list
                 widget: list
@@ -177,9 +186,5 @@ collections: # A list of collections the CMS should be able to edit
                   - {label: 'Position in Company', name: position, widget: string}
                   - {label: 'Company Name', name: company, widget: string}
                   - {label: Quote, name: quote, widget: text}
-                  - label: Contact
-                    name: contact
-                    widget: list
-                    fields:
-                      - {label: 'Phone Number', name: phone, widget: string}
-                      - {label: 'Email Address', name: email, widget: string}
+                  - {label: 'Phone Number', name: phone, widget: string}
+                  - {label: 'Email Address', name: email, widget: string}

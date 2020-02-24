@@ -133,10 +133,10 @@ input:focus, textarea:focus {
   text-decoration: none;
   transition: var(--shadow-transition);
 
-  & .tile {
+  & .tile, &.tile-shadow {
     color: var(--white);
     overflow: hidden;
-    transition: var(--shadow-transition);
+    transition: var(--shadow-transition) !important;
   }
 
   & .hover-cover {
@@ -185,10 +185,10 @@ button:focus {
   }
   
   &:hover, &:focus, &:active {
-    transform: scale(1.25);
+    transform: scale(1.1);
     
     i {
-      transform: scale(1.25);
+      transform: scale(1.1);
     }
   }
 }
