@@ -10,6 +10,7 @@ const AboutPreview = ({ entry, getAsset }) => {
   const intro = data.get('intro');
   const main = data.get('main');
   const bios = data.get('people') || [];
+  const portraits = data.get('resources') || [];
 
   return <div className='bg-white'>
 
@@ -29,8 +30,12 @@ const AboutPreview = ({ entry, getAsset }) => {
 
         <div className='flex-ns flex-wrap mhn2-ns mb3'>
           {bios.map((bio, i) => <div className='ph2-ns pv2 w-33-m w-50-ns' key={i}>
-            <img src={ getAsset(bio.get('image')) } alt={ bio.getIn(['params', 'text']) } className='center db mb2 h4 object-cover'/>
-            <p className='h5 overflow-auto'>{ bio.getIn(['params', 'text']) }</p>
+            {portraits.map((portrait, i) => {
+              if (portrait.get('src') === bio.get('image')) {
+                return <img key={i} src={ getAsset(portrait.get('src')) } alt={ bio.get('name') } className='center db mb2 h4 object-cover' />;
+              }
+            })}
+            <p className='h5 overflow-auto'>{ bio.get('text') }</p>
           </div>)}
         </div>
       </div>
