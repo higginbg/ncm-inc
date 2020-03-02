@@ -125,7 +125,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Text, name: text, widget: markdown, required: true}
           - label: Resources
             name: resources
-            widget: list
+            widget: hidden
             fields:
               - label: Image
                 name: src

@@ -1,8 +1,7 @@
-// JS Goes here - ES6 supported
-
+// Imports
 import './css/main.css';
 
-import lozad from 'lozad'
+import lozad from 'lozad';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -11,9 +10,19 @@ import 'lightgallery.js/dist/js/lightgallery.min.js';
 import 'lg-zoom.js/dist/lg-zoom.min.js';
 import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
 
-// Say hello
-console.log('🦊 Hello! Edit me in src/index.js');
+import navAnimation from './js/modules/NavAnimation';
+import navShrink from './js/modules/NavShrink';
+import navHighlight from './js/modules/NavHighlight';
+import menuClose from './js/modules/MenuClose';
 
+import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
+
+import { nav, drpdwn, drpdwnBtn, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
+
+
+/* Initiations */
+
+// lozad
 const lozadEl = document.querySelectorAll('.lozad');
 if (lozadEl.length > 0) {
   const observer = lozad(lozadEl); // lazy loads elements with default selector as '.lozad'
@@ -23,6 +32,7 @@ if (lozadEl.length > 0) {
   observer.triggerLoad(lozadTrig);
 }
 
+// AOS
 AOS.init({
   startEvent: 'load',
   duration: 1000,
@@ -30,6 +40,7 @@ AOS.init({
   easing: 'ease'
 });
 
+// lightgallery.js
 lightGallery(document.getElementById('lightgallery'), {
   thumbnail: true,
   animateThumb: true,
@@ -41,156 +52,42 @@ lightGallery(document.getElementById('lightgallery'), {
   selector: '.item'
 });
 
-const nav         = document.getElementById('nav');
-const drpdwnBtn   = nav.querySelector('button');
-const drpdwn      = nav.querySelector('ul');
-const callBtn     = document.getElementById('call');
-const links       = drpdwn.querySelectorAll('li a');
 
-const isRoot = location.pathname === '/';
+/* Event listeners */
 
-
-// Grow or shrink Nav if page is scrolled up/down
-
-const scrollPos = () => window.pageYOffset || document.documentElement.scrollTop;
-
-let lastScroll = scrollPos();
-const shrinkNav = () => {
-  const currScroll = scrollPos();
-  const notTop = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
-  const shrink = notTop && currScroll > lastScroll;
-
-  const shrinkEl = (el, l, s) => {
-    shrink
-      ? el.classList.replace(l, s)
-      : el.classList.replace(s, l);
-  };
-
-  shrink ? nav.classList.add('small') : nav.classList.remove('small');
-
-  shrinkEl(nav, 'o-100', 'o-90');
-  shrinkEl(nav, 'f5-m', 'f6-m');
-
-  // Decreases link fonts
-  lastScroll = scrollPos();
-};
-
-// Only slide nav bar if on home page
-const addAnmtn = el => {
-  const anmtn = 'slideInDown';
-  el.classList.add(anmtn);
-};
-
-if (isRoot) {
-  addAnmtn(drpdwn);
-  addAnmtn(drpdwnBtn);
-  addAnmtn(callBtn);
-}
-
-const menuOpenIcon = '<i class="fas fa-bars"></i>';
-const menuCloseIcon = '<i class="fas fa-times"></i>';
-const navSmall = 'nav-small';
-
-const closeMenu = () => {
-  drpdwn.classList.remove(navSmall);
-  drpdwnBtn.innerHTML = menuOpenIcon;
-};
-
-window.onresize = closeMenu;
-
-let anmtnTimeout;
+// window
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
-
   AOS.refresh();
+  navAnimation();
+  navHighlight(drpdwn, isRoot);
 });
 
-window.addEventListener('scroll', shrinkNav);
+window.addEventListener('resize', menuClose);
+
+window.addEventListener('scroll', navShrink);
 
 window.addEventListener('click', ({ target }) => {
 
+  // close menu on click 
   const tag = target.tagName.toLowerCase();
-
   if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
-    closeMenu();
+    menuClose();
   }
 
-  if (tag === 'input' || tag === 'textarea') {
-    document.body.paddingTop = `${document.body.paddingTop + nav.clientHeight}px`;
-  } else {
-    document.body.paddingTop = `${document.body.paddingTop - nav.clientHeight}px`;
-  }
+  // Add padding for nav when input is clicked
+  const height = (tag === 'input' || tag === 'textarea') ? nav.clientHeight : (-nav.clientHeight);
+  document.body.paddingTop = `${document.body.paddingTop + height}px`;
 });
 
+// document
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmovde', handleTouchMove, false);
+
+// others
 nav.addEventListener('click', e => e.stopPropagation());
 
 drpdwnBtn.addEventListener('click', () => {
   drpdwn.classList.toggle(navSmall);
   drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall) ? menuCloseIcon : menuOpenIcon;
 });
-
-// Highlight nav link when current page
-const url = window.location.href.split('/');
-const page = url[3];
-
-for (const link of links) {
-  const navLoc = link.href.split('/');
-  const checkNav = navLoc[navLoc.length - 1];
-
-  const isHome = !checkNav && isRoot;
-  const isCurrentPath = page.toLowerCase() === link.text.toLowerCase();
-  const isCurrentPage = page === checkNav;
-
-  if (isCurrentPath || isHome) {
-    link.classList.add('selected');
-
-    if (isCurrentPage || isHome) {
-      link.classList.remove('nav-link');
-    }
-  }
-}
-
-
-/* Handle swiping left to close menu */
-/* Found here: https://stackoverflow.com/questions/15084675/how-to-implement-swipe-gestures-for-mobile-devices */
-
-let xDown = null;
-let yDown = null;
-
-const handleTouchStart = e => {
-  xDown = e.touches[0].clientX;
-  yDown = e.touches[0].clientY;
-};
-
-const handleTouchMove = e => {
-  if (!xDown || !yDown) {
-    return;
-  }
-  var xUp = e.touches[0].clientX;
-  var yUp = e.touches[0].clientY;
-  var xDiff = xDown - xUp;
-  var yDiff = yDown - yUp;
-
-  if ( Math.abs(xDiff) > Math.abs(yDiff) ) { /*most significant*/
-
-    if (xDiff > 0) {
-      /* left swipe */
-      closeMenu();
-    } else {
-      /* right swipe */
-    }
-  } else {
-    if (yDiff > 0) {
-      /* up swipe */
-    } else {
-      /* down swipe */
-    }
-  }
-
-  /* reset values */
-  xDown = null;
-  yDown = null;
-};
-
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);

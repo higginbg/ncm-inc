@@ -22,7 +22,7 @@ const ProjectsPreview = ({ entry, getAsset, widgetFor }) => {
         <h2 className='f3 lh-title mb3'>Gallery</h2>
         <div className='flex-ns flex-wrap mhn2-ns mb3'>
           {gallery.map((image, i) => <div className='ph2-ns pv2 w-33-m w-50-ns' key={i}>
-            <img src={ getAsset(image.get('src')) } alt={ image.get('title') } className='center db mb2'/>
+            <img src={ getAsset(image.get('src')) } alt={ image.get('title') } className='center db mb2 tile-shadow' />
             <p className='tc'>{ image.get('title') }</p>
           </div>)}
         </div>

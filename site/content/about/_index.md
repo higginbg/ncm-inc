@@ -47,7 +47,10 @@ people:
     position: Administrative Assistant
     text: Olivia is the newest member of the team. As administrative assistant, Olivia performs a wide variety of jobs. She has a background in small business management and makes a wonderful addition to the company.
 resources:
-  - src: 'portrait-james-guerra.jpg'      
+  - src: 'portrait-james-guerra.jpg' 
+    title: James Guerra
   - src: 'portrait-greg-guerra.jpg'
+    title: Greg Guerra
   - src: 'portrait-blank.png'
+    title: Blank Portrait
 ---

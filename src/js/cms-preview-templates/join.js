@@ -12,7 +12,6 @@ const JoinPreview = ({ entry, widgetFor }) => <div>
       <div class='cms'>{ widgetFor('body') }</div>
     </div>
   </div>
-  
 </div>;
 
 export default JoinPreview;

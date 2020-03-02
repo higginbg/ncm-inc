@@ -1,9 +1,6 @@
 import React from 'react';
 import Jumbotron from './components/jumbotron';
 
-const wrapperClass = 'section bb b--grey-2';
-const containerClass = 'mw7 center';
-
 const AboutPreview = ({ entry, getAsset }) => {
 
   const data = entry.get('data');
@@ -16,15 +13,15 @@ const AboutPreview = ({ entry, getAsset }) => {
 
     <Jumbotron image={ data.get('image') } title={ data.get('title') } />
 
-    <div className={wrapperClass}>
-      <div className={containerClass}>
+    <div className='section bg-debut relative header-shadow'>
+      <div className='mw7 center'>
         <h1 className='f2 lh-title mb3'>{ intro.get('heading') }</h1>
         <p>{ intro.get('text') }</p>
       </div>
     </div>
 
-    <div className={wrapperClass}>
-      <div className={containerClass}>
+    <div className='section bg-white'>
+      <div className='mw7 center'>
         <h1 className='f2 lh-title mb3'>{ main.get('heading') }</h1>
         <p>{ main.get('text') }</p>
 
@@ -40,7 +37,6 @@ const AboutPreview = ({ entry, getAsset }) => {
         </div>
       </div>
     </div>
-
   </div>;
 };
 
