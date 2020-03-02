@@ -14,10 +14,11 @@ import navAnimation from './js/modules/NavAnimation';
 import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
 import menuClose from './js/modules/MenuClose';
+import handleForm from './js/modules/HandleForm';
 
 import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
 
-import { nav, drpdwn, drpdwnBtn, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
+import { nav, drpdwn, drpdwnBtn, form, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
 
 
 /* Initiations */
@@ -91,3 +92,5 @@ drpdwnBtn.addEventListener('click', () => {
   drpdwn.classList.toggle(navSmall);
   drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall) ? menuCloseIcon : menuOpenIcon;
 });
+
+form && form.addEventListener('submit', e => handleForm(e));
