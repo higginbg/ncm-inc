@@ -22,7 +22,7 @@ if (form) {
 
   // Send data in POST
   const sendData = data => {
-    fetch({
+    fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': form.name === 'application' ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
       body: `form-name=${form.name}` + urlencodeFormData(data)
@@ -37,7 +37,7 @@ if (form) {
           if (id !== 'form-name') {
             list += `
               <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
-              <p class="mt1 bg-grey-1 br1 pa2 pre">${value.name || value}</p>
+              <p class="mt1 bg-grey-1 br1 pa2 pre">${value.name === undefined ? value : (value.name || '(none)')}</p>
             `;
           }
         }
