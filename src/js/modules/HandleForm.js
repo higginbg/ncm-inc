@@ -20,14 +20,35 @@ if (form) {
     return s;
   };
 
+  const errMsg = () => {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error sending message',
+      html: `
+        <div class="pb2">
+          <div class="pv2">
+            Please contact us via <a href="tel:+1971-336-2341" class="link">phone</a> or <a href="mailto:danielle.guerra@ncmreno.com" class="link">email</a>.
+          </div>
+          <div>Sorry for any inconvenience.</div>
+        </div>
+      `,
+      footer: '<a href="/" class="link">Return home</a>'
+    });
+  };
+
   // Send data in POST
   const sendData = data => {
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': form.name === 'application' ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
-      body: `form-name=${form.name}` + urlencodeFormData(data)
+      headers: { 'Content-Type': form.getAttribute('name') === 'application' ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
+      body: urlencodeFormData(data)
     })
       .then(resp => {
+
+        if (!resp.ok) {
+          errMsg();
+          return;
+        }
 
         // Show message details to user
         form.previousElementSibling.innerText = "We'll be in touch soon!";
@@ -52,17 +73,7 @@ if (form) {
         });
       })
       .catch(err => {
-        Swal.fire({
-          icon: 'error',
-          title: 'Error sending message',
-          html: `
-            <div class="pb2">
-              <div class="pv2">Please contact us via phone or email.</div>
-              <div>Sorry for any inconvenience.</div>
-            </div>
-          `,
-          footer: '<a href="/" class="link">Return home</a>'
-        });
+        errMsg();
       });
   };
 
