@@ -23,7 +23,7 @@ if (form) {
   const sendData = data => {
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { 'Content-Type': form.name === 'application' ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
       body: `form-name=${form.name}` + urlencodeFormData(data)
     })
       .then(resp => {
