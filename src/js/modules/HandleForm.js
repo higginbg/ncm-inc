@@ -38,24 +38,26 @@ if (form) {
 
   // Send data in POST
   const sendData = data => {
-    const hasFile = form.getAttribute('name') === 'application';
 
-    const options = {
-      method: 'POST',
-      body: hasFile ? data : urlencodeFormData(data)
-    };
+    // Show loading animation if has file
+    let hasFile;
+    for (const [id, value] of data.entries()) {
+      hasFile = value.name !== undefined;
+    }
 
-    if (!hasFile) {
-      options.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
-    } else {
+    if (hasFile) {
       Swal.fire({
         title: 'Uploading file.',
-        timerProgressBar: true,
         onBeforeOpen: () => Swal.showLoading()
       });
     }
 
-    fetch('/', options).then(resp => {
+    // Post data
+    fetch('/', {
+      method: 'POST',
+      body: hasFile ? data : urlencodeFormData(data),
+      headers: !hasFile && { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }).then(resp => {
 
       if (!resp.ok) {
         errMsg();
@@ -79,14 +81,18 @@ if (form) {
 
       Swal.fire({
         icon: 'success',
-        title: 'Success!',
-        text: 'Your message has been sent!',
+        title: 'Thank you!',
+        text: `
+          <div>
+            <div>Your message has been sent!</div>
+            <div>We'll be in touch soon.</div>
+          </div>
+        `,
         footer: '<a href="/" class="link">Return home</a>'
       });
-    })
-      .catch(err => {
-        errMsg();
-      });
+    }).catch(err => {
+      errMsg();
+    });
   };
 
   const submitForm = e => {
@@ -124,7 +130,7 @@ if (form) {
     const filePath = el.value;
     const extn = /(\.pdf|\.doc|\.docx)$/i;
 
-    const showError = msg => {
+    const uploadError = msg => {
       Swal.fire({
         icon: 'error',
         title: 'Upload error.',
@@ -134,9 +140,9 @@ if (form) {
     };
 
     if (filePath !== '' && !extn.test(filePath)) {
-      showError('Please upload only pdf, doc, docx.');
+      uploadError('Please upload only pdf, doc, docx.');
     } else if (el.files[0].size > 1000000) {
-      showError('Maximum file size is 1 MB.');
+      uploadError('Maximum file size is 1 MB.');
     }
   };
 

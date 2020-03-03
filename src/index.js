@@ -53,13 +53,16 @@ lightGallery(document.getElementById('lightgallery'), {
 });
 
 
+// Before window load
+navAnimation();
+
 /* Event listeners */
 
 // window
+
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
   AOS.refresh();
-  navAnimation();
   navHighlight(drpdwn, isRoot);
 });
 
