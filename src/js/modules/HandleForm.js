@@ -23,7 +23,7 @@ if (form) {
   const errMsg = () => {
     Swal.fire({
       icon: 'error',
-      title: 'Error sending message',
+      title: 'Error sending message.',
       html: `
         <div class="pb2">
           <div class="pv2">
@@ -41,6 +41,7 @@ if (form) {
     const hasFile = form.getAttribute('name') === 'application';
     fetch('/', {
       method: 'POST',
+      headers: { 'Content-Type': hasFile ? '' : 'application/x-www-form-urlencoded' },
       body: hasFile ? data : urlencodeFormData(data)
     })
       .then(resp => {
@@ -110,14 +111,21 @@ if (form) {
 
   validateFile = el => {
     const filePath = el.value;
-    const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
-    if (filePath !== '' && !allowedExtensions.test(filePath)) {
+    const extn = /(\.pdf|\.doc|\.docx)$/i;
+
+    const showError = msg => {
       Swal.fire({
         icon: 'error',
-        title: 'Upload error',
-        text: 'Please upload only pdf, doc, docx.',
+        title: 'Upload error.',
+        text: msg
       });
       el.value = '';
+    };
+
+    if (filePath !== '' && !extn.test(filePath)) {
+      showError('Please upload only pdf, doc, docx.');
+    } else if (el.files[0].size > 1000000) {
+      showError('Maximum file size is 1 MB.');
     }
   };
 
