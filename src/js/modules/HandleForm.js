@@ -40,9 +40,12 @@ if (form) {
   const sendData = data => {
 
     // Show loading animation if has file
-    let hasFile;
+    let hasFile = false;
     for (const [id, value] of data.entries()) {
-      hasFile = value.name !== undefined;
+      if (value.name) {
+        hasFile = true;
+        break;
+      }
     }
 
     if (hasFile) {
@@ -53,11 +56,17 @@ if (form) {
     }
 
     // Post data
-    fetch('/', {
+
+    const options = {
       method: 'POST',
       body: hasFile ? data : urlencodeFormData(data),
-      headers: !hasFile && { 'Content-Type': 'application/x-www-form-urlencoded' }
-    }).then(resp => {
+    };
+
+    if (!hasFile) {
+      options.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    }
+
+    fetch('/', options).then(resp => {
 
       if (!resp.ok) {
         errMsg();
