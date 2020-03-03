@@ -4,8 +4,8 @@ const drpdwn         = nav.querySelector('ul');
 const drpdwnBtn      = nav.querySelector('button');
 const callBtn        = document.getElementById('call');
 const form           = document.querySelector('form');
-const requiredInputs = form.querySelectorAll('[required]') || {};
-const resume         = form.querySelector('#resume');
+const requiredInputs = form ? form.querySelectorAll('[required]') : null;
+const resume         = form ? form.querySelector('#resume') : null;
 
 const isRoot = location.pathname === '/';
 

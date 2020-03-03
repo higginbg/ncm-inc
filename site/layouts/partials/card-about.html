@@ -3,11 +3,14 @@
     <div class="flip-card-inner">
 
       <!-- Front -->
-      <div class="flip-card-front bg-off-white br1 cover bg-center" style="background-image: url('{{ .loadingThumb }}');">
+      <div class="flip-card-front bg-debut br1">
 
-        <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="lozad lozad-trigger w-100 h6 br1 br--top object-cover" data-aos="fade-in" data-aos-duration=500 />
+        <div class="w-100 h6 cover bg-center br1 br--top overflow-hidden" style="background-image: url('{{ .loadingThumb }}');">
+          <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="lozad lozad-trigger w-100 h-100 object-cover" data-aos="fade-in" data-aos-duration=500 />
+        </div>
 
-        <div class="w-100 bg-debut-dark off-white o-90 absolute bottom-0 ph3 pv2 footer-shadow">
+
+        <div class="w-100 bg-debut-dark off-white ph3 pv2 br1 br--bottom">
           
           <h2 class="f5 lh-title mb1">{{ .name }}</h2>
           <h3 class="f6">{{ .position }}</h3>

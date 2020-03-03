@@ -25,11 +25,19 @@ if (form) {
       icon: 'error',
       title: 'Error sending message.',
       html: `
-        <div class="pb2">
-          <div class="pv2">
-            Please contact us via <a href="tel:+1971-336-2341" class="link">phone</a> or <a href="mailto:danielle.guerra@ncmreno.com" class="link">email</a>.
+        <div class="pv2 tl">
+          <div class="pv2">You can still reach us!</div>
+          <div class="f5 flex flex-row pa3">
+            <div class="flex flex-column b pr2">
+              <span class="mb1">Phone</span>
+              <span class="mt1">Email</span>
+            </div>
+            <div class="flex flex-column pl2">
+              <span class="mb1"><a href="tel:+1971-336-2341" class="link">(971) 336-2341</a></span>
+              <span class="mt1"><a href="mailto:danielle.guerra@ncmreno.com" class="link">danielle.guerra@ncmreno.com</a></span>
+            </div>
           </div>
-          <div>Sorry for any inconvenience.</div>
+          <div class="pv2">We apologize for any inconvenience.</div>
         </div>
       `,
       footer: '<a href="/" class="link">Return home</a>'
