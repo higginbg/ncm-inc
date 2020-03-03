@@ -41,12 +41,9 @@ if (form) {
     const hasFile = form.getAttribute('name') === 'application';
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': hasFile ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
       body: hasFile ? data : urlencodeFormData(data)
     })
       .then(resp => {
-
-        console.log(resp)
 
         if (!resp.ok) {
           errMsg();

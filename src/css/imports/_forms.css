@@ -123,14 +123,14 @@ label
   z-index: 2;
 }
 
-.swal2-container {
+.swal2-popup {
   font-family: var(--font-family) !important;
+  font-size: 1em !important;
 }
 
 .swal2-icon.swal2-info {
   color: var(--primary) !important;
   border-color: var(--primary) !important;
-  opacity: 80%;
 }
 
 button.swal2-styled {
