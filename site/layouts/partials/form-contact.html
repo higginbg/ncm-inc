@@ -1,5 +1,5 @@
 
-<div class="section form-section bg-debut no-select footer-shadow-light">
+<div class="section form-section bg-debut footer-shadow-light">
   <div class="measure-narrow center">
     
     <!-- Contact -->
@@ -12,30 +12,65 @@
         <!-- Name -->
         <fieldset>
           <label for="name">Name</label>
-          <input required type="text" id="name" name="name" placeholder="Name" class="w-100 mb2">
+          <input
+            required
+            aria-required="true"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            class="w-100 mb2"
+          >
         </fieldset>
         
         <!-- Email -->
         <fieldset>
           <label for="email">Email</label>
-          <input required type="email" id="email" name="email" placeholder="Email" class="w-100 mb2">
+          <input
+            required
+            aria-required="true"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            class="w-100 mb2"
+          >
         </fieldset>
 
         <!-- Company -->
         <fieldset>
           <label for="company">Company</label>
-          <input type="company" id="company" name="company" placeholder="Company" class="w-100 mb2">
+          <input
+            required
+            aria-required="true"
+            type="company"
+            id="company"
+            name="company"
+            placeholder="Company"
+            class="w-100 mb2"
+          >
         </fieldset>
     
         <!-- Message -->
         <fieldset>
           <label for="message">Your message</label>
-          <textarea required id="message" name="message" placeholder="Your message" rows="8" cols="80" class="w-100 no-resize"></textarea>
+          <textarea
+            required
+            aria-required="true"
+            id="message"
+            name="message"
+            placeholder="Message"
+            rows="8"
+            cols="80"
+            class="w-100 no-resize"
+          ></textarea>
         </fieldset>
+        
         <!-- Button -->
         <div class="w-100 tc mt3">
-          <button type="submit" class="btn w-100">Send<i class="fas fa-paper-plane"></i></button>
+          <button type="submit" class="btn w-100 disabled">Send<i class="fas fa-paper-plane"></i></button>
         </div>
+
       </form>
     </div>
   </div>

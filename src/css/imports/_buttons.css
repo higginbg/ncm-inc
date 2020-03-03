@@ -13,6 +13,23 @@
   box-shadow: var(--tile-shadow);
   background-origin: border-box;
   user-select: none;
+
+  &.disabled {
+    background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
+  }
+
+  &.enabled {
+    background-image: none;
+    background-color: var(--primary);
+
+    &:focus, &:active {
+      border: 2px solid transparent;
+      opacity: 90%;
+      background-image: none;
+      box-shadow: var(--button-press-shadow);
+      outline: 0!important;
+    }
+  }
   
   i {
     opacity: 0;

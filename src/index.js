@@ -14,11 +14,11 @@ import navAnimation from './js/modules/NavAnimation';
 import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
 import menuClose from './js/modules/MenuClose';
-import handleForm from './js/modules/HandleForm';
+import { validate, handleForm } from './js/modules/HandleForm';
 
 import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
 
-import { nav, drpdwn, drpdwnBtn, form, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
+import { nav, drpdwn, drpdwnBtn, form, requiredInputs, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
 
 
 /* Initiations */
@@ -94,3 +94,7 @@ drpdwnBtn.addEventListener('click', () => {
 });
 
 form && form.addEventListener('submit', e => handleForm(e));
+
+for (const input of requiredInputs) {
+  input.addEventListener('blur', e => validate(e, input));
+}
