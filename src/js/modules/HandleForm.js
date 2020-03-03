@@ -46,6 +46,8 @@ if (form) {
     })
       .then(resp => {
 
+        console.log(resp)
+
         if (!resp.ok) {
           errMsg();
           return;
