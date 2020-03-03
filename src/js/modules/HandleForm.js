@@ -33,10 +33,12 @@ if (form) {
         let list = '';
 
         for (const [id, value] of data.entries()) {
-          list += `
-            <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
-            <p class="mt1 bg-grey-1 br1 pa2 pre">${value}</p>
-          `;
+          if (id !== 'form-name') {
+            list += `
+              <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
+              <p class="mt1 bg-grey-1 br1 pa2 pre">${value}</p>
+            `;
+          }
         }
 
         form.innerHTML = `
