@@ -38,10 +38,11 @@ if (form) {
 
   // Send data in POST
   const sendData = data => {
+    const hasFile = form.getAttribute('name') === 'application';
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': form.getAttribute('name') === 'application' ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
-      body: urlencodeFormData(data)
+      headers: { 'Content-Type': hasFile ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
+      body: hasFile ? data : urlencodeFormData(data)
     })
       .then(resp => {
 
