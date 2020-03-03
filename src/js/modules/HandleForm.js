@@ -39,40 +39,45 @@ if (form) {
   // Send data in POST
   const sendData = data => {
     const hasFile = form.getAttribute('name') === 'application';
-    fetch('/', {
+
+    const options = {
       method: 'POST',
-      headers: { 'Content-Type': hasFile ? '' : 'application/x-www-form-urlencoded' },
       body: hasFile ? data : urlencodeFormData(data)
+    };
+
+    if (!hasFile) {
+      options.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    }
+
+    fetch('/', options).then(resp => {
+
+      if (!resp.ok) {
+        errMsg();
+        return;
+      }
+
+      // Show message details to user
+      form.previousElementSibling.innerText = "We'll be in touch soon!";
+      let list = '';
+
+      for (const [id, value] of data.entries()) {
+        if (id !== 'form-name') {
+          list += `
+            <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
+            <p class="mt1 bg-grey-1 br1 pa2 pre">${value.name === undefined ? value : (value.name || '(none)')}</p>
+          `;
+        }
+      }
+
+      form.innerHTML = `<div>${list}</div>`;
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: 'Your message has been sent!',
+        footer: '<a href="/" class="link">Return home</a>'
+      });
     })
-      .then(resp => {
-
-        if (!resp.ok) {
-          errMsg();
-          return;
-        }
-
-        // Show message details to user
-        form.previousElementSibling.innerText = "We'll be in touch soon!";
-        let list = '';
-
-        for (const [id, value] of data.entries()) {
-          if (id !== 'form-name') {
-            list += `
-              <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
-              <p class="mt1 bg-grey-1 br1 pa2 pre">${value.name === undefined ? value : (value.name || '(none)')}</p>
-            `;
-          }
-        }
-
-        form.innerHTML = `<div>${list}</div>`;
-
-        Swal.fire({
-          icon: 'success',
-          title: 'Success!',
-          text: 'Your message has been sent!',
-          footer: '<a href="/" class="link">Return home</a>'
-        });
-      })
       .catch(err => {
         errMsg();
       });
