@@ -121,9 +121,11 @@ if (form) {
     // Check if all fields are filled
     let isFilled = true;
 
-    for (const input of requiredInputs) {
-      if (input.value.trim() === '') {
-        isFilled = false;
+    if (requiredInputs) {
+      for (const input of requiredInputs) {
+        if (input.value.trim() === '') {
+          isFilled = false;
+        }
       }
     }
 
@@ -136,8 +138,10 @@ if (form) {
 
   handleForm = e => {
 
-    for (const input of requiredInputs) {
-      validate(e, input);
+    if (requiredInputs) {
+      for (const input of requiredInputs) {
+        validate(e, input);
+      }
     }
 
     // Submit if all fields filled

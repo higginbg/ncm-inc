@@ -95,6 +95,8 @@ drpdwnBtn.addEventListener('click', () => {
 
 form && form.addEventListener('submit', e => handleForm(e));
 
-for (const input of requiredInputs) {
-  input.addEventListener('blur', e => validate(e, input));
+if (requiredInputs) {
+  for (const input of requiredInputs) {
+    input.addEventListener('blur', e => validate(e, input));
+  }
 }
