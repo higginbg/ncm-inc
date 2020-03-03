@@ -47,6 +47,12 @@ if (form) {
 
     if (!hasFile) {
       options.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    } else {
+      Swal.fire({
+        title: 'Uploading file.',
+        timerProgressBar: true,
+        onBeforeOpen: () => Swal.showLoading()
+      });
     }
 
     fetch('/', options).then(resp => {
