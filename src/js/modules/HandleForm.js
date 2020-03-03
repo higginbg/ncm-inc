@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
 
 import { form, requiredInputs } from '../variables';
 
+let validateFile;
 let validate;
 let handleForm;
 
@@ -21,7 +22,7 @@ if (form) {
 
   // Send data in POST
   const sendData = data => {
-    fetch('/', {
+    fetch({
       method: 'POST',
       headers: { 'Content-Type': form.name === 'application' ? 'multipart/form-data' : 'application/x-www-form-urlencoded' },
       body: `form-name=${form.name}` + urlencodeFormData(data)
@@ -36,16 +37,12 @@ if (form) {
           if (id !== 'form-name') {
             list += `
               <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
-              <p class="mt1 bg-grey-1 br1 pa2 pre">${value}</p>
+              <p class="mt1 bg-grey-1 br1 pa2 pre">${value.name || value}</p>
             `;
           }
         }
 
-        form.innerHTML = `
-          <div>
-            ${list}
-          </div>
-        `;
+        form.innerHTML = `<div>${list}</div>`;
 
         Swal.fire({
           icon: 'success',
@@ -100,6 +97,19 @@ if (form) {
     }
   };
 
+  validateFile = el => {
+    const filePath = el.value;
+    const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+    if (filePath !== '' && !allowedExtensions.test(filePath)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Upload error',
+        text: 'Please upload only pdf, doc, docx.',
+      });
+      el.value = '';
+    }
+  };
+
   const invalid = 'invalid';
   let flag = false;
 
@@ -117,23 +127,6 @@ if (form) {
       el.placeholder = id.charAt(0).toUpperCase() + id.slice(1);
       classList.remove(invalid);
     }
-
-    // Check if all fields are filled
-    let isFilled = true;
-
-    if (requiredInputs) {
-      for (const input of requiredInputs) {
-        if (input.value.trim() === '') {
-          isFilled = false;
-        }
-      }
-    }
-
-    // Highlight submit button if all fields filled
-    const submitBtn = form.querySelector('button');
-    isFilled ?
-      submitBtn.classList.replace('disabled', 'enabled')
-      : submitBtn.classList.replace('enabled', 'disabled');
   };
 
   handleForm = e => {
@@ -149,4 +142,4 @@ if (form) {
   };
 }
 
-export { validate, handleForm };
+export { validateFile, validate, handleForm };
