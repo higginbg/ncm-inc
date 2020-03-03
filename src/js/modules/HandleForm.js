@@ -91,9 +91,9 @@ if (form) {
       Swal.fire({
         icon: 'success',
         title: 'Thank you!',
-        text: `
-          <div>
-            <div>Your message has been sent!</div>
+        html: `
+          <div class="pb2">
+            <div class="pv2">Your message has been sent!</div>
             <div>We'll be in touch soon.</div>
           </div>
         `,

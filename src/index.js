@@ -10,7 +10,6 @@ import 'lightgallery.js/dist/js/lightgallery.min.js';
 import 'lg-zoom.js/dist/lg-zoom.min.js';
 import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
 
-import navAnimation from './js/modules/NavAnimation';
 import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
 import menuClose from './js/modules/MenuClose';
@@ -52,9 +51,6 @@ lightGallery(document.getElementById('lightgallery'), {
   selector: '.item'
 });
 
-
-// Before window load
-navAnimation();
 
 /* Event listeners */
 
