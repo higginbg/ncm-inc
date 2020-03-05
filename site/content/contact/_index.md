@@ -1,7 +1,8 @@
 ---
 title: Contact
-heading: "Let's get in touch."
-intro_text: "Like our work? We’d love to get in touch with you to schedule a consultation!"
+description: Like our work? We'd love to get in touch with you to schedule a consultation!
+heading: Let's get in touch.
+intro_text: Like our work? We'd love to get in touch with you to schedule a consultation!
 contact_entries:
   - heading: Phone
     text: "[+1 (971) 336-2341](tel:+1971-336-2341)"

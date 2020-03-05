@@ -32,3 +32,5 @@ resources:
   - src: 'guest-room-4.jpg'
     title: Guest Room 4
 ---
+
+Our work at the Hampton Inn is mostly located in the spa and kitchen areas of the property. We are replacing tile, adding trim to the elevators, and fully updating the spa bathroom.

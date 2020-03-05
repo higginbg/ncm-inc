@@ -1,5 +1,6 @@
 ---
 title: About Our Team
+description: We are proud of the team we have assembled through the years. Please take a moment to meet us.
 image: '/img/cover-about.jpg'
 intro: 
   heading: Our Mission Statement

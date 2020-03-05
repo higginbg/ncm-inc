@@ -1,14 +1,20 @@
-<head>
+<head itemscope itemtype="{{ .Site.BaseURL }}">
 
 	{{ $stylesheet := .Site.Data.webpack.main }}
 	{{ with $stylesheet.css }}
     <link href="{{ relURL . }}" rel="stylesheet">
 	{{ end }}
 	
-	<title>{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}</title>
-
+	<!-- Title tags -->
+  <title itemprop="name">{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}</title>
+  <meta property="og:title" content="{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}" />
+  <meta name="twitter:title" content="{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}" />
+	<meta itemprop="name" content="{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}" />
+  <meta name="application-name" content="{{ if .IsHome }}Leaders in Hospitality Renovation{{ else }}{{ .Title }}{{ end }} - {{ $.Site.Title }}" />
+  <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+	
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
 
@@ -24,14 +30,91 @@
 	<link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
 	<link rel="manifest" href="/manifest.json">
-	<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#141414">
+	<link rel="mask-icon" href="/img/logos/logo-large.svg" color="#141414">
 	<meta name="theme-color" content="#141414">
+
+	<!-- Description tags -->
+	<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Content }}{{ end }}">
+	<meta itemprop="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Content }}{{ end }}" />
+	<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Content }}{{ end }}" />
+	<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Content }}{{ end }}" />
 
 	<!-- Open Graph -->
 	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="NCM Inc. - Leaders In Hospitality Renovation">
 	<meta property="og:url" content="http://www.ncmreno.netlify.com/">
 	<meta property="og:image" content="/img/logos/logo-large.png">
+
+	<!-- Link tags -->
+	<base href="{{ .Permalink }}">
+	<link rel="canonical" href="{{ .Permalink }}" itemprop="url" /> 
+	<meta name="url" content="{{ .Permalink }}" />
+	<meta name="twitter:url" content="{{ .Permalink }}" /> 
+	<meta property="og:url" content="{{ .Permalink }}" />
+
+	<!-- Language tags -->
+	<meta property="og:locale" content="{{ .Language.Lang }}">
+	<meta name="language" content="{{ .Language.LanguageName }}">
+	{{ range .AllTranslations }}
+	  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+	{{ end }}
+
+	<!-- Image tags -->
+	{{ with .Params.image }} 
+		<meta itemprop="image" content="{{ . | absURL }}" />
+		<meta property="og:image" content="{{ . | absURL }}" /> 
+		<meta name="twitter:image" content="{{ . | absURL }}" />
+		<meta name="twitter:image:src" content="{{ . | absURL }}" /> 
+	{{ else }}
+		<meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+		<meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+		<meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+		<meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" /> 
+	{{ end }}
+
+	<!-- Date tags -->
+  <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+  
+  <!-- Sitemap & RSS Feed tags -->
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" /> 
+
+	{{ with .OutputFormats.Get "RSS" }}
+		<link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+		<link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  {{ end }}
+  
+  <meta property="og:type" content="website" /> 
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <script defer type="application/ld+json">
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "{{ .Permalink }}", 
+      "sameAs": [
+        "{{ .Site.Params.github }}"
+      ], 
+      "name": "{{ .Title }}", 
+      "logo": "/img/logos/logo-large.png" 
+    }
+  </script>
+
+  <!-- Search Engine Crawler tags -->
+  <meta name="robots" content="index,follow" /> 
+  <meta name="googlebot" content="index,follow" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#141414" /> 
+  <meta name="msapplication-TileColor" content="#141414" />
+
+  <meta name="keywords" content="" />
+  <meta name="imagemode" content="force" />
+  <meta name="coverage" content="Worldwide" /> 
+  <meta name="distribution" content="Global" />
+  <meta name="HandheldFriendly" content="True" /> 
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.sitename }}" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-touch-fullscreen" content="yes" /> 
 
   {{ if .IsHome }}
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
