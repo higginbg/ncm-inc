@@ -1,7 +1,7 @@
 // Handle swiping left to close menu
 // https://stackoverflow.com/questions/15084675/how-to-implement-swipe-gestures-for-mobile-devices
 
-import menuClose from './MenuClose';
+import menuClose from '../modules/MenuClose';
 
 let xDown = null;
 let yDown = null;

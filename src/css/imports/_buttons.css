@@ -35,6 +35,42 @@
   }
 }
 
+.btn-contact {
+  display: inline-block;
+  border-radius: var(--border-radius-pill);
+  padding: 12px 16px;
+  font-size: var(--font-size-m);
+  text-align: center;
+  line-height: 1.25;
+  background-color: var(--off-white);
+  text-decoration: none;
+  color: var(--primary);
+  transition: var(--shadow-transition) !important;
+  box-shadow: var(--tile-shadow);
+  background-origin: border-box;
+  user-select: none;
+
+  & .details {
+    max-width: 0;
+    white-space: pre;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover {
+
+    & .details {
+      max-width: 500px;
+      margin-left: var(--spacing-small);
+    }
+  }
+
+  &:focus, &:active {
+    box-shadow: var(--button-press-shadow);
+    outline: 0!important;
+  }
+}
+
 .btn-back:hover i {
   margin-right: var(--spacing-small);    
 }

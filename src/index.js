@@ -14,8 +14,8 @@ import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
 import menuClose from './js/modules/MenuClose';
 
-import { validateFile, validate, handleForm } from './js/modules/HandleForm';
-import { handleTouchStart, handleTouchMove } from './js/modules/HandleTouch';
+import { validateFile, validate, handleForm } from './js/handlers/HandleForm';
+import { handleTouchStart, handleTouchMove } from './js/handlers/HandleTouch';
 import { nav, drpdwn, drpdwnBtn, form, requiredInputs, resume, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
 
 
