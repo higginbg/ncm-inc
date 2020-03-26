@@ -1,18 +1,26 @@
 <div class="bg-off-white">
   <div
-    class="pv5 pv6-l ph2 vh-75-ns vh-50 bb b--grey-1 bg-bottom cover no-select"
+    class="vh-75-ns vh-50 bb b--grey-1 bg-bottom cover no-select"
     style="background-image: url('{{ .image }}');"
     data-aos="fade-left"
   >
-    <div class="absolute top-1 top-0-ns ma3-ns o-90">
+
+    <div class="absolute top-1 top-0-ns ma3 o-90">
       <div class="absolute h-100 w-100 bg-black br1" data-aos="fade-in" data-aos-delay=1000 data-aos-duration=750></div>
+      
       <div class="pa3 mh2">
-
         <h1 class="f1 lh-title primary mb2 pre" data-aos="fade-in" data-aos-delay=1000 data-aos-duration=750>{{ .Title }}</h1>
+        <h2 class="f3 lh-title white mb2 pre" data-aos="fade-in" data-aos-delay=2000 data-aos-duration=750>{{ .subtitle }}</h2>
+      </div>
 
-        <h2 class="f3 lh-title white pre" data-aos="fade-in" data-aos-delay=2000 data-aos-duration=750>{{ .subtitle }}</h2>
+    </div>
 
+    <div class="absolute bottom-0 w-100" data-aos="fade-in" data-aos-delay=2500 data-aos-duration=750>
+      <div class="absolute w-100 h-100 bg-white o-60"></div>
+      <div class="db center tc pa3 mw5" data-aos="zoom-in" data-aos-duration=500>
+        <a href="/contact" class="btn btn-forward w-100">Contact now<i class="fas fa-angle-right"></i></a>
       </div>
     </div>
+
   </div>
 </div>
