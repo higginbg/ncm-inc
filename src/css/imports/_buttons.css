@@ -61,7 +61,6 @@
 
     & .details {
       max-width: 500px;
-      margin-left: var(--spacing-small);
     }
   }
 

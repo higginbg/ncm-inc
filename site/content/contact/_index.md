@@ -7,7 +7,7 @@ contact_entries:
   - heading: Phone
     text: "[+1 (971) 336-2341](tel:+1971-336-2341)"
   - heading: Email
-    text: "[danielle.guerra@ncmreno.com](mailto:danielle.guerra@ncmreno.com)"
+    text: "[office@ncmreno.com](mailto:office@ncmreno.com)"
   - heading: Mailing Address
     text: "1740 Shaff Rd, Box 315\\
 

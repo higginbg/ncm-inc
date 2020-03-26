@@ -34,7 +34,7 @@ if (form) {
             </div>
             <div class="flex flex-column pl2">
               <span class="mb1"><a href="tel:+1971-336-2341" class="link">(971) 336-2341</a></span>
-              <span class="mt1"><a href="mailto:danielle.guerra@ncmreno.com" class="link">danielle.guerra@ncmreno.com</a></span>
+              <span class="mt1"><a href="mailto:office@ncmreno.com" class="link">office@ncmreno.com</a></span>
             </div>
           </div>
           <div class="pv2">We apologize for any inconvenience.</div>
