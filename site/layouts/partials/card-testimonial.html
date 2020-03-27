@@ -32,7 +32,7 @@
       <div class="flip-card-back h-100 pa3 bg-white ba b--off-white br1">
         <div class="inner h-100">
 
-          <h2 class="f3 lh-title mb3">Contact {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
+          <h3 class="f3 lh-title mb3">Contact {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h3>
           <p class="db lh-title mb2">We encourage you to contact our references for their experiences with our team.</p>
   
           <div class="flex flex-row flex-wrap">
@@ -41,7 +41,7 @@
             {{ if .phone }}
     
               <div class="contact mt3 mr3">
-                <h3 class="f5 lh-title mb1">Phone</h3>
+                <h4 class="f5 lh-title mb1">Phone</h4>
                   
                 <a class="link pre" href="tel:+1{{ .phone | urlize }}">{{ .phone }}</a>
               </div>
@@ -52,7 +52,7 @@
             {{ if .email }}
     
               <div class="contact mt3 mr3">
-                <h3 class="f5 lh-title mb1">Email</h3>
+                <h4 class="f5 lh-title mb1">Email</h4>
                   
                 <a class="link db pre" href="mailto:{{ .email }}">{{ .email }}</a>
               </div>

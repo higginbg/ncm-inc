@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://ncmreno.netlify.com/"
 languageCode = "en-us"
 languageLang = "en"
 title = "NCM Inc."
@@ -8,3 +8,22 @@ pluralizeListTitles = false
 # See configuration options for more details: 
 # https://gohugo.io/getting-started/configuration/#toml-configuration
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+paginate = 10
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+[params]
+  author = "Gabriel Higginbotham"
+  github = "https://github.com/higginbg"
+  og_image = "/img/logos/logo-large.png"
+  sitename = "NCM Inc"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
