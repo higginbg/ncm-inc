@@ -10,7 +10,6 @@ import '@fortawesome/fontawesome-free/js/all.min.js';
 
 import 'lightgallery.js/dist/js/lightgallery.min.js';
 import 'lg-zoom.js/dist/lg-zoom.min.js';
-import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
 
 import navShrink from './js/modules/NavShrink';
 import navHighlight from './js/modules/NavHighlight';
@@ -43,9 +42,6 @@ AOS.init({
 
 // lightgallery.js
 lightGallery(document.getElementById('lightgallery'), {
-  thumbnail: true,
-  animateThumb: true,
-  showThumbByDefault: false,
   subHtmlSelectorRelative: true,
   scale: .5,
   actualSize: false,
