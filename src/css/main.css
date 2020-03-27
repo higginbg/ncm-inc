@@ -23,9 +23,14 @@
  *
  */
 
-
 /* External Library Includes */
 @import './imports/_reset';
+
+@import 'animate.css/animate.min.css';
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css');
 
 /* Modules */
 @import './imports/_box-sizing';
