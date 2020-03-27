@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 import '@fortawesome/fontawesome-free/js/all.min.js';
 
 import 'lightgallery.js/dist/js/lightgallery.min.js';
-import 'lightgallery.js/dist/css/lightgallery.min.css';
 import 'lg-zoom.js/dist/lg-zoom.min.js';
 import 'lg-thumbnail.js/dist/lg-thumbnail.min.js';
 
