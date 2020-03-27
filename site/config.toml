@@ -1,6 +1,7 @@
 baseurl = "https://ncmreno.netlify.com/"
 languageCode = "en-us"
 languageLang = "en"
+defaultContentLanguage = "en"
 title = "NCM Inc."
 pluralizeListTitles = false
 
