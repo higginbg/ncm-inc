@@ -16,6 +16,21 @@
   status = 301
 
 [[redirects]]
-  from = "/home.html"
-  to = "/"
+  from = "/current-projects"
+  to = "/projects"
+  status = 301
+
+[[redirects]]
+  from = "/previous-projects"
+  to = "/projects"
+  status = 301
+
+[[redirects]]
+  from = "/references"
+  to = "/testimonials"
+  status = 301
+
+[[redirects]]
+  from = "/about-us"
+  to = "/about"
   status = 301
