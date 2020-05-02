@@ -11,26 +11,26 @@
   command = "yarn build:preview"
 
 [[redirects]]
-  from = "/home"
+  from = "/home*"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/current-projects"
+  from = "/current-projects*"
   to = "/projects"
   status = 301
 
 [[redirects]]
-  from = "/previous-projects"
+  from = "/previous-projects*"
   to = "/projects"
   status = 301
 
 [[redirects]]
-  from = "/references"
+  from = "/references*"
   to = "/testimonials"
   status = 301
 
 [[redirects]]
-  from = "/about-us"
+  from = "/about-us*"
   to = "/about"
   status = 301
