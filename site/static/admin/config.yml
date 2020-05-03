@@ -10,7 +10,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: 'site/content/projects/list' # The path to the folder where the documents are stored
     path: '{{year}}/{{month}}/{{fields.slug}}/{{title}}/'
     slug: '{{year}}/{{month}}/{{fields.slug}}/{{title}}/'
-    summary: '{{year}}-{{month}} | {{slug}} | {{title}}'
+    summary: '{{year}}-{{month}} | {{fields.slug}} | {{title}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: 'Project Name', name: title, widget: string}
