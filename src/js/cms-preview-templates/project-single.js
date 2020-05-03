@@ -9,7 +9,7 @@ const ProjectsPreview = ({ entry, getAsset, widgetFor }) => {
     <div className='section bg-debut relative header-shadow'>
       <div className='mw7 center'>
         <h2 className='f2 lh-title mb2'>{ data.get('title') }</h2>
-        <h3 className='f4 lh-title'>{ data.get('subtitle') }</h3>
+        <h3 className='f4 lh-title'>{ data.get('slug') }</h3>
       </div>
     </div>
 
