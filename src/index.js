@@ -79,7 +79,7 @@ window.addEventListener('click', ({ target }) => {
 
 // document
 document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmovde', handleTouchMove, false);
+document.addEventListener('touchmove', handleTouchMove, false);
 
 // others
 nav.addEventListener('click', e => e.stopPropagation());

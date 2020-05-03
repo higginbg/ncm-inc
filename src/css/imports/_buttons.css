@@ -9,10 +9,20 @@
   text-decoration: none;
   color: var(--off-white);
   text-align: center;
-  transition: var(--shadow-transition) !important;
   box-shadow: var(--tile-shadow);
   background-origin: border-box;
   user-select: none;
+
+  &.btn-alt {
+    background-image: linear-gradient(var(--primary), var(--secondary));
+    color: var(--off-white);
+    transition: var(--shadow-transition) !important;
+
+    &:focus, &:active {
+      background-image: linear-gradient(var(--primary), var(--primary));
+      border: 2px solid var(--primary);
+    }
+  }
   
   & svg {
     opacity: 0;
@@ -31,7 +41,7 @@
   &:focus, &:active {
     background-image: linear-gradient(var(--grey-3), var(--grey-3));
     box-shadow: var(--button-press-shadow);
-    outline: 0!important;
+    outline: 0 !important;
   }
 }
 

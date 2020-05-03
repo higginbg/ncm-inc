@@ -1,4 +1,4 @@
-<div class="w-50-l ph2-l pv2">
+<div class="w-50-ns ph2-ns pv2">
   <a class="db no-underline tile-link" href="{{ .RelPermalink }}">
     {{ with .Resources.GetMatch .Params.image }}
       {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}

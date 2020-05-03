@@ -27,7 +27,7 @@
 	--nav-height-small: 60px;
 	--footer-height: 250px;
 
-	--footer-height-medium: 50px;
+	--footer-height-large: 50px;
 
 	--spacing-none: 0;
 	--spacing-extra-small: .25rem;
@@ -38,7 +38,7 @@
 	--spacing-extra-extra-large: 8rem;
 	--spacing-extra-extra-extra-large: 16rem;
 
-	--neg-margin: 7em;
+	--neg-margin: 10em;
 
 	/* Miscelaneous */
 	--border-radius: 10px;

@@ -22,17 +22,16 @@ const handleTouchMove = e => {
 
   if (Math.abs(xDiff) > Math.abs(yDiff)) { /* most significant */
 
-    if (xDiff > 0) {
-      /* left swipe */
+    if (xDiff > 0) {    /* left swipe */
       menuClose();
-    } else {
-      /* right swipe */
+    } else {            /* right swipe */
+      /* Do nothing */
     }
   } else {
-    if (yDiff > 0) {
-      /* up swipe */
-    } else {
-      /* down swipe */
+    if (yDiff > 0) {    /* up swipe */
+      menuClose();
+    } else {            /* down swipe */
+      menuClose();
     }
   }
 

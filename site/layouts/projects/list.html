@@ -1,4 +1,4 @@
-<div class="flex-l flex-row flex-wrap">
+<div class="flex-ns flex-row flex-wrap">
   {{ range (.Paginator 10).Pages.ByDate.Reverse }}
     {{ .Render "li" }}
   {{ end }}

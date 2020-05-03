@@ -47,7 +47,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (--breakpoint-large) {
   .divider-grey {
     box-shadow: inset 0 -4px 0 var(--black), var(--nav-shadow);
     /* Link hover states */
@@ -72,7 +72,7 @@
   box-shadow: var(--menu-shadow);
 }
 
-@media (--breakpoint-medium) {
+@media (--breakpoint-large) {
   #menu-container {
     box-shadow: none;
   }
@@ -131,14 +131,14 @@ footer {
   box-shadow: var(--footer-shadow);
 }
 
-@media (--breakpoint-medium) {
+@media (--breakpoint-large) {
   #content-wrapper {
-    padding-bottom: var(--footer-height-medium);
+    padding-bottom: var(--footer-height-large);
   }
 
   footer {
-    height: var(--footer-height-medium);
-    margin-top: calc(-1 * var(--footer-height-medium));
+    height: var(--footer-height-large);
+    margin-top: calc(-1 * var(--footer-height-large));
   }
 }
 
@@ -146,7 +146,7 @@ footer {
   margin-top: calc(-0.75 * var(--neg-margin));
 }
 
-@media (--breakpoint-medium) {
+@media (--breakpoint-large) {
   .neg-margin {
     margin-top: calc(-1 * var(--neg-margin));
   }
@@ -160,7 +160,7 @@ footer {
     padding-bottom: calc(0.75 * var(--neg-margin));
   }
 
-  @media (--breakpoint-medium) {
+  @media (--breakpoint-large) {
     &.neg-margin-offset {
       padding: var(--spacing-large) var(--spacing-medium);
       padding-bottom: calc(var(--spacing-small) + var(--neg-margin));

@@ -1,8 +1,15 @@
-<div class="bg-off-white br1 tile-shadow h5 w-100 cover z-1 animated fadeIn slow" style="background-image: url('{{ .loadingThumb }}');">
-  <div class="tile h5 br1 cover relative bg-center z-2" style="background-image: url('{{ .image }}');" data-aos="fade-in" data-aos-duration=500>
-    <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
-      <div class="h-100 w-100 bg-debut-dark o-70 absolute"></div>
-      <span class="f3 white z-999 o-90">{{ .text }}</span>
+<div
+  class="bg-off-white br1 tile-shadow h4-ns h4-m h5-l h4 w-100 cover z-1 animated fadeIn slow"
+  style="background-image: url('{{ .loadingThumb }}');"
+>
+  <div
+    class="media tile h4-ns h4-m h5-l h4 br1 cover relative bg-center z-2"
+    style="background-image: url('{{ .image }}');"
+    data-aos="fade-in" data-aos-duration=500
+  >
+    <div class="hover-cover absolute h-100 w-100 flex justify-center items-center no-select">
+      <div class="backdrop h-100 w-100 bg-debut-dark o-70 absolute"></div>
+      <span class="f3-l f4 lh-solid pa2 white z-999 o-90">{{ .text }}</span>
     </div>
     <div class="banner db bg-debut-dark white w-100 o-80 ph2 pv1 absolute bottom-0 footer-shadow">
   
