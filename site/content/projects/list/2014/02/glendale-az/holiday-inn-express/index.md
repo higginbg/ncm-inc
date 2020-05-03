@@ -1,6 +1,6 @@
 ---
 title: Holiday Inn Express
-subtitle: Glendale, AZ
+slug: Glendale, AZ
 image: 'guest-room-1.jpg'
 date: '2014-02-01T00:00:00.000Z'
 featured: true

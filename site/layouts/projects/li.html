@@ -3,7 +3,7 @@
     {{ with .Resources.GetMatch .Params.image }}
       {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
       {{ $thumb := (.Resize "600x").RelPermalink }}
-      {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.subtitle "loadingThumb" $loadingThumb "image" $thumb "text" "View →") }}
+      {{ partial "media-tile" (dict "title" $.Title "subtitle" $.Params.slug "loadingThumb" $loadingThumb "image" $thumb "text" "View →") }}
     {{ end }}
   </a>
 </div>

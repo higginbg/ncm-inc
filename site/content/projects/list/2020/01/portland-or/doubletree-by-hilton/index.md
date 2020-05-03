@@ -1,6 +1,6 @@
 ---
 title: Doubletree by Hilton
-subtitle: Portland, OR
+slug: Portland, OR
 image: 'lobby-1.jpg'
 date: '2020-01-01T00:00:00.000Z'
 featured: false

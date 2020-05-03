@@ -1,6 +1,6 @@
 ---
 title: Courtyard North Harbor
-subtitle: Portland, OR
+slug: Portland, OR
 image: 'bar-room.jpg'
 date: '2017-02-01T00:00:00.000Z'
 featured: true

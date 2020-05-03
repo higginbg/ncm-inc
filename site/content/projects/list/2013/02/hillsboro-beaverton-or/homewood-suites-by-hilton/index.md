@@ -1,6 +1,6 @@
 ---
 title: Homewood Suites by Hilton
-subtitle: Hillsboro/Beaverton, OR
+slug: Hillsboro/Beaverton, OR
 image: 'lobby.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: true

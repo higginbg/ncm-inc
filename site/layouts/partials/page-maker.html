@@ -5,7 +5,7 @@
   <div class="w-50 tl pr2-m pr1" data-aos="fade-up-left" data-aos-duration=750>
     {{ with $pages.Prev . }}
       {{ $hotel := .Title }}
-      {{ $location := .Params.subtitle }}
+      {{ $location := .Params.slug }}
       {{ $link := .RelPermalink }}
 
       {{ with .Resources.GetMatch .Params.image }}
@@ -36,7 +36,7 @@
   <div class="w-50 tr pl2-m pl1" data-aos="fade-up-right" data-aos-duration=750>
     {{ with $pages.Next . }}
       {{ $hotel := .Title }}
-      {{ $location := .Params.subtitle }}
+      {{ $location := .Params.slug }}
       {{ $link := .RelPermalink }}
 
       {{ with .Resources.GetMatch .Params.image }}
