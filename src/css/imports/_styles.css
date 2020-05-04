@@ -30,11 +30,6 @@
   #content-wrapper {
     padding-bottom: var(--footer-height-large);
   }
-
-  footer {
-    height: var(--footer-height-large);
-    margin-top: calc(-1 * var(--footer-height-large));
-  }
 }
 
 

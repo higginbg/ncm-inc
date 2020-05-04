@@ -1,6 +1,10 @@
 nav {
   height: var(--nav-height);
 
+  & .nav-small {
+    width: 300px;
+  }
+
   &.small {
     height: var(--nav-height-small);
   }
@@ -81,10 +85,6 @@ nav {
   #menu-container {
     box-shadow: none;
   }
-}
-
-.nav-small {
-  width: 300px;
 }
 
 .size-trans {

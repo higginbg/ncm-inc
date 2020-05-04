@@ -1,46 +1,49 @@
-
-{{ $location := .Title }}
-{{ $city := .Params.slug }}
+{{ $location := .Title }} {{ $city := .Params.slug }}
 
 <div id="lightgallery" class="flex flex-row flex-wrap justify-center mt4">
-
   {{ range .Params.resources }}
     {{ with $.Resources.GetMatch .src }}
-    
-      {{ $image := .RelPermalink }}
-      {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
-      {{ $thumb := (.Resize "600x").RelPermalink }}
+  
+    {{ $image := .RelPermalink }}
+    {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
+    {{ $thumb := (.Resize "600x").RelPermalink }}
 
-      <div class="w-100 w-50-ns w-33-l pa2-ns pv2" style="width: 375px;">
-        <a href="{{ $image }}" class="item db tile-link bg-off-white br1 overflow-hidden tile-shadow" data-sub-html=".caption">
+    <div class="w-100 w-50-ns w-33-l pa2-ns pv2">
+      <a
+        href="{{ $image }}"
+        class="item db tile-link bg-off-white br1 overflow-hidden tile-shadow w-100 h-100"
+        data-sub-html=".caption"
+      >
         <div class="caption dn">
           <h2 class="f5">{{ .Title }}</h2>
           <h3 class="f6">{{ $location }} - {{ $city }}</h3>
         </div>
-          <div class="h4 h3-ns gallery tile br1 relative w-100">
-            <div class="img-container h-100 w-100">
-          <div
-            class="absolute h-100 w-100 cover z-1 animated fadeIn slow"
-            style="background-image: url('{{ $loadingThumb }}');"
-          >
-          </div>
+        <div class="gallery tile br1 relative w-100 h-100">
+          <div class="img-container w-100 h-100">
+            <div
+              class="absolute w-100 h-100 cover z-1 animated fadeIn slow"
+              style="background-image: url('{{ $loadingThumb }}');"
+            ></div>
             <img
               data-src="{{ $thumb }}"
               alt="{{ .Title }}"
               class="lozad lozad-trigger relative br1 object-cover grey-4 z-2"
               style="min-width: 100%; min-height: 100%;"
-              data-aos="fade-in" data-aos-duration=500 data-aos-delay=100
+              data-aos="fade-in"
+              data-aos-duration="500"
+              data-aos-delay="100"
             />
           </div>
-            <div class="hover-cover top-0-l bottom-0 white o-90 flex justify-center items-center z-999">
-              <div class="backdrop bg-black o-50"></div>
-              <i class="fas fa-search fa-flip-horizontal fa-2x pa1-l pa2"></i>
-            </div>
+          <div
+            class="hover-cover top-0-l bottom-0 white o-90 flex justify-center items-center z-999"
+          >
+            <div class="backdrop bg-black o-50"></div>
+            <i class="fas fa-search fa-flip-horizontal fa-2x pa1-l pa2"></i>
           </div>
-        </a>
-      </div>
-      
-    {{ end }}
-  {{ end }}
+        </div>
+      </a>
+    </div>
 
+  {{ end }}
+  {{ end }}
 </div>

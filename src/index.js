@@ -66,7 +66,7 @@ window.addEventListener('scroll', navShrink);
 
 window.addEventListener('click', ({ target }) => {
 
-  // close menu on click 
+  // close menu on click
   const tag = target.tagName.toLowerCase();
   if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
     menuClose();

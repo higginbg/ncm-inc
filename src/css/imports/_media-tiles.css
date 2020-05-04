@@ -29,16 +29,12 @@
   }
 
   & .img-container {
+    width: 100%;
     transition: var(--shadow-transition) !important;
   }
 
-  & .gallery.tile .backdrop {
+  & .gallery .backdrop {
     border-radius: var(--border-radius) 0 0 0;
-  }
-
-  & .banner {
-    max-height: 100vh;
-    transition: var(--shadow-transition);
   }
 
   &:hover, &:focus, &:active {
@@ -48,12 +44,8 @@
       box-shadow: var(--shadow-hover);
     }
     
-    & .hover-cover {
-      font-size: 1em;
-      opacity: 1;
-    }
-
-    & .gallery.tile .hover-cover {
+    & .hover-cover,
+    & .gallery .hover-cover {
       font-size: 1.1em;
       opacity: 1;
     }
@@ -68,44 +60,14 @@
   }
 }
 
-.page-maker .tile-link {
-
-  &:hover .hover-cover {
-    opacity: 1;
-  }
-
-  & .hover-cover {
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-}
-
 @media (--breakpoint-large) {
-
-  & .gallery.tile .hover-cover {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-  }
 
   .tile-link {
 
-    &:hover {
-
-      & .hover-cover {
-        font-size: 1.3em;
-      }
-
-      & .gallery.tile .hover-cover {
-        opacity: 1;
-      }
-    }
-  
-    & .hover-cover {
+    & .gallery .hover-cover {
       width: 100%;
       height: 100%;
+      left: 0;
       opacity: 0;
     }
   }
