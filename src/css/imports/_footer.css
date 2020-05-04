@@ -7,9 +7,6 @@ footer {
 }
 
 @media (--breakpoint-large) {
-  #content-wrapper {
-    padding-bottom: var(--footer-height-large);
-  }
 
   footer {
     height: var(--footer-height-large);

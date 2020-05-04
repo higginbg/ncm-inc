@@ -26,6 +26,17 @@
   padding-bottom: var(--footer-height);
 }
 
+@media (--breakpoint-large) {
+  #content-wrapper {
+    padding-bottom: var(--footer-height-large);
+  }
+
+  footer {
+    height: var(--footer-height-large);
+    margin-top: calc(-1 * var(--footer-height-large));
+  }
+}
+
 
 /* Account for nav when using hash links */
 h1, h2, h3, h4, h5, h6 {
