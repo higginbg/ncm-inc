@@ -1,0 +1,92 @@
+nav {
+  height: var(--nav-height);
+
+  &.small {
+    height: var(--nav-height-small);
+  }
+
+  & .subtitle {
+    transition: var(--shadow-transition);
+  }
+}
+
+#logo {
+  box-shadow: none;
+  
+  &:hover, &:focus, &:active {
+    background-color: var(--grey-4);
+    outline: none !important;
+  }
+}
+
+.subtitle.small {
+  width: 0;
+  height: 0;
+}
+
+#call {
+  
+  &:focus, &:active {
+    background-color: var(--grey-4);
+    outline: none !important;
+  }
+}
+
+/* Used in the navbar */
+.divider-grey {
+  box-shadow: inset var(--spacing-small) 0 0 var(--black), var(--nav-shadow);
+  /* Link hover states */
+  
+
+  & a {
+    transition: var(--hover-transition);
+    border-left: var(--spacing-small) solid transparent;
+
+    &.selected {
+      background-color: var(--grey-4);
+    }
+  }
+
+  & ul .nav-link:hover, & ul .nav-link:focus {
+    border-left: var(--spacing-small) solid var(--primary);
+  }
+}
+
+@media (--breakpoint-large) {
+  .divider-grey {
+    box-shadow: inset 0 -4px 0 var(--black), var(--nav-shadow);
+    /* Link hover states */
+    & a {
+      border-left: none;
+      transition: var(--hover-transition);
+
+    &.selected {
+        border-left: none;
+        background-color: var(--grey-4);
+      } 
+    }
+  
+    & ul .nav-link:hover, & ul .nav-link:focus {
+      border-left: none;
+      box-shadow: inset 0 -4px 0 var(--primary); 
+    }
+  }
+}
+
+#menu-container {
+  box-shadow: var(--menu-shadow);
+}
+
+@media (--breakpoint-large) {
+  #menu-container {
+    box-shadow: none;
+  }
+}
+
+.nav-small {
+  width: 300px;
+}
+
+.size-trans {
+  transition: var(--size-transition);
+}

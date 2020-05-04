@@ -1,0 +1,28 @@
+footer {
+  height: var(--footer-height);
+  margin-top: calc(-1 * var(--footer-height));
+  -webkit-box-shadow: var(--footer-shadow);
+  -moz-box-shadow: var(--footer-shadow);
+  box-shadow: var(--footer-shadow);
+}
+
+@media (--breakpoint-large) {
+  #content-wrapper {
+    padding-bottom: var(--footer-height-large);
+  }
+
+  footer {
+    height: var(--footer-height-large);
+    margin-top: calc(-1 * var(--footer-height-large));
+  }
+}
+
+.neg-margin {
+  margin-top: calc(-0.75 * var(--neg-margin));
+}
+
+@media (--breakpoint-large) {
+  .neg-margin {
+    margin-top: calc(-1 * var(--neg-margin));
+  }
+}

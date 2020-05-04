@@ -12,3 +12,69 @@
 .link:focus, .md a:focus   {
   transition: color .15s ease-in;
 }
+
+.link, .md a {
+  text-decoration: none;
+  position: relative;
+  color: var(--primary);
+  transition: var(--shadow-transition) !important;
+  cursor: pointer;
+
+  &:before {
+    background-color: var(--primary);
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    width: 0;
+  }
+
+  &.link-prev:before {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  &.link-next:before {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    outline: 0!important;
+
+    &:before {
+       width: 100%;
+    }
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--white);
+  transition: var(--shadow-transition) !important;
+  cursor: pointer;
+
+  &:focus, &:active {
+    background-color: var(--grey-4);
+    color: var(--white);
+    outline: 0!important;
+  }
+}
+
+.footer-link {
+  text-decoration: none;
+  transition: all .15s ease-in;
+  color: var(--white);
+  padding: var(--spacing-extra-small) var(--spacing-small);
+  border-radius: var(--border-radius-pill);
+
+  &:hover, &:focus, &:active {
+    background-color: var(--grey-3);
+    box-shadow: none;
+    outline: 0!important;
+  }
+}

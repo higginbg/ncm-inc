@@ -1,32 +1,34 @@
-<div class="flip-card w-33-l w-50-ns w-100 pa2-ns pv2" tabindex=0>
-
+<div class="flip-card-wrapper pa2-ns pv2">
+  <blockquote class="flip-card" tabindex=0>
     <div class="flip-card-inner">
-
+  
       <!-- Front -->
       <div class="flip-card-front bg-debut br1">
-
+  
         <div class="w-100 h6 cover bg-center br1 br--top overflow-hidden" style="background-image: url('{{ .loadingThumb }}');">
           <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="lozad lozad-trigger w-100 h-100 object-cover" data-aos="fade-in" data-aos-duration=500 />
         </div>
-
-
+  
+  
         <div class="w-100 bg-debut-dark off-white ph3 pv2 br1 br--bottom">
           
           <h2 class="f5 lh-title mb1">{{ .name }}</h2>
           <h3 class="f6">{{ .position }}</h3>
-
+  
         </div>
       </div>
-
+  
       <!-- Back -->
       <div class="flip-card-back pa3 bg-debut br1">
         <div class="inner h-100 bg-white pa2 ba b--off-white">
-
+  
           <h2 class="f4 lh-title mb3">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
           <p class="db">{{ .text }}</p>
-
+  
         </div>
       </div>
-
+  
     </div>
+  </blockquote>
 </div>
+

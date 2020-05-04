@@ -1,5 +1,5 @@
-<div class="w-33-l w-50-ns pa2-ns pv2 mw5" style="min-width: 375px;">
-  <blockquote class="flip-card h-100" style="min-height: 350px;" tabindex=0>
+<div class="flip-card-wrapper pa2-ns pv2">
+  <blockquote class="flip-card" tabindex=0>
 
     <div class="flip-card-inner">
 
@@ -34,16 +34,14 @@
 
           <h3 class="f3 lh-title mb3">Contact {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h3>
           <p class="db lh-title mb2">We encourage you to contact our references for their experiences with our team.</p>
-  
-          <div class="flex flex-row flex-wrap">
-    
+      
             <!-- Phone -->
             {{ if .phone }}
     
-              <div class="contact mt3 mr3">
+              <div class="mt3">
                 <h4 class="f5 lh-title mb1">Phone</h4>
                   
-                <a class="link pre" href="tel:+1{{ .phone | urlize }}">{{ .phone }}</a>
+                <a class="link db pre" href="tel:+1{{ .phone | urlize }}">{{ .phone }}</a>
               </div>
 
             {{ end }}
@@ -51,7 +49,7 @@
             <!-- Email -->
             {{ if .email }}
     
-              <div class="contact mt3 mr3">
+              <div class="mt3">
                 <h4 class="f5 lh-title mb1">Email</h4>
                   
                 <a class="link db pre" href="mailto:{{ .email }}">{{ .email }}</a>
@@ -59,7 +57,6 @@
     
             {{ end }}
     
-          </div>
         </div>
 
       </div>

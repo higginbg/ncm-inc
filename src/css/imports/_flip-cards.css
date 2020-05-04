@@ -1,0 +1,88 @@
+.flip-card-wrapper {
+  width: 100%;
+  max-width: 400px;
+  perspective: 1000px;
+  cursor: default;
+
+  & .flip-card {
+    min-height: 350px;
+    height: 100%;
+    
+    &:hover, &:active, &:focus, &:focus-within {
+      outline: 0!important;
+    }
+  }
+
+  & .link {
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  & .contact {
+    flex-basis: 40%;
+  }
+
+  &:hover, &:active, &:focus, &:focus-within {
+    outline: 0!important;
+
+    & .link {
+      pointer-events: auto;
+      touch-action: auto;
+      cursor: pointer;
+    }
+
+    & .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    & .flip-card-back, & .flip-card-front {
+      backface-visibility: hidden;
+    }
+
+    & .flip-card-back .inner {
+      overflow: auto;
+    }
+  }
+}
+
+.flip-card-inner {
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform: rotateX(0deg);
+  transform-style: preserve-3d;
+  -webkit-box-shadow: var(--flip-shadow);
+  -moz-box-shadow: var(--flip-shadow);
+  box-shadow: var(--flip-shadow);
+  border-radius: var(--border-radius);
+}
+
+.flip-card-front {
+  position: relative;
+  transform: rotateY(0deg);
+}
+
+.flip-card-front, .flip-card-back {
+  -moz-backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+
+  & .inner {
+    overflow: hidden;
+  }
+}
+
+@media (--breakpoint-not-small) {
+
+  .flip-card-wrapper {
+    width: 375px;
+  }
+}
