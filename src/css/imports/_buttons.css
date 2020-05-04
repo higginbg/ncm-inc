@@ -4,7 +4,7 @@
   padding: 18px 16px;
   font-size: var(--font-size-m);
   line-height: 1.25;
-  border: 2px solid transparent;
+  border: 0;
   background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
   text-decoration: none;
   color: var(--off-white);
@@ -13,14 +13,14 @@
   background-origin: border-box;
   user-select: none;
 
-  &.btn-alt {
+  &.btn-primary {
     background-image: linear-gradient(var(--primary), var(--secondary));
     color: var(--off-white);
     transition: var(--shadow-transition) !important;
 
     &:focus, &:active {
-      background-image: linear-gradient(var(--primary), var(--primary));
-      border: 2px solid var(--primary);
+      background-image: linear-gradient(var(--off-white), var(--off-white));
+      color: var(--primary);
     }
   }
   
@@ -39,8 +39,10 @@
   }
 
   &:focus, &:active {
-    background-image: linear-gradient(var(--grey-3), var(--grey-3));
-    box-shadow: var(--button-press-shadow);
+    background-image: linear-gradient(var(--off-white), var(--off-white));
+    color: var(--grey-4);
+    box-shadow: var(--button-press-shadow), inset 0 0 10px var(--grey-2);
+    border: 0;
     outline: 0 !important;
   }
 }
@@ -79,8 +81,11 @@
   }
 
   &:focus, &:active {
-    box-shadow: var(--button-press-shadow);
-    outline: 0!important;
+    background-image: linear-gradient(var(--off-white), var(--off-white));
+    color: var(--grey-4);
+    box-shadow: var(--button-press-shadow), inset 0 0 10px var(--grey-2);
+    border: 0;
+    outline: 0 !important;
   }
 }
 

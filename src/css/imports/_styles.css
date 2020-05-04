@@ -94,6 +94,7 @@
 .visible {   visibility: visible; }
 .hidden {    visibility: hidden; }
 .no-select { user-select: none; }
+.cd { cursor: default; }
 .no-resize { resize: none; }
 
 #page-container {

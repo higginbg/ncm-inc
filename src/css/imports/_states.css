@@ -190,6 +190,11 @@ input:focus, textarea:focus {
       opacity: 1;
     }
 
+    & .gallery.tile .hover-cover {
+      font-size: 1.1em;
+      opacity: 1;
+    }
+
     & .img-container {
       transform: scale(1.1);
     }
