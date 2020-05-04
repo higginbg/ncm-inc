@@ -11,9 +11,10 @@ button:focus {
   font-size: var(--font-size-m);
   line-height: 1.25;
   border: 0;
-  background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
-  text-decoration: none;
+  /* background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1)); */
+  background-image: linear-gradient(var(--primary), var(--secondary));
   color: var(--off-white);
+  text-decoration: none;
   text-align: center;
   box-shadow: var(--tile-shadow);
   background-origin: border-box;
@@ -34,22 +35,11 @@ button:focus {
   }
 
   &:focus, &:active {
-    background-image: linear-gradient(var(--off-white), var(--off-white));
+    background-image: linear-gradient(var(--off-white), var(--grey-1));
     color: var(--grey-4);
-    box-shadow: var(--button-press-shadow), inset 0 0 10px var(--grey-2);
+    box-shadow: 0 0 15px var(--secondary);
     border: 0;
     outline: 0 !important;
-  }
-}
-
-.btn-primary {
-  background-image: linear-gradient(var(--primary), var(--secondary));
-  color: var(--off-white);
-  transition: var(--shadow-transition) !important;
-
-  &:focus, &:active {
-    background-image: linear-gradient(var(--off-white), var(--off-white));
-    color: var(--primary);
   }
 }
 
@@ -87,9 +77,9 @@ button:focus {
   }
 
   &:focus, &:active {
-    background-image: linear-gradient(var(--off-white), var(--off-white));
+    background-image: linear-gradient(var(--off-white), var(--grey-1));
     color: var(--grey-4);
-    box-shadow: var(--button-press-shadow), inset 0 0 10px var(--grey-2);
+    box-shadow: 0 0 15px var(--secondary);
     border: 0;
     outline: 0 !important;
   }
