@@ -19,6 +19,11 @@
   }
 }
 
+.subtitle.small {
+  width: 0;
+  height: 0;
+}
+
 #call {
   
   &:focus, &:active {
@@ -106,6 +111,10 @@ nav {
 
   &.small {
     height: var(--nav-height-small);
+  }
+
+  & .subtitle {
+    transition: var(--shadow-transition);
   }
 }
 
