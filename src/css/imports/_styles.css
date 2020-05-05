@@ -10,7 +10,7 @@
   background-color: var(--highlight);
 }
 
-.noscript {
+.noscript, .ie-warning {
   position: fixed;
   top: 0;
   text-align: center;

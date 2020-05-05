@@ -11,6 +11,8 @@
           <div class="noscript">This site works best with JavaScript enabled.</div>
         </noscript>
 
+        <div class="ie-warning hidden">Please use a modern browser such as Google Chrome or Mozilla Firefox.</div>
+
         {{ block "main" . }}{{ end }}
       </div>
 
@@ -39,6 +41,19 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function msieversion() {
+        var ua = window.navigator.userAgent;
+        var isIE = /MSIE|Trident/.test(ua);
+  
+        if (isIE) {
+          document.querySelector('.ie-warning').style.visibility = 'visible';
+        }
+      }
+  
+      window.addEventListener('load', msieversion);
+    </script>
 
     {{ $script := .Site.Data.webpack.main }} {{ with $script.js }}
     <script src="{{ relURL . }}"></script>
