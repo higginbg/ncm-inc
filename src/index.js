@@ -47,7 +47,6 @@ lightGallery(document.getElementById('lightgallery'), {
   selector: '.item'
 });
 
-
 /* Event listeners */
 
 // window

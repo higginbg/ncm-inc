@@ -10,6 +10,19 @@
   background-color: var(--highlight);
 }
 
+.noscript {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  background-color: red;
+  color: var(--white);
+  margin-top: var(--nav-height);
+  padding: 10px;
+  width: 100%;
+  z-index: 9999999;
+  user-select: none;
+}
+
 .visible {   visibility: visible; }
 .hidden {    visibility: hidden; }
 .no-select { user-select: none; }

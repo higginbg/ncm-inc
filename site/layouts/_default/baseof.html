@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.Language.Lang }}">
   {{ partial "head" . }}
-  <body class="sans-serif preload" data-instant-intensity="mousedown">
+  <body class="sans-serif preload">
     {{ block "header" . }}{{ partial "nav" . }}{{end}}
 
     <div id="page-container" class="overflow-hidden">
       <div id="content-wrapper">
+
+        <noscript>
+          <div class="noscript">This site works best with JavaScript enabled.</div>
+        </noscript>
+
         {{ block "main" . }}{{ end }}
       </div>
 
