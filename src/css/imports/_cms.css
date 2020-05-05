@@ -39,7 +39,7 @@
 	/* Links */
 	& a {
 		color: var(--primary);
-		transition: var(--hover-transition);
+		transition: var(--transition-hover);
 		&:hover {
 			background-color: var(--highlight);
 			color: var(--black);

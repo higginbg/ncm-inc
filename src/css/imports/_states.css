@@ -15,18 +15,18 @@ input:focus, textarea:focus {
 }
 
 .raise {
-  transition: var(--hover-transition);
+  transition: var(--transition-hover);
   transform: translateY(0) translateZ(0);
 }
 
 .raise:hover,
 .raise:focus {
-  transition: var(--hover-transition);
+  transition: var(--transition-hover);
   transform: translateY(-.12rem) translateZ(0);
 }
 
 .raise:active {
-  transition: var(--hover-transition);
+  transition: var(--transition-hover);
   opacity: .5;
 }
 

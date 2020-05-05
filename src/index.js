@@ -6,8 +6,6 @@ import lozad from 'lozad';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import '@fortawesome/fontawesome-free/js/all.min.js';
-
 import 'lightgallery.js/dist/js/lightgallery.min.js';
 import 'lg-zoom.js/dist/lg-zoom.min.js';
 

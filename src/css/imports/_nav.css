@@ -10,7 +10,7 @@ nav {
   }
 
   & .subtitle {
-    transition: var(--shadow-transition);
+    transition: var(--transition-all);
   }
 }
 
@@ -42,8 +42,10 @@ nav {
   /* Link hover states */
   
 
-  & a {
-    transition: var(--hover-transition);
+  & a, & button {
+    transition:
+      font-size 0.3s ease,
+      border 0.3s ease !important;
     border-left: var(--spacing-small) solid transparent;
 
     &.selected {
@@ -62,7 +64,7 @@ nav {
     /* Link hover states */
     & a {
       border-left: none;
-      transition: var(--hover-transition);
+      transition: box-shadow 0.3s ease !important;
 
     &.selected {
         border-left: none;
@@ -88,5 +90,5 @@ nav {
 }
 
 .size-trans {
-  transition: var(--size-transition);
+  transition: var(--transition-size);
 }

@@ -23,7 +23,7 @@ input, textarea {
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
-  transition: var(--shadow-transition);
+  transition: var(--transition-all);
   z-index: 2;
   user-select: none;
   &:hover, &:focus, &:active {
@@ -86,28 +86,24 @@ input[type="file"] {
   color: transparent;
   font-size: var(--font-size);
   line-height: normal;
-  transition: var(--shadow-transition);
 }
 
 :-moz-placeholder {
   color: transparent;
   font-size: var(--font-size);
   line-height: normal;
-  transition: var(--shadow-transition);
 }
 
 ::-moz-placeholder {
   color: transparent;
   font-size: var(--font-size);
   line-height: normal;
-  transition: var(--shadow-transition);
 }
 
 :-ms-input-placeholder {
   color: transparent;
   font-size: var(--font-size);
   line-height: normal;
-  transition: var(--shadow-transition);
 }
 
 label
@@ -119,7 +115,7 @@ label
   padding: var(--spacing-extra-small) 0;
   pointer-events: none;
   line-height: 1;
-  transition: var(--hover-transition);
+  transition: var(--transition-hover);
   z-index: 2;
 }
 
@@ -136,7 +132,7 @@ label
 
 button.swal2-styled {
   border-radius: var(--border-radius-pill) !important;
-  transition: var(--shadow-transition) !important;
+  transition: var(--transition-all) !important;
   box-shadow: var(--tile-shadow) !important;
 
   &:hover {

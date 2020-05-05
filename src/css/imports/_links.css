@@ -17,7 +17,6 @@
   text-decoration: none;
   position: relative;
   color: var(--primary);
-  transition: var(--shadow-transition) !important;
   cursor: pointer;
 
   &:before {
@@ -55,7 +54,7 @@
 .nav-link {
   text-decoration: none;
   color: var(--white);
-  transition: var(--shadow-transition) !important;
+  transition: var(--transition-all) !important;
   cursor: pointer;
 
   &:focus, &:active {

@@ -27,6 +27,7 @@
 @import './imports/_reset';
 
 @import 'animate.css/animate.min.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
