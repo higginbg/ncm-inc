@@ -10,7 +10,8 @@
   background-color: var(--highlight);
 }
 
-.noscript, .ie-warning {
+#noscript-warning,
+#ie-warning {
   position: fixed;
   top: 0;
   text-align: center;
@@ -21,6 +22,22 @@
   width: 100%;
   z-index: 9999999;
   user-select: none;
+  cursor: default;
+}
+
+#ie-warning {
+  display: none;
+}
+
+body.ie {
+  & #ie-warning {
+    display: block;
+  }
+
+  & [data-aos] {
+    opacity: 1 !important;
+    transform: translate(0) scale(1) !important;
+  }
 }
 
 .visible {   visibility: visible; }

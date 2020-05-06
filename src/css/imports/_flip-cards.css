@@ -18,10 +18,6 @@
     touch-action: none;
   }
 
-  & .contact {
-    flex-basis: 40%;
-  }
-
   &:hover, &:active, &:focus, &:focus-within {
     outline: 0!important;
 
@@ -84,5 +80,56 @@
 
   .flip-card-wrapper {
     width: 375px;
+  }
+}
+
+.ie .flip-card-wrapper {
+  perspective: 0px;
+  height: 100%;
+
+  & .flip-card {
+    height: auto;
+    
+    &:hover, &:active, &:focus, &:focus-within {
+      outline: 0!important;
+    }
+  }
+
+  & .flip-card-back, & .flip-card-front {
+    background: none !important;
+    border: none !important;
+    backface-visibility: visible;
+
+    & .ba {
+      padding: none !important;
+      border: none !important;
+    }
+  }
+
+  .flip-card-inner {
+    border: 1px solid var(--grey-1);
+    transform-style: none;
+  }
+
+  .flip-card-back {
+    position: relative;
+    transform: rotateY(0deg);
+  
+    & .inner {
+      overflow: visible;
+      border-top: 1px solid var(--grey-1);
+      padding-top: var(--spacing-small);
+    }
+  }
+
+  &:hover, &:active, &:focus, &:focus-within {
+
+    & .flip-card-inner {
+      transform: rotateY(0deg);
+    }
+
+    & .flip-card-back, & .flip-card-front {
+      backface-visibility: visible;
+    }
   }
 }

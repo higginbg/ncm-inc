@@ -8,10 +8,10 @@
       <div id="content-wrapper">
 
         <noscript>
-          <div class="noscript">This site works best with JavaScript enabled.</div>
+          <div id="noscript-warning">This site works best with JavaScript enabled.</div>
         </noscript>
 
-        <div class="ie-warning hidden">Please use a modern browser such as Google Chrome or Mozilla Firefox.</div>
+        <div id="ie-warning">Please use a modern browser such as Google Chrome or Mozilla Firefox.</div>
 
         {{ block "main" . }}{{ end }}
       </div>
@@ -48,10 +48,27 @@
         var isIE = /MSIE|Trident/.test(ua);
   
         if (isIE) {
-          document.querySelector('.ie-warning').style.visibility = 'visible';
+          // add ie class to body
+          document.body.classList.add('ie');
+
+          // add lazy load elements all at once
+          var noscriptElements = document.querySelectorAll('.lozad');
+          for (var i = 0; i < noscriptElements.length; i++) {
+            var el = noscriptElements[i];
+
+            var image = el.getAttribute('data-src');
+            if (image) {
+              el.setAttribute('src', image);
+            }
+
+            var background = el.getAttribute('data-background-image');
+            if (background) {
+              el.style.backgroundImage = 'url(' + background + ')';
+            }
+          }
         }
       }
-  
+
       window.addEventListener('load', msieversion);
     </script>
 
