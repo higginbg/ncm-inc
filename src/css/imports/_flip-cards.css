@@ -86,6 +86,7 @@
 .ie .flip-card-wrapper {
   perspective: 0px;
   height: 100%;
+  cursor: auto;
 
   & .flip-card {
     height: auto;
@@ -99,26 +100,63 @@
     background: none !important;
     border: none !important;
     backface-visibility: visible;
+    padding: 0 !important;
 
     & .ba {
-      padding: none !important;
+      padding: 0 !important;
       border: none !important;
     }
   }
 
+  &.about {
+
+    & h4 {
+      display: none;
+    }
+
+    & .flip-card-inner {
+      box-shadow: none !important;
+    }
+
+    & .flip-card-back {
+      padding: var(--spacing-extra-small) 0 0 var(--spacing-small) !important;
+
+      & .inner {
+        padding: var(--spacing-small) !important;
+      }
+    }
+  }
+
+  &.testimonial {
+
+    & h3 {
+      font-size: 1.3em;
+    }
+
+    & .flip-card-front {
+      padding-bottom: var(--spacing-medium) !important;
+    }
+
+    & .flip-card-inner {
+      border: 1px solid var(--grey-1) !important;
+      padding: var(--spacing-medium) !important;
+    }
+  }
+
   .flip-card-inner {
-    border: 1px solid var(--grey-1);
     transform-style: none;
   }
 
   .flip-card-back {
+    padding: 0 !important;
     position: relative;
     transform: rotateY(0deg);
+    padding: 0 !important;
   
     & .inner {
       overflow: visible;
       border-top: 1px solid var(--grey-1);
-      padding-top: var(--spacing-small);
+      padding: var(--spacing-medium) 0 0 0 !important;
     }
   }
 

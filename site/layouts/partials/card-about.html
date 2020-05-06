@@ -1,4 +1,4 @@
-<div class="flip-card-wrapper pa2-ns pv2">
+<div class="flip-card-wrapper about pa2-ns pv2">
   <blockquote class="flip-card" tabindex=0>
     <div class="flip-card-inner">
   
@@ -22,7 +22,7 @@
       <div class="flip-card-back pa3 bg-debut br1">
         <div class="inner h-100 bg-white pa2 ba b--off-white">
   
-          <h2 class="f4 lh-title mb3">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h2>
+          <h4 class="f4 lh-title mb3">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h4>
           <p class="db">{{ .text }}</p>
   
         </div>
