@@ -15,10 +15,6 @@
     opacity: 0.6;
   }
   
-  .gallery .backdrop {
-    opacity: 0.3;
-    border-radius: var(--border-radius) 0 0 0;
-  }
   
   .banner {
     position: absolute;
@@ -27,6 +23,11 @@
     color: var(--white);
     width: 100%;
     opacity: 0.8;
+  }
+  
+  .gallery .backdrop {
+    opacity: 0.3;
+    border-radius: var(--border-radius) 0 0 0;
   }
 
   .hover-cover {
@@ -64,9 +65,12 @@
     
     & .hover-cover,
     & .gallery .hover-cover {
-      font-size: 0.5em;
       visibility: visible;
       opacity: 1;
+    }
+
+    & .gallery .hover-cover {
+      font-size: 0.5em;
     }
 
     & .img-container {

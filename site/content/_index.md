@@ -1,7 +1,7 @@
 ---
 title: NCM Inc.
 description: NCM Inc. is a top choice for renovations in the hospitality industry. Why? 30 years of experience speaks for itself. From pools to patios and bar rooms to bathrooms, we've done it all.
-subtitle: Commercial Renovators
+subtitle: Hotel Renovation
 image: /img/cover-home.png
 intro:
   heading: 30 Years in Hospitality
