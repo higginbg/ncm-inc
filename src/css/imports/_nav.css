@@ -1,5 +1,6 @@
-nav {
+#nav {
   height: var(--nav-height);
+  min-width: 400px;
 
   & .nav-small {
     width: 300px;
@@ -46,15 +47,19 @@ nav {
     transition:
       font-size 0.3s ease,
       border 0.3s ease !important;
-    border-left: var(--spacing-small) solid transparent;
 
-    &.selected {
+    &.active {
       background-color: var(--grey-4);
+      border-left: var(--spacing-small) solid transparent;
     }
   }
 
-  & ul .nav-link:hover, & ul .nav-link:focus {
-    border-left: var(--spacing-small) solid var(--primary);
+  & ul .nav-link {
+    border-left: var(--spacing-small) solid transparent;
+
+    &:hover, &:focus {
+      border-left: var(--spacing-small) solid var(--primary);
+    }
   }
 }
 
@@ -63,18 +68,20 @@ nav {
     box-shadow: inset 0 -4px 0 var(--black), var(--nav-shadow);
     /* Link hover states */
     & a {
-      border-left: none;
       transition: box-shadow 0.3s ease !important;
-
-    &.selected {
+      
+      &.active {
         border-left: none;
-        background-color: var(--grey-4);
       } 
     }
-  
-    & ul .nav-link:hover, & ul .nav-link:focus {
+
+    & ul .nav-link {
       border-left: none;
-      box-shadow: inset 0 -4px 0 var(--primary); 
+      
+      &:hover, &:focus {
+        border-left: none;
+        box-shadow: inset 0 -4px 0 var(--primary); 
+      }
     }
   }
 }

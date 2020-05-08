@@ -16,7 +16,7 @@ const navHighlight = () => {
     const isCurrentPage = page === checkNav;
 
     if (isCurrentPath || isHome) {
-      link.classList.add('selected');
+      link.classList.add('active');
 
       if (isCurrentPage || isHome) {
         link.classList.remove('nav-link');
