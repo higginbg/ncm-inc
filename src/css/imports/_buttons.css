@@ -19,6 +19,7 @@ button:focus {
   box-shadow: var(--tile-shadow);
   background-origin: border-box;
   user-select: none;
+  transition: var(--transition-shadow) !important;
   
   & i {
     opacity: 0;
