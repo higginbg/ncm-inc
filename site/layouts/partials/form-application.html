@@ -54,7 +54,7 @@
         </fieldset>
 
         <!-- Resume -->
-        <fieldset>
+        <fieldset id="resume">
           <div class="w-100 tl mt3">
             <button
               id="resume-btn"
@@ -64,15 +64,15 @@
             Upload Resume
           </button>
           </div>
-          <label id="resume-label" for="resume" class="mt2">
-            <span class="f6 db">1 MB max</span>
-            <span class="f6 db mt1">pdf, doc, docx</span>
-          </label>
+          <label for="resume" class="dn">Resume</label>
+          <div id="specs" class="grey-3 f6 mt2">
+            <span class="db">1 MB max</span>
+            <span class="db">pdf, doc, docx</span>
+          </div>
           <div id="filename" class="grey-3 mt2"></div>
           <input
             type="file"
             accept=".pdf,.doc,.docx"
-            id="resume"
             name="resume"
             placeholder="Resume"
             class="dn w-100 mb2"

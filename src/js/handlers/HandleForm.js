@@ -7,7 +7,6 @@ let validate;
 let handleForm;
 
 if (form) {
-
   // Encode data
   const urlencodeFormData = data => {
     let s = '';
@@ -40,13 +39,12 @@ if (form) {
           <div class="pv2">We apologize for any inconvenience.</div>
         </div>
       `,
-      footer: '<a href="/" class="link">Return home</a>'
+      footer: '<a href="/" class="link">Return home</a>',
     });
   };
 
   // Send data in POST
   const sendData = data => {
-
     // Show loading animation if has file
     let hasFile = false;
     for (const [id, value] of data.entries()) {
@@ -59,7 +57,7 @@ if (form) {
     if (hasFile) {
       Swal.fire({
         title: 'Uploading file.',
-        onBeforeOpen: () => Swal.showLoading()
+        onBeforeOpen: () => Swal.showLoading(),
       });
     }
 
@@ -74,42 +72,63 @@ if (form) {
       options.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
     }
 
-    fetch('/', options).then(resp => {
-
-      if (!resp.ok) {
-        errMsg();
-        return;
-      }
-
-      // Show message details to user
-      form.previousElementSibling.innerText = "We'll be in touch soon!";
-      let list = '';
-
-      for (const [id, value] of data.entries()) {
-        if (id !== 'form-name') {
-          list += `
-            <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
-            <p class="mt1 bg-grey-1 br1 pa2 pre">${value.name === undefined ? value : (value.name || '(none)')}</p>
-          `;
+    fetch('/', options)
+      .then(resp => {
+        if (!resp.ok) {
+          errMsg();
+          return;
         }
-      }
 
-      form.innerHTML = `<div>${list}</div>`;
+        // Show message details to user
+        let list = '';
 
-      Swal.fire({
-        icon: 'success',
-        title: 'Thank you!',
-        html: `
-          <div class="pb2">
-            <div class="pv2">Your message has been sent!</div>
-            <div>We'll be in touch soon.</div>
-          </div>
-        `,
-        footer: '<a href="/" class="link">Return home</a>'
+        let error = '';
+        for (const [id, value] of data.entries()) {
+          const userInput = value.name || value;
+
+          if (id !== 'form-name') {
+            if (id !== 'resume' && !userInput) {
+              error = 'An error has occured, please submit again';
+              break;
+            }
+
+            list += `
+            <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
+            <p class="mt1 bg-grey-1 br1 pa2 pre">${userInput || '(none)'}</p>
+          `;
+          }
+        }
+
+        if (error) {
+          form.previousElementSibling.innerHTML = `
+            <div class="mt3">
+              <span class="db mb2">Error sending message.</span>
+              <span class="db mt2">Please try again.</span>
+            </div>
+          `;
+          form.remove();
+          errMsg();
+          return;
+        }
+
+        form.previousElementSibling.innerText = "We'll be in touch soon!";
+        form.innerHTML = `<div>${list}</div>`;
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank you!',
+          html: `
+            <div class="pb2">
+              <div class="pv2">Your message has been sent!</div>
+              <div>We'll be in touch soon.</div>
+            </div>
+          `,
+          footer: '<a href="/" class="link">Return home</a>',
+        });
+      })
+      .catch(err => {
+        errMsg();
       });
-    }).catch(err => {
-      errMsg();
-    });
   };
 
   const submitForm = e => {
@@ -118,7 +137,7 @@ if (form) {
     e.preventDefault();
 
     // Show warning if invalid email
-    if (!(/^\S+@\S+$/).test(value)) {
+    if (!/^\S+@\S+$/.test(value)) {
       Swal.fire({
         icon: 'info',
         title: 'Submit?',
@@ -144,33 +163,34 @@ if (form) {
   };
 
   validateFile = el => {
-    const label = document.getElementById('resume-label');
+    const label = document.getElementById('specs');
     const filenameEl = document.getElementById('filename');
     label.classList.add('db');
 
     const filePath = el.value;
     const extn = /(\.pdf|\.doc|\.docx)$/i;
 
-    const uploadError = text => {
-      Swal.fire({
-        icon: 'error',
-        title: 'Upload error.',
-        text,
-      });
-      el.value = '';
-      filenameEl.textContent = '';
-    };
-
+    let error = '';
     if (filePath !== '' && !extn.test(filePath)) {
-      uploadError('Please upload only pdf, doc, docx.');
+      error = 'Please upload only pdf, doc, docx.';
     } else if (el.files[0].size > 1000000) {
-      uploadError('Maximum file size is 1 MB.');
-    } else { // file is good
+      error = 'Maximum file size is 1 MB.';
+    }
+
+    if (!error) {
       label.classList.replace('db', 'dn');
 
       const fileSplit = filePath.split('\\');
       const fileName = fileSplit[fileSplit.length - 1];
       filenameEl.textContent = fileName;
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Upload error.',
+        text: error,
+      });
+      el.value = '';
+      filenameEl.textContent = '';
     }
   };
 
@@ -194,7 +214,6 @@ if (form) {
   };
 
   handleForm = e => {
-
     if (requiredInputs) {
       for (const input of requiredInputs) {
         validate(e, input);

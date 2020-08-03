@@ -101,4 +101,3 @@ if (resume) {
   resume.addEventListener('change', e => validateFile(resume));
   resumeBtn.addEventListener('click', () => resume.click());
 }
-
