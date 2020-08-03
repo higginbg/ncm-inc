@@ -144,22 +144,33 @@ if (form) {
   };
 
   validateFile = el => {
+    const label = document.getElementById('resume-label');
+    const filenameEl = document.getElementById('filename');
+    label.classList.add('db');
+
     const filePath = el.value;
     const extn = /(\.pdf|\.doc|\.docx)$/i;
 
-    const uploadError = msg => {
+    const uploadError = text => {
       Swal.fire({
         icon: 'error',
         title: 'Upload error.',
-        text: msg
+        text,
       });
       el.value = '';
+      filenameEl.textContent = '';
     };
 
     if (filePath !== '' && !extn.test(filePath)) {
       uploadError('Please upload only pdf, doc, docx.');
     } else if (el.files[0].size > 1000000) {
       uploadError('Maximum file size is 1 MB.');
+    } else { // file is good
+      label.classList.replace('db', 'dn');
+
+      const fileSplit = filePath.split('\\');
+      const fileName = fileSplit[fileSplit.length - 1];
+      filenameEl.textContent = fileName;
     }
   };
 
