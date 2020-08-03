@@ -15,7 +15,7 @@ import menuClose from './js/modules/MenuClose';
 
 import { validateFile, validate, handleForm } from './js/handlers/HandleForm';
 import { handleTouchStart, handleTouchMove } from './js/handlers/HandleTouch';
-import { nav, drpdwn, drpdwnBtn, form, requiredInputs, resume, isRoot, menuOpenIcon, menuCloseIcon, navSmall } from './js/variables';
+import { nav, drpdwn, drpdwnBtn, form, requiredInputs, resume, isRoot, menuOpenIcon, menuCloseIcon, navSmall, resumeBtn } from './js/variables';
 
 
 /* Initiations */
@@ -86,7 +86,10 @@ drpdwnBtn.addEventListener('click', () => {
   drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall) ? menuCloseIcon : menuOpenIcon;
 });
 
-form && form.addEventListener('submit', e => handleForm(e));
+if (form) {
+  form.addEventListener('submit', e => handleForm(e));
+}
+
 
 if (requiredInputs) {
   for (const input of requiredInputs) {
@@ -94,4 +97,8 @@ if (requiredInputs) {
   }
 }
 
-resume && resume.addEventListener('change', e => validateFile(resume));
+if (resume) {
+  resume.addEventListener('change', e => validateFile(resume));
+  resumeBtn.addEventListener('click', () => resume.click());
+}
+

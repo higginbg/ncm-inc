@@ -55,10 +55,18 @@
 
         <!-- Resume -->
         <fieldset>
-          <label for="resume">
-            <span>Resume (optional)</span>
-            <span class="db mt1 f6">1 MB max</span>
-            <span class="db mt1 f6">pdf, doc, docx</span>
+          <div class="w-100 tl mt3">
+            <button
+              id="resume-btn"
+              type="button"
+              class="btn btn-alt w-100"
+            >
+            Upload Resume
+          </button>
+          </div>
+          <label for="resume" class="f6">
+            <span class="db mt2">1 MB max</span>
+            <span class="db mt1">pdf, doc, docx</span>
           </label>
           <input
             type="file"
@@ -66,7 +74,7 @@
             id="resume"
             name="resume"
             placeholder="Resume"
-            class="w-100 mb2"
+            class="dn w-100 mb2"
           >
         </fieldset>
         

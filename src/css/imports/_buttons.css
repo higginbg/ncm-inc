@@ -44,6 +44,10 @@ button:focus {
   }
 }
 
+.btn-alt {
+  background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
+}
+
 .btn-contact {
   display: inline-block;
   border-radius: var(--border-radius-pill);
