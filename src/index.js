@@ -15,8 +15,19 @@ import menuClose from './js/modules/MenuClose';
 
 import { validateFile, validate, handleForm } from './js/handlers/HandleForm';
 import { handleTouchStart, handleTouchMove } from './js/handlers/HandleTouch';
-import { nav, drpdwn, drpdwnBtn, form, requiredInputs, resume, isRoot, menuOpenIcon, menuCloseIcon, navSmall, resumeBtn } from './js/variables';
-
+import {
+  nav,
+  drpdwn,
+  drpdwnBtn,
+  form,
+  requiredInputs,
+  resume,
+  isRoot,
+  menuOpenIcon,
+  menuCloseIcon,
+  navSmall,
+  resumeBtn,
+} from './js/variables';
 
 /* Initiations */
 
@@ -35,16 +46,16 @@ AOS.init({
   startEvent: 'load',
   duration: 1000,
   once: true,
-  easing: 'ease'
+  easing: 'ease',
 });
 
 // lightgallery.js
 lightGallery(document.getElementById('lightgallery'), {
   subHtmlSelectorRelative: true,
-  scale: .5,
+  scale: 0.5,
   actualSize: false,
   download: false,
-  selector: '.item'
+  selector: '.item',
 });
 
 /* Event listeners */
@@ -59,10 +70,12 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', menuClose);
 
-window.addEventListener('scroll', navShrink);
+window.addEventListener('scroll', () => {
+  menuClose();
+  navShrink();
+});
 
 window.addEventListener('click', ({ target }) => {
-
   // close menu on click
   const tag = target.tagName.toLowerCase();
   if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
@@ -70,7 +83,10 @@ window.addEventListener('click', ({ target }) => {
   }
 
   // Add padding for nav when input is clicked
-  const height = (tag === 'input' || tag === 'textarea') ? nav.clientHeight : (-nav.clientHeight);
+  const height =
+    tag === 'input' || tag === 'textarea'
+      ? nav.clientHeight
+      : -nav.clientHeight;
   document.body.paddingTop = `${document.body.paddingTop + height}px`;
 });
 
@@ -82,14 +98,16 @@ document.addEventListener('touchmove', handleTouchMove, false);
 nav.addEventListener('click', e => e.stopPropagation());
 
 drpdwnBtn.addEventListener('click', () => {
+  navShrink();
   drpdwn.classList.toggle(navSmall);
-  drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall) ? menuCloseIcon : menuOpenIcon;
+  drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall)
+    ? menuCloseIcon
+    : menuOpenIcon;
 });
 
 if (form) {
   form.addEventListener('submit', e => handleForm(e));
 }
-
 
 if (requiredInputs) {
   for (const input of requiredInputs) {
