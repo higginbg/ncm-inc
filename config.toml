@@ -1,5 +1,5 @@
 title = "NCM Inc. Hotel Renovation"
-baseURL = "https://ncmreno.netlify.com/"
+baseURL = "https://ncmreno.netlify.app/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
