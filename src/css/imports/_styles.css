@@ -4,8 +4,8 @@
 }
 
 ::selection {
-  background-color: var(--highlight);
-  color: var(--white);
+  color: var(--highlight);
+  background-color: var(--off-white);
 }
 
 #noscript-warning,
