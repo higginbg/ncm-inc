@@ -30,7 +30,7 @@
 
 <!-- About -->
 {{ with .Params.about }}
-  <div class="section bg-grey-1 relative all-shadow bb bt b--black bw3">
+  <div class="section bg-grey-1">
 
     {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
 
@@ -58,7 +58,7 @@
 {{ end }}
 
 <!-- Testimonials -->
-<div class="section bg-white neg-margin-offset">
+<div class="section bg-white neg-margin-offset relative">
   <div class="mw7 center">
 
     {{ partial "section-title"  (dict "text" .Params.testimonials.heading "icon" "far fa-building") }}
