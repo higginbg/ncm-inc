@@ -7,12 +7,13 @@
 {{ partial "short-text" .Params.intro }}
 
 <!-- Projects -->
+
 <div class="section bg-white">
   <div class="mw7 center">
+    
+    {{ partial "section-title" (dict "text" .Params.projects.heading "icon" "fas fa-hard-hat") }}
 
-    <h2 class="f2 lh-title mb3">{{ .Params.projects.heading }}</h2>
-  
-    <p class="mb3">{{ .Params.projects.text }}</p>
+    <p class="mb3 center">{{ .Params.projects.text }}</p>
   
     <div class="flex-ns flex-row flex-wrap center mhn2-ns mw7">
   
@@ -29,9 +30,28 @@
 
 <!-- About -->
 {{ with .Params.about }}
-  <div class="section bg-debut relative all-shadow bb bt b--grey-1 bw5">
+  <div class="section bg-grey-1 relative all-shadow bb bt b--black bw3">
+
+    {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
+
+    <p class="mb3 center">{{ .text }}</p>
+
     <div class="mw7 center">
-      {{ partial "text-and-image" . }}
+      <div class="flex-ns mhn2-ns">
+      
+        <div class="w-50-ns ph2-ns pv2">
+          <div class="bg-off-white br1 tile-shadow">
+            <img src="{{ .image1 }}" alt="" class="lozad lozad-trigger w-100 br1 h5 center object-cover db" data-aos="fade-in">
+          </div>
+        </div>
+  
+        <div class="w-50-ns ph2-ns pv2">
+          <div class="bg-off-white br1 tile-shadow">
+            <img src="{{ .image2 }}" alt="" class="lozad lozad-trigger w-100 br1 h5 center object-cover db" data-aos="fade-in">
+          </div>
+        </div>
+  
+      </div>
       {{ partial "button-forward" (dict "link" "/about" "text" .button)}}
     </div>
   </div>
@@ -41,7 +61,7 @@
 <div class="section bg-white neg-margin-offset">
   <div class="mw7 center">
 
-    <h2 class="f2 lh-title mb3">{{ .Params.testimonials.heading }}</h2>
+    {{ partial "section-title"  (dict "text" .Params.testimonials.heading "icon" "far fa-building") }}
   
     <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
 

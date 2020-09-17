@@ -9,30 +9,18 @@
   &.small {
     height: var(--nav-height-small);
   }
-
-  & .subtitle {
-    transition: var(--transition-all);
-  }
 }
 
-#logo {
-  box-shadow: none;
-  transition: background-color 0.3s ease-out !important;
-  
-  &:hover, &:focus, &:active {
+.nav-btn {
+  text-decoration: none;
+  transition: var(--transition-shadow) !important;
+
+  &:hover {
     background-color: var(--grey-4);
-    outline: none !important;
   }
-}
-
-.subtitle.small {
-  width: 0;
-  height: 0;
-}
-
-#call {
   
   &:focus, &:active {
+    box-shadow: inset 0 -4px 0 var(--primary);
     background-color: var(--grey-4);
     outline: none !important;
   }
@@ -50,6 +38,9 @@
       border 0.3s ease !important;
 
     &.active {
+      position: relative;
+      font-weight: var(--bold-font-weight);
+      color: var(--primary);
       background-color: var(--grey-4);
       border-left: var(--spacing-small) solid transparent;
       pointer-events: none;

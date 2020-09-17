@@ -69,3 +69,7 @@ button {
 a {
 	color: inherit;
 }
+
+.error-page {
+	min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+}

@@ -30,10 +30,11 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css');
 
 /* Modules */
+@import './imports/_animations';
 @import './imports/_box-sizing';
 @import './imports/_images';
 @import './imports/_background-size';

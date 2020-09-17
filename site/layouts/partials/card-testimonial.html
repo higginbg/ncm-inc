@@ -3,16 +3,16 @@
 
     <div class="flip-card-inner">
 
-      <div class="flip-card-front bg-debut br1 ba b--off-white pa3">
+      <div class="flip-card-front bg-grey-1 br1 pa2">
 
-        <div class="bg-white h-100 pv1 ph2 ba b--off-white">
+        <div class="h-100 bg-white pa2 br1">
 
-          <div class="h-100 flex flex-column justify-between" data-aos="fade-in" data-aos-duration=750>
+          <div class="h-100 flex flex-column justify-between bb b--primary bw1" data-aos="fade-in" data-aos-duration=750>
 
             <p class="f5 mb3">“{{ .quote }}”</p>
     
-            <cite class="tr db">
-              <span class="db">{{ .name }}</span>
+            <cite class="tr db pb2">
+              <span class="dib b pt1">{{ .name }}</span>
         
                 {{ if .position }}
                   <span class="f6 lh-title db">{{ .position }}</span>
@@ -29,36 +29,37 @@
         </div>
       </div>
   
-      <div class="flip-card-back h-100 pa3 bg-white ba b--off-white br1">
-        <div class="inner h-100">
+      <div class="flip-card-back h-100 pa2 bg-black br1">
+        <div class="inner h-100 bg-white pa2 br1">
+          <div class="h-100 bg-black off-white pa3 br1">
 
-          <h3 class="f3 lh-title mb3">Contact {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h3>
-          <p class="db lh-title mb2">We encourage you to contact our references for their experiences with our team.</p>
+            <h3 class="f3 lh-title mb3">Contact {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h3>
+            <p class="db lh-title mb2">We encourage you to contact our references for their experiences with our team.</p>
+        
+              <!-- Phone -->
+              {{ if .phone }}
       
-            <!-- Phone -->
-            {{ if .phone }}
-    
-              <div class="mt3">
-                <h4 class="f5 lh-title mb1">Phone</h4>
-                  
-                <a class="link pre" href="tel:+1{{ .phone | urlize }}">{{ .phone }}</a>
-              </div>
+                <div class="mt3">
+                  <h4 class="f5 lh-title mb1">Phone</h4>
+                    
+                  <a class="link pre" href="tel:+1{{ .phone | urlize }}">{{ .phone }}</a>
+                </div>
+  
+              {{ end }}
+  
+              <!-- Email -->
+              {{ if .email }}
+      
+                <div class="mt3">
+                  <h4 class="f5 lh-title mb1">Email</h4>
+                    
+                  <a class="link pre" href="mailto:{{ .email }}">{{ .email }}</a>
+                </div>
+      
+              {{ end }}
 
-            {{ end }}
-
-            <!-- Email -->
-            {{ if .email }}
-    
-              <div class="mt3">
-                <h4 class="f5 lh-title mb1">Email</h4>
-                  
-                <a class="link pre" href="mailto:{{ .email }}">{{ .email }}</a>
-              </div>
-    
-            {{ end }}
-    
+          </div>
         </div>
-
       </div>
     </div>
   </blockquote>

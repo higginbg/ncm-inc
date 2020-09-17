@@ -1,5 +1,4 @@
-fieldset
-{
+fieldset {
   position: relative;
 }
 
@@ -16,22 +15,26 @@ fieldset
 
 input, textarea {
   background-color: transparent;
-  color: var(--black);
+  color: inherit;
   border: 1px solid transparent;
-  border-bottom: 1px solid var(--grey-2);
-  padding: var(--spacing-small) 0;
+  box-shadow: inset 0 -1px 0 var(--grey-2);
+  margin-top: var(--spacing-small);
+  padding:  var(--spacing-extra-small) 0;
   font-size: var(--font-size);
   line-height: 1.25;
   position: relative;
   transition: var(--transition-all);
   z-index: 2;
-  user-select: none;
-  &:hover, &:focus, &:active {
-    padding: var(--spacing-small);
-    border: 1px solid var(--grey-1);
-    border-radius: var(--border-radius);
-    box-shadow: inset 0 0 5px var(--grey-1);
+
+  &:hover {
+    box-shadow: inset 0 -3px 0 var(--grey-3);
   }
+
+  &:focus, &:active {
+    box-shadow: inset 0 -3px 0 var(--primary);
+    background-color: #eee;
+  }
+
   &:focus + label {
     pointer-events: auto;
   }
@@ -45,10 +48,12 @@ input[type="file"] {
   & + label {
     display: block;
   } 
+
   &:hover {
     border-radius: var(--border-radius);
     border: 1px solid var(--grey-1);
   }
+
   &:focus {
     padding: var(--spacing-small);
     border-radius: var(--border-radius);
@@ -56,64 +61,31 @@ input[type="file"] {
 }
 
 :not(:focus).invalid {
-  box-shadow: inset 0 0 5px darkred;
   border-bottom: 1px solid transparent;
-  border-radius: var(--border-radius);
-  padding: var(--spacing-small);
+  box-shadow: inset 0 -3px 0 darkred;
 
   &:hover {
-    box-shadow: inset 0 0 5px var(--grey-1);
+    box-shadow: inset 0 -3px 0 red;
   }
 
-  &::-webkit-input-placeholder {
-    color: var(--grey-2);
-  }
-  
-  &:-moz-placeholder {
-    color: var(--grey-2);
-  }
-  
-  &::-moz-placeholder {
-    color: var(--grey-2);
-  }
-  
-  &:-ms-input-placeholder {
-    color: var(--grey-2);
+  &::placeholder {
+    color: darkred;
   }
 }
 
-::-webkit-input-placeholder {
+::placeholder {
   color: transparent;
   font-size: var(--font-size);
   line-height: normal;
 }
 
-:-moz-placeholder {
-  color: transparent;
-  font-size: var(--font-size);
-  line-height: normal;
-}
-
-::-moz-placeholder {
-  color: transparent;
-  font-size: var(--font-size);
-  line-height: normal;
-}
-
-:-ms-input-placeholder {
-  color: transparent;
-  font-size: var(--font-size);
-  line-height: normal;
-}
-
-label
-{
+label {
   display: block;
-  font-size: var(--font-size);
-  font-weight: 400;
-  color: var(--grey-3);
+  font-size: calc(var(--font-size) * 0.9);
+  font-weight: bold;
+  color: var(--primary);
   padding: var(--spacing-extra-small) 0;
-  pointer-events: none;
+  user-select: none;
   line-height: 1;
   transition: var(--transition-hover);
   z-index: 2;

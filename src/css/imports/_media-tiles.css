@@ -15,14 +15,14 @@
     opacity: 0.6;
   }
   
-  
   .banner {
     position: absolute;
     bottom: 0;
     left: 0;
     color: var(--white);
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
+    transition: padding-bottom 0.25s ease-out;
   }
   
   .gallery .backdrop {
@@ -53,6 +53,7 @@
 
   & .img-container {
     width: 100%;
+    transform: scale(1.01);
     transition: var(--transition-all) !important;
   }
 
@@ -62,23 +63,19 @@
     & .tile, & .tile-shadow {
       box-shadow: var(--shadow-hover);
     }
-    
-    & .hover-cover,
-    & .gallery .hover-cover {
-      visibility: visible;
-      opacity: 1;
-    }
 
     & .gallery .hover-cover {
+      opacity: 1;
+      visibility: visible;
       font-size: 0.5em;
     }
 
     & .img-container {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
 
     & .banner {
-      opacity: 0;
+      padding-bottom: var(--spacing-medium);
     }
   }
 }
@@ -96,6 +93,8 @@
       visibility: hidden;
       transition:
         font-size 0.3s cubic-bezier(.25,.8,.25,1),
+        opacity 0.3s cubic-bezier(.25,.8,.25,1),
+        visibility 0.3s cubic-bezier(.25,.8,.25,1),
         opacity 0.3s cubic-bezier(.25,.8,.25,1) !important;
     }
 

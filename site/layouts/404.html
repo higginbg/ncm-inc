@@ -1,8 +1,12 @@
 {{ define "main" }}
 
-<div class="section bg-white header-shadow h5 tc">
-  <h1 class="f5 mt4 mb2">Oops! Page not found.</h1>
-  {{ partial "button-forward" (dict "link" "/" "text" "Go to Home Page")}}
+<div class="error-page section bg-white flex justify-center items-center tc">
+  <div class="w-100">
+    <h1 class="f5">Oops! Page not found.</h1>
+    <div style="margin-top: -2em;">
+      {{ partial "button-forward" (dict "link" "/" "text" "Go to Home Page")}}
+    </div>
+  </div>
 </div>
 
 {{ end }}

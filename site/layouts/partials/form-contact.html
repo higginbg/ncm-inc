@@ -1,75 +1,78 @@
 
-<div class="section form-section bg-debut footer-shadow-light bt b--grey-1 bw5 cd">
+<div class="section form-section bg-grey-1 footer-shadow-light bt b--black bw3 cd">
   <div class="measure-narrow center">
     
     <!-- Contact -->
-    <div class="neg-margin bg-white ba b--grey-1 pa3 br1 h-100 tile-shadow" data-aos="fade-up">
+    <div class="neg-margin br1 overflow-hidden h-100 tile-shadow" data-aos="fade-up">
 
-      <h2 class="f3 lh-title tc mb4">Send us a message!</h2>
+      <h2 class="f3 bg-black off-white pa3 lh-title tc no-select">Send us a message!</h2>
     
-      <form novalidate id="form-contact" name="contact" netlify-honeypot="bot-field" netlify>
+      <form class="bg-white" novalidate id="form-contact" name="contact" netlify-honeypot="bot-field" netlify>
 
-        <input type="hidden" name="form-name" value="contact" />
+        <div class="pa3 pt4">
 
-        <!-- Name -->
-        <fieldset>
-          <label for="name">Name</label>
-          <input
-            required
-            aria-required="true"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            class="w-100 mb2"
-          >
-        </fieldset>
-        
-        <!-- Email -->
-        <fieldset>
-          <label for="email">Email</label>
-          <input
-            required
-            aria-required="true"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            class="w-100 mb2"
-          >
-        </fieldset>
-
-        <!-- Company -->
-        <fieldset>
-          <label for="company">Company</label>
-          <input
-            required
-            aria-required="true"
-            type="company"
-            id="company"
-            name="company"
-            placeholder="Company"
-            class="w-100 mb2"
-          >
-        </fieldset>
-    
-        <!-- Message -->
-        <fieldset>
-          <label for="message">Your message</label>
-          <textarea
-            required
-            aria-required="true"
-            id="message"
-            name="message"
-            placeholder="Message"
-            rows="8"
-            cols="80"
-            class="w-100 no-resize"
-          ></textarea>
-        </fieldset>
+          <input type="hidden" name="form-name" value="contact" />
+  
+          <!-- Name -->
+          <fieldset>
+            <label for="name">Name</label>
+            <input
+              required
+              aria-required="true"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              class="w-100 mb2"
+            >
+          </fieldset>
+          
+          <!-- Email -->
+          <fieldset>
+            <label for="email">Email</label>
+            <input
+              required
+              aria-required="true"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              class="w-100 mb2"
+            >
+          </fieldset>
+  
+          <!-- Company -->
+          <fieldset>
+            <label for="company">Company</label>
+            <input
+              required
+              aria-required="true"
+              type="company"
+              id="company"
+              name="company"
+              placeholder="Company"
+              class="w-100 mb2"
+            >
+          </fieldset>
+      
+          <!-- Message -->
+          <fieldset>
+            <label for="message">Your message</label>
+            <textarea
+              required
+              aria-required="true"
+              id="message"
+              name="message"
+              placeholder="Message"
+              rows="8"
+              cols="80"
+              class="w-100 no-resize"
+            ></textarea>
+          </fieldset>
+        </div>
         
         <!-- Button -->
-        <div class="w-100 tc mt3">
+        <div class="w-100 bg-grey-1 pa3 tc mt3">
           <button type="submit" class="btn w-100 disabled">Send<i class="fas fa-paper-plane"></i></button>
         </div>
 

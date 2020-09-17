@@ -9,6 +9,7 @@ button:focus {
   border-radius: var(--border-radius-pill);
   padding: 18px 16px;
   font-size: var(--font-size-m);
+  font-weight: var(--bold-font-weight);
   line-height: 1.25;
   border: 0;
   /* background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1)); */
@@ -24,10 +25,11 @@ button:focus {
   & i {
     opacity: 0;
     transition: var(--transition-hover) !important;
+    width: 0;
   }
 
   &:hover {
-    box-shadow: var(--button-press-shadow);
+    box-shadow: var(--shadow-hover);
 
     & i {
       opacity: 1;
@@ -37,19 +39,26 @@ button:focus {
 
   &:focus, &:active {
     background-image: linear-gradient(var(--off-white), var(--grey-1));
-    color: var(--grey-4);
+    color: var(--text-color);
     box-shadow: 0 0 15px var(--secondary);
     border: 0;
     outline: 0 !important;
   }
 }
 
+.btn-light {
+  background-image: linear-gradient(var(--off-white), var(--grey-1));
+  color: var(--primary);
+}
+
 .btn-alt {
-  background-image: linear-gradient(var(--grey-3), rgba(65, 65, 65, 1));
+  background-image: linear-gradient(var(--grey-3), var(--grey-4));
+  color: var(--off-white);
 }
 
 .btn-contact {
   display: inline-block;
+  font-weight: var(--bold-font-weight);
   border-radius: var(--border-radius-pill);
   padding: 12px 16px;
   font-size: var(--font-size-m);
@@ -83,7 +92,7 @@ button:focus {
 
   &:focus, &:active {
     background-image: linear-gradient(var(--off-white), var(--grey-1));
-    color: var(--grey-4);
+    color: var(--text-color);
     box-shadow: 0 0 15px var(--secondary);
     border: 0;
     outline: 0 !important;

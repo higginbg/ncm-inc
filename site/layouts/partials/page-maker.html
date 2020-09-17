@@ -14,11 +14,11 @@
 
         <div class="center">
           <a class="db-m dn no-underline tile-link" href="{{ $link }}">
-            <h2 class="f4 lh-title mb2 grey-4 tl"><span class="primary">&larr;</span> Previous</h2>
+            <h2 class="f4 lh-title mb2 black tl"><span class="primary">&larr;</span> Previous</h2>
             {{ partial "media-tile" (dict "title" $hotel "subtitle" $location "loadingThumb" $loadingThumb "image" $image "text" "← View") }}
           </a>
           <a class="dn-m db no-underline h-100 link tile-link link-prev" href="{{ $link }}">
-            <h2 class="f4 lh-title mb2 grey-4 tl"><span class="primary">&larr;</span> Previous</h2>
+            <h2 class="f4 lh-title mb2 black tl"><span class="primary">&larr;</span> Previous</h2>
             <div class="tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $loadingThumb }}'); height: 150px;">
               <noscript>
                 <div class="tile br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;"></div>
@@ -28,10 +28,6 @@
                 data-background-image="{{ $image }}"
                 style="height: 150px;"
               >
-              </div>
-              <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
-                <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>
-                <span class="f4 white z-999 o-90">&larr; View</span>
               </div>
             </div>
             <h3 class="f5 lh-title mt2 tl">{{ $hotel }}</h3>
@@ -53,11 +49,11 @@
 
         <div class="center">
           <a class="db-m dn no-underline tile-link" href="{{ $link }}">
-            <h2 class="f4 lh-title mb2 grey-4 tr">Next <span class="primary">&rarr;</span></h2>
+            <h2 class="f4 lh-title mb2 black tr">Next <span class="primary">&rarr;</span></h2>
             {{ partial "media-tile" (dict "title" $hotel "subtitle" $location "loadingThumb" $loadingThumb "image" $image "text" "View →") }}
           </a>
           <a class="dn-m db no-underline h-100 link tile-link link-next" href="{{ $link }}">
-            <h2 class="f4 lh-title mb2 grey-4 tr">Next <span class="primary">&rarr;</span></h2>
+            <h2 class="f4 lh-title mb2 black tr">Next <span class="primary">&rarr;</span></h2>
             <div class="tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $loadingThumb }}'); height: 150px;">
               <noscript>
                 <div class="tile br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;"></div>
@@ -67,10 +63,6 @@
                 data-background-image="{{ $image }}"
                 style="height: 150px;"
               >
-              </div>
-              <div class="hover-cover absolute h-100 w-100 flex justify-center items-center">
-                <div class="h-100 w-100 bg-debut-dark o-80 absolute"></div>
-                <span class="f4 white z-999 o-90">View &rarr;</span>
               </div>
             </div>
             <h3 class="f5 lh-title mt2 tr">{{ $hotel }}</h3>

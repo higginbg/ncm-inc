@@ -1,22 +1,24 @@
-<div id="jumbotron" class="bg-white header-shadow relative bb b--black bw1">
-  <div
-    class="vh-75-ns vh-50 bg-bottom cover no-select"
-    style="background-image: url('{{ .image }}');"
-  >
-
-    <div class="db-ns dn absolute top-0 left-0 ma3-ns ma2 o-90 w-auto-ns w-100">
-      <div class="absolute h-100 w-100 bg-black br1" data-aos="fade-in" data-aos-delay=1000 data-aos-duration=750></div>
-      
-      <div class="pa3 mh2">
-        <h1>
-          <span class="f1-ns f2 db lh-title primary mb2 pre" data-aos="fade-in" data-aos-delay=1000 data-aos-duration=750>{{ .Title }} </span>
-          <span class="f3-ns f4 db lh-title white mb2 pre" data-aos="fade-in" data-aos-delay=2000 data-aos-duration=750>{{ .subtitle }}</span>
-        </h1>
+<div id="jumbotron" class="bg-off-white header-shadow">
+  <div class="bb b--off-white bw3">
+    <div
+      class="vh-75-ns vh-50 bg-bottom cover no-select"
+      style="background-image: url('{{ .image }}');"
+      data-aos="fade-in"
+    >
+      <div
+        id="jumbotron-logo"
+        class="absolute mw5-ns mw6 pa3-ns pa2"
+        data-aos="fade-in"
+        data-aos-delay="1000"
+      >
+        <img
+          src="/img/logos/logo.png"
+          class="tile-shadow"
+          style="border-radius: 100%"
+        />
       </div>
-
     </div>
-
   </div>
-</div>
 
-{{ partial "banner-contact"}}
+  {{ partial "banner-contact"}}
+</div>

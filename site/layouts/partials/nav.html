@@ -2,20 +2,19 @@
 	<div class="w-100 h-100 flex flex-row justify-between relative">
 
 		<!-- Menu Button (for small screens) -->
-		<button class="dn-l w3 mr2 f4 bg-none white pa1 enlarge"><i class="fas fa-bars"></i></button>
+		<button class="nav-btn dn-l w3 mr2 f4 bg-none off-white pa1"><i class="fas fa-bars"></i></button>
 
 		<!-- Logo -->
-		<a id="logo" href="/" class="no-underline lh-solid pv2 ph3 mr4-l h-100">
+		<a id="logo" href="/" class="nav-btn no-underline lh-solid pv2 ph3 mr4-l h-100">
 			<div id="logo-container" class="lh-solid tc flex flex-column justify-center items-center h-100 no-select">
-				<div class="f3 primary">NCM Inc.</div>
-				<div class="subtitle dn-ns db f6 white mt2 overflow-hidden">Hotel Renovation</div>
+				<span class="f3 b primary">NCM</span>
 			</div>
 		</a>
 
 		<!-- Primary Nav -->
 		<div id="menu-container" class="overflow-y-auto bg-black static-l absolute top-100 h-100-l vh-100 pb0-l pb3 bt-0-l bt b--grey-3 z-999">
 
-			<ul class="overflow-x-hidden overflow-y-visible bg-black w-auto-l w0 h-100-l h-90 flex flex-row-l flex-column white size-trans">
+			<ul class="overflow-x-hidden overflow-y-visible bg-black w-auto-l w0 h-100-l h-90 flex flex-row-l flex-column off-white size-trans">
 				
 				<div class="dn-l h-100-l">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
 				{{ partial "nav-link" (dict "link" "/about" "text" "About") }}
@@ -28,8 +27,8 @@
 		</div>
 
 		<!-- Call Button (small screens only) -->
-		<a id="call" href="tel:+1971-336-2341" class="nav-link dn-l db w3 h-100 ml2 white pa1 enlarge" tabindex=0>
-      <div class="h-100 flex justify-center items-center"><i class="fas fa-phone"></i></div>
+		<a href="tel:+1971-336-2341" class="nav-btn dn-l db w3 h-100 ml2 off-white pa1" tabindex=0>
+      <span class="h-100 flex justify-center items-center"><i class="fas fa-phone"></i></span>
     </a>
 		
 	</div>

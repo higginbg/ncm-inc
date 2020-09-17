@@ -1,13 +1,11 @@
 .preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
+  transition: none !important;
   scroll-behavior: auto;
 }
 
 ::selection {
   background-color: var(--highlight);
+  color: var(--white);
 }
 
 #noscript-warning,
@@ -40,11 +38,21 @@ body.ie {
   }
 }
 
-.visible {   visibility: visible; }
-.hidden {    visibility: hidden; }
-.no-select { user-select: none; }
-.no-resize { resize: none; }
-.cd {        cursor: default; }
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+.no-select {
+  user-select: none;
+}
+.no-resize {
+  resize: none;
+}
+.cd {
+  cursor: default;
+}
 
 #page-container {
   position: relative;
@@ -52,26 +60,24 @@ body.ie {
 }
 
 #content-wrapper {
+  background-color: var(--black);
   padding-top: var(--nav-height);
   padding-bottom: var(--footer-height);
 }
 
-@media (--breakpoint-large) {
-  #content-wrapper {
-    padding-bottom: var(--footer-height-large);
-  }
-}
-
-
 /* Account for nav when using hash links */
-h1, h2, h3, h4, h5, h6 {
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   &[id]::before {
-    display: block; 
-    content: " "; 
-    margin-top: calc(-1 * var(--nav-height)); 
-    height: var(--nav-height); 
-    visibility: hidden; 
+    display: block;
+    content: ' ';
+    margin-top: calc(-1 * var(--nav-height));
+    height: var(--nav-height);
+    visibility: hidden;
     pointer-events: none;
   }
 }

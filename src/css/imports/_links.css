@@ -16,13 +16,14 @@
 .link, .md a {
   text-decoration: none;
   position: relative;
+  padding-bottom: 2px;
   color: var(--primary);
   cursor: pointer;
 
   &:before {
     background-color: var(--primary);
     content: '';
-    height: 2px;
+    height: 1px;
     position: absolute;
     bottom: -3px;
     left: 50%;

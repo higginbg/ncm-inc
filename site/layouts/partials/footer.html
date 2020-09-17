@@ -1,8 +1,8 @@
-<footer class="w-100 bg-black white absolute bottom-0">
+<footer class="w-100 bg-black off-white absolute bottom-0">
 	
-	<div class="f6 h-100 flex flex-row flex-wrap-l justify-between items-center ph2-l pv0-l pa3">
+	<div class="f6 h-100 w-100 flex flex-row flex-wrap-l justify-between items-center ph2-l pv0-l pa3">
 
-		<ul class="flex flex-row-l flex-column flex-wrap">
+		<ul class="w-33-l w-50 flex flex-column flex-wrap">
 			<li class="ma1"><a href="/" class="footer-link">Home</a></li>
 			<li class="ma1"><a href="/about" class="footer-link">About</a></li>
 			<li class="ma1"><a href="/projects" class="footer-link">Projects</a></li>
@@ -11,7 +11,9 @@
 			<li class="ma1"><a href="/contact" class="footer-link">Contact</a></li>
 		</ul>
 		
-		<div class="f2 dn-l db pl3 pr5-m pr3">{{ partial "logo" . }}</div>
+		<div class="w-33-l w-50 f2 flex justify-center" data-aos="fade-in">{{ partial "logo" . }}</div>
+
+		<div class="w-33-l w-50 db-l dn"></div>
 
 	</div>
 

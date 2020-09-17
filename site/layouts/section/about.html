@@ -8,8 +8,8 @@
     <div class="mw7 center">
 
       {{ with .Params.main }}
-        <h2 class="f2 lh-title mb3">{{ .heading }}</h2>
-        <p>{{ .text }}</p>
+        {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
+        <p class="center mb4">{{ .text }}</p>
       {{ end }}
 
       <div class="flex flex-row flex-wrap justify-center">
