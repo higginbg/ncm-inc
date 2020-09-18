@@ -19,10 +19,10 @@ people:
     image: 'portrait-greg-guerra.jpg'
     position: Vice President
     text: Greg and his son, James, started NCM in 2015. He has 30 years of experience with hotel renovations across the nation and has continuously delivered top quality service. When not working, he enjoys going on adventures with his wife and kids.
-  - name: Danielle Guerra
-    image: 'portrait-blank.png'
+  - name: Dani Guerra
+    image: 'portrait-dani-guerra.png'
     position: Controller
-    text: Danielle first started with the company in 2015 as the Head of Marketing and has learned and grown with the company to get to the position she is in today. She has previous experience with account management and finances. When Danielle is not working, she enjoys spending time with friends and reading.
+    text: Dani first started with the company in 2015 as the Head of Marketing and has learned and grown with the company to get to the position she is in today. She has previous experience with account management and finances. When Danielle is not working, she enjoys spending time with friends and reading.
   - name: Damon Bleth
     image: 'portrait-blank.png'
     position: Partner/Project Manager
