@@ -1,5 +1,5 @@
 ---
-title: About Our Team
+title: About
 description: We are proud of the team we have assembled through the years. Please take a moment to meet us.
 image: '/img/cover-about.jpg'
 intro: 
@@ -31,6 +31,14 @@ people:
     image: 'portrait-blank.png'
     position: Purchasing and Logistics Manager
     text: Jim has worked in hospitality renovation for over 20 years and in the construction industry for over 32 years as a carpenter, superintendent, project manager, and logistics manager and controller. Jim oversees the budget, orders and tracks incoming materials, coordinates travel and housing of the crews, and oversees project accounting.
+  - name: Jacob Watkins
+    image: 'portrait-blank.png'
+    position: Project Manager
+    text: ''
+  - name: Hayden McIntyre
+    image: 'portrait-blank.png'
+    position: Project Manager
+    text: ''
   - name: Leo Nicovic
     image: 'portrait-blank.png'
     position: Superintendent
@@ -43,10 +51,10 @@ people:
     image: 'portrait-blank.png'
     position: Project Coordinator
     text: Ed has been involved in the construction industry for 30 years. Primarily focused on finishing and punch programs, Ed has an eye for detail that brings the quality of finish to the next level. As a project coordinator, Ed demands the same quality from anyone under his command to ensure the highest quality product for the owner.
-  - name: Olivia Bennett
+  - name: Vanessa Rodriguez
     image: 'portrait-blank.png'
     position: Administrative Assistant
-    text: Olivia is the newest member of the team. As administrative assistant, Olivia performs a wide variety of jobs. She has a background in small business management and makes a wonderful addition to the company.
+    text: Vanessa is the newest member of the team. As administrative assistant, Olivia performs a wide variety of jobs. She has a background in small business management and makes a wonderful addition to the company.
 resources:
   - src: 'portrait-james-guerra.jpg' 
     title: James Guerra

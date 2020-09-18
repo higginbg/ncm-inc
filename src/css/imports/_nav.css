@@ -2,6 +2,10 @@
   height: var(--nav-height);
   min-width: 400px;
 
+  & ul:focus-within {
+    width: 300px;
+  }
+
   & .nav-small {
     width: 300px;
   }
@@ -13,7 +17,7 @@
 
 .nav-btn {
   text-decoration: none;
-  transition: var(--transition-shadow) !important;
+  transition: var(--transition-all) !important;
 
   &:hover {
     background-color: var(--grey-4);

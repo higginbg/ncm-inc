@@ -1,12 +1,12 @@
+.tile, .tile-shadow {
+  color: var(--off-white);
+  overflow: hidden;
+  transition: var(--transition-shadow) !important;
+}
+
 .tile-link {
   text-decoration: none;
   transition: var(--transition-shadow) !important;
-
-  & .tile, &.tile-shadow {
-    color: var(--white);
-    overflow: hidden;
-    transition: var(--transition-shadow) !important;
-  }
 
   .backdrop {
     position: absolute;
@@ -57,8 +57,7 @@
     transition: var(--transition-all) !important;
   }
 
-  &:hover, &:focus, &:active {
-    outline: 0!important;
+  &:hover {
 
     & .tile, & .tile-shadow {
       box-shadow: var(--shadow-hover);
@@ -77,6 +76,18 @@
     & .banner {
       padding-bottom: var(--spacing-medium);
     }
+  }
+
+  &:focus, &:active {
+    outline: 0!important;
+
+   & .banner {
+     background-color: var(--primary);
+
+     & .primary {
+       color: var(--off-white);
+     }
+   }
   }
 }
 
