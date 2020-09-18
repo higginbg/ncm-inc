@@ -67,7 +67,7 @@
   transform-style: preserve-3d;
   box-shadow: var(--flip-shadow);
   border-radius: var(--border-radius);
-  cursor: default;
+  cursor: normal;
 }
 
 .flip-card-front {

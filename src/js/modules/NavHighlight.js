@@ -17,6 +17,7 @@ const navHighlight = () => {
 
     if (isCurrentPath || isHome) {
       link.classList.add('active');
+      link.tabIndex = -1;
 
       if (isCurrentPage || isHome) {
         link.classList.remove('nav-link');
