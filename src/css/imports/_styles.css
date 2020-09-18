@@ -101,3 +101,8 @@ h6 {
     /* border-top: 1px solid var(--off-white); */
   }
 }
+
+#list {
+  padding-top: var(--spacing-extra-large);
+  margin-top: calc(-1 * var(--spacing-extra-large));
+}
