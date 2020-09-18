@@ -8,8 +8,10 @@
     <div class="mw7 center">
 
       {{ with .Params.main }}
+      <div data-aos="fade-in">
         {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
         <p class="center mb4">{{ .text }}</p>
+      </div>
       {{ end }}
 
       <div class="flex flex-row flex-wrap justify-center">

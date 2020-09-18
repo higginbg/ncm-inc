@@ -10,8 +10,10 @@
 
       {{ with .Params.main }}
         
+      <div data-aos="fade-in">
         {{ partial "section-title" (dict "text" .heading "icon" "fas fa-hard-hat") }}
         {{ with .text }}<p class="mb4 db">{{ . }}</p>{{ end }}
+      </div>
 
       {{ end }}
 

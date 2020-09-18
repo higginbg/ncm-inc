@@ -9,35 +9,51 @@
 <!-- Projects -->
 
 <div class="section bg-white">
-  <div class="mw7 center">
-    
-    {{ partial "section-title" (dict "text" .Params.projects.heading "icon" "fas fa-hard-hat") }}
+  <div class="mw9 flex-l flex-row-reverse items-center justify-center center pa2-l">
 
-    <p class="mb3 center">{{ .Params.projects.text }}</p>
+    <div class="w-40-l pl3-l" data-aos="fade-in">
+      {{ partial "section-title" (dict "text" .Params.projects.heading "icon" "fas fa-hard-hat") }}
   
-    <div class="flex-ns flex-row flex-wrap center mhn2-ns mw7">
+      <p class="mb4 center">{{ .Params.projects.text }}</p>
+
+      <div class="dn db-l" style="margin-top: -1.5em;">
+        {{ partial "button-forward" (dict "link" "/projects" "text" .Params.projects.button) }}
+      </div>
+    </div>
+    
+  
+    <div class="w-60-l flex-ns flex-row flex-wrap center mhn2-ns mw7">
   
       {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
         {{ .Render "li" }}
       {{ end }}
   
     </div>
+  </div>
 
+  <div class="db dn-l">
     {{ partial "button-forward" (dict "link" "/projects" "text" .Params.projects.button) }}
-
   </div>
 </div>
 
 <!-- About -->
 {{ with .Params.about }}
   <div class="section bg-grey-1">
+    <div class="mw9 center">
+    
+    <div class="flex-l flex-row items-center justify-center center">
+      <div class="w-40-l pr3-l" data-aos="fade-in">
+        {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
+    
+        <p class="mb4 center">{{ .text }}</p>
 
-    {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
-
-    <p class="mb3 center">{{ .text }}</p>
-
-    <div class="mw7 center">
-      <div class="flex-ns mhn2-ns">
+        <div class="dn db-l" style="margin-top: -1.5em;">
+          {{ partial "button-forward" (dict "link" "/about" "text" .button)}}
+        </div>
+      </div>
+  
+  
+      <div class="w-60-l flex-ns mhn2-ns">
       
         <div class="w-50-ns ph2-ns pv2">
           <div class="bg-off-white br1 tile-shadow">
@@ -52,6 +68,10 @@
         </div>
   
       </div>
+      </div>
+  </div>
+
+    <div class="db dn-l">
       {{ partial "button-forward" (dict "link" "/about" "text" .button)}}
     </div>
   </div>
@@ -59,11 +79,21 @@
 
 <!-- Testimonials -->
 <div class="section bg-white neg-margin-offset relative">
-  <div class="mw7 center">
+  <div class="mw9 flex-l flex-row-reverse justify-center items-center center">
 
-    {{ partial "section-title"  (dict "text" .Params.testimonials.heading "icon" "far fa-building") }}
-  
-    <div class="flex flex-row flex-wrap justify-center mb3-ns mb1">
+    <div class="w-40-l" data-aos="fade-in">
+      {{ partial "section-title"  (dict "text" .Params.testimonials.heading "icon" "far fa-building") }}
+
+      {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
+        <p class="mb4 center">{{ .Params.intro.text }}</p>
+      {{ end }}
+
+      <div class="dn db-l" style="margin-top: -1.5em;">
+        {{ partial "button-forward" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
+      </div>
+    </div>
+    
+    <div class="w-60-l flex flex-row flex-wrap justify-center mb3-ns mb1">
 
       {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
         {{ with .Params.main }}
@@ -76,9 +106,10 @@
       {{ end }}
   
     </div> 
-  
-  {{ partial "button-forward" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
+  </div>
 
+  <div class="db dn-l">
+    {{ partial "button-forward" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
   </div>
 </div>
 

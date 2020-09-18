@@ -9,9 +9,12 @@
     <div class="mw7 center">
 
       {{ with .Params.main }}
-    
+
+      <div data-aos="fade-in">
         {{ partial "section-title" (dict "text" .heading "icon" "far fa-building") }}
         {{ with .text }}<p class="mb4 db">{{ . }}</p>{{ end }}
+      </div>
+    
 
         <div class="flex flex-row flex-wrap justify-center">
           {{ range .list }}
