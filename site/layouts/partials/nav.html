@@ -1,4 +1,4 @@
-<nav id="nav" class="f5-l f5 w-100 bg-black o-100 fixed z-999 no-select divider-grey size-trans">
+<nav id="nav" class="o-100 no-select divider-grey size-trans">
 	<div class="w-100 h-100 flex flex-row justify-between relative">
 
 		<!-- Menu Button (for small screens) -->
@@ -7,18 +7,16 @@
 		</button>
 
 		<!-- Logo -->
-		<a id="logo" href="/" class="nav-btn lh-solid ph3 mr4-l"  tabindex="2">
-			<div id="logo-container" class="lh-solid tc flex flex-column justify-center items-center h-100 no-select">
-				<span class="f3 b primary">NCM</span>
-			</div>
+		<a id="logo" href="/" class="ph3 mr4-l pt2"  tabindex="2">
+			<img src="/img/logos/logo.png" alt="logo">
 		</a>
 
 		<!-- Primary Nav -->
-		<div id="menu-container" class="overflow-y-auto bg-black static-l absolute top-100 h-100-l vh-100 pb0-l pb3 bt-0-l bt b--grey-3 z-999">
+		<div id="menu-container" class="pb0-l pb3 bt-0-l bt b--grey-2">
 
-			<ul class="overflow-x-hidden overflow-y-visible bg-black w-auto-l w0 h-100-l h-90 flex flex-row-l flex-column off-white size-trans">
+			<ul class="pt2-l pr3-l size-trans">
 				
-				<div class="dn-l h-100-l">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
+				<div class="dn-l">{{ partial "nav-link" (dict "link" "/" "text" "Home") }}</div>
 				{{ partial "nav-link" (dict "link" "/about" "text" "About") }}
 				{{ partial "nav-link" (dict "link" "/projects" "text" "Projects") }}
 				{{ partial "nav-link" (dict "link" "/testimonials" "text" "Testimonials") }}

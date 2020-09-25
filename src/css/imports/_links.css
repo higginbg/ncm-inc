@@ -52,8 +52,11 @@
   }
 }
 
-.nav-link {
+.nav-link, .active {
+  font-size: 0.8em;
+  display: flex;
   text-decoration: none;
+  width: 100%;
   color: var(--white);
   transition: var(--transition-all) !important;
   cursor: pointer;

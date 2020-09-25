@@ -26,12 +26,12 @@
 .top-25    { top:    25%; transform:   translateY(-25%); }
 .right-25  { right:  25%; transform:   translateX(-25%); }
 .bottom-25 { bottom: 25%; transform:   translateY(25%); }
-.left-25   { left:   25%; transform:   translateX(25%); }
+.left-25   { left:   25%; transform:   translateX(-25%); }
 
 .top-50    { top:    50%; transform:   translateY(-50%); }
 .right-50  { right:  50%; transform:   translateX(-50%); }
 .bottom-50 { bottom: 50%; transform:   translateY(50%); }
-.left-50   { left:   50%; transform:   translateX(50%); }
+.left-50   { left:   50%; transform:   translateX(-50%); }
 
 .top-100    { top:   100%; }
 
@@ -122,6 +122,10 @@
   .right--2-l  { right:  -2rem; }
   .bottom--2-l { bottom: -2rem; }
   .left--2-l   { left:   -2rem; }
+  .top-25-l    { top:    25%; transform:   translateY(-25%); }
+  .right-25-l  { right:  25%; transform:   translateX(-25%); }
+  .bottom-25-l { bottom: 25%; transform:   translateY(25%); }
+  .left-25-l   { left:   25%; transform:   translateX(-25%); }
   .absolute--fill-l {
     top: 0;
     right: 0;

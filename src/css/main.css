@@ -34,7 +34,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.0/css/lightgallery.min.css');
 
 /* Modules */
-@import './imports/_animations';
+@import './imports/_jumbotron';
 @import './imports/_box-sizing';
 @import './imports/_images';
 @import './imports/_background-size';
