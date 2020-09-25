@@ -4,9 +4,24 @@
   transition: var(--transition-shadow) !important;
 }
 
+.project-tile {
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+}
+
 .tile-link {
   text-decoration: none;
   transition: var(--transition-shadow) !important;
+
+  & .media {
+    opacity: 0.75;
+    transition: opacity 0.25s ease-out;
+  }
+
+  & .cover {
+    transition: box-shadow 0.25s ease-out !important;
+  }
 
   .backdrop {
     position: absolute;
@@ -16,9 +31,7 @@
   }
   
   .banner {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    display: block;
     color: var(--white);
     width: 100%;
     opacity: 0.9;
@@ -63,6 +76,10 @@
       box-shadow: var(--shadow-hover);
     }
 
+    & .media {
+      opacity: 1;
+    }
+
     & .gallery .hover-cover {
       opacity: 1;
       visibility: visible;
@@ -71,10 +88,6 @@
 
     & .img-container {
       transform: scale(1.15);
-    }
-
-    & .banner {
-      padding-bottom: var(--spacing-medium);
     }
   }
 
@@ -91,7 +104,22 @@
   }
 }
 
+@media (--breakpoint-medium) {
+  .project-tile {
+    margin: 0;
+    max-width: 50%;
+  }
+}
+
 @media (--breakpoint-large) {
+
+  .project-tile {
+    max-width: 33%;
+  }
+
+  #home .project-tile{
+    max-width: 50%;
+  }
 
   .tile-link {
 

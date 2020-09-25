@@ -16,9 +16,9 @@
   --line-height: 1.5;
   --text-color: var(--black);
 
-	--font-size: 20px;
-	--font-size-m: 22px;
-	--font-size-l: 24px;
+	--font-size: 18px;
+	--font-size-m: 20px;
+	--font-size-l: 22px;
 
 	--body-font-weight: 300;
 	--bold-font-weight: 600;
@@ -40,7 +40,7 @@
 	--neg-margin: 10em;
 
 	/* Border Radius */
-	--border-radius: 7px;
+	--border-radius: 5px;
 	--border-radius-pill: 9999px;
 	
   /* Transitions */
@@ -110,6 +110,6 @@
 @media (--breakpoint-large) {
   :root {
     --nav-height: 120px;
-    --nav-height-small: 80px;
+    --nav-height-small: 70px;
   }
 }

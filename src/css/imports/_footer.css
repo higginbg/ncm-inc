@@ -10,6 +10,6 @@ footer {
 
 @media (--breakpoint-large) {
   .neg-margin {
-    margin-top: calc(-1 * var(--neg-margin));
+    margin-top: calc(-0.75 * var(--neg-margin));
   }
 }

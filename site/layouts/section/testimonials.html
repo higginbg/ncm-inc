@@ -2,8 +2,6 @@
 
 {{ partial "jumbotron" .Params }}
 
-{{ partial "short-text" .Params.intro }}
-
 <div class="section bg-white neg-margin-offset">
 
     <div class="mw7 center">
@@ -11,10 +9,9 @@
       {{ with .Params.main }}
 
       <div data-aos="fade-in">
-        {{ partial "section-title" (dict "text" .heading "icon" "far fa-building") }}
+        {{ partial "section-title" .heading }}
         {{ with .text }}<p class="mb4 db">{{ . }}</p>{{ end }}
       </div>
-    
 
         <div class="flex flex-row flex-wrap justify-center">
           {{ range .list }}

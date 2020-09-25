@@ -3,116 +3,116 @@
 <!-- Jumbotron -->
 {{ partial "jumbotron-home" .Params }}
 
-<!-- Intro -->
-{{ partial "short-text" .Params.intro }}
-
 <!-- Projects -->
 
-<div class="section bg-white">
-  <div class="mw9 flex-l flex-row-reverse items-center justify-center center pa2-l">
+<div id="home">
 
-    <div class="w-40-l pl3-l" data-aos="fade-in">
-      {{ partial "section-title" (dict "text" .Params.projects.heading "icon" "fas fa-hard-hat") }}
+  <div class="section bg-white">
+    <div class="mw9 flex-l flex-row-reverse items-center justify-center center ph2-l pv4">
   
-      <p class="mb4 center">{{ .Params.projects.text }}</p>
-
-      <div class="dn db-l" style="margin-top: -1.5em;">
-        {{ partial "button" (dict "link" "/projects" "text" .Params.projects.button) }}
-      </div>
-    </div>
+      <div class="w-40-l pl3-l" data-aos="fade-in">
+        {{ partial "section-title" .Params.projects.heading }}
     
+        <p class="mb4 center">{{ .Params.projects.text }}</p>
   
-    <div class="w-60-l flex-ns flex-row flex-wrap center mhn2-ns mw7">
-  
-      {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
-        {{ .Render "li" }}
-      {{ end }}
-  
-    </div>
-  </div>
-
-  <div class="db dn-l">
-    {{ partial "button" (dict "link" "/projects" "text" .Params.projects.button) }}
-  </div>
-</div>
-
-<!-- About -->
-{{ with .Params.about }}
-  <div class="section bg-grey-1">
-    <div class="mw9 center">
-    
-    <div class="flex-l flex-row items-center justify-center center">
-      <div class="w-40-l pr3-l" data-aos="fade-in">
-        {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
-    
-        <p class="mb4 center">{{ .text }}</p>
-
         <div class="dn db-l" style="margin-top: -1.5em;">
-          {{ partial "button" (dict "link" "/about" "text" .button)}}
+          {{ partial "button" (dict "link" "/projects" "text" .Params.projects.button) }}
         </div>
       </div>
-  
-  
-      <div class="w-60-l flex-ns mhn2-ns">
       
-        <div class="w-50-ns ph2-ns pv2">
-          <div class="bg-off-white br1 tile-shadow">
-            <img src="{{ .image1 }}" alt="" class="lozad lozad-trigger w-100 br1 h5 center object-cover db" data-aos="fade-in">
-          </div>
-        </div>
-  
-        <div class="w-50-ns ph2-ns pv2">
-          <div class="bg-off-white br1 tile-shadow">
-            <img src="{{ .image2 }}" alt="" class="lozad lozad-trigger w-100 br1 h5 center object-cover db" data-aos="fade-in">
-          </div>
-        </div>
-  
-      </div>
-      </div>
-  </div>
-
-    <div class="db dn-l">
-      {{ partial "button" (dict "link" "/about" "text" .button)}}
-    </div>
-  </div>
-{{ end }}
-
-<!-- Testimonials -->
-<div class="section bg-white neg-margin-offset relative">
-  <div class="mw9 flex-l flex-row-reverse justify-center items-center center">
-
-    <div class="w-40-l pl3-l" data-aos="fade-in">
-      {{ partial "section-title"  (dict "text" .Params.testimonials.heading "icon" "far fa-building") }}
-
-      {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
-        <p class="mb4 center">{{ .Params.intro.text }}</p>
-      {{ end }}
-
-      <div class="dn db-l" style="margin-top: -1.5em;">
-        {{ partial "button" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
-      </div>
-    </div>
     
-    <div class="w-60-l flex flex-row flex-wrap justify-center mb3-ns mb1">
-
-      {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
-        {{ with .Params.main }}
-          <div class="flex flex-row flex-wrap justify-center">
-            {{ range first 3 .list }}
-              {{ partial "card-testimonial" . }}
-            {{ end }}
-          </div>
+      <div class="w-60-l flex-ns flex-row flex-wrap center mhn2-ns mw7">
+    
+        {{ range first 4 ( where ( where .Site.Pages "Section" "=" "projects" ) ".Params.featured" "=" true ) }}
+          {{ .Render "li" }}
         {{ end }}
-      {{ end }}
+    
+      </div>
+    </div>
   
-    </div> 
+    <div class="db dn-l">
+      {{ partial "button" (dict "link" "/projects" "text" .Params.projects.button) }}
+    </div>
   </div>
-
-  <div class="db dn-l">
-    {{ partial "button" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
+  
+  <!-- About -->
+  {{ with .Params.about }}
+    <div class="section bg-grey-1">
+      <div class="mw9 flex-l flex-row items-center justify-center center ph2-l pv4">
+  
+        <div class="w-40-l pr3-l" data-aos="fade-in">
+          {{ partial "section-title" .heading }}
+      
+          <p class="mb4 center">{{ .text }}</p>
+  
+          <div class="dn db-l" style="margin-top: -1.5em;">
+            {{ partial "button" (dict "link" "/about" "text" .button)}}
+          </div>
+        </div>
+    
+    
+        <div class="w-60-l flex-ns mhn2-ns">
+        
+          <div class="w-50-ns ph2-ns pv2">
+            <div class="bg-off-white br1 tile-shadow">
+              <img src="{{ .image1 }}" alt="" class="lozad lozad-trigger w-100 br1 h5 center object-cover db" data-aos="fade-in">
+            </div>
+          </div>
+    
+          <div class="w-50-ns ph2-ns pv2">
+            <div class="bg-off-white br1 tile-shadow">
+              <img src="{{ .image2 }}" alt="" class="lozad lozad-trigger w-100 br1 h5 center object-cover db" data-aos="fade-in">
+            </div>
+          </div>
+    
+        </div>
+      </div>
+  
+      <div class="db dn-l">
+        {{ partial "button" (dict "link" "/about" "text" .button)}}
+      </div>
+    </div>
+  {{ end }}
+  
+  <!-- Testimonials -->
+  <div class="section bg-white neg-margin-offset relative">
+    <div class="mw9 flex-l flex-row-reverse justify-center items-center center ph2-l pt4">
+  
+      <div class="w-40-l pl3-l" data-aos="fade-in">
+        {{ partial "section-title"  .Params.testimonials.heading }}
+  
+        {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
+          <p class="mb4 center">{{ .Params.intro.text }}</p>
+        {{ end }}
+  
+        <div class="dn db-l" style="margin-top: -1.5em;">
+          {{ partial "button" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
+        </div>
+      </div>
+      
+      <div class="w-60-l flex flex-row flex-wrap justify-center mb3-ns mb1">
+  
+        {{ range ( where .Site.Sections "Section" "=" "testimonials") }}
+          {{ with .Params.main }}
+            <div class="flex flex-row flex-wrap justify-center">
+              {{ range first 3 .list }}
+                {{ partial "card-testimonial" . }}
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+    
+      </div> 
+    </div>
+  
+    <div class="db dn-l">
+      {{ partial "button" (dict "link" "/testimonials" "text" .Params.testimonials.button)}}
+    </div>
   </div>
+  
+  {{ partial "form-contact" }}
+  
 </div>
 
-{{ partial "form-contact" }}
 
 {{ end }}

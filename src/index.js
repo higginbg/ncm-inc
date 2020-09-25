@@ -50,13 +50,16 @@ AOS.init({
 });
 
 // lightgallery.js
-lightGallery(document.getElementById('lightgallery'), {
-  subHtmlSelectorRelative: true,
-  scale: 0.5,
-  actualSize: false,
-  download: false,
-  selector: '.item',
-});
+const lg = document.getElementById('lightgallery');
+if (lg) {
+  lightGallery(lg, {
+    subHtmlSelectorRelative: true,
+    scale: 0.5,
+    actualSize: false,
+    download: false,
+    selector: '.item',
+  });
+}
 
 /* Event listeners */
 

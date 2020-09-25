@@ -1,11 +1,15 @@
 .flip-card-wrapper {
   perspective: 1000px;
-  
 
   &.about .flip-card {
     min-height: 400px;
     max-height: 500px;
     width: 350px;
+  }
+
+  & .media {
+    opacity: 0.85;
+    transition: opacity 0.25s ease-out;
   }
   
   & .flip-card {
@@ -22,17 +26,13 @@
     touch-action: none;
   }
 
-  & .banner {
-    transition: padding-bottom 0.3s ease-out;
-  }
-
   &:hover {
     & .flip-card-front {
       box-shadow: var(--flip-shadow);
     }
 
-    & .banner {
-      padding-bottom: var(--spacing-medium);
+    & .media {
+      opacity: 1;
     }
   } 
 

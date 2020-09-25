@@ -22,12 +22,16 @@
 #logo {
   transition: opacity 0.3s ease-out !important;
 
-  &:hover {
+  &:hover, &:focus {
     opacity: 0.95;
     
     img {
       box-shadow: 0 0 10px 1px var(--off-white);
     }
+  }
+
+  &:focus {
+    outline: none !important;
   }
 
   img {
@@ -79,7 +83,6 @@
       position: relative;
       font-weight: var(--bold-font-weight);
       color: var(--primary);
-      background-color: var(--grey-4);
       border-left: var(--spacing-small) solid transparent;
       pointer-events: none;
     }

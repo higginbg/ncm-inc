@@ -2,14 +2,12 @@
 
   {{ partial "jumbotron" .Params }}
 
-  {{ partial "short-text" .Params.intro }}
-
   <div class="section bg-white neg-margin-offset">
     <div class="mw7 center">
 
       {{ with .Params.main }}
       <div data-aos="fade-in">
-        {{ partial "section-title" (dict "text" .heading "icon" "fas fa-tree") }}
+        {{ partial "section-title" .heading }}
         <p class="center mb4">{{ .text }}</p>
       </div>
       {{ end }}

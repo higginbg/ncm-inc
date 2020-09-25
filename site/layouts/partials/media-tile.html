@@ -1,26 +1,28 @@
-<div class="bg-off-white br1 tile-shadow relative overflow-hidden">
-  <div
-    class="w-100 cover z-1 animated fadeIn slow"
-    style="background-image: url('{{ .loadingThumb }}');"
-  >
-
-    <!-- No lazy loading when JS is disabled -->
-    <noscript class="media tile absolute w-100 h4-ns h4-m h5-l h5 z-3">
-      <div
-        class="br1 h4-ns h4-m h5-l h5 cover w-100 relative bg-center z-4 animated fadeIn slow"
-        style="background-image: url('{{ .image }}');"
-      >
-        {{ partial "media-hover-cover" . }}
-      </div>
-    </noscript>
-
+<div class="bg-off-white br1 tile tile-shadow relative overflow-hidden">
+  <div class="h-100 w-100">
     <div
-      class="lozad lozad-trigger media tile h4-ns h4-m h5-l h5 br1 cover relative bg-center z-2"
-      data-background-image="{{ .image }}"
-      data-aos="fade-in" data-aos-duration="500" data-aos-delay="100"
+      class="w-100 cover z-1 animated fadeIn slower"
+      style="background-image: url('{{ .loadingThumb }}');"
     >
-      {{ partial "media-hover-cover" . }}
-    </div>
+      <!-- No lazy loading when JS is disabled -->
+      <noscript class="media absolute w-100 h4-ns h4-m h5-l h5 z-3">
+        <div
+          class="br1 h4-ns h4-m h5-l h5 cover w-100 relative bg-center z-4 animated fadeIn slow"
+          style="background-image: url('{{ .image }}');"
+        >
+          {{ partial "media-hover-cover" . }}
+        </div>
+      </noscript>
 
+      <div class="h-100 w-100" data-aos="fade-in" data-aos-duration="1000">
+        <div class="media">
+          <div
+            class="lozad lozad-trigger h4-ns h4-m h5-l h5 cover relative bg-center z-2"
+            data-background-image="{{ .image }}"
+          ></div>
+        </div>
+      </div>
+    </div>
   </div>
+  {{ partial "media-hover-cover" . }}
 </div>

@@ -5,15 +5,20 @@
       <!-- Front -->
       <div class="flip-card-front br1">
   
-        <div class="w-100 h6 cover bg-center br1 br--top overflow-hidden" style="background-image: url('{{ .loadingThumb }}');">
-          <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="lozad lozad-trigger w-100 h-100 object-cover" data-aos="fade-in" data-aos-duration=500 />
+        <div class="media">
+          <div class="w-100 h6 cover bg-center overflow-hidden" style="background-image: url('{{ .loadingThumb }}');">
+            <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="lozad lozad-trigger w-100 h-100 object-cover" data-aos="fade-in" data-aos-duration=500 />
+          </div>
         </div>
   
   
-        <div class="banner absolute bottom-0 o-80 w-100 bg-black off-white ph3 pv2 br1 br--bottom">
-          
-          <h2 class="f5 b primary lh-title mb1">{{ .name }}</h2>
-          <h3 class="f6">{{ .position }}</h3>
+        <div class="banner absolute bottom-0 w-100 off-white ph3 pv2">
+
+          <div class="w-100 h-100 absolute bottom-0 left-0 bg-black o-80"></div>
+          <div data-aos="fade-in">
+            <h2 class="f5 b primary lh-title mb1">{{ .name }}</h2>
+            <h3 class="f6">{{ .position }}</h3>
+          </div>
   
         </div>
       </div>
