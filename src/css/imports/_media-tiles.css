@@ -93,7 +93,7 @@
     outline: 0!important;
 
    & .banner {
-     background-color: var(--primary);
+    background: linear-gradient(105deg, var(--primary), var(--primary)) !important;
 
      & .primary {
        color: var(--off-white);

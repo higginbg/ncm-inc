@@ -31,6 +31,7 @@
     }
 
     & .content {
+      text-align: center;
       display: flex;
       align-items: center;
       height: 100%;
@@ -38,7 +39,7 @@
     }
 
     & .btn-container {
-      text-align: left;
+      margin: auto;
     }
   }
 }
@@ -60,8 +61,12 @@
       min-height: 400px;
       padding: 0 var(--spacing-small);
 
-      & .btn-container {
+      & .content {
         text-align: left;
+      }
+
+      & .btn-container {
+        margin: 0;
       }
     }
   }
