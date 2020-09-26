@@ -3,13 +3,13 @@
 
   &.about .flip-card {
     min-height: 400px;
-    max-height: 500px;
     width: 350px;
   }
 
   & .media {
-    opacity: 0.85;
-    transition: opacity 0.25s ease-out;
+    filter: grayscale(100%);
+    /* opacity: 0.85; */
+    transition: filter 0.25s ease-out;
   }
   
   & .flip-card {
@@ -32,7 +32,7 @@
     }
 
     & .media {
-      opacity: 1;
+      filter: grayscale(0%);
     }
   } 
 

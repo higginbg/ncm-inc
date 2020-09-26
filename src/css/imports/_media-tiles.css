@@ -34,8 +34,6 @@
     display: block;
     color: var(--white);
     width: 100%;
-    opacity: 0.9;
-    transition: padding-bottom 0.25s ease-out;
   }
   
   .gallery .backdrop {

@@ -1,42 +1,47 @@
 <div class="flip-card-wrapper about pa2-ns pv2">
-  <blockquote class="flip-card" tabindex=0>
+  <blockquote class="flip-card" tabindex="0">
     <div class="flip-card-inner">
-  
       <!-- Front -->
       <div class="flip-card-front bg-off-white br1">
-  
         <div class="media">
-          <div class="w-100 h6 cover bg-center overflow-hidden" style="background-image: url('{{ .loadingThumb }}');">
-            <img src="{{ .image }}" alt="{{ .name }}, {{ .position }} at NCM Inc." class="lozad lozad-trigger w-100 h-100 object-cover" data-aos="fade-in" data-aos-duration=500 />
+          <div
+            class="w-100 h6 cover bg-center overflow-hidden"
+            style="background-image: url('{{ .loadingThumb }}');"
+          >
+            <img
+              src="{{ .image }}"
+              alt="{{ .name }}, {{ .position }} at NCM Inc."
+              class="lozad lozad-trigger w-100 h-100 object-cover"
+              data-aos="fade-in"
+              data-aos-duration="500"
+            />
           </div>
         </div>
-  
-  
-        <div class="banner absolute bottom-0 w-100 off-white ph3 pv2">
 
-          <div class="w-100 h-100 absolute bottom-0 left-0 bg-black o-80"></div>
-          <div data-aos="fade-in">
+        <div
+          class="w-100 off-white ph3 pv2"
+          style="
+            background: linear-gradient(105deg, var(--black), var(--grey-4));
+          "
+        >
+          <div>
             <h2 class="f5 b primary lh-title mb1">{{ .name }}</h2>
             <h3 class="f6">{{ .position }}</h3>
           </div>
-  
         </div>
       </div>
-  
+
       <!-- Back -->
       <div class="flip-card-back bg-grey-1 pa2 mb3 br1">
         <div class="inner pa3 h-100 bg-white br1">
-
           <div class="mb1 bb b--primary bw1">
-            <h4 class="f4 b lh-title mb3">About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}</h4>
+            <h4 class="f4 b lh-title mb3">
+              About {{ with .name }}{{ index (split . " ") 0 }}{{ end }}
+            </h4>
             <p class="db mb1">{{ .text }}</p>
           </div>
-          
-          
         </div>
       </div>
-  
     </div>
   </blockquote>
 </div>
-
