@@ -21,8 +21,13 @@
       top: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(295deg, var(--black), var(--grey-3));
-      opacity: 90%;
+    }
+
+    & .content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
     }
 
     & .btn-container {
