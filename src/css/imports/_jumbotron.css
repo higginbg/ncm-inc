@@ -2,11 +2,11 @@
   position: relative;
   display: flex;
   flex-direction: column-reverse;
-  height: auto;
+  height: 50vh;
+  min-height: 400px;
 
   & .image {
-    height: 50vh;
-    min-height: 400px;
+    height: 100%;
     width: 100%;
   }
 

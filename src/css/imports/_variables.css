@@ -109,7 +109,7 @@
 
 @media (--breakpoint-large) {
   :root {
-    --nav-height: 120px;
+    --nav-height: 100px;
     --nav-height-small: 70px;
   }
 }
