@@ -84,7 +84,6 @@
       font-weight: var(--bold-font-weight);
       color: var(--primary);
       border-left: var(--spacing-small) solid transparent;
-      pointer-events: none;
     }
   }
 

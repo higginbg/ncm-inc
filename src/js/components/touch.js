@@ -1,7 +1,7 @@
 // Handle swiping left to close menu
 // https://stackoverflow.com/questions/15084675/how-to-implement-swipe-gestures-for-mobile-devices
 
-import menuClose from '../modules/MenuClose';
+import { close as closeNav } from './nav';
 
 let xDown = null;
 let yDown = null;
@@ -20,18 +20,23 @@ const handleTouchMove = e => {
   var xDiff = xDown - xUp;
   var yDiff = yDown - yUp;
 
-  if (Math.abs(xDiff) > Math.abs(yDiff)) { /* most significant */
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    /* most significant */
 
-    if (xDiff > 0) {    /* left swipe */
-      menuClose();
-    } else {            /* right swipe */
+    if (xDiff > 0) {
+      /* left swipe */
+      closeNav();
+    } else {
+      /* right swipe */
       /* Do nothing */
     }
   } else {
-    if (yDiff > 0) {    /* up swipe */
-      menuClose();
-    } else {            /* down swipe */
-      menuClose();
+    if (yDiff > 0) {
+      /* up swipe */
+      closeNav();
+    } else {
+      /* down swipe */
+      closeNav();
     }
   }
 
@@ -40,4 +45,7 @@ const handleTouchMove = e => {
   yDown = null;
 };
 
-export { handleTouchStart, handleTouchMove };
+export const init = () => {
+  document.addEventListener('touchstart', handleTouchStart, false);
+  document.addEventListener('touchmove', handleTouchMove, false);
+};

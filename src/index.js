@@ -1,124 +1,23 @@
-// Imports
+import * as lozad from './js/components/lozad';
+import * as aos from './js/components/aos';
+import * as touch from './js/components/touch';
+import * as lightGallery from './js/components/lightGallery';
+import * as nav from './js/components/nav';
+import * as forms from './js/components/forms/init';
 import './css/main.css';
 
-import lozad from 'lozad';
+lozad.init();
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+aos.init();
 
-import 'lightgallery.js/dist/js/lightgallery.min.js';
-import 'lg-zoom.js/dist/lg-zoom.min.js';
+nav.init();
 
-import navShrink from './js/modules/NavShrink';
-import navHighlight from './js/modules/NavHighlight';
-import menuClose from './js/modules/MenuClose';
+touch.init();
 
-import { validateFile, validate, handleForm } from './js/handlers/HandleForm';
-import { handleTouchStart, handleTouchMove } from './js/handlers/HandleTouch';
-import {
-  nav,
-  drpdwn,
-  drpdwnBtn,
-  form,
-  requiredInputs,
-  resume,
-  isRoot,
-  menuOpenIcon,
-  menuCloseIcon,
-  navSmall,
-  resumeBtn,
-} from './js/variables';
+lightGallery.init();
 
-/* Initiations */
-
-// lozad
-const lozadEl = document.querySelectorAll('.lozad');
-if (lozadEl.length > 0) {
-  const observer = lozad(lozadEl); // lazy loads elements with default selector as '.lozad'
-  observer.observe();
-
-  const lozadTrig = document.querySelector('.lozad-trigger');
-  observer.triggerLoad(lozadTrig);
-}
-
-// AOS
-AOS.init({
-  startEvent: 'load',
-  duration: 1000,
-  once: true,
-  easing: 'ease',
-});
-
-// lightgallery.js
-const lg = document.getElementById('lightgallery');
-if (lg) {
-  lightGallery(lg, {
-    subHtmlSelectorRelative: true,
-    scale: 0.5,
-    actualSize: false,
-    download: false,
-    selector: '.item',
-  });
-}
-
-/* Event listeners */
-
-// window
+forms.init();
 
 window.addEventListener('load', () => {
   document.body.classList.remove('preload');
-  AOS.refresh();
-  navHighlight(drpdwn, isRoot);
 });
-
-window.addEventListener('resize', menuClose);
-
-window.addEventListener('scroll', () => {
-  menuClose();
-  navShrink();
-});
-
-window.addEventListener('click', ({ target }) => {
-  // close menu on click
-  const tag = target.tagName.toLowerCase();
-  if (drpdwn.classList.contains(navSmall) && !target.closest('nav')) {
-    menuClose();
-  }
-
-  // Add padding for nav when input is clicked
-  const height =
-    tag === 'input' || tag === 'textarea'
-      ? nav.clientHeight
-      : -nav.clientHeight;
-  document.body.paddingTop = `${document.body.paddingTop + height}px`;
-});
-
-// document
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchmove', handleTouchMove, false);
-
-// others
-nav.addEventListener('click', e => e.stopPropagation());
-
-drpdwnBtn.addEventListener('click', () => {
-  navShrink();
-  drpdwn.classList.toggle(navSmall);
-  drpdwnBtn.innerHTML = drpdwn.classList.contains(navSmall)
-    ? menuCloseIcon
-    : menuOpenIcon;
-});
-
-if (form) {
-  form.addEventListener('submit', e => handleForm(e));
-}
-
-if (requiredInputs) {
-  for (const input of requiredInputs) {
-    input.addEventListener('blur', e => validate(e, input));
-  }
-}
-
-if (resume) {
-  resume.addEventListener('change', e => validateFile(resume));
-  resumeBtn.addEventListener('click', () => resume.click());
-}
