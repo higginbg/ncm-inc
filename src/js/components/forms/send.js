@@ -66,7 +66,7 @@ export const sendData = async (form, data) => {
       }
 
       list += `
-        <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
+        <h3 class="b primary mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
         <p class="mt1 bg-grey-1 pa2 br1 pre">${userInput || '(none)'}</p>
       `;
     }
