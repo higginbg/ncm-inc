@@ -1,5 +1,3 @@
-import 'aos/dist/aos.css';
-
 import * as lozad from './js/components/lozad';
 import * as aos from './js/components/aos';
 import * as touch from './js/components/touch';

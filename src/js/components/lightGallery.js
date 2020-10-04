@@ -1,10 +1,10 @@
-export const init = async () => {
+import 'lightgallery.js';
+import 'lg-zoom.js/dist/lg-zoom.min.js';
+
+export const init = () => {
   const lg = document.getElementById('lightgallery');
 
   if (lg) {
-    await import('lightgallery.js');
-    await import('lg-zoom.js/dist/lg-zoom.min.js');
-
     lightGallery(lg, {
       subHtmlSelectorRelative: true,
       scale: 0.5,
