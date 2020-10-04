@@ -86,10 +86,10 @@ export const sendData = async (form, data) => {
   }
 
   form.previousElementSibling.innerText = "We'll be in touch soon!";
-  form.innerHTML = `<div>${inputList.map(
+  form.innerHTML = `<div class="black pa2">${inputList.forEach(
     ({ name, input }) => `
       <h3 class="mt3">${name}</h3>
-      <p class="mt1 bg-grey-1 br1 pa2 pre">${input}</p>
+      <p class="mt1 bg-grey-1 pre">${input}</p>
     `
   )}</div>`;
 
