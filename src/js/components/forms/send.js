@@ -67,7 +67,7 @@ export const sendData = async (form, data) => {
 
       list += `
         <h3 class="mt3">${id.charAt(0).toUpperCase() + id.slice(1)}</h3>
-        <p class="mt1 bg-grey-1 br1 pre">${userInput || '(none)'}</p>
+        <p class="mt1 bg-grey-1 pa2 br1 pre">${userInput || '(none)'}</p>
       `;
     }
   }
@@ -85,7 +85,7 @@ export const sendData = async (form, data) => {
   }
 
   form.previousElementSibling.innerText = "We'll be in touch soon!";
-  form.innerHTML = `<div class="black pa2">${list}</div>`;
+  form.innerHTML = `<div class="black pa3">${list}</div>`;
 
   Swal.fire({
     icon: 'success',
