@@ -54,8 +54,7 @@ export const sendData = async (form, data) => {
   }
 
   // Show message details to user
-  const list = '';
-
+  let list = '';
   let error = '';
   for (const [id, value] of data.entries()) {
     const userInput = value.name || value;
