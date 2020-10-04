@@ -11,12 +11,6 @@ resources:
     title: Lobby 2
   - src: 'lobby-3.jpg'
     title: Lobby 3
-  - src: 'fitness-center-1.jpg'
-    title: Fitness Center 1
-  - src: 'fitness-center-2.jpg'
-    title: Fitness Center 2
-  - src: 'pool.jpg'
-    title: Pool
   - src: 'bar-room.jpg'
     title: Bar Room
   - src: 'breakfast-area.jpg'
@@ -29,14 +23,6 @@ resources:
     title: Lounge Area 1
   - src: 'lounge-area-2.jpg'
     title: Lounge Area 2
-  - src: 'conference-room-1.jpg'
-    title: Conference Room 1
-  - src: 'conference-room-2.jpg'
-    title: Conference Room 2
-  - src: 'conference-room-3.jpg'
-    title: Conference Room 3
-  - src: 'conference-room-4.jpg'
-    title: Conference Room 4
   - src: 'guest-room-1.jpg'
     title: Guest Room 1
   - src: 'guest-room-2.jpg'
