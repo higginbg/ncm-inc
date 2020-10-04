@@ -4,6 +4,7 @@ slug: Portland, OR
 image: 'bar-room.jpg'
 date: '2017-02-01T00:00:00.000Z'
 featured: true
+description: 'https://www.marriott.com/hotels/travel/pdxnh-courtyard-portland-north/'
 resources:
   - src: 'lobby.jpg'
     title: Lobby

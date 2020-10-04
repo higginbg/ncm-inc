@@ -5,25 +5,36 @@
   <div class="section bg-white neg-margin-offset">
     <div class="mw8 center pt3 pb4">
 
-      {{ if .Content }}
+      {{ with .Content }}
+      <div class="flex-l flex-row mb4 bg-off-white br1 pa4-ns pa3 nav-shadow">
 
-      <div class="flex-l flex-row mb4">
-
-        <div class="w-40-l">
-          <h2 class="dib f3 lh-title bb mb4 pb1 b--primary bw1">Overview</h2>
+        <div class="w-30-l mb3">
+          <h2 class="f3 b">Overview</h2>
         </div>
   
-        <div class="w-60-l mb4 ml3-l">    
-          {{ .Content }}
+        <div class="w-70-l h-100 mb4 ml3-l">    
+          {{ . }}
         </div>
       </div>
-
-        
       {{ end }}
 
-      <h2 class="dib f3 lh-title mb3 pb1 bb b--primary bw1">Gallery</h2>
+      {{ with .Description }}
+      <div class="flex-l flex-row mb4 bg-off-white br1 pa4-ns pa3 nav-shadow">
+
+        <div class="w-30-l mb3">
+          <h2 class="f3 b">Website</h2>
+        </div>
   
-      {{ partial "gallery" . }}
+        <div class="w-70-l mb4 ml3-l">
+          <a class="dib link" target="_blank" href="{{ . }}">{{ . }}</a>
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="bg-off-white br1 pa4-ns pa3 nav-shadow">
+        <h2 class="f3 b mb3">Gallery</h2>
+        {{ partial "gallery" . }}
+      </div>
 
     </div>
   </div>

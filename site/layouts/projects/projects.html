@@ -10,12 +10,12 @@
         
       <div data-aos="fade-in">
         {{ partial "section-title" .heading }}
-        {{ with .text }}<p class="mb4 db">{{ . }}</p>{{ end }}
+          {{ with .text }}<p class="mb4 db">{{ . }}</p>{{ end }}
+        
+        {{ end }}
+        
+        {{ .Render "list" }}
       </div>
-
-      {{ end }}
-
-      {{ .Render "list" }}
       
     </div>
   </div>

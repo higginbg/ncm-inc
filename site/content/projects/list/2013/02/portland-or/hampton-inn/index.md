@@ -4,6 +4,7 @@ slug: Portland, OR
 image: 'fitness-center.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: false
+description: 'https://www.hilton.com/en/hotels/pdxpdhx-hampton-suites-portland-pearl-district/'
 resources:
   - src: 'lobby.jpg'
     title: Lobby

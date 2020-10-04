@@ -4,6 +4,7 @@ slug: Hillsboro/Beaverton, OR
 image: 'lobby.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: true
+description: 'https://www.hilton.com/en/hotels/pdxbthw-homewood-suites-hillsboro-beaverton/'
 resources:
   - src: 'lobby.jpg'
     title: Lobby

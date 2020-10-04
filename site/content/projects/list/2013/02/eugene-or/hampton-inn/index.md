@@ -4,6 +4,7 @@ slug: Eugene, OR
 image: 'lobby-1.jpg'
 date: '2013-02-01T00:00:00.000Z'
 featured: false
+description: 'https://www.hilton.com/en/hotels/eughhhx-hampton-eugene/'
 resources:
   - src: 'lobby-1.jpg'
     title: Lobby 1

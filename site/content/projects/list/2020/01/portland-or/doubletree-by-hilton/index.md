@@ -4,6 +4,7 @@ slug: Portland, OR
 image: 'lobby-1.jpg'
 date: '2020-01-01T00:00:00.000Z'
 featured: false
+description: 'https://www.hilton.com/en/hotels/rllc-dt-doubletree-portland/'
 resources:
   - src: 'lobby-1.jpg'
     title: Lobby 1

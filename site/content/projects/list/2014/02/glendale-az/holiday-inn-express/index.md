@@ -4,6 +4,7 @@ slug: Glendale, AZ
 image: 'guest-room-1.jpg'
 date: '2014-02-01T00:00:00.000Z'
 featured: true
+description: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/glendale/phxgg/hoteldetail'
 resources:
   - src: 'lobby-1.jpg'
     title: Lobby 1

@@ -4,6 +4,7 @@ slug: Salem, OR
 image: 'pool.jpg'
 date: '2017-03-01T00:00:00.000Z'
 featured: true
+description: 'https://www.wyndhamhotels.com/laquinta/salem-oregon/la-quinta-salem-or/overview'
 resources:
   - src: 'lobby.jpg'
     title: Lobby

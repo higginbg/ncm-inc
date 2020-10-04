@@ -8,6 +8,10 @@
   background-color: var(--off-white);
 }
 
+.bg-off-white ::selection {
+  background-color: var(--white);
+}
+
 #noscript-warning,
 #ie-warning {
   position: fixed;
