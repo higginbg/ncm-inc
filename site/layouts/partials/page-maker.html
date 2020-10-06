@@ -1,4 +1,4 @@
-<div class="flex flex-row justify-around items-start neg-margin">
+<div class="flex flex-row justify-around neg-margin">
 
   {{ $pages := .CurrentSection.Pages.ByDate.Reverse }}
   
@@ -13,11 +13,11 @@
         {{ $image := (.Resize "600x").RelPermalink }}
 
         <div class="center">
-          <a class="db-m dn no-underline tile-link" href="{{ $link }}">
+          <a class="db-m dn tile-link" href="{{ $link }}">
             <h2 class="f4 lh-title mb2 black tl"><span class="primary">&larr;</span> Previous</h2>
             {{ partial "media-tile" (dict "title" $hotel "subtitle" $location "loadingThumb" $loadingThumb "image" $image "text" "← View") }}
           </a>
-          <a class="dn-m db no-underline h-100 link tile-link link-prev" href="{{ $link }}">
+          <a class="dn-m db h-100 link tile-link link-prev" style="max-width: 300px;" href="{{ $link }}">
             <h2 class="f4 lh-title mb2 black tl"><span class="primary">&larr;</span> Previous</h2>
             <div class="tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $loadingThumb }}'); height: 150px;">
               <noscript>
@@ -47,27 +47,25 @@
         {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
         {{ $image := (.Resize "600x").RelPermalink }}
 
-        <div class="center">
-          <a class="db-m dn no-underline tile-link" href="{{ $link }}">
-            <h2 class="f4 lh-title mb2 black tr">Next <span class="primary">&rarr;</span></h2>
-            {{ partial "media-tile" (dict "title" $hotel "subtitle" $location "loadingThumb" $loadingThumb "image" $image "text" "View →") }}
-          </a>
-          <a class="dn-m db no-underline h-100 link tile-link link-next" href="{{ $link }}">
-            <h2 class="f4 lh-title mb2 black tr">Next <span class="primary">&rarr;</span></h2>
-            <div class="tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $loadingThumb }}'); height: 150px;">
-              <noscript>
-                <div class="tile br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;"></div>
-              </noscript>
-              <div
-                class="lozad lozad-trigger tile br1 cover relative bg-center"
-                data-background-image="{{ $image }}"
-                style="height: 150px;"
-              >
-              </div>
+        <a class="db-m dn tile-link" href="{{ $link }}">
+          <h2 class="f4 lh-title mb2 black tr">Next <span class="primary">&rarr;</span></h2>
+          {{ partial "media-tile" (dict "title" $hotel "subtitle" $location "loadingThumb" $loadingThumb "image" $image "text" "View →") }}
+        </a>
+        <a class="dn-m db fr w-100 h-100 link tile-link link-next" style="max-width: 300px;" href="{{ $link }}">
+          <h2 class="f4 lh-title mb2 black tr">Next <span class="primary">&rarr;</span></h2>
+          <div class="tile tile-shadow br1 cover relative bg-center" style="background-image: url('{{ $loadingThumb }}'); height: 150px;">
+            <noscript>
+              <div class="tile br1 cover relative bg-center" style="background-image: url('{{ $image }}'); height: 150px;"></div>
+            </noscript>
+            <div
+              class="lozad lozad-trigger tile br1 cover relative bg-center"
+              data-background-image="{{ $image }}"
+              style="height: 150px;"
+            >
             </div>
-            <h3 class="f5 lh-title mt2 tr">{{ $hotel }}</h3>
-          </a>
-        </div>
+          </div>
+          <h3 class="f5 lh-title mt2 tr">{{ $hotel }}</h3>
+        </a>
       {{ end }}
     {{ end }}
   </div>

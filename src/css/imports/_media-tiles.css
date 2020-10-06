@@ -1,6 +1,13 @@
 :root {
   --intro-card-width: 400px;
-  --intro-offset: 30vh;
+  --intro-offset: 0;
+}
+
+
+@media (--breakpoint-medium) {
+  :root {
+    --intro-offset: 30vh;
+  }
 }
 
 .tile, .tile-shadow {

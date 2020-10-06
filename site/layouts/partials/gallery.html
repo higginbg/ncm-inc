@@ -8,7 +8,7 @@
     {{ $loadingThumb := ((.Resize "200x") | images.Filter (images.GaussianBlur 10)).RelPermalink }}
     {{ $thumb := (.Resize "600x").RelPermalink }}
 
-    <div class="w-100 w-50-ns w-33-l h4-ns h4-m h4-l h5 pa2-ns pv2" style="max-width: 450px; min-width: 400px;">
+    <div class="w-100 w-50-ns w-33-l h4-ns h4-m h4-l h5 pa2-ns pv2" style="width: 400px;">
       <a
         href="{{ $image }}"
         target="_blank"
