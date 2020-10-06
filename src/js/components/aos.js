@@ -8,4 +8,6 @@ export const init = () => {
     once: true,
     easing: 'ease',
   });
+
+  window.addEventListener('load', AOS.refresh);
 };

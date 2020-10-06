@@ -1,8 +1,8 @@
 <div class="flex flex-row justify-around items-start neg-margin">
 
-  {{ $pages := .CurrentSection.Pages }}
+  {{ $pages := .CurrentSection.Pages.ByDate.Reverse }}
   
-  <div class="w-50 pr2-m pr1" data-aos="fade-up-left" data-aos-duration=750>
+  <div class="w-50 pr2-m pr1" data-aos="fade-up-left" data-aos-duration="750">
     {{ with $pages.Prev . }}
       {{ $hotel := .Title }}
       {{ $location := .Params.slug }}
@@ -37,7 +37,7 @@
     {{ end }}
   </div>
 
-  <div class="w-50 pl2-m pl1" data-aos="fade-up-right" data-aos-duration=750>
+  <div class="w-50 pl2-m pl1" data-aos="fade-up-right" data-aos-duration="750">
     {{ with $pages.Next . }}
       {{ $hotel := .Title }}
       {{ $location := .Params.slug }}

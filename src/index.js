@@ -18,6 +18,16 @@ lightGallery.init();
 
 forms.init();
 
-window.addEventListener('load', () => {
-  document.body.classList.remove('preload');
-});
+const fitToGallery = () => {
+  const details = document.getElementById('project-details');
+  const gallery = document.getElementById('gallery-container');
+  if (details && gallery) {
+    details.style.height = `calc(${gallery.clientHeight}px + var(--intro-offset) + var(--spacing-extra-large))`;
+    details.style.minHeight = 'auto';
+    details.classList.remove('overflow-auto');
+  }
+};
+
+window.addEventListener('load', fitToGallery);
+
+window.addEventListener('resize', fitToGallery);

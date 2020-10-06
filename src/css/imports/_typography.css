@@ -23,7 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--off-white);
-  background-image: url("/img/backgrounds/debut.png");
   background-repeat: repeat;
   color: var(--text-color);
   min-width: 400px;

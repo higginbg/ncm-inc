@@ -23,19 +23,20 @@ button:focus {
   transition: var(--transition-shadow) !important;
   
   & i {
-    opacity: 0;
+    margin-left: 0.5em;
+    /* opacity: 0;
     transition: var(--transition-hover) !important;
-    width: 0;
+    width: 0; */
   }
 
   &:hover {
     box-shadow: var(--shadow-hover);
     opacity: 0.9;
 
-    & i {
+    /* & i {
       opacity: 1;
       margin-left: var(--spacing-small); 
-    }
+    } */
   }
 
   &:focus, &:active {

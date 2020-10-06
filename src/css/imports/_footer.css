@@ -5,7 +5,7 @@ footer {
 }
 
 .neg-margin {
-  margin-top: calc(-0.5 * var(--neg-margin));
+  margin-top: calc(-0.75 * var(--neg-margin));
 }
 
 @media (--breakpoint-large) {

@@ -1,14 +1,9 @@
-.preload * {
-  transition: none !important;
-  scroll-behavior: auto;
-}
-
 ::selection {
   color: var(--highlight);
   background-color: var(--off-white);
 }
 
-.bg-off-white ::selection {
+.bg-off-white > ::selection {
   background-color: var(--white);
 }
 
@@ -64,7 +59,7 @@ body.ie {
 }
 
 #content-wrapper {
-  background-color: var(--black);
+  background-color: var(--off-white);
   padding-top: var(--nav-height);
   padding-bottom: var(--footer-height);
 }
@@ -99,10 +94,6 @@ h6 {
       padding: var(--spacing-large) var(--spacing-medium);
       padding-bottom: calc(var(--spacing-small) + var(--neg-margin));
     }
-  }
-
-  & + .section {
-    /* border-top: 1px solid var(--off-white); */
   }
 }
 

@@ -1,7 +1,9 @@
-<div class="flex-ns flex-row flex-wrap justify-center">
-  {{ range (.Paginator 12).Pages.ByDate.Reverse }}
+{{ $paginator := (.Paginator 12).Pages.ByDate.Reverse }}
+
+<div class="flex-ns flex-row-reverse flex-wrap justify-center">
+  {{ range $paginator }}
     {{ .Render "li" }}
   {{ end }}
 </div>
 
-{{ partial "pagination" . }}
+{{ partial "pagination" (.Paginate ($paginator)) }}

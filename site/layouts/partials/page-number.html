@@ -1,5 +1,5 @@
 {{ $currentURL := .RelPermalink }}
-{{ $sectionPages := (.CurrentSection.Pages.ByParam "order").Reverse }}
+{{ $sectionPages := (.CurrentSection.Pages.ByDate) }}
 {{ $pageCount := len $sectionPages }}
 
 <nav class="mw5 center mt4-m mt2">

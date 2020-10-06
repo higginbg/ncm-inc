@@ -1,5 +1,7 @@
+{{ $pageCount := .TotalPages }}
+
 {{ with .Paginator }}
-  {{ if gt .TotalPages 1 }}
+  {{ if gt $pageCount 1 }}
   
     <nav class="center mt4 mb3">
 
@@ -12,7 +14,7 @@
         </div>
 
         <div class="w-10-ns w-33 tc mh3">
-          <span class="pre">{{ add 1 (sub .TotalPages .PageNumber) }} of {{ .TotalPages }}</span>
+          <span class="pre">{{ add 1 (sub $pageCount .PageNumber) }} of {{ $pageCount }}</span>
         </div>
 
         <div class="w-40-ns w-33 tl mh3">

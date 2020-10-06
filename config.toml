@@ -13,7 +13,7 @@ canonifyURLs = true
 [params]
   author = "Gabriel Higginbotham"
   github = "https://github.com/higginbg"
-  og_image = "/img/logos/logo-large.png"
+  og_image = "/img/logos/logo.png"
   sitename = "NCM Inc"
 
 [languages]

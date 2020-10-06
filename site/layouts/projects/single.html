@@ -1,43 +1,55 @@
 {{ define "main" }}
 
-  {{ partial "heading-left" (dict "title" .Title "subtitle" .Params.slug "mw" "mw8") }}
-
-  <div class="section bg-white neg-margin-offset">
-    <div class="mw8 center pt3 pb4">
-
-      {{ with .Content }}
-      <div class="flex-l flex-row mb4 bg-off-white br1 pa4-ns pa3 nav-shadow">
-
-        <div class="w-30-l mb3">
-          <h2 class="f3 b">Overview</h2>
-        </div>
-  
-        <div class="w-70-l h-100 mb4 ml3-l">    
-          {{ . }}
-        </div>
-      </div>
-      {{ end }}
-
-      {{ with .Description }}
-      <div class="flex-l flex-row mb4 bg-off-white br1 pa4-ns pa3 nav-shadow">
-
-        <div class="w-30-l mb3">
-          <h2 class="f3 b">Website</h2>
-        </div>
-  
-        <div class="w-70-l mb4 ml3-l">
-          <a class="dib link" target="_blank" href="{{ . }}">{{ . }}</a>
-        </div>
-      </div>
-      {{ end }}
-
-      <div class="bg-off-white br1 pa4-ns pa3 nav-shadow">
-        <h2 class="f3 b mb3">Gallery</h2>
-        {{ partial "gallery" . }}
-      </div>
-
+  {{ $title := .Title }}
+  {{ with .Resources.GetMatch .Params.image }}
+  <div class="vh-25 vh-50-m w-100 bg-off-white">
+    <div
+      class="h-100 cover bg-center"
+      style="background-image: url('{{ .RelPermalink }}');"
+      data-aos="fade-in"
+    >
     </div>
   </div>
+  {{ end }}
+
+  <div id="project-details" class="section bg-white neg-margin-offset overflow-auto">
+    <div class="relative mw9 center">
+
+      <div id="project-intro" data-aos="fade-up">
+        <div class="backdrop"></div>
+    
+        <div class="content animated fadeIn">
+          <div class="pb4">
+            <h1 class="f3 b lh-title mb2">{{ .Title }}</h1>
+            <h2 class="f5 lh-title">{{ .Params.slug }}</h2>
+          </div>
+      
+          {{ with .Content }}
+            <div class="pb3">
+              <h2 class="f5 b mb3">Overview</h2>
+              <p class="ma0 pa0">{{ . }}</p>
+            </div>
+          {{ end }}
+      
+          {{ with .Description }}
+            <div class="pb3">
+              <a class="db btn" target="_blank" href="{{ . }}"
+                >Hotel Website<i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    
+  
+      <div id="gallery-container">
+        <h2 class="di f4 b mb3 animated fadeIn slower">Gallery</h2>
+        {{ partial "gallery" . }}
+      </div>
+  
+    </div>
+  </div>
+
 
   <div class="section bg-grey-1">
     <div class="mw7 center">
