@@ -109,6 +109,7 @@
 
 #project-details {
   padding: 0;
+  padding-bottom: var(--spacing-extra-large);
   min-height: 200vh;
 
   & > div {
@@ -140,10 +141,6 @@
   .project-tile {
     margin: 0;
     max-width: 50%;
-  }
-
-  #project-details {
-    padding-bottom: var(--spacing-extra-large);
   }
 
   #project-intro {
